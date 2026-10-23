@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "branch-daily-desk",
+  "name": "DAILY DESK",
+  "title": "Desk 48×24\"",
+  "brand": "branch",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    122,
+    61,
+    72.5
+  ],
+  "worksWith": "Branch® Daily Desk, 48×24\" top, 28.5\" tall",
+  "productUrl": "https://www.branchfurniture.com/products/daily-desk",
+  "instructionsUrl": "https://www.branchfurniture.com/daily-desk-assembly-guide",
+  "color": "#d8c3a0",
+  "confidence": "medium",
+  "sources": [
+    "https://www.branchfurniture.com/products/daily-desk"
+  ],
+  "options": {
+    "tt": 2.5,
+    "leg": {
+      "s": 4,
+      "inset": 3
+    },
+    "bars": 12,
+    "mount": "plate",
+    "topLabel": "Desk top"
+  },
+  "tags": [
+    "desk",
+    "home office",
+    "writing desk",
+    "branch"
+  ],
+  "notes": "Brand page: 36×24, 48×24 or 58×27\" top, fixed 28.5\" height, powder-coated steel frame and MDF laminate top, assembles in under ten minutes. Leg and bracket layout is our simplification.",
+  "minutes": 10
+}

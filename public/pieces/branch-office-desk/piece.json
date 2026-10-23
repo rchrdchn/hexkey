@@ -1,0 +1,369 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/branch-office-desk.json by scripts/generate.mjs (archetype \"table\"). Edit the spec, not this file.",
+  "slug": "branch-office-desk",
+  "name": "OFFICE DESK",
+  "title": "Desk 60×30\"",
+  "brand": "Branch",
+  "brandId": "branch",
+  "disclaimer": "Not affiliated with or endorsed by Branch.",
+  "worksWith": "Branch® Office Desk, 60×30×30\" (W×D×H)",
+  "productUrl": "https://www.branchfurniture.com/products/office-desk",
+  "instructionsUrl": "https://www.branchfurniture.com/office-desk-assembly-guide",
+  "size": [
+    153,
+    76,
+    76
+  ],
+  "minutes": 15,
+  "people": 2,
+  "level": 2,
+  "color": "#d8c3a0",
+  "category": "desks",
+  "archetype": "table",
+  "confidence": "medium",
+  "sources": [
+    "https://www.branchfurniture.com/products/office-desk"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    },
+    {
+      "id": "plate",
+      "label": "Mounting plate"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        152.5,
+        2.5,
+        76
+      ],
+      "pos": [
+        0,
+        74.75,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        5,
+        73.5,
+        5
+      ],
+      "pos": [
+        -69.75,
+        36.75,
+        31.5
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        5,
+        73.5,
+        5
+      ],
+      "pos": [
+        69.75,
+        36.75,
+        31.5
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        5,
+        73.5,
+        5
+      ],
+      "pos": [
+        69.75,
+        36.75,
+        -31.5
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        5,
+        73.5,
+        5
+      ],
+      "pos": [
+        -69.75,
+        36.75,
+        -31.5
+      ]
+    },
+    {
+      "id": "plate1",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        -69.75,
+        73.3,
+        31.5
+      ]
+    },
+    {
+      "id": "plate2",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        69.75,
+        73.3,
+        31.5
+      ]
+    },
+    {
+      "id": "plate3",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        69.75,
+        73.3,
+        -31.5
+      ]
+    },
+    {
+      "id": "plate4",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        -69.75,
+        73.3,
+        -31.5
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Lay the top upside down on a rug or the flattened box, so the good side stays scratch-free.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "4 mounting plates",
+      "say": "Screw a mounting plate onto each corner, four screws each, using the pre-drilled holes. These are what the legs twist into.",
+      "add": [
+        "plate1",
+        "plate2",
+        "plate3",
+        "plate4"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -72.75,
+              73.5,
+              28.5
+            ],
+            [
+              -66.75,
+              73.5,
+              28.5
+            ],
+            [
+              -66.75,
+              73.5,
+              34.5
+            ],
+            [
+              -72.75,
+              73.5,
+              34.5
+            ],
+            [
+              66.75,
+              73.5,
+              28.5
+            ],
+            [
+              72.75,
+              73.5,
+              28.5
+            ],
+            [
+              72.75,
+              73.5,
+              34.5
+            ],
+            [
+              66.75,
+              73.5,
+              34.5
+            ],
+            [
+              66.75,
+              73.5,
+              -34.5
+            ],
+            [
+              72.75,
+              73.5,
+              -34.5
+            ],
+            [
+              72.75,
+              73.5,
+              -28.5
+            ],
+            [
+              66.75,
+              73.5,
+              -28.5
+            ],
+            [
+              -72.75,
+              73.5,
+              -34.5
+            ],
+            [
+              -66.75,
+              73.5,
+              -34.5
+            ],
+            [
+              -66.75,
+              73.5,
+              -28.5
+            ],
+            [
+              -72.75,
+              73.5,
+              -28.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "2 legs on",
+      "say": "Twist on the first two legs, clockwise, until they are snug and straight. Hand tight is right.",
+      "add": [
+        "leg1",
+        "leg2"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Last 2 legs",
+      "say": "Same with the last two legs.",
+      "add": [
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": -30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, turn it right side up. Lift it, don't pivot on the legs, or they can snap off.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Level the feet",
+      "say": "Rock the table gently. If it wobbles, twist the adjustable foot on the short leg until it sits flat.",
+      "view": {
+        "az": 20,
+        "el": 10,
+        "tight": true
+      }
+    }
+  ],
+  "done": "Done. Your OFFICE DESK desk 60×30\" is built. Give it a proud little pat.",
+  "notes": "Brand page: 48×24×30\" or 60×30×30\", flared legs with levelling feet, ships in 3 boxes, assembles in 15 minutes or less. How the legs fix to the top is our simplification."
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "bestar-20w-nightstand",
+  "name": "20W",
+  "title": "Open nightstand",
+  "brand": "bestar",
+  "archetype": "bookcase",
+  "category": "bedroom",
+  "size": [
+    49.6,
+    44.5,
+    74.8
+  ],
+  "worksWith": "Bestar® 20W nightstand, 19.53×17.52×29.45\" (W×D×H)",
+  "productUrl": "https://www.bestar.com/products/20w-nightstand",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--lM-xkZPa--/16c776037265d8ebc43891019ccce0ecfdbba049.pdf",
+  "color": "#7a5a3c",
+  "confidence": "low",
+  "sources": [
+    "https://www.bestar.com/products/20w-nightstand"
+  ],
+  "options": {
+    "t": 1.6,
+    "top": "overlay",
+    "tt": 2,
+    "shelves": 2,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    }
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "open shelves",
+    "bestar"
+  ],
+  "notes": "Brand page: 19.53×17.52×29.45\", 2 adjustable shelves. Base and back details are our guesses."
+}

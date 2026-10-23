@@ -1,0 +1,45 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "vasagle-6-tier-bookshelf",
+  "name": "CUSTOS",
+  "title": "6-tier bookshelf",
+  "brand": "songmics",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    80,
+    24,
+    161
+  ],
+  "worksWith": "VASAGLE® CUSTOS 6-tier bookshelf (ULBC412), 31.5×9.5×63.3\"",
+  "productUrl": "https://www.songmics.com/products/vasagle-vasagle-6-tier-bookshelf-storage-organizer-31-5-x-9-5-x-63-3-inches-ulbc412",
+  "color": "#2b2b2b",
+  "confidence": "medium",
+  "sources": [
+    "https://www.songmics.com/products/vasagle-vasagle-6-tier-bookshelf-storage-organizer-31-5-x-9-5-x-63-3-inches-ulbc412"
+  ],
+  "options": {
+    "t": 1.5,
+    "top": "overlay",
+    "tt": 1.8,
+    "shelves": 0,
+    "fixed": [
+      0.18,
+      0.36,
+      0.54,
+      0.72
+    ],
+    "base": {
+      "type": "plinth",
+      "h": 4
+    }
+  },
+  "tags": [
+    "bookshelf",
+    "bookcase",
+    "6 tier",
+    "shallow",
+    "vasagle"
+  ],
+  "notes": "Brand page: 6 tiers, 31.5×9.5×63.3\", particleboard and MDF. Shelf spacing and how the shelves fix are our best guess; it is shallow, so anchor it to the wall."
+}

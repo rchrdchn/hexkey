@@ -14,9 +14,9 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | Tier | Brands | Included (pieces) | Research-only (queued) | Skipped (blocked/terms) |
 |---|---|---|---|---|
 | big | 16 | 8 | 5 | 3 |
-| medium | 19 | 5 | 9 | 5 |
-| small | 10 | 0 | 10 | 0 |
-| **total** | **45** | **13** | **24** | **8** |
+| medium | 19 | 8 | 6 | 5 |
+| small | 10 | 2 | 8 | 0 |
+| **total** | **45** | **18** | **19** | **8** |
 
 ## Pieces in the catalog by brand
 
@@ -32,10 +32,15 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | ClosetMaid (Home by Ames) | 1 |
 | Tribesigns | 3 |
 | Nathan James | 5 |
+| SONGMICS / VASAGLE | 2 |
 | FlexiSpot | 1 |
 | UPLIFT Desk | 1 |
+| Bestar | 2 |
+| Linon | 2 |
 | Delta Children | 2 |
-| **total** | **77** |
+| Branch | 3 |
+| VIVO | 1 |
+| **total** | **87** |
 
 ## Big brands and big-box retailers
 
@@ -72,11 +77,11 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | [Burrow](https://burrow.com) | research-only | 3 | Assembly guides per product | public | Crawl-delay 10 | Range shelving, Serif | Queued. |
 | [Tribesigns](https://www.tribesigns.com) | included | 5 | Product page installation manual PDF on Shopify CDN | public | Crawl-delay 10 | 5-tier ladder bookshelf, computer desks, L-desks | One page returned 503 → skipped that item. |
 | [Nathan James](https://nathanjameshome.com) | included | 4 | Instructions in box; product pages list assembly minutes (no PDF seen) | public | Crawl-delay 10; .json 404 so HTML specs used | Theo ladder shelf, Parker desk, Haven bookcase, Andrew nightstand |  |
-| [SONGMICS / VASAGLE](https://www.songmics.com) | research-only | 4 | Manual PDFs on product pages / Amazon | sitemap 503; vasagle.com TLS failure | Crawl-delay 10 | VASAGLE industrial bookcase, cube storage | Unreachable → queued. |
+| [SONGMICS / VASAGLE](https://www.songmics.com) | included | 4 | "Important instructions" section on product pages; manual PDFs not linked on the pages we read | public, no login (songmics.com; vasagle.com still TLS failure) | Shopify default; products allowed | VASAGLE CUSTOS 6-tier bookshelf (ULBC412), VASAGLE LIRY nightstand (ULET699), cube storage, ladder shelves | Pages are mostly script-rendered; size and tier/drawer counts taken from the product titles on songmics.com. No instructions link, so pieces carry no instructionsUrl. |
 | [FlexiSpot](https://www.flexispot.com) | included | 5 | Product page "Downloads" → E7 manual | public | verified 2026-10-23 | E7 standing desk frame, E5, Comhar |  |
 | [UPLIFT Desk](https://www.upliftdesk.com) | included | 5 | Assembly & programming page + Specs/Assembly tab | public | verified 2026-10-23 | UPLIFT V2 standing desk |  |
-| [Bestar](https://www.bestar.com) | research-only | 4 | Assembly instructions per model | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | Pur murphy bed, Small Space desk | Queued. _(unverified: from general knowledge)_ |
-| [Linon](https://www.linon.com) | research-only | 3 | Assembly instructions per item | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | accent tables, bookcases | Queued. _(unverified: from general knowledge)_ |
+| [Bestar](https://www.bestar.com) | included | 4 | Product page "View assembly instructions" → Salsify-hosted PDF | public, no login | Shopify default; products allowed | Universel tall 5-shelf bookcase, 20W nightstand, murphy beds, L-desks | Assembled width/depth/height in the page data; the visible "75×120×65 cm" block is a page template default, so we ignored it. |
+| [Linon](https://www.linon.com) | included | 3 | No public instructions link seen on product pages; "assembly required" noted in copy | public, no login | Shopify default; products allowed | Cody 2/4/6 cube unit, Cosgrove ladder bookcase, Hudson dressers and nightstands | Many Linon pieces ship mostly assembled ("only the legs"), so we skipped those and took the Cody cube units, which need full assembly. Cody outer size is worked out from the published inner cube size → low confidence. |
 | [Delta Children](https://www.deltachildren.com) | included | 5 | Product page "Assembly Instructions" PDF on Shopify CDN + tips video | public | Shopify default; allowed | Rowen 4-drawer dresser, Haven 6-drawer dresser, Sutton dresser, toy organizers |  |
 | [KidKraft](https://www.kidkraft.com) | research-only | 3 | Instructions lookup by item number | public | Crawl-delay 10 | play kitchens, bookcases | Toys dominate; queued. |
 | [Furinno](https://www.furinno.com) | research-only | 4 | Instructions on product pages | sitemap 502 | unverified (general knowledge, site not checked) | Pasir 3-tier shelf, Turn-N-Tube | Server error → queued. |
@@ -86,7 +91,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 
 | Brand | Status | Fit | Where instructions live | Access | robots.txt / terms | Popular flat-pack | Notes |
 |---|---|---|---|---|---|---|---|
-| [Branch](https://www.branchfurniture.com) | research-only | 4 | Assembly guides per product | public | Crawl-delay 10 | Ergonomic chair, Duo standing desk | Queued. |
+| [Branch](https://www.branchfurniture.com) | included | 4 | Per-product assembly guide pages (e.g. /daily-desk-assembly-guide) plus a spec-sheet PDF | public, no login | Shopify default; products allowed | Daily Desk, Office Desk, Duo Standing Desk, Standing Desk, L-Desk | Sizes from the product pages and FAQ (Daily 28.5" tall; Office 30" tall; Duo 28–47.3"). |
 | [Thuma](https://www.thuma.co) | research-only | 4 | Tool-free assembly guide/video ("The Bed") | public | Crawl-delay 10 | The Bed, Nightstand | Joinery bed needs a new archetype; queued. |
 | [Sabai](https://sabai.design) | research-only | 2 | Assembly videos | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | Essential sofa | Upholstered; low fit. _(unverified: from general knowledge)_ |
 | [Hem](https://hem.com) | research-only | 3 | Assembly instructions per product | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | Palissade, Kazimir | Queued. _(unverified: from general knowledge)_ |
@@ -94,7 +99,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | [Hodedah](https://www.hodedah.com) | research-only | 4 | Instructions PDFs per item | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | dressers, bookcases | Queued. _(unverified: from general knowledge)_ |
 | [Yaheetech](https://www.yaheetech.com) | research-only | 3 | Manuals on Amazon/product pages | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | bookcases, desks | Queued. _(unverified: from general knowledge)_ |
 | [Autonomous](https://www.autonomous.ai) | research-only | 4 | Assembly guide per desk | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | SmartDesk Core | Standing desk archetype ready; queued. _(unverified: from general knowledge)_ |
-| [VIVO](https://www.vivo-us.com) | research-only | 4 | Manuals per SKU | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | desk frames, monitor mounts | Queued. _(unverified: from general knowledge)_ |
+| [VIVO](https://www.vivo-us.com) | included | 4 | Product page "Assembly Instructions": frame and table-top manual PDFs on the Shopify CDN | public, no login | Shopify default; products allowed | PRO 60×24" dual motor desk, E2 series desks, desk frames | Specs (top size, thickness, height range) listed on the product page. |
 | [Fully (Herman Miller)](https://www.fully.com) | research-only | 3 | Jarvis desk assembly guide | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | Jarvis desk | Jarvis now sold via Herman Miller; queued. _(unverified: from general knowledge)_ |
 
 ## Skipped and why

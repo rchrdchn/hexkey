@@ -515,16 +515,18 @@
    "label": "SONGMICS / VASAGLE®",
    "tier": "medium",
    "site": "https://www.songmics.com",
-   "status": "research-only",
+   "status": "included",
    "fit": 4,
-   "instructions": "Manual PDFs on product pages / Amazon",
-   "access": "sitemap 503; vasagle.com TLS failure",
-   "robots": "Crawl-delay 10",
+   "instructions": "\"Important instructions\" section on product pages; manual PDFs not linked on the pages we read",
+   "access": "public, no login (songmics.com; vasagle.com still TLS failure)",
+   "robots": "Shopify default; products allowed",
    "products": [
-    "VASAGLE industrial bookcase",
-    "cube storage"
+    "VASAGLE CUSTOS 6-tier bookshelf (ULBC412)",
+    "VASAGLE LIRY nightstand (ULET699)",
+    "cube storage",
+    "ladder shelves"
    ],
-   "note": "Unreachable → queued.",
+   "note": "Pages are mostly script-rendered; size and tier/drawer counts taken from the product titles on songmics.com. No instructions link, so pieces carry no instructionsUrl.",
    "disclaimer": "Not affiliated with or endorsed by Ziel Home Furnishing.",
    "checked": "verified 2026-10-23",
    "short": "VASAGLE"
@@ -574,18 +576,20 @@
    "label": "Bestar®",
    "tier": "medium",
    "site": "https://www.bestar.com",
-   "status": "research-only",
+   "status": "included",
    "fit": 4,
-   "instructions": "Assembly instructions per model",
-   "access": "unverified (general knowledge, site not checked)",
-   "robots": "unverified (general knowledge, site not checked)",
+   "instructions": "Product page \"View assembly instructions\" → Salsify-hosted PDF",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed",
    "products": [
-    "Pur murphy bed",
-    "Small Space desk"
+    "Universel tall 5-shelf bookcase",
+    "20W nightstand",
+    "murphy beds",
+    "L-desks"
    ],
-   "note": "Queued.",
+   "note": "Assembled width/depth/height in the page data; the visible \"75×120×65 cm\" block is a page template default, so we ignored it.",
    "disclaimer": "Not affiliated with or endorsed by Bestar.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-23"
   },
   {
    "id": "linon",
@@ -593,18 +597,19 @@
    "label": "Linon®",
    "tier": "medium",
    "site": "https://www.linon.com",
-   "status": "research-only",
+   "status": "included",
    "fit": 3,
-   "instructions": "Assembly instructions per item",
-   "access": "unverified (general knowledge, site not checked)",
-   "robots": "unverified (general knowledge, site not checked)",
+   "instructions": "No public instructions link seen on product pages; \"assembly required\" noted in copy",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed",
    "products": [
-    "accent tables",
-    "bookcases"
+    "Cody 2/4/6 cube unit",
+    "Cosgrove ladder bookcase",
+    "Hudson dressers and nightstands"
    ],
-   "note": "Queued.",
+   "note": "Many Linon pieces ship mostly assembled (\"only the legs\"), so we skipped those and took the Cody cube units, which need full assembly. Cody outer size is worked out from the published inner cube size → low confidence.",
    "disclaimer": "Not affiliated with or endorsed by Linon.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-23"
   },
   {
    "id": "delta-children",
@@ -690,16 +695,19 @@
    "label": "Branch®",
    "tier": "small",
    "site": "https://www.branchfurniture.com",
-   "status": "research-only",
+   "status": "included",
    "fit": 4,
-   "instructions": "Assembly guides per product",
-   "access": "public",
-   "robots": "Crawl-delay 10",
+   "instructions": "Per-product assembly guide pages (e.g. /daily-desk-assembly-guide) plus a spec-sheet PDF",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed",
    "products": [
-    "Ergonomic chair",
-    "Duo standing desk"
+    "Daily Desk",
+    "Office Desk",
+    "Duo Standing Desk",
+    "Standing Desk",
+    "L-Desk"
    ],
-   "note": "Queued.",
+   "note": "Sizes from the product pages and FAQ (Daily 28.5\" tall; Office 30\" tall; Duo 28–47.3\").",
    "disclaimer": "Not affiliated with or endorsed by Branch.",
    "checked": "verified 2026-10-23"
   },
@@ -839,18 +847,19 @@
    "label": "VIVO®",
    "tier": "small",
    "site": "https://www.vivo-us.com",
-   "status": "research-only",
+   "status": "included",
    "fit": 4,
-   "instructions": "Manuals per SKU",
-   "access": "unverified (general knowledge, site not checked)",
-   "robots": "unverified (general knowledge, site not checked)",
+   "instructions": "Product page \"Assembly Instructions\": frame and table-top manual PDFs on the Shopify CDN",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed",
    "products": [
-    "desk frames",
-    "monitor mounts"
+    "PRO 60×24\" dual motor desk",
+    "E2 series desks",
+    "desk frames"
    ],
-   "note": "Queued.",
+   "note": "Specs (top size, thickness, height range) listed on the product page.",
    "disclaimer": "Not affiliated with or endorsed by VIVO.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-23"
   },
   {
    "id": "fully",

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "linon-cody-6-cube",
+  "name": "CODY",
+  "title": "6-cube storage unit",
+  "brand": "linon",
+  "archetype": "cubes",
+  "category": "storage",
+  "size": [
+    109.5,
+    37,
+    73.7
+  ],
+  "worksWith": "Linon® Cody 6-cube unit, inner cubes 13.5×14.5×13.5\"",
+  "productUrl": "https://www.linon.com/products/cody-espresso-2-cubes-unit",
+  "color": "#3b2f2a",
+  "confidence": "low",
+  "sources": [
+    "https://www.linon.com/products/cody-espresso-2-cubes-unit"
+  ],
+  "options": {
+    "cols": 3,
+    "rows": 2,
+    "cell": 34.3,
+    "outer": 1.8,
+    "inner": 1.5
+  },
+  "tags": [
+    "cube storage",
+    "cubby",
+    "organizer",
+    "linon"
+  ],
+  "notes": "Brand page: 2, 4 or 6 cubes, inner cubes 13.5\" wide, 14.5\" deep and 13.5\" tall, stands vertically or horizontally, 10 lb per shelf. Outer size is worked out from the cube size and our guess at board thickness; we show the 6-cube lying on its long side."
+}

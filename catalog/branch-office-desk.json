@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "branch-office-desk",
+  "name": "OFFICE DESK",
+  "title": "Desk 60×30\"",
+  "brand": "branch",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    152.5,
+    76,
+    76
+  ],
+  "worksWith": "Branch® Office Desk, 60×30×30\" (W×D×H)",
+  "productUrl": "https://www.branchfurniture.com/products/office-desk",
+  "instructionsUrl": "https://www.branchfurniture.com/office-desk-assembly-guide",
+  "color": "#d8c3a0",
+  "confidence": "medium",
+  "sources": [
+    "https://www.branchfurniture.com/products/office-desk"
+  ],
+  "options": {
+    "tt": 2.5,
+    "leg": {
+      "s": 5,
+      "inset": 4
+    },
+    "mount": "plate",
+    "feet": true,
+    "topLabel": "Desk top"
+  },
+  "tags": [
+    "desk",
+    "office desk",
+    "home office",
+    "branch"
+  ],
+  "notes": "Brand page: 48×24×30\" or 60×30×30\", flared legs with levelling feet, ships in 3 boxes, assembles in 15 minutes or less. How the legs fix to the top is our simplification.",
+  "minutes": 15
+}

@@ -1,10 +1,12 @@
 // Brand picker checks on WebKit iPhone 15 + Chromium desktop: brand chips filter the list, search finds brands,
 // cards show the brand, the guide's legal line names the right brand and links its own instructions, no console errors, no sideways overflow.
-// Usage: node scripts/shots-brands.mjs [baseUrl] [outDir]
+// Usage: node scripts/shots-brands.mjs [baseUrl] [outDir] [chipBrands=walker-edison,zinus] [searchBrand=tribesigns]
 import { chromium, webkit, devices } from 'playwright';
 import fs from 'node:fs';
 const base = process.argv[2] || 'http://localhost:4173';
 const out = process.argv[3] || 'shots/brands';
+const chipBrands = (process.argv[4] || 'walker-edison,zinus').split(',');
+const searchBrand = process.argv[5] || 'tribesigns';
 fs.mkdirSync(out, { recursive: true });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const cat = JSON.parse(fs.readFileSync(new URL('../public/pieces/catalog.json', import.meta.url)));
@@ -33,7 +35,7 @@ for (const [eng, name, bt, opts] of runs) {
   ok(chips === nBrands + 1, `${tag} ${chips} brand chips (All + ${nBrands} brands)`);
   ok(await overflow() <= 0, `${tag} no sideways overflow with brand row`);
   await shot('01-picker');
-  for (const id of ['walker-edison', 'zinus']) {
+  for (const id of chipBrands) {
     await page.locator(`.cats.brands button[data-brand="${id}"]`).click();
     await sleep(500);
     const want = cat.filter((e) => e.brandId === id).length;
@@ -47,9 +49,9 @@ for (const [eng, name, bt, opts] of runs) {
   await sleep(500);
   const sd = await page.locator('.cards .card').evaluateAll((els) => els.map((e) => e.getAttribute('data-slug')));
   ok(sd.includes('flexispot-e7') && sd.includes('uplift-v2'), `${tag} search "standing desk" finds ${sd.join(', ')}`);
-  await page.locator('.search input').fill('tribesigns');
+  await page.locator('.search input').fill(searchBrand);
   await sleep(500);
-  ok(await page.locator('.cards .card').count() === cat.filter((e) => e.brandId === 'tribesigns').length, `${tag} search by brand name "tribesigns"`);
+  ok(await page.locator('.cards .card').count() === cat.filter((e) => e.brandId === searchBrand).length, `${tag} search by brand name "${searchBrand}"`);
   await shot('03-search');
   ok(await overflow() <= 0, `${tag} no sideways overflow after search`);
   // open a piece and check its legal line

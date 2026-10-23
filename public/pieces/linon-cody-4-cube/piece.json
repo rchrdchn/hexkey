@@ -1,0 +1,517 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/linon-cody-4-cube.json by scripts/generate.mjs (archetype \"cubes\"). Edit the spec, not this file.",
+  "slug": "linon-cody-4-cube",
+  "name": "CODY",
+  "title": "4-cube storage unit",
+  "brand": "Linon",
+  "brandId": "linon",
+  "disclaimer": "Not affiliated with or endorsed by Linon.",
+  "worksWith": "Linon® Cody 4-cube unit, inner cubes 13.5×14.5×13.5\"",
+  "productUrl": "https://www.linon.com/products/cody-espresso-2-cubes-unit",
+  "size": [
+    74,
+    74,
+    37
+  ],
+  "minutes": 30,
+  "people": 1,
+  "level": 2,
+  "color": "#3b2f2a",
+  "category": "storage",
+  "archetype": "cubes",
+  "confidence": "low",
+  "sources": [
+    "https://www.linon.com/products/cody-espresso-2-cubes-unit"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "end",
+      "label": "End panel"
+    },
+    {
+      "id": "long",
+      "label": "Long shelf",
+      "plural": "Long shelves"
+    },
+    {
+      "id": "div",
+      "label": "Divider"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.8,
+        73.7,
+        37
+      ],
+      "pos": [
+        -35.95,
+        36.85,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.8,
+        73.7,
+        37
+      ],
+      "pos": [
+        35.95,
+        36.85,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "end",
+      "size": [
+        70.1,
+        1.8,
+        37
+      ],
+      "pos": [
+        0,
+        0.9,
+        0
+      ]
+    },
+    {
+      "id": "top",
+      "part": "end",
+      "size": [
+        70.1,
+        1.8,
+        37
+      ],
+      "pos": [
+        0,
+        72.8,
+        0
+      ]
+    },
+    {
+      "id": "long1",
+      "part": "long",
+      "size": [
+        70.1,
+        1.5,
+        37
+      ],
+      "pos": [
+        0,
+        36.85,
+        0
+      ]
+    },
+    {
+      "id": "div1_1",
+      "part": "div",
+      "size": [
+        1.5,
+        34.3,
+        37
+      ],
+      "pos": [
+        0,
+        18.95,
+        0
+      ]
+    },
+    {
+      "id": "div2_1",
+      "part": "div",
+      "size": [
+        1.5,
+        34.3,
+        37
+      ],
+      "pos": [
+        0,
+        54.75,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Stand one thick side panel on its edge, holes in. Screw in four cam pins at the ends, and tap two dowels into the holes for the long shelves.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -35.05,
+              0.9,
+              12.5
+            ],
+            [
+              -35.05,
+              0.9,
+              -12.5
+            ],
+            [
+              -35.05,
+              72.8,
+              12.5
+            ],
+            [
+              -35.05,
+              72.8,
+              -12.5
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -35.05,
+              36.85,
+              12.5
+            ],
+            [
+              -35.05,
+              36.85,
+              -12.5
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Push one of the thick end panels onto the low pins, then lock it with two cam locks, arrows toward the pins, turned clockwise.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -31.65,
+              1.8,
+              12.5
+            ],
+            [
+              -31.65,
+              1.8,
+              -12.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Row 1: dividers",
+      "say": "Tap dowels into the panel below, two per divider, and stand the short divider on them. They set the cube width, so push them fully home.",
+      "add": [
+        "div1_1"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              0,
+              1.8,
+              12.5
+            ],
+            [
+              0,
+              1.8,
+              -12.5
+            ],
+            [
+              0,
+              36.1,
+              12.5
+            ],
+            [
+              0,
+              36.1,
+              -12.5
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Long shelf 1",
+      "say": "Lower a long shelf onto the divider dowels and the side dowels at the same time. Wiggle it down evenly, a little at each end.",
+      "add": [
+        "long1"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Row 2: dividers",
+      "say": "Next row of dividers, same as before: dowels down, dividers on.",
+      "add": [
+        "div2_1"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              0,
+              37.6,
+              12.5
+            ],
+            [
+              0,
+              37.6,
+              -12.5
+            ],
+            [
+              0,
+              71.9,
+              12.5
+            ],
+            [
+              0,
+              71.9,
+              -12.5
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Top on. Lock 2.",
+      "say": "Top end panel onto its pins and the top dowels. Lock two cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -31.65,
+              73.7,
+              12.5
+            ],
+            [
+              -31.65,
+              73.7,
+              -12.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Side two. Lock 4.",
+      "say": "Pins into the ends of the top and bottom, dowels into the long shelves, then press the second side on and lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              35.05,
+              0.9,
+              12.5
+            ],
+            [
+              35.05,
+              0.9,
+              -12.5
+            ],
+            [
+              35.05,
+              72.8,
+              12.5
+            ],
+            [
+              35.05,
+              72.8,
+              -12.5
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              35.05,
+              36.85,
+              12.5
+            ],
+            [
+              35.05,
+              36.85,
+              -12.5
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              31.65,
+              1.8,
+              12.5
+            ],
+            [
+              31.65,
+              1.8,
+              -12.5
+            ],
+            [
+              31.65,
+              73.7,
+              12.5
+            ],
+            [
+              31.65,
+              73.7,
+              -12.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Screw the wall bracket to the top at the back, then into the wall with fixings for your wall. Fill the bottom cubes first and the top ones last. And always anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              70.7,
+              -18.8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your CODY 4-cube storage unit is built. Give it a proud little pat.",
+  "notes": "Brand page: 2, 4 or 6 cubes, inner cubes 13.5\" wide, 14.5\" deep and 13.5\" tall, stands vertically or horizontally, 10 lb per shelf. Outer size is worked out from the cube size and our guess at board thickness; we show the 4-cube square."
+}

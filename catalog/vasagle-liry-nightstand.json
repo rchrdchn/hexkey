@@ -1,0 +1,52 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "vasagle-liry-nightstand",
+  "name": "LIRY",
+  "title": "2-drawer nightstand",
+  "brand": "songmics",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    60,
+    40,
+    60
+  ],
+  "worksWith": "VASAGLE® LIRY farmhouse nightstand with 2 drawers and an open shelf (ULET699), 23.6×15.7×23.6\"",
+  "productUrl": "https://www.songmics.com/products/vasagle-vasagle-farmhouse-nightstand-with-charging-station-2-drawers-ulet699",
+  "color": "#e9e2d6",
+  "confidence": "low",
+  "sources": [
+    "https://www.songmics.com/products/vasagle-vasagle-farmhouse-nightstand-with-charging-station-2-drawers-ulet699"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "h": 0.8
+      },
+      {
+        "type": "drawer",
+        "h": 0.8
+      },
+      {
+        "type": "open"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "legs",
+      "h": 8,
+      "leg": 4
+    },
+    "runners": true,
+    "knobs": 1
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "farmhouse",
+    "vasagle"
+  ],
+  "notes": "Brand page: 2 drawers over an open shelf, built-in charging station, 23.6×15.7×23.6\". Leg height, drawer sizes and the charging-strip mounting are our guesses (the charging strip is not modelled)."
+}

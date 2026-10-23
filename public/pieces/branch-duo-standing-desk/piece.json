@@ -1,0 +1,477 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/branch-duo-standing-desk.json by scripts/generate.mjs (archetype \"standing-desk\"). Edit the spec, not this file.",
+  "slug": "branch-duo-standing-desk",
+  "name": "DUO",
+  "title": "Standing desk 48×24\"",
+  "brand": "Branch",
+  "brandId": "branch",
+  "disclaimer": "Not affiliated with or endorsed by Branch.",
+  "worksWith": "Branch® Duo Standing Desk, 48×24\" top, 28–47.3\" height range",
+  "productUrl": "https://www.branchfurniture.com/products/duo-standing-desk",
+  "instructionsUrl": "https://www.branchfurniture.com/duo-standing-desk-assembly-guide",
+  "size": [
+    122,
+    71,
+    61
+  ],
+  "minutes": 30,
+  "people": 2,
+  "level": 2,
+  "color": "#d8c3a0",
+  "category": "desks",
+  "archetype": "standing-desk",
+  "confidence": "low",
+  "sources": [
+    "https://www.branchfurniture.com/products/duo-standing-desk"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top"
+    },
+    {
+      "id": "beam",
+      "label": "Crossbeam"
+    },
+    {
+      "id": "bracket",
+      "label": "Side bracket"
+    },
+    {
+      "id": "column",
+      "label": "Lifting column"
+    },
+    {
+      "id": "foot",
+      "label": "Foot"
+    },
+    {
+      "id": "ctrl",
+      "label": "Control box"
+    },
+    {
+      "id": "keypad",
+      "label": "Keypad"
+    },
+    {
+      "id": "tray",
+      "label": "Cable tray"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        122,
+        2.5,
+        61
+      ],
+      "pos": [
+        0,
+        69.75,
+        0
+      ]
+    },
+    {
+      "id": "brL",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        49
+      ],
+      "pos": [
+        -47.5,
+        67.25,
+        0
+      ]
+    },
+    {
+      "id": "brR",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        49
+      ],
+      "pos": [
+        47.5,
+        67.25,
+        0
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        88,
+        5,
+        5
+      ],
+      "pos": [
+        0,
+        64.5,
+        -2
+      ]
+    },
+    {
+      "id": "colL",
+      "part": "column",
+      "size": [
+        7,
+        62,
+        5
+      ],
+      "pos": [
+        -47.5,
+        35,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            34.1,
+            5
+          ],
+          "p": [
+            0,
+            13.95,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            31,
+            4
+          ],
+          "p": [
+            0,
+            -15.5,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colR",
+      "part": "column",
+      "size": [
+        7,
+        62,
+        5
+      ],
+      "pos": [
+        47.5,
+        35,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            34.1,
+            5
+          ],
+          "p": [
+            0,
+            13.95,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            31,
+            4
+          ],
+          "p": [
+            0,
+            -15.5,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footL",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        55
+      ],
+      "pos": [
+        -47.5,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "footR",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        55
+      ],
+      "pos": [
+        47.5,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "ctrl",
+      "part": "ctrl",
+      "size": [
+        20,
+        4,
+        9
+      ],
+      "pos": [
+        0,
+        66.5,
+        -16.5
+      ]
+    },
+    {
+      "id": "keypad",
+      "part": "keypad",
+      "size": [
+        14,
+        2.5,
+        6
+      ],
+      "pos": [
+        26,
+        67.25,
+        27.5
+      ]
+    },
+    {
+      "id": "tray",
+      "part": "tray",
+      "size": [
+        61,
+        6,
+        8
+      ],
+      "pos": [
+        0,
+        65.5,
+        -25.5
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Flip the top onto something soft, underside up. This whole desk is built upside down.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Crossbeam + brackets",
+      "say": "Slide the side brackets onto the ends of the crossbeam, set it in the middle of the top, and stretch it out until the brackets sit near the ends. Screw both brackets into the top.",
+      "add": [
+        "beam",
+        "brL",
+        "brR"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -47.5,
+              68.5,
+              16.5
+            ],
+            [
+              -47.5,
+              68.5,
+              -16.5
+            ],
+            [
+              47.5,
+              68.5,
+              16.5
+            ],
+            [
+              47.5,
+              68.5,
+              -16.5
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "2 lifting columns",
+      "say": "Set each lifting column onto its bracket, motor end against the beam, and bolt it down. Cables face the back.",
+      "add": [
+        "colL",
+        "colR"
+      ],
+      "from": [
+        0,
+        -40,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      },
+      "safety": "Columns are heavy. Lift with your legs."
+    },
+    {
+      "caption": "2 feet",
+      "say": "Bolt a foot across the end of each column, longer side toward the front. Check both feet point the same way.",
+      "add": [
+        "footL",
+        "footR"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Control box + keypad",
+      "say": "Screw the control box under the top near the back, and the keypad under the front edge on the side you prefer.",
+      "add": [
+        "ctrl",
+        "keypad"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 6
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 60
+      }
+    },
+    {
+      "caption": "Plug in the cables",
+      "say": "Plug both motor cables and the keypad cable into the control box, then tuck everything into the cable tray and screw the tray on. Do not plug into the wall yet.",
+      "add": [
+        "tray"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 160,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, lift the desk and turn it onto its feet. Lift it clear, do not pivot it on one leg.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Power on + reset",
+      "say": "Plug it in, then run the first-time reset from your manual, usually holding the down button until the desk bottoms out. Test up and down with nothing on top.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    }
+  ],
+  "done": "Done. Your DUO standing desk 48×24\" is built. Give it a proud little pat.",
+  "notes": "Brand page: 36×24, 48×24 or 58×27\" top, 28 to 47.3\" height range, 275 lb lift capacity, frameless design with reusable inserts. The real Duo has no crossbeam; ours uses the generic standing-desk build, so follow Branch's guide for the frame."
+}

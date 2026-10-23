@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "branch-duo-standing-desk",
+  "name": "DUO",
+  "title": "Standing desk 48×24\"",
+  "brand": "branch",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    122,
+    61,
+    71
+  ],
+  "worksWith": "Branch® Duo Standing Desk, 48×24\" top, 28–47.3\" height range",
+  "productUrl": "https://www.branchfurniture.com/products/duo-standing-desk",
+  "instructionsUrl": "https://www.branchfurniture.com/duo-standing-desk-assembly-guide",
+  "color": "#d8c3a0",
+  "confidence": "low",
+  "sources": [
+    "https://www.branchfurniture.com/products/duo-standing-desk"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 10
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "branch"
+  ],
+  "notes": "Brand page: 36×24, 48×24 or 58×27\" top, 28 to 47.3\" height range, 275 lb lift capacity, frameless design with reusable inserts. The real Duo has no crossbeam; ours uses the generic standing-desk build, so follow Branch's guide for the frame.",
+  "people": 2,
+  "minutes": 30
+}

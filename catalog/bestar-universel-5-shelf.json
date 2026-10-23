@@ -1,0 +1,43 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "bestar-universel-5-shelf",
+  "name": "UNIVERSEL",
+  "title": "Tall 5-shelf bookcase",
+  "brand": "bestar",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    76,
+    30.5,
+    183
+  ],
+  "worksWith": "Bestar® Universel tall 5-shelf bookcase, 30×12×72\"",
+  "productUrl": "https://www.bestar.com/products/d-uni-bck",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--I5Rohch7--/0c09ea3b31bb9e4fe23623ea8d5e608b16cff609.pdf",
+  "color": "#4a3a30",
+  "confidence": "medium",
+  "sources": [
+    "https://www.bestar.com/products/d-uni-bck"
+  ],
+  "options": {
+    "t": 1.6,
+    "top": "overlay",
+    "tt": 2,
+    "shelves": 3,
+    "fixed": [
+      0.45
+    ],
+    "base": {
+      "type": "plinth",
+      "h": 6
+    }
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "tall",
+    "bestar"
+  ],
+  "notes": "Brand page: 2 fixed and 3 adjustable shelves, two people recommended. Size from the page's assembled width, depth and height (30×12×72\"). Which shelves are fixed is our guess.",
+  "people": 2
+}
