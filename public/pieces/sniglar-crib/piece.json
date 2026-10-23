@@ -1,0 +1,1021 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/sniglar-crib.json by scripts/generate.mjs (archetype \"crib\"). Edit the spec, not this file.",
+  "slug": "sniglar-crib",
+  "name": "SNIGLAR",
+  "title": "Crib",
+  "worksWith": "IKEA® SNIGLAR crib, 137×74×84 cm (53⅞×29⅛×33⅛\")",
+  "productUrl": "https://www.ikea.com/us/en/p/sniglar-crib-beech-50248541/",
+  "size": [
+    137,
+    84,
+    74
+  ],
+  "minutes": 20,
+  "people": 1,
+  "level": 1,
+  "color": "#dcc09a",
+  "category": "kids",
+  "archetype": "crib",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/sniglar-crib-beech-50248541/"
+  ],
+  "parts": [
+    {
+      "id": "end",
+      "label": "End frame"
+    },
+    {
+      "id": "side",
+      "label": "Side frame"
+    },
+    {
+      "id": "base",
+      "label": "Mattress base"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "endL",
+      "part": "end",
+      "size": [
+        4.2,
+        84,
+        74
+      ],
+      "pos": [
+        -66.4,
+        42,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4.2,
+            84,
+            4.2
+          ],
+          "p": [
+            0,
+            0,
+            -34.9
+          ]
+        },
+        {
+          "s": [
+            4.2,
+            84,
+            4.2
+          ],
+          "p": [
+            0,
+            0,
+            34.9
+          ]
+        },
+        {
+          "s": [
+            2.4,
+            6,
+            65.6
+          ],
+          "p": [
+            0,
+            37,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.4,
+            6,
+            65.6
+          ],
+          "p": [
+            0,
+            -28,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            -28.8
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            -14.4
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            14.4
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            28.8
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "endR",
+      "part": "end",
+      "size": [
+        4.2,
+        84,
+        74
+      ],
+      "pos": [
+        66.4,
+        42,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4.2,
+            84,
+            4.2
+          ],
+          "p": [
+            0,
+            0,
+            -34.9
+          ]
+        },
+        {
+          "s": [
+            4.2,
+            84,
+            4.2
+          ],
+          "p": [
+            0,
+            0,
+            34.9
+          ]
+        },
+        {
+          "s": [
+            2.4,
+            6,
+            65.6
+          ],
+          "p": [
+            0,
+            37,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.4,
+            6,
+            65.6
+          ],
+          "p": [
+            0,
+            -28,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            -28.8
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            -14.4
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            14.4
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            1.5,
+            28.8
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "sideB",
+      "part": "side",
+      "size": [
+        128.6,
+        62,
+        2.4
+      ],
+      "pos": [
+        0,
+        43,
+        -34.9
+      ],
+      "boxes": [
+        {
+          "s": [
+            128.6,
+            4,
+            2.4
+          ],
+          "p": [
+            0,
+            29,
+            0
+          ]
+        },
+        {
+          "s": [
+            128.6,
+            4,
+            2.4
+          ],
+          "p": [
+            0,
+            -29,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -59.3,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -49.42,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -39.53,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -29.65,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -19.77,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -9.88,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            9.88,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            19.77,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            29.65,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            39.53,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            49.42,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            59.3,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "sideF",
+      "part": "side",
+      "size": [
+        128.6,
+        62,
+        2.4
+      ],
+      "pos": [
+        0,
+        43,
+        34.9
+      ],
+      "boxes": [
+        {
+          "s": [
+            128.6,
+            4,
+            2.4
+          ],
+          "p": [
+            0,
+            29,
+            0
+          ]
+        },
+        {
+          "s": [
+            128.6,
+            4,
+            2.4
+          ],
+          "p": [
+            0,
+            -29,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -59.3,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -49.42,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -39.53,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -29.65,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -19.77,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            -9.88,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            9.88,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            19.77,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            29.65,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            39.53,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            49.42,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            2.2,
+            54,
+            2.2
+          ],
+          "p": [
+            59.3,
+            0,
+            0
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "base",
+      "part": "base",
+      "size": [
+        127.6,
+        2,
+        64.6
+      ],
+      "pos": [
+        0,
+        37,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            127.6,
+            2,
+            3
+          ],
+          "p": [
+            0,
+            0,
+            -30.8
+          ]
+        },
+        {
+          "s": [
+            127.6,
+            2,
+            3
+          ],
+          "p": [
+            0,
+            0,
+            30.8
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            -60.8,
+            0.2,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            -43.43,
+            0.2,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            -26.06,
+            0.2,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            -8.69,
+            0.2,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            8.69,
+            0.2,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            26.06,
+            0.2,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            43.43,
+            0.2,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            1.2,
+            61.6
+          ],
+          "p": [
+            60.8,
+            0.2,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "One end + back side",
+      "say": "Lay out every part and count them, because cribs must be complete. Stand one end frame up and bolt the back side frame to it, two bolts.",
+      "add": [
+        "endL",
+        "sideB"
+      ],
+      "from": [
+        0,
+        0,
+        -35
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+x",
+          "at": [
+            [
+              -64.3,
+              22.33,
+              -34.9
+            ],
+            [
+              -64.3,
+              63.67,
+              -34.9
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Mattress base",
+      "say": "Choose the base height. Use the high position, about 37 centimeters, for a newborn, and the low one as soon as your baby can sit up. Screw the base to the end frame.",
+      "add": [
+        "base"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 45
+      },
+      "safety": "Lower the base once baby can sit up."
+    },
+    {
+      "caption": "Front side",
+      "say": "Bolt the front side frame to the same end frame. Bars facing in, smooth side out.",
+      "add": [
+        "sideF"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+x",
+          "at": [
+            [
+              -64.3,
+              22.33,
+              34.9
+            ],
+            [
+              -64.3,
+              63.67,
+              34.9
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Last end. 4 bolts.",
+      "say": "Close the box with the second end frame. Four bolts, then screw the base to this end too.",
+      "add": [
+        "endR"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-x",
+          "at": [
+            [
+              64.3,
+              22.33,
+              34.9
+            ],
+            [
+              64.3,
+              63.67,
+              34.9
+            ],
+            [
+              64.3,
+              22.33,
+              -34.9
+            ],
+            [
+              64.3,
+              63.67,
+              -34.9
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": -30,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Tighten + test",
+      "say": "Tighten every bolt, then push hard on each corner. Nothing should wobble or gap. Check the bolts again every few months.",
+      "view": {
+        "az": 20,
+        "el": 35
+      },
+      "safety": "Never use it with a missing or loose part."
+    }
+  ],
+  "done": "The crib is built. Do one more round of bolt checks, then make it cozy. Congratulations."
+}

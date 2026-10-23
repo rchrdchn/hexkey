@@ -1,0 +1,368 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/lagkapten-adils.json by scripts/generate.mjs (archetype \"table\"). Edit the spec, not this file.",
+  "slug": "lagkapten-adils",
+  "name": "LAGKAPTEN / ADILS",
+  "title": "Desk",
+  "worksWith": "IKEA® LAGKAPTEN / ADILS desk, 120×60×73 cm (47¼×23⅝×28¾\")",
+  "productUrl": "https://www.ikea.com/us/en/p/lagkapten-adils-desk-white-s29416758/",
+  "size": [
+    120,
+    73,
+    60
+  ],
+  "minutes": 25,
+  "people": 2,
+  "level": 2,
+  "color": "#f3efe8",
+  "category": "desks",
+  "archetype": "table",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/us/en/p/lagkapten-adils-desk-white-s29416758/"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    },
+    {
+      "id": "plate",
+      "label": "Mounting plate"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        120,
+        3.6,
+        60
+      ],
+      "pos": [
+        0,
+        71.2,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        3.6,
+        69.4,
+        3.6
+      ],
+      "pos": [
+        -54.2,
+        34.7,
+        24.2
+      ],
+      "shape": "cyl"
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        3.6,
+        69.4,
+        3.6
+      ],
+      "pos": [
+        54.2,
+        34.7,
+        24.2
+      ],
+      "shape": "cyl"
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        3.6,
+        69.4,
+        3.6
+      ],
+      "pos": [
+        54.2,
+        34.7,
+        -24.2
+      ],
+      "shape": "cyl"
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        3.6,
+        69.4,
+        3.6
+      ],
+      "pos": [
+        -54.2,
+        34.7,
+        -24.2
+      ],
+      "shape": "cyl"
+    },
+    {
+      "id": "plate1",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        -54.2,
+        69.2,
+        24.2
+      ]
+    },
+    {
+      "id": "plate2",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        54.2,
+        69.2,
+        24.2
+      ]
+    },
+    {
+      "id": "plate3",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        54.2,
+        69.2,
+        -24.2
+      ]
+    },
+    {
+      "id": "plate4",
+      "part": "plate",
+      "size": [
+        9,
+        0.4,
+        9
+      ],
+      "pos": [
+        -54.2,
+        69.2,
+        -24.2
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Lay the top upside down on a rug or the flattened box, so the good side stays scratch-free.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "4 mounting plates",
+      "say": "Screw a mounting plate onto each corner, four screws each, using the pre-drilled holes. These are what the legs twist into.",
+      "add": [
+        "plate1",
+        "plate2",
+        "plate3",
+        "plate4"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -57.2,
+              69.4,
+              21.2
+            ],
+            [
+              -51.2,
+              69.4,
+              21.2
+            ],
+            [
+              -51.2,
+              69.4,
+              27.2
+            ],
+            [
+              -57.2,
+              69.4,
+              27.2
+            ],
+            [
+              51.2,
+              69.4,
+              21.2
+            ],
+            [
+              57.2,
+              69.4,
+              21.2
+            ],
+            [
+              57.2,
+              69.4,
+              27.2
+            ],
+            [
+              51.2,
+              69.4,
+              27.2
+            ],
+            [
+              51.2,
+              69.4,
+              -27.2
+            ],
+            [
+              57.2,
+              69.4,
+              -27.2
+            ],
+            [
+              57.2,
+              69.4,
+              -21.2
+            ],
+            [
+              51.2,
+              69.4,
+              -21.2
+            ],
+            [
+              -57.2,
+              69.4,
+              -27.2
+            ],
+            [
+              -51.2,
+              69.4,
+              -27.2
+            ],
+            [
+              -51.2,
+              69.4,
+              -21.2
+            ],
+            [
+              -57.2,
+              69.4,
+              -21.2
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "2 legs on",
+      "say": "Twist on the first two legs, clockwise, until they are snug and straight. Hand tight is right.",
+      "add": [
+        "leg1",
+        "leg2"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Last 2 legs",
+      "say": "Same with the last two legs.",
+      "add": [
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": -30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, turn it right side up. Lift it, don't pivot on the legs, or they can snap off.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Level the feet",
+      "say": "Rock the table gently. If it wobbles, twist the adjustable foot on the short leg until it sits flat.",
+      "view": {
+        "az": 20,
+        "el": 10,
+        "tight": true
+      }
+    }
+  ],
+  "done": "Desk done. Plug in, sit down, and get something great made."
+}

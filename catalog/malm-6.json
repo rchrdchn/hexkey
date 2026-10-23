@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "malm-6",
+  "name": "MALM",
+  "title": "Chest of 6 drawers",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    160,
+    48,
+    78
+  ],
+  "worksWith": "IKEA® MALM chest of 6 drawers, 160×48×78 cm (63×18⅞×30¾\")",
+  "productUrl": "https://www.ikea.com/de/en/p/malm-chest-of-6-drawers-white-60403584/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/de/en/p/malm-chest-of-6-drawers-white-60403584/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "none"
+    }
+  },
+  "tags": [
+    "dresser",
+    "wide",
+    "big"
+  ]
+}

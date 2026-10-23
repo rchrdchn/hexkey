@@ -1,0 +1,593 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/malm-bed-queen.json by scripts/generate.mjs (archetype \"bed\"). Edit the spec, not this file.",
+  "slug": "malm-bed-queen",
+  "name": "MALM",
+  "title": "Bed frame, Queen",
+  "worksWith": "IKEA® MALM bed frame, 168×211×100 cm (66⅛×83⅛×39⅜\")",
+  "productUrl": "https://www.ikea.com/us/en/p/malm-bed-frame-white-s19931605/",
+  "size": [
+    168,
+    100,
+    211
+  ],
+  "minutes": 30,
+  "people": 2,
+  "level": 2,
+  "color": "#f3efe8",
+  "category": "bedroom",
+  "archetype": "bed",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/malm-bed-frame-white-s19931605/"
+  ],
+  "parts": [
+    {
+      "id": "head",
+      "label": "Headboard"
+    },
+    {
+      "id": "foot",
+      "label": "Footboard"
+    },
+    {
+      "id": "rail",
+      "label": "Side rail"
+    },
+    {
+      "id": "ledge",
+      "label": "Slat ledge"
+    },
+    {
+      "id": "beam",
+      "label": "Center beam"
+    },
+    {
+      "id": "slats",
+      "label": "Slat roll"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "head",
+      "part": "head",
+      "size": [
+        168,
+        100,
+        4
+      ],
+      "pos": [
+        0,
+        50,
+        -103.5
+      ]
+    },
+    {
+      "id": "foot",
+      "part": "foot",
+      "size": [
+        168,
+        38,
+        4
+      ],
+      "pos": [
+        0,
+        19,
+        103.5
+      ]
+    },
+    {
+      "id": "railL",
+      "part": "rail",
+      "size": [
+        2.4,
+        22,
+        203
+      ],
+      "pos": [
+        -82.8,
+        32,
+        0
+      ]
+    },
+    {
+      "id": "railR",
+      "part": "rail",
+      "size": [
+        2.4,
+        22,
+        203
+      ],
+      "pos": [
+        82.8,
+        32,
+        0
+      ]
+    },
+    {
+      "id": "ledgeL",
+      "part": "ledge",
+      "size": [
+        3,
+        3,
+        201
+      ],
+      "pos": [
+        -80.1,
+        23,
+        0
+      ]
+    },
+    {
+      "id": "ledgeR",
+      "part": "ledge",
+      "size": [
+        3,
+        3,
+        201
+      ],
+      "pos": [
+        80.1,
+        23,
+        0
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        4,
+        24.5,
+        201
+      ],
+      "pos": [
+        0,
+        12.25,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            6,
+            201
+          ],
+          "p": [
+            0,
+            9.25,
+            0
+          ]
+        },
+        {
+          "s": [
+            4,
+            18.5,
+            4
+          ],
+          "p": [
+            0,
+            -3,
+            0
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "slats",
+      "part": "slats",
+      "size": [
+        159.6,
+        0.9,
+        199
+      ],
+      "pos": [
+        0,
+        24.95,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -96.5
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -84.44
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -72.37
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -60.31
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -48.25
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -36.19
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -24.12
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -12.06
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            12.06
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            24.13
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            36.19
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            48.25
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            60.31
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            72.38
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            84.44
+          ]
+        },
+        {
+          "s": [
+            159.6,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            96.5
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Headboard first",
+      "say": "Build it in the room it will live in. Stand the headboard where the bed will go, a hand-width from the wall.",
+      "add": [
+        "head"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 30,
+        "el": 25
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Side rails. 4 bolts.",
+      "say": "Hold a side rail against the headboard and bolt it on, two bolts. Then the other rail. Keep the ledge grooves facing in.",
+      "add": [
+        "railL",
+        "railR"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+z",
+          "at": [
+            [
+              -82.8,
+              26.5,
+              -101.5
+            ],
+            [
+              -82.8,
+              37.5,
+              -101.5
+            ],
+            [
+              82.8,
+              26.5,
+              -101.5
+            ],
+            [
+              82.8,
+              37.5,
+              -101.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 30
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Footboard. 4 bolts.",
+      "say": "Bring in the footboard and bolt both rails to it. Leave the bolts a little loose until the frame is square.",
+      "add": [
+        "foot"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-z",
+          "at": [
+            [
+              -82.8,
+              26.5,
+              101.5
+            ],
+            [
+              -82.8,
+              37.5,
+              101.5
+            ],
+            [
+              82.8,
+              26.5,
+              101.5
+            ],
+            [
+              82.8,
+              37.5,
+              101.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 140,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Square, then tighten",
+      "say": "Measure corner to corner both ways. When the two diagonals match, the frame is square. Now tighten every bolt.",
+      "view": {
+        "az": 0,
+        "el": 80
+      }
+    },
+    {
+      "caption": "Slat ledges",
+      "say": "Screw a slat ledge along the inside of each rail, flush with the bottom of the groove.",
+      "add": [
+        "ledgeL",
+        "ledgeR"
+      ],
+      "from": [
+        0,
+        25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 16
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Center beam",
+      "say": "Hang the center beam between the headboard and the footboard, then twist its support leg down until it touches the floor. The middle needs support too.",
+      "add": [
+        "beam"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Roll out 17 slats",
+      "say": "Roll out all seventeen slats like a rug, curve up, and lock the ends to the ledges.",
+      "add": [
+        "slats"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    }
+  ],
+  "done": "Done. Your MALM bed frame, queen is built. Give it a proud little pat.",
+  "notes": "Slats are usually sold separately; the slat step shows a typical roll-out slat base."
+}

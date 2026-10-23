@@ -1,0 +1,59 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hemnes-8-drawer",
+  "name": "HEMNES",
+  "title": "8-drawer dresser",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    160,
+    50,
+    96
+  ],
+  "worksWith": "IKEA® HEMNES 8-drawer dresser, 160×50×96 cm (63×19⅝×37¾\")",
+  "productUrl": "https://www.ikea.com/us/en/p/hemnes-8-drawer-dresser-white-stain-10576191/",
+  "color": "#eee8dc",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/hemnes-8-drawer-dresser-white-stain-10576191/",
+    "https://www.dimensions.com/element/hemnes-8-drawer-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2,
+        "h": 0.7
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      }
+    ],
+    "top": "overlay",
+    "tt": 2.8,
+    "overhang": 1.5,
+    "t": 2,
+    "base": {
+      "type": "apron",
+      "h": 11,
+      "leg": 5
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "wide",
+    "big",
+    "solid wood"
+  ],
+  "notes": "Assumes a top row of two shallower drawers over a 2×3 grid."
+}

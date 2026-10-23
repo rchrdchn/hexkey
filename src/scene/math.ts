@@ -2,11 +2,11 @@ import * as THREE from 'three';
 import type { Piece, V3 } from '../types';
 
 export const CM = 0.01; // data is in cm, scene in meters
-const D2R = Math.PI / 180;
+export const D2R = Math.PI / 180;
 
-export function pieceBounds(p: Piece) {
+export function pieceBounds(p: Pick<Piece, 'objects' | 'env'>) {
   const b = new THREE.Box3();
-  p.objects.forEach((o) => {
+  [...p.objects, ...(p.env ?? [])].forEach((o) => {
     const h = new THREE.Vector3(...o.size).multiplyScalar(0.5);
     const c = new THREE.Vector3(...o.pos);
     b.expandByPoint(c.clone().sub(h)).expandByPoint(c.clone().add(h));
@@ -43,7 +43,7 @@ export function objectLocal(o: { pos: V3; rot?: V3 }) {
 
 /** "Unboxed" flat lay: every panel lies flat on the floor to the right of the build area. World matrices (meters). */
 export function flatLayout(p: Piece) {
-  const b = pieceBounds(p);
+  const b = pieceBounds({ objects: p.objects });
   const reach = Math.max(b.max.x - b.min.x, b.max.y - b.min.y, b.max.z - b.min.z) / 2; // build area radius-ish
   const order = [...p.objects].sort((a, z) => (p.addedAt[a.id] ?? 99) - (p.addedAt[z.id] ?? 99));
   const out: Record<string, THREE.Matrix4> = {};

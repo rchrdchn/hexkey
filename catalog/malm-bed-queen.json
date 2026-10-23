@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "malm-bed-queen",
+  "name": "MALM",
+  "title": "Bed frame, Queen",
+  "archetype": "bed",
+  "category": "bedroom",
+  "size": [
+    168,
+    211,
+    100
+  ],
+  "worksWith": "IKEA® MALM bed frame, 168×211×100 cm (66⅛×83⅛×39⅜\")",
+  "productUrl": "https://www.ikea.com/us/en/p/malm-bed-frame-white-s19931605/",
+  "color": "#f3efe8",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/malm-bed-frame-white-s19931605/"
+  ],
+  "options": {
+    "footboard": 38,
+    "clear": 21,
+    "railH": 22,
+    "slats": 17
+  },
+  "tags": [
+    "bed",
+    "queen",
+    "big"
+  ],
+  "people": 2,
+  "notes": "Slats are usually sold separately; the slat step shows a typical roll-out slat base."
+}

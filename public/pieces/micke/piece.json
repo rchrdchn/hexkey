@@ -1,0 +1,563 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/micke.json by scripts/generate.mjs (archetype \"desk\"). Edit the spec, not this file.",
+  "slug": "micke",
+  "name": "MICKE",
+  "title": "Desk",
+  "worksWith": "IKEA® MICKE desk, 105×50×75 cm (41⅜×19⅝×29½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/micke-desk-white-80213074/",
+  "size": [
+    105,
+    75,
+    50
+  ],
+  "minutes": 30,
+  "people": 1,
+  "level": 2,
+  "color": "#f3efe8",
+  "category": "desks",
+  "archetype": "desk",
+  "confidence": "low",
+  "sources": [
+    "https://www.ikea.com/us/en/p/micke-desk-white-80213074/"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "top",
+      "label": "Desk top"
+    },
+    {
+      "id": "modesty",
+      "label": "Back panel"
+    },
+    {
+      "id": "tpanel",
+      "label": "Tower panel"
+    },
+    {
+      "id": "front",
+      "label": "Drawer front"
+    },
+    {
+      "id": "dbox",
+      "label": "Drawer box part"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        73,
+        50
+      ],
+      "pos": [
+        -51.7,
+        36.5,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        73,
+        50
+      ],
+      "pos": [
+        51.7,
+        36.5,
+        0
+      ]
+    },
+    {
+      "id": "sideM",
+      "part": "side",
+      "size": [
+        1.6,
+        73,
+        50
+      ],
+      "pos": [
+        18.3,
+        36.5,
+        0
+      ]
+    },
+    {
+      "id": "tBottom",
+      "part": "tpanel",
+      "size": [
+        31.8,
+        1.6,
+        49
+      ],
+      "pos": [
+        35,
+        8,
+        0
+      ]
+    },
+    {
+      "id": "tShelf",
+      "part": "tpanel",
+      "size": [
+        31.8,
+        1.6,
+        49
+      ],
+      "pos": [
+        35,
+        57,
+        0
+      ]
+    },
+    {
+      "id": "modesty",
+      "part": "modesty",
+      "size": [
+        68.4,
+        30,
+        1.6
+      ],
+      "pos": [
+        -16.7,
+        55,
+        -22
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        105,
+        2,
+        50
+      ],
+      "pos": [
+        0,
+        74,
+        0
+      ]
+    },
+    {
+      "id": "dFront",
+      "part": "front",
+      "size": [
+        31.5,
+        12,
+        1.6
+      ],
+      "pos": [
+        35,
+        65,
+        24.2
+      ]
+    },
+    {
+      "id": "dBox",
+      "part": "dbox",
+      "size": [
+        29.2,
+        9,
+        42
+      ],
+      "pos": [
+        35,
+        64.5,
+        -2.4
+      ],
+      "boxes": [
+        {
+          "s": [
+            1.2,
+            9,
+            42
+          ],
+          "p": [
+            -14,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            1.2,
+            9,
+            42
+          ],
+          "p": [
+            14,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            26.8,
+            8,
+            1.2
+          ],
+          "p": [
+            0,
+            0.5,
+            -20.4
+          ]
+        },
+        {
+          "s": [
+            26.8,
+            0.3,
+            41
+          ],
+          "p": [
+            0,
+            -3.9,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Tower sides",
+      "say": "Start with the drawer tower. Lay the two tower sides on their edges, holes facing each other, and screw in the cam pins.",
+      "add": [
+        "sideR",
+        "sideM"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              50.9,
+              8,
+              19
+            ],
+            [
+              50.9,
+              8,
+              -19
+            ],
+            [
+              50.9,
+              57,
+              19
+            ],
+            [
+              50.9,
+              57,
+              -19
+            ]
+          ]
+        },
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              19.1,
+              8,
+              19
+            ],
+            [
+              19.1,
+              8,
+              -19
+            ],
+            [
+              19.1,
+              57,
+              19
+            ],
+            [
+              19.1,
+              57,
+              -19
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Tower shelves. Lock 8.",
+      "say": "Fit the two tower panels between the sides, one low and one under the drawer. Eight cam locks, all turned clockwise.",
+      "add": [
+        "tBottom",
+        "tShelf"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              22.5,
+              8.8,
+              19
+            ],
+            [
+              22.5,
+              8.8,
+              -19
+            ],
+            [
+              47.5,
+              8.8,
+              19
+            ],
+            [
+              47.5,
+              8.8,
+              -19
+            ],
+            [
+              22.5,
+              57.8,
+              19
+            ],
+            [
+              22.5,
+              57.8,
+              -19
+            ],
+            [
+              47.5,
+              57.8,
+              19
+            ],
+            [
+              47.5,
+              57.8,
+              -19
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Left side + back",
+      "say": "Connect the left side panel to the tower with the long back panel. Dowels first, then cam locks at both ends.",
+      "add": [
+        "sideL",
+        "modesty"
+      ],
+      "from": [
+        -35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -50.9,
+              48,
+              -22
+            ],
+            [
+              -50.9,
+              62,
+              -22
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+z",
+          "at": [
+            [
+              -47.5,
+              55,
+              -21.2
+            ],
+            [
+              14.1,
+              55,
+              -21.2
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 140,
+        "el": 25
+      },
+      "safety": "Two people make this easier."
+    },
+    {
+      "caption": "Desk top on",
+      "say": "Tap dowels into the top edges, set the desk top on, and screw it down from underneath through the tower and the side.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -51.7,
+              73,
+              19
+            ],
+            [
+              -51.7,
+              73,
+              -19
+            ],
+            [
+              51.7,
+              73,
+              19
+            ],
+            [
+              51.7,
+              73,
+              -19
+            ],
+            [
+              18.3,
+              73,
+              19
+            ],
+            [
+              18.3,
+              73,
+              -19
+            ]
+          ]
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 6
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Build the drawer",
+      "say": "Build the drawer box: sides onto the front, bottom slides into the grooves, back panel screwed on.",
+      "add": [
+        "dFront",
+        "dBox"
+      ],
+      "from": [
+        0,
+        0,
+        45
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "count": 4
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Use the wall fitting to tie the desk to the wall behind it. It stops the desk from tipping if someone leans on an open drawer.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              67,
+              -22.8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your MICKE desk is built. Give it a proud little pat.",
+  "notes": "Panel layout simplified: one drawer over an open compartment on the right."
+}

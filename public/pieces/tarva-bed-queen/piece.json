@@ -1,0 +1,693 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/tarva-bed-queen.json by scripts/generate.mjs (archetype \"bed\"). Edit the spec, not this file.",
+  "slug": "tarva-bed-queen",
+  "name": "TARVA",
+  "title": "Bed frame, Queen",
+  "worksWith": "IKEA® TARVA bed frame, 160×209×92 cm (63×82¼×36¼\")",
+  "productUrl": "https://www.ikea.com/us/en/p/tarva-bed-frame-pine-90249949/",
+  "size": [
+    160,
+    92,
+    211
+  ],
+  "minutes": 30,
+  "people": 2,
+  "level": 2,
+  "color": "#e2c595",
+  "category": "bedroom",
+  "archetype": "bed",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/tarva-bed-frame-pine-90249949/"
+  ],
+  "parts": [
+    {
+      "id": "head",
+      "label": "Headboard"
+    },
+    {
+      "id": "foot",
+      "label": "Footboard"
+    },
+    {
+      "id": "rail",
+      "label": "Side rail"
+    },
+    {
+      "id": "ledge",
+      "label": "Slat ledge"
+    },
+    {
+      "id": "beam",
+      "label": "Center beam"
+    },
+    {
+      "id": "slats",
+      "label": "Slat roll"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "head",
+      "part": "head",
+      "size": [
+        160,
+        92,
+        5
+      ],
+      "pos": [
+        0,
+        46,
+        -103
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            92,
+            7
+          ],
+          "p": [
+            -76.5,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            92,
+            7
+          ],
+          "p": [
+            76.5,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            146,
+            32.2,
+            1.8
+          ],
+          "p": [
+            0,
+            24.6,
+            0
+          ]
+        },
+        {
+          "s": [
+            146,
+            14,
+            1.8
+          ],
+          "p": [
+            0,
+            -19,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "foot",
+      "part": "foot",
+      "size": [
+        160,
+        32,
+        5
+      ],
+      "pos": [
+        0,
+        16,
+        103
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            32,
+            7
+          ],
+          "p": [
+            -76.5,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            32,
+            7
+          ],
+          "p": [
+            76.5,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            146,
+            11.2,
+            1.8
+          ],
+          "p": [
+            0,
+            6.6,
+            0
+          ]
+        },
+        {
+          "s": [
+            146,
+            14,
+            1.8
+          ],
+          "p": [
+            0,
+            11,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railL",
+      "part": "rail",
+      "size": [
+        2.4,
+        14,
+        203
+      ],
+      "pos": [
+        -76.5,
+        27,
+        0
+      ]
+    },
+    {
+      "id": "railR",
+      "part": "rail",
+      "size": [
+        2.4,
+        14,
+        203
+      ],
+      "pos": [
+        76.5,
+        27,
+        0
+      ]
+    },
+    {
+      "id": "ledgeL",
+      "part": "ledge",
+      "size": [
+        3,
+        3,
+        201
+      ],
+      "pos": [
+        -73.8,
+        22,
+        0
+      ]
+    },
+    {
+      "id": "ledgeR",
+      "part": "ledge",
+      "size": [
+        3,
+        3,
+        201
+      ],
+      "pos": [
+        73.8,
+        22,
+        0
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        4,
+        23.5,
+        201
+      ],
+      "pos": [
+        0,
+        11.75,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            6,
+            201
+          ],
+          "p": [
+            0,
+            8.75,
+            0
+          ]
+        },
+        {
+          "s": [
+            4,
+            17.5,
+            4
+          ],
+          "p": [
+            0,
+            -3,
+            0
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "slats",
+      "part": "slats",
+      "size": [
+        147,
+        0.9,
+        199
+      ],
+      "pos": [
+        0,
+        23.95,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -96.5
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -84.44
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -72.37
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -60.31
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -48.25
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -36.19
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -24.12
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            -12.06
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            12.06
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            24.13
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            36.19
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            48.25
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            60.31
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            72.38
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            84.44
+          ]
+        },
+        {
+          "s": [
+            147,
+            0.9,
+            6.3
+          ],
+          "p": [
+            0,
+            0,
+            96.5
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Headboard first",
+      "say": "Build it in the room it will live in. Stand the headboard where the bed will go, a hand-width from the wall.",
+      "add": [
+        "head"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 30,
+        "el": 25
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Side rails. 4 bolts.",
+      "say": "Hold a side rail against the headboard and bolt it on, two bolts. Then the other rail. Keep the ledge grooves facing in.",
+      "add": [
+        "railL",
+        "railR"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+z",
+          "at": [
+            [
+              -76.5,
+              23.5,
+              -101.5
+            ],
+            [
+              -76.5,
+              30.5,
+              -101.5
+            ],
+            [
+              76.5,
+              23.5,
+              -101.5
+            ],
+            [
+              76.5,
+              30.5,
+              -101.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 30
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Footboard. 4 bolts.",
+      "say": "Bring in the footboard and bolt both rails to it. Leave the bolts a little loose until the frame is square.",
+      "add": [
+        "foot"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-z",
+          "at": [
+            [
+              -76.5,
+              23.5,
+              101.5
+            ],
+            [
+              -76.5,
+              30.5,
+              101.5
+            ],
+            [
+              76.5,
+              23.5,
+              101.5
+            ],
+            [
+              76.5,
+              30.5,
+              101.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 140,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Square, then tighten",
+      "say": "Measure corner to corner both ways. When the two diagonals match, the frame is square. Now tighten every bolt.",
+      "view": {
+        "az": 0,
+        "el": 80
+      }
+    },
+    {
+      "caption": "Slat ledges",
+      "say": "Screw a slat ledge along the inside of each rail, flush with the bottom of the groove.",
+      "add": [
+        "ledgeL",
+        "ledgeR"
+      ],
+      "from": [
+        0,
+        25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 16
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Center beam",
+      "say": "Hang the center beam between the headboard and the footboard, then twist its support leg down until it touches the floor. The middle needs support too.",
+      "add": [
+        "beam"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Roll out 17 slats",
+      "say": "Unroll the slats across the ledges, curved side up, and space them evenly. Seventeen slats, clipped or screwed at the ends.",
+      "add": [
+        "slats"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    }
+  ],
+  "done": "Done. Your TARVA bed frame, queen is built. Give it a proud little pat.",
+  "notes": "Slats are usually sold separately; the slat step shows a typical roll-out slat base."
+}

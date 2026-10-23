@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "kallax-2x4",
+  "name": "KALLAX",
+  "title": "Shelf unit 2×4",
+  "archetype": "cubes",
+  "category": "shelving",
+  "size": [
+    77,
+    39,
+    147
+  ],
+  "worksWith": "IKEA® KALLAX shelf unit, 77×39×147 cm (30⅜×15⅜×57⅞\")",
+  "productUrl": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-20631663/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-20631663/"
+  ],
+  "options": {
+    "cols": 2,
+    "rows": 4
+  },
+  "tags": [
+    "cubes",
+    "records",
+    "tall"
+  ]
+}

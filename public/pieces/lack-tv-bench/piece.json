@@ -1,0 +1,305 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/lack-tv-bench.json by scripts/generate.mjs (archetype \"table\"). Edit the spec, not this file.",
+  "slug": "lack-tv-bench",
+  "name": "LACK",
+  "title": "TV bench",
+  "worksWith": "IKEA® LACK TV bench, 90×26×45 cm (35⅜×10¼×17¾\")",
+  "productUrl": "https://www.ikea.com/ca/en/p/lack-tv-bench-black-90243297/",
+  "size": [
+    90,
+    45,
+    26
+  ],
+  "minutes": 20,
+  "people": 1,
+  "level": 1,
+  "color": "#3b3734",
+  "category": "tables",
+  "archetype": "table",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/ca/en/p/lack-tv-bench-black-90243297/"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Top"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "dbolt",
+      "label": "Double-ended screw",
+      "kind": "bolt"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        90,
+        5,
+        26
+      ],
+      "pos": [
+        0,
+        42.5,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        5,
+        40,
+        5
+      ],
+      "pos": [
+        -42.5,
+        20,
+        10.5
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        5,
+        40,
+        5
+      ],
+      "pos": [
+        42.5,
+        20,
+        10.5
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        5,
+        40,
+        5
+      ],
+      "pos": [
+        42.5,
+        20,
+        -10.5
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        5,
+        40,
+        5
+      ],
+      "pos": [
+        -42.5,
+        20,
+        -10.5
+      ]
+    },
+    {
+      "id": "shelf",
+      "part": "shelf",
+      "size": [
+        80,
+        1.6,
+        25.4
+      ],
+      "pos": [
+        0,
+        13,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Lay the top upside down on a rug or the flattened box, so the good side stays scratch-free.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "4 double screws",
+      "say": "Twist a double-ended screw into each corner hole by hand, halfway in. The other half is for the leg.",
+      "hardware": [
+        {
+          "id": "dbolt",
+          "axis": "-y",
+          "at": [
+            [
+              -42.5,
+              40,
+              10.5
+            ],
+            [
+              42.5,
+              40,
+              10.5
+            ],
+            [
+              42.5,
+              40,
+              -10.5
+            ],
+            [
+              -42.5,
+              40,
+              -10.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "2 legs on",
+      "say": "Twist on the first two legs, clockwise, until they are snug and straight. Hand tight is right.",
+      "add": [
+        "leg1",
+        "leg2"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Last 2 legs",
+      "say": "Same with the last two legs.",
+      "add": [
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": -30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Shelf. 8 screws.",
+      "say": "Slide the lower shelf between the legs and screw it in, two screws through each leg. Keep the shelf level as you go.",
+      "add": [
+        "shelf"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -40,
+              13,
+              9.3
+            ],
+            [
+              -40,
+              13,
+              -9.3
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              40,
+              13,
+              9.3
+            ],
+            [
+              40,
+              13,
+              -9.3
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "Turn it right side up. Lift it, don't drag it on two legs.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      }
+    }
+  ],
+  "done": "Done. Your LACK tv bench is built. Give it a proud little pat."
+}

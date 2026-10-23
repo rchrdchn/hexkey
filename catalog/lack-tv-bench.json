@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "lack-tv-bench",
+  "name": "LACK",
+  "title": "TV bench",
+  "archetype": "table",
+  "category": "tables",
+  "size": [
+    90,
+    26,
+    45
+  ],
+  "worksWith": "IKEA® LACK TV bench, 90×26×45 cm (35⅜×10¼×17¾\")",
+  "productUrl": "https://www.ikea.com/ca/en/p/lack-tv-bench-black-90243297/",
+  "color": "#3b3734",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/ca/en/p/lack-tv-bench-black-90243297/"
+  ],
+  "options": {
+    "tt": 5,
+    "leg": {
+      "s": 5,
+      "inset": 0
+    },
+    "shelf": {
+      "y": 13,
+      "t": 1.6
+    },
+    "topLabel": "Top"
+  },
+  "tags": [
+    "tv",
+    "media",
+    "living room"
+  ]
+}

@@ -40,6 +40,8 @@ export function HwIcon({ kind, px = 44 }: { kind: HwKind; px?: number }) {
       case 'nail': return <g transform="rotate(-35 32 32)"><rect x="22" y="6" width="20" height="5" rx="2" fill={M} /><path d="M30 11h4v40l-2 6-2-6z" fill={M} /></g>;
       case 'bolt': return <g transform="rotate(-35 32 32)"><rect x="27" y="4" width="10" height="56" rx="3" fill={M} /><rect x="23" y="29" width="18" height="6" rx="2" fill={D} /><path d="M27 10h10M27 16h10M27 22h10M27 42h10M27 48h10M27 54h10" stroke={D} strokeWidth="1.6" /></g>;
       case 'shelfpin': return <g><rect x="14" y="26" width="22" height="12" rx="3" fill={M} /><rect x="30" y="18" width="20" height="28" rx="3" fill={M} stroke={D} strokeWidth="2" /></g>;
+      case 'hinge': return <g><circle cx="20" cy="32" r="12" fill="#d9dde2" stroke={M} strokeWidth="3" /><rect x="26" y="26" width="30" height="12" rx="3" fill={M} /><circle cx="48" cy="32" r="2.5" fill={D} /></g>;
+      case 'knob': return <g><rect x="28" y="36" width="8" height="18" rx="2" fill={D} /><circle cx="32" cy="26" r="15" fill="#e6e1d8" stroke={M} strokeWidth="3" /></g>;
       case 'bracket': return <g><path d="M12 20h40v10H22v24H12z" fill="#d9dde2" stroke={M} strokeWidth="3" strokeLinejoin="round" /><circle cx="40" cy="25" r="3" fill={D} /><circle cx="17" cy="44" r="3" fill={D} /></g>;
     }
   })();

@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ingo",
+  "name": "INGO",
+  "title": "Table",
+  "archetype": "apron-table",
+  "category": "tables",
+  "size": [
+    120,
+    75,
+    73
+  ],
+  "worksWith": "IKEA® INGO table, 120×75×73 cm (47¼×29½×28¾\")",
+  "productUrl": "https://www.ikea.com/sg/en/p/ingo-bord-furu-14630009/",
+  "color": "#e2c595",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/sg/en/p/ingo-bord-furu-14630009/"
+  ],
+  "options": {
+    "tt": 2.8,
+    "leg": 5.5,
+    "apron": 8
+  },
+  "tags": [
+    "dining",
+    "pine",
+    "kitchen"
+  ],
+  "people": 2
+}

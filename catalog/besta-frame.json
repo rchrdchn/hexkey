@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "besta-frame",
+  "name": "BESTÅ",
+  "title": "Frame",
+  "archetype": "bookcase",
+  "category": "storage",
+  "size": [
+    60,
+    40,
+    64
+  ],
+  "worksWith": "IKEA® BESTÅ frame, 60×40×64 cm (23⅝×15¾×25¼\")",
+  "productUrl": "https://www.ikea.com/us/en/p/besta-frame-white-30245850/",
+  "color": "#f3efe8",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/besta-frame-white-30245850/"
+  ],
+  "options": {
+    "t": 1.8,
+    "top": "inset",
+    "base": {
+      "type": "none"
+    },
+    "shelves": 1,
+    "lying": false
+  },
+  "tags": [
+    "tv",
+    "cabinet",
+    "media"
+  ],
+  "notes": "Doors, hinges and legs are sold separately and are not part of this build."
+}

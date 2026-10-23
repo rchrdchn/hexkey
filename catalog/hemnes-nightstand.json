@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hemnes-nightstand",
+  "name": "HEMNES",
+  "title": "Nightstand",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    46,
+    35,
+    70
+  ],
+  "worksWith": "IKEA® HEMNES nightstand, 46×35×70 cm (18⅛×13¾×27½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/hemnes-nightstand-white-stain-20200456/",
+  "color": "#eee8dc",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/hemnes-nightstand-white-stain-20200456/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2.2,
+    "overhang": 1,
+    "t": 1.8,
+    "base": {
+      "type": "apron",
+      "h": 16,
+      "leg": 4.5
+    },
+    "knobs": 1,
+    "anchor": false
+  },
+  "tags": [
+    "nightstand",
+    "bedside",
+    "solid wood"
+  ]
+}

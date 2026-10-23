@@ -1,0 +1,308 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/bekvam-stool.json by scripts/generate.mjs (archetype \"stool\"). Edit the spec, not this file.",
+  "slug": "bekvam-stool",
+  "name": "BEKVÄM",
+  "title": "Step stool",
+  "worksWith": "IKEA® BEKVÄM step stool, 43×40×50 cm (16⅞×15¾×19⅝\")",
+  "productUrl": "https://www.ikea.com/us/en/p/bekvaem-step-stool-white-40611032/",
+  "size": [
+    43,
+    50,
+    40
+  ],
+  "minutes": 15,
+  "people": 1,
+  "level": 1,
+  "color": "#f3efe8",
+  "category": "kids",
+  "archetype": "stool",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/bekvaem-step-stool-white-40611032/"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side"
+    },
+    {
+      "id": "tread",
+      "label": "Step"
+    },
+    {
+      "id": "rail",
+      "label": "Back rail"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        2.2,
+        50,
+        40
+      ],
+      "pos": [
+        -20.4,
+        25,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            2.2,
+            25,
+            40
+          ],
+          "p": [
+            0,
+            -12.5,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.2,
+            25,
+            22
+          ],
+          "p": [
+            0,
+            12.5,
+            -9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        2.2,
+        50,
+        40
+      ],
+      "pos": [
+        20.4,
+        25,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            2.2,
+            25,
+            40
+          ],
+          "p": [
+            0,
+            -12.5,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.2,
+            25,
+            22
+          ],
+          "p": [
+            0,
+            12.5,
+            -9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "treadTop",
+      "part": "tread",
+      "size": [
+        38.6,
+        2.2,
+        22
+      ],
+      "pos": [
+        0,
+        48.9,
+        -9
+      ]
+    },
+    {
+      "id": "treadLow",
+      "part": "tread",
+      "size": [
+        38.6,
+        2.2,
+        20
+      ],
+      "pos": [
+        0,
+        23.9,
+        10
+      ]
+    },
+    {
+      "id": "rail",
+      "part": "rail",
+      "size": [
+        38.6,
+        6,
+        2.2
+      ],
+      "pos": [
+        0,
+        12,
+        -18.9
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side + dowels",
+      "say": "Lay one side flat, the stepped edge facing you. Tap the wood dowels into the holes for the two steps and the back rail.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -19.3,
+              48.9,
+              -16
+            ],
+            [
+              -19.3,
+              48.9,
+              -4
+            ],
+            [
+              -19.3,
+              23.9,
+              4
+            ],
+            [
+              -19.3,
+              23.9,
+              16
+            ],
+            [
+              -19.3,
+              12,
+              -18.9
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Steps + rail",
+      "say": "Press both steps and the back rail onto the dowels. Wipe off any glue that squeezes out, if you used some.",
+      "add": [
+        "treadTop",
+        "treadLow",
+        "rail"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "view": {
+        "az": 35,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Other side. 6 screws.",
+      "say": "Put the second side on top and drive the screws through it into the steps and the rail. Then flip it and tighten the first side too.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              19.3,
+              48.9,
+              -16
+            ],
+            [
+              19.3,
+              48.9,
+              -4
+            ],
+            [
+              19.3,
+              23.9,
+              4
+            ],
+            [
+              19.3,
+              23.9,
+              16
+            ],
+            [
+              19.3,
+              12,
+              -18.5
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 1
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Wobble test",
+      "say": "Stand it on a flat floor and press on each corner of the top step. Retighten after the first week, wood settles.",
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Re-tighten the screws now and then."
+    }
+  ],
+  "done": "Step stool done. Kitchen top shelves just got a lot closer."
+}

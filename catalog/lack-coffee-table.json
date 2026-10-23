@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "lack-coffee-table",
+  "name": "LACK",
+  "title": "Coffee table",
+  "archetype": "table",
+  "category": "tables",
+  "size": [
+    90,
+    55,
+    45
+  ],
+  "worksWith": "IKEA® LACK coffee table, 90×55×45 cm (35⅜×21⅝×17¾\")",
+  "productUrl": "https://www.ikea.com/us/en/p/lack-coffee-table-white-90449905/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/us/en/p/lack-coffee-table-white-90449905/"
+  ],
+  "options": {
+    "tt": 5,
+    "leg": {
+      "s": 5,
+      "inset": 0
+    },
+    "shelf": {
+      "y": 13,
+      "t": 1.6
+    },
+    "topLabel": "Table top"
+  },
+  "tags": [
+    "living room",
+    "coffee"
+  ]
+}

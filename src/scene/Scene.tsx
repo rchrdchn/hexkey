@@ -2,8 +2,8 @@ import * as THREE from 'three';
 import { useEffect, useMemo, useRef } from 'react';
 import { useFrame, useThree } from '@react-three/fiber';
 import { CameraControls, ContactShadows, Edges, Environment, Lightformer } from '@react-three/drei';
-import type { Piece, V3 } from '../types';
-import { CM, poseMatrix, objectLocal, flatLayout, objectCorners, frameBox, lerpPose, easeInOut, easeOutBack, clamp01, pieceBounds } from './math';
+import type { Piece, V3, ObjectDef } from '../types';
+import { CM, poseMatrix, objectLocal, flatLayout, objectCorners, frameBox, lerpPose, easeInOut, easeOutBack, clamp01, pieceBounds, D2R } from './math';
 import { HardwareItem, useRingTexture } from './Hardware';
 import { partColor } from '../palette';
 import { sfx } from '../sfx';
@@ -16,12 +16,30 @@ const FLY_T = 1.15;
 interface Props { piece: Piece; mode: Mode; step: number; highlight?: string | null; onSnap?: (fn: () => string) => void; reduced?: boolean; inset: { top: number; bottom: number; left: number } }
 
 const FINAL: V3 = [0, 0, 0];
+const ghostMat = new THREE.MeshBasicMaterial({ color: '#ff5a36', transparent: true, opacity: 0.15, depthWrite: false });
+
+/** One object: a single box/cylinder, or a handful of sub-shapes (pre-assembled frames, slat rolls). */
+function Body({ o, mat, edges }: { o: ObjectDef; mat: THREE.Material; edges: string | null }) {
+  const list = o.boxes ?? [{ s: o.size, p: [0, 0, 0] as V3, shape: o.shape }];
+  const many = list.length > 6;
+  return (<>
+    {list.map((b, i) => (
+      <mesh key={i} material={mat} position={[b.p[0] * CM, b.p[1] * CM, b.p[2] * CM]} rotation={'r' in b && b.r ? [b.r[0] * D2R, b.r[1] * D2R, b.r[2] * D2R] : [0, 0, 0]}>
+        {b.shape === 'cyl'
+          ? <cylinderGeometry args={[(Math.min(b.s[0], b.s[2]) * CM) / 2, (Math.min(b.s[0], b.s[2]) * CM) / 2, b.s[1] * CM, many ? 8 : 18]} />
+          : <boxGeometry args={[b.s[0] * CM, b.s[1] * CM, b.s[2] * CM]} />}
+        {edges && !(many && b.shape === 'cyl') && <Edges threshold={15} color={edges} />}
+      </mesh>
+    ))}
+  </>);
+}
 
 export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: Props) {
   const { camera, size, invalidate, gl, scene, clock } = useThree();
   const controls = useRef<CameraControls>(null);
-  const meshes = useRef<Record<string, THREE.Mesh | null>>({});
-  const ghosts = useRef<Record<string, THREE.Mesh | null>>({});
+  const meshes = useRef<Record<string, THREE.Group | null>>({});
+  const ghosts = useRef<Record<string, THREE.Group | null>>({});
+  const envRef = useRef<THREE.Group>(null);
   const hwRefs = useRef<Record<string, THREE.Group | null>>({});
   const ringRefs = useRef<Record<string, THREE.Sprite | null>>({});
   const ringTex = useRingTexture();
@@ -29,6 +47,11 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
   const flat = useMemo(() => flatLayout(piece), [piece]);
   const locals = useMemo(() => Object.fromEntries(piece.objects.map((o) => [o.id, objectLocal(o)])), [piece]);
   const finalPose = piece.poses[piece.poses.length - 1] ?? FINAL;
+  const mats = useMemo(() => {
+    const ids = piece.parts.map((p) => p.id);
+    return Object.fromEntries(piece.objects.map((o) => [o.id, new THREE.MeshStandardMaterial({ color: partColor(ids.indexOf(o.part), piece.color), roughness: 0.75, emissive: '#ff5a36', emissiveIntensity: 0 })]));
+  }, [piece]);
+  useEffect(() => () => Object.values(mats).forEach((m) => m.dispose()), [mats]);
 
   // animation clock per (piece, mode, step)
   const anim = useRef({ t0: 0, fromPose: FINAL as V3, pose: FINAL as V3, key: '', landed: new Set<string>(), userAt: -1e9 });
@@ -112,7 +135,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
       const m = meshes.current[o.id];
       if (!m) return;
       const at = piece.addedAt[o.id] ?? 99;
-      const mat = m.material as THREE.MeshStandardMaterial;
+      const mat = mats[o.id];
       let em = 0;
       if (mode === 'pick' || mode === 'done') m.matrix.copy(M).multiply(locals[o.id]);
       else if (mode === 'parts') {
@@ -122,7 +145,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
       else if (at > step) m.matrix.copy(flat[o.id]);
       else {
         const k = adding.indexOf(o.id);
-        const delay = poseDelay + 0.35 + k * 0.28;
+        const delay = poseDelay + 0.35 + k * Math.min(0.28, 2.4 / Math.max(1, adding.length));
         const ft = clamp01((t - delay) / FLY_T);
         lastLand = Math.max(lastLand, delay + FLY_T);
         const target = Mt.clone().multiply(locals[o.id]);
@@ -152,13 +175,15 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
         if (g) {
           g.visible = ft < 1;
           g.matrix.copy(target);
-          (g.material as THREE.MeshBasicMaterial).opacity = 0.1 + 0.12 * pulse;
+          ghostMat.opacity = 0.1 + 0.12 * pulse;
         }
       }
       if (!(mode === 'build' && at === step)) { const g = ghosts.current[o.id]; if (g) g.visible = false; }
       mat.emissiveIntensity = em;
       m.matrixWorldNeedsUpdate = true;
     });
+
+    if (envRef.current) { envRef.current.visible = mode !== 'parts'; envRef.current.matrix.copy(M); envRef.current.matrixWorldNeedsUpdate = true; }
 
     // hardware
     const nowCount = mode === 'build' ? piece.hw.filter((x) => x.step === step).length : 0;
@@ -167,7 +192,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
       const g = hwRefs.current[h.key];
       const r = ringRefs.current[h.key];
       if (!g) return;
-      const internal = h.kind === 'dowel' || h.kind === 'campin' || h.kind === 'bolt';
+      const internal = h.kind === 'dowel' || h.kind === 'campin' || h.kind === 'bolt' || h.kind === 'hinge';
       const show = mode === 'pick' || mode === 'done' ? !internal : mode === 'build' && (h.step === step || (h.step < step && (!internal || h.step === step - 1)));
       g.visible = show;
       if (r) r.visible = false;
@@ -200,7 +225,6 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
     if (busy) invalidate();
   });
 
-  const parts = useMemo(() => piece.parts.map((p) => p.id), [piece]);
   return (
     <>
       <color attach="background" args={['#f6f1ea']} />
@@ -217,18 +241,24 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
         <meshBasicMaterial color="#efe8de" />
       </mesh>
       <ContactShadows position={[0, 0, 0]} opacity={0.42} scale={14} blur={2.4} far={2.5} resolution={512} color="#5a4636" />
+      {piece.env && (
+        <group ref={envRef} matrixAutoUpdate={false}>
+          {piece.env.map((e) => (
+            <mesh key={e.id} position={[e.pos[0] * CM, e.pos[1] * CM, e.pos[2] * CM]}>
+              <boxGeometry args={[e.size[0] * CM, e.size[1] * CM, e.size[2] * CM]} />
+              <meshStandardMaterial color={e.color ?? '#ece6dc'} roughness={0.95} />
+            </mesh>
+          ))}
+        </group>
+      )}
       {piece.objects.map((o) => (
         <group key={o.id}>
-          <mesh ref={(m) => { meshes.current[o.id] = m; }} matrixAutoUpdate={false}>
-            <boxGeometry args={[o.size[0] * CM, o.size[1] * CM, o.size[2] * CM]} />
-            <meshStandardMaterial color={partColor(parts.indexOf(o.part), piece.color)} roughness={0.75} emissive="#ff5a36" emissiveIntensity={0} />
-            <Edges threshold={15} color="#a99c8a" />
-          </mesh>
-          <mesh ref={(m) => { ghosts.current[o.id] = m; }} matrixAutoUpdate={false} visible={false}>
-            <boxGeometry args={[o.size[0] * CM, o.size[1] * CM, o.size[2] * CM]} />
-            <meshBasicMaterial color="#ff5a36" transparent opacity={0.15} depthWrite={false} />
-            <Edges threshold={15} color="#ff5a36" />
-          </mesh>
+          <group ref={(m) => { meshes.current[o.id] = m; }} matrixAutoUpdate={false}>
+            <Body o={o} mat={mats[o.id]} edges="#a99c8a" />
+          </group>
+          <group ref={(m) => { ghosts.current[o.id] = m; }} matrixAutoUpdate={false} visible={false}>
+            <Body o={o} mat={ghostMat} edges={o.boxes ? null : '#ff5a36'} />
+          </group>
         </group>
       ))}
       {piece.hw.map((h) => (

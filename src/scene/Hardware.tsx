@@ -25,7 +25,12 @@ const G = {
   pinPeg: cyl(0.25, 1, 8),
   plateA: new THREE.BoxGeometry(5, 0.25, 3),
   plateB: new THREE.BoxGeometry(5, 3, 0.25),
+  hingeCup: cyl(1.75, 1.2, 24),
+  hingeArm: new THREE.BoxGeometry(1.4, 1, 6),
+  knobStem: cyl(0.35, 2, 10),
+  knobHead: new THREE.SphereGeometry(1.4, 18, 12),
 };
+const knobMat = new THREE.MeshStandardMaterial({ color: '#efe9df', roughness: 0.5 });
 
 export function HardwareModel({ kind }: { kind: HwKind }) {
   switch (kind) {
@@ -54,6 +59,14 @@ export function HardwareModel({ kind }: { kind: HwKind }) {
     case 'shelfpin': return (<>
       <mesh geometry={G.pinPeg} material={metal} position={[0, -0.3, 0]} />
       <mesh geometry={G.pinPlate} material={metal} position={[0, 0.3, 0]} />
+    </>);
+    case 'hinge': return (<>
+      <mesh geometry={G.hingeCup} material={zinc} position={[0, -0.3, 0]} />
+      <mesh geometry={G.hingeArm} material={metal} position={[0, 0.6, 0]} rotation={[0, 0, 0]} />
+    </>);
+    case 'knob': return (<>
+      <mesh geometry={G.knobStem} material={dark} position={[0, 0.6, 0]} />
+      <mesh geometry={G.knobHead} material={knobMat} position={[0, 2.1, 0]} scale={[1, 0.7, 1]} />
     </>);
     case 'bracket': return (<>
       <mesh geometry={G.plateA} material={zinc} position={[0, 0.12, 1.5]} />

@@ -1,0 +1,239 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/lack-wall-shelf.json by scripts/generate.mjs (archetype \"wall-shelf\"). Edit the spec, not this file.",
+  "slug": "lack-wall-shelf",
+  "name": "LACK",
+  "title": "Wall shelf",
+  "worksWith": "IKEA® LACK wall shelf, 110×26×5 cm (43¼×10¼×2\")",
+  "productUrl": "https://www.ikea.com/us/en/p/lack-wall-shelf-white-90282180/",
+  "size": [
+    110,
+    5,
+    27
+  ],
+  "minutes": 10,
+  "people": 1,
+  "level": 1,
+  "color": "#f3efe8",
+  "category": "shelving",
+  "archetype": "wall-shelf",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/lack-wall-shelf-white-90282180/"
+  ],
+  "env": [
+    {
+      "id": "wall",
+      "size": [
+        180,
+        200,
+        2
+      ],
+      "pos": [
+        0,
+        100,
+        -14.6
+      ],
+      "color": "#ece6dc"
+    }
+  ],
+  "parts": [
+    {
+      "id": "shelf",
+      "label": "Shelf"
+    },
+    {
+      "id": "fitting",
+      "label": "Wall fitting"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "fitting",
+      "part": "fitting",
+      "size": [
+        80,
+        4,
+        12
+      ],
+      "pos": [
+        0,
+        140,
+        -7.6
+      ],
+      "boxes": [
+        {
+          "s": [
+            80,
+            4,
+            0.6
+          ],
+          "p": [
+            0,
+            0,
+            -5.7
+          ]
+        },
+        {
+          "s": [
+            1.6,
+            1,
+            11
+          ],
+          "p": [
+            -37,
+            0,
+            0.4
+          ]
+        },
+        {
+          "s": [
+            1.6,
+            1,
+            11
+          ],
+          "p": [
+            0,
+            0,
+            0.4
+          ]
+        },
+        {
+          "s": [
+            1.6,
+            1,
+            11
+          ],
+          "p": [
+            37,
+            0,
+            0.4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shelf",
+      "part": "shelf",
+      "size": [
+        110,
+        5,
+        26
+      ],
+      "pos": [
+        0,
+        140,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Find the spot",
+      "say": "Pick the spot and find what is behind the wall: a stud, brick or drywall. The screws for the wall are not included, because they depend on that.",
+      "view": {
+        "az": 20,
+        "el": 10
+      },
+      "safety": "Check your wall can carry the load."
+    },
+    {
+      "caption": "Level, then screw",
+      "say": "Hold the wall fitting up, put a level on it, and mark the holes. Drill, plug if needed, and screw the fitting to the wall. Level matters more than anything here.",
+      "add": [
+        "fitting"
+      ],
+      "from": [
+        0,
+        0,
+        30
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-z",
+          "at": [
+            [
+              -34,
+              140,
+              -13.6
+            ],
+            [
+              -11.33,
+              140,
+              -13.6
+            ],
+            [
+              11.33,
+              140,
+              -13.6
+            ],
+            [
+              34,
+              140,
+              -13.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 10,
+        "tight": true
+      }
+    },
+    {
+      "caption": "Slide the shelf on",
+      "say": "Slide the shelf over the prongs, all the way back until it touches the wall.",
+      "add": [
+        "shelf"
+      ],
+      "from": [
+        0,
+        0,
+        45
+      ],
+      "view": {
+        "az": 30,
+        "el": 15
+      }
+    },
+    {
+      "caption": "Lock screws",
+      "say": "From underneath, drive the two small locking screws up into the fitting. Now it cannot slide off.",
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "at": [
+            [
+              -37,
+              137.5,
+              -7
+            ],
+            [
+              37,
+              137.5,
+              -7
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": -20,
+        "tight": true
+      }
+    }
+  ],
+  "done": "Shelf is up. Keep the heavy stuff near the wall end of the bracket, and enjoy the floating look."
+}

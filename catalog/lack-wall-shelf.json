@@ -1,0 +1,27 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "lack-wall-shelf",
+  "name": "LACK",
+  "title": "Wall shelf",
+  "archetype": "wall-shelf",
+  "category": "shelving",
+  "size": [
+    110,
+    26,
+    5
+  ],
+  "worksWith": "IKEA® LACK wall shelf, 110×26×5 cm (43¼×10¼×2\")",
+  "productUrl": "https://www.ikea.com/us/en/p/lack-wall-shelf-white-90282180/",
+  "color": "#f3efe8",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/lack-wall-shelf-white-90282180/"
+  ],
+  "options": {},
+  "tags": [
+    "floating",
+    "wall"
+  ],
+  "people": 1,
+  "done": "Shelf is up. Keep the heavy stuff near the wall end of the bracket, and enjoy the floating look."
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rchrdchn/hexkey/schema/catalog-spec.schema.json",
+  "title": "Hexkey catalog spec",
+  "description": "A short description of one piece: archetype + product-page dimensions + options. scripts/generate.mjs expands it into public/pieces/<slug>/piece.json. Write every word yourself; use only public facts (names, dimensions, hardware types and counts).",
+  "type": "object",
+  "required": ["slug", "name", "title", "archetype", "category", "size", "worksWith", "productUrl", "confidence", "sources"],
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+    "name": { "type": "string" },
+    "title": { "type": "string" },
+    "archetype": { "enum": ["bookcase", "cubes", "chest", "table", "apron-table", "desk", "wall-shelf", "bed", "crib", "ladder", "stool"] },
+    "category": { "enum": ["shelving", "dressers", "bedroom", "storage", "tables", "desks", "kids"] },
+    "size": { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3, "description": "Width × depth × height in cm, in the order product pages list them (beds: width × length × headboard height)" },
+    "worksWith": { "type": "string", "pattern": "IKEA®" },
+    "productUrl": { "type": "string", "pattern": "^https://www\\.ikea\\.com/[a-z]{2}/[a-z]{2}/p/" },
+    "color": { "type": "string" },
+    "confidence": { "enum": ["high", "medium", "low"] },
+    "sources": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "options": { "type": "object", "description": "Archetype-specific, see docs/ARCHETYPES.md" },
+    "tags": { "type": "array", "items": { "type": "string" } },
+    "people": { "type": "integer" }, "minutes": { "type": "number" }, "level": { "type": "integer" },
+    "done": { "type": "string" },
+    "notes": { "type": "string" }
+  }
+}

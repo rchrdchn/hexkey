@@ -1,0 +1,47 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "rast",
+  "name": "RAST",
+  "title": "Chest of 3 drawers",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    62,
+    30,
+    70
+  ],
+  "worksWith": "IKEA® RAST chest of 3 drawers, 62×30×70 cm (24⅜×11¾×27½\")",
+  "productUrl": "https://www.ikea.com/qa/en/p/rast-chest-of-3-drawers-pine-75305709/",
+  "color": "#e2c595",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/qa/en/p/rast-chest-of-3-drawers-pine-75305709/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "t": 1.8,
+    "base": {
+      "type": "none"
+    },
+    "runners": false,
+    "drawerDepth": 24
+  },
+  "tags": [
+    "pine",
+    "hack",
+    "small"
+  ],
+  "notes": "Solid pine; drawers run on wooden rails, no metal runners. No knobs are included, so it is a popular one to paint and customize."
+}

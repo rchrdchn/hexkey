@@ -1,0 +1,32 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "billy-106",
+  "name": "BILLY",
+  "title": "Low bookcase",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    80,
+    28,
+    106
+  ],
+  "worksWith": "IKEA® BILLY bookcase, 80×28×106 cm (31½×11×41¾\")",
+  "productUrl": "https://www.ikea.com/us/en/p/billy-bookcase-white-90522043/",
+  "color": "#f3efe8",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/billy-bookcase-white-90522043/"
+  ],
+  "options": {
+    "t": 1.5,
+    "shelves": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6.5
+    }
+  },
+  "tags": [
+    "books",
+    "low"
+  ]
+}

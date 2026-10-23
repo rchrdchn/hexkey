@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "lagkapten-adils",
+  "name": "LAGKAPTEN / ADILS",
+  "title": "Desk",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    120,
+    60,
+    73
+  ],
+  "worksWith": "IKEA® LAGKAPTEN / ADILS desk, 120×60×73 cm (47¼×23⅝×28¾\")",
+  "productUrl": "https://www.ikea.com/us/en/p/lagkapten-adils-desk-white-s29416758/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/us/en/p/lagkapten-adils-desk-white-s29416758/"
+  ],
+  "options": {
+    "tt": 3.6,
+    "leg": {
+      "s": 3.6,
+      "inset": 4,
+      "shape": "round"
+    },
+    "mount": "plate",
+    "feet": true,
+    "topLabel": "Desk top"
+  },
+  "tags": [
+    "office",
+    "home office",
+    "desk"
+  ],
+  "people": 2,
+  "done": "Desk done. Plug in, sit down, and get something great made."
+}

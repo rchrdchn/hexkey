@@ -1,0 +1,29 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ivar",
+  "name": "IVAR",
+  "title": "Shelving unit",
+  "archetype": "ladder",
+  "category": "shelving",
+  "size": [
+    89,
+    30,
+    179
+  ],
+  "worksWith": "IKEA® IVAR shelving unit, 89×30×179 cm (35×11¾×70½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/ivar-shelving-unit-pine-s29403845/",
+  "color": "#e2c595",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/ivar-shelving-unit-pine-s29403845/"
+  ],
+  "options": {
+    "shelves": 4,
+    "shelfW": 83
+  },
+  "tags": [
+    "pine",
+    "garage",
+    "pantry"
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/ingo.json by scripts/generate.mjs (archetype \"apron-table\"). Edit the spec, not this file.",
+  "slug": "ingo",
+  "name": "INGO",
+  "title": "Table",
+  "worksWith": "IKEA® INGO table, 120×75×73 cm (47¼×29½×28¾\")",
+  "productUrl": "https://www.ikea.com/sg/en/p/ingo-bord-furu-14630009/",
+  "size": [
+    120,
+    73,
+    75
+  ],
+  "minutes": 25,
+  "people": 2,
+  "level": 2,
+  "color": "#e2c595",
+  "category": "tables",
+  "archetype": "apron-table",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/sg/en/p/ingo-bord-furu-14630009/"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Table top"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    },
+    {
+      "id": "long",
+      "label": "Long rail"
+    },
+    {
+      "id": "short",
+      "label": "Short rail"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        120,
+        2.8,
+        75
+      ],
+      "pos": [
+        0,
+        71.6,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        5.5,
+        70.2,
+        5.5
+      ],
+      "pos": [
+        -51.25,
+        35.1,
+        28.75
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        5.5,
+        70.2,
+        5.5
+      ],
+      "pos": [
+        51.25,
+        35.1,
+        28.75
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        5.5,
+        70.2,
+        5.5
+      ],
+      "pos": [
+        51.25,
+        35.1,
+        -28.75
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        5.5,
+        70.2,
+        5.5
+      ],
+      "pos": [
+        -51.25,
+        35.1,
+        -28.75
+      ]
+    },
+    {
+      "id": "longF",
+      "part": "long",
+      "size": [
+        97,
+        8,
+        2
+      ],
+      "pos": [
+        0,
+        66.2,
+        28.75
+      ]
+    },
+    {
+      "id": "longB",
+      "part": "long",
+      "size": [
+        97,
+        8,
+        2
+      ],
+      "pos": [
+        0,
+        66.2,
+        -28.75
+      ]
+    },
+    {
+      "id": "shortL",
+      "part": "short",
+      "size": [
+        2,
+        8,
+        52
+      ],
+      "pos": [
+        -51.25,
+        66.2,
+        0
+      ]
+    },
+    {
+      "id": "shortR",
+      "part": "short",
+      "size": [
+        2,
+        8,
+        52
+      ],
+      "pos": [
+        51.25,
+        66.2,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Put the table top upside down on the flattened box. You will build the frame right on top of it.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Legs + long rails",
+      "say": "Bolt a long rail between two legs, then do the same with the other pair. Two bolts at each joint. Leave them a little loose for now.",
+      "add": [
+        "leg1",
+        "leg2",
+        "leg3",
+        "leg4",
+        "longF",
+        "longB"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+x",
+          "at": [
+            [
+              -48.5,
+              64.2,
+              28.75
+            ],
+            [
+              -48.5,
+              68.2,
+              28.75
+            ],
+            [
+              -48.5,
+              64.2,
+              -28.75
+            ],
+            [
+              -48.5,
+              68.2,
+              -28.75
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "bolt",
+          "axis": "-x",
+          "at": [
+            [
+              48.5,
+              64.2,
+              28.75
+            ],
+            [
+              48.5,
+              68.2,
+              28.75
+            ],
+            [
+              48.5,
+              64.2,
+              -28.75
+            ],
+            [
+              48.5,
+              68.2,
+              -28.75
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Short rails join them",
+      "say": "Now join the two halves with the short rails, two bolts per joint. Square up the frame, then tighten every bolt.",
+      "add": [
+        "shortL",
+        "shortR"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+z",
+          "at": [
+            [
+              -51.25,
+              64.2,
+              26
+            ],
+            [
+              -51.25,
+              68.2,
+              26
+            ],
+            [
+              51.25,
+              64.2,
+              26
+            ],
+            [
+              51.25,
+              68.2,
+              26
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "bolt",
+          "axis": "-z",
+          "at": [
+            [
+              -51.25,
+              64.2,
+              -26
+            ],
+            [
+              -51.25,
+              68.2,
+              -26
+            ],
+            [
+              51.25,
+              64.2,
+              -26
+            ],
+            [
+              51.25,
+              68.2,
+              -26
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -35,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Screw down the top",
+      "say": "Center the frame on the top and drive the wood screws up through the rails into the top. Short screws only, so nothing pokes through.",
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -25.62,
+              70.2,
+              28.75
+            ],
+            [
+              25.63,
+              70.2,
+              28.75
+            ],
+            [
+              -25.62,
+              70.2,
+              -28.75
+            ],
+            [
+              25.63,
+              70.2,
+              -28.75
+            ],
+            [
+              -51.25,
+              70.2,
+              0
+            ],
+            [
+              51.25,
+              70.2,
+              0
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, lift it and turn it right side up. Then sit down. You earned it.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    }
+  ],
+  "done": "Done. Your INGO table is built. Give it a proud little pat."
+}

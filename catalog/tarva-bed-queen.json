@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "tarva-bed-queen",
+  "name": "TARVA",
+  "title": "Bed frame, Queen",
+  "archetype": "bed",
+  "category": "bedroom",
+  "size": [
+    160,
+    209,
+    92
+  ],
+  "worksWith": "IKEA® TARVA bed frame, 160×209×92 cm (63×82¼×36¼\")",
+  "productUrl": "https://www.ikea.com/us/en/p/tarva-bed-frame-pine-90249949/",
+  "color": "#e2c595",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/tarva-bed-frame-pine-90249949/"
+  ],
+  "options": {
+    "footboard": 32,
+    "clear": 20,
+    "railH": 14,
+    "slats": 17,
+    "posts": 7,
+    "board": 3
+  },
+  "tags": [
+    "bed",
+    "queen",
+    "pine",
+    "big"
+  ],
+  "people": 2,
+  "notes": "Slats are usually sold separately; the slat step shows a typical roll-out slat base."
+}

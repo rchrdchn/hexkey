@@ -1,0 +1,41 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "malm-3",
+  "name": "MALM",
+  "title": "Chest of 3 drawers",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    80,
+    48,
+    78
+  ],
+  "worksWith": "IKEA® MALM chest of 3 drawers, 80×48×78 cm (31½×18⅞×30¾\")",
+  "productUrl": "https://www.ikea.com/de/en/p/malm-chest-of-3-drawers-white-20403562/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/de/en/p/malm-chest-of-3-drawers-white-20403562/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "none"
+    }
+  },
+  "tags": [
+    "dresser"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "kallax-4x4",
+  "name": "KALLAX",
+  "title": "Shelf unit 4×4",
+  "archetype": "cubes",
+  "category": "shelving",
+  "size": [
+    147,
+    39,
+    147
+  ],
+  "worksWith": "IKEA® KALLAX shelf unit, 147×39×147 cm (57⅞×15⅜×57⅞\")",
+  "productUrl": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-10637302/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-10637302/"
+  ],
+  "options": {
+    "cols": 4,
+    "rows": 4
+  },
+  "tags": [
+    "cubes",
+    "records",
+    "room divider",
+    "big"
+  ]
+}

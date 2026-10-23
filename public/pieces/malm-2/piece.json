@@ -1,0 +1,879 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/malm-2.json by scripts/generate.mjs (archetype \"chest\"). Edit the spec, not this file.",
+  "slug": "malm-2",
+  "name": "MALM",
+  "title": "Chest of 2 drawers",
+  "worksWith": "IKEA® MALM chest of 2 drawers, 40×48×55 cm (15¾×18⅞×21⅝\")",
+  "productUrl": "https://www.ikea.com/de/en/p/malm-chest-of-2-drawers-white-80214549/",
+  "size": [
+    40,
+    55,
+    48
+  ],
+  "minutes": 65,
+  "people": 1,
+  "level": 2,
+  "color": "#f3efe8",
+  "category": "dressers",
+  "archetype": "chest",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/de/en/p/malm-chest-of-2-drawers-white-80214549/"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom panel"
+    },
+    {
+      "id": "top",
+      "label": "Top panel"
+    },
+    {
+      "id": "back",
+      "label": "Back panel"
+    },
+    {
+      "id": "dside",
+      "label": "Drawer side"
+    },
+    {
+      "id": "dback",
+      "label": "Drawer back"
+    },
+    {
+      "id": "dbottom",
+      "label": "Drawer bottom"
+    },
+    {
+      "id": "front",
+      "label": "Drawer front"
+    },
+    {
+      "id": "runner",
+      "label": "Drawer runner"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "nail",
+      "label": "Nail",
+      "kind": "nail"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        53.2,
+        48
+      ],
+      "pos": [
+        -19.2,
+        26.6,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        53.2,
+        48
+      ],
+      "pos": [
+        19.2,
+        26.6,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "bottom",
+      "size": [
+        36.8,
+        1.6,
+        47.6
+      ],
+      "pos": [
+        0,
+        0.8,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        40,
+        1.8,
+        48
+      ],
+      "pos": [
+        0,
+        54.1,
+        0
+      ]
+    },
+    {
+      "id": "back",
+      "part": "back",
+      "size": [
+        39.6,
+        52.5,
+        0.3
+      ],
+      "pos": [
+        0,
+        26.75,
+        -24.15
+      ]
+    },
+    {
+      "id": "d1f",
+      "part": "front",
+      "size": [
+        36.5,
+        25.5,
+        1.6
+      ],
+      "pos": [
+        0,
+        40.3,
+        23.2
+      ]
+    },
+    {
+      "id": "d1l",
+      "part": "dside",
+      "size": [
+        1.2,
+        21.5,
+        42
+      ],
+      "pos": [
+        -16.5,
+        39.15,
+        1.4
+      ]
+    },
+    {
+      "id": "d1r",
+      "part": "dside",
+      "size": [
+        1.2,
+        21.5,
+        42
+      ],
+      "pos": [
+        16.5,
+        39.15,
+        1.4
+      ]
+    },
+    {
+      "id": "d1b",
+      "part": "dbottom",
+      "size": [
+        32.6,
+        0.3,
+        40.5
+      ],
+      "pos": [
+        0,
+        29.4,
+        1.6
+      ]
+    },
+    {
+      "id": "d1k",
+      "part": "dback",
+      "size": [
+        31.8,
+        20,
+        1.2
+      ],
+      "pos": [
+        0,
+        39.9,
+        -19
+      ]
+    },
+    {
+      "id": "rn1l",
+      "part": "runner",
+      "size": [
+        1.2,
+        1.4,
+        42
+      ],
+      "pos": [
+        -17.8,
+        29,
+        1.4
+      ]
+    },
+    {
+      "id": "rn1r",
+      "part": "runner",
+      "size": [
+        1.2,
+        1.4,
+        42
+      ],
+      "pos": [
+        17.8,
+        29,
+        1.4
+      ]
+    },
+    {
+      "id": "d2f",
+      "part": "front",
+      "size": [
+        36.5,
+        25.5,
+        1.6
+      ],
+      "pos": [
+        0,
+        14.5,
+        23.2
+      ]
+    },
+    {
+      "id": "d2l",
+      "part": "dside",
+      "size": [
+        1.2,
+        21.5,
+        42
+      ],
+      "pos": [
+        -16.5,
+        13.35,
+        1.4
+      ]
+    },
+    {
+      "id": "d2r",
+      "part": "dside",
+      "size": [
+        1.2,
+        21.5,
+        42
+      ],
+      "pos": [
+        16.5,
+        13.35,
+        1.4
+      ]
+    },
+    {
+      "id": "d2b",
+      "part": "dbottom",
+      "size": [
+        32.6,
+        0.3,
+        40.5
+      ],
+      "pos": [
+        0,
+        3.6,
+        1.6
+      ]
+    },
+    {
+      "id": "d2k",
+      "part": "dback",
+      "size": [
+        31.8,
+        20,
+        1.2
+      ],
+      "pos": [
+        0,
+        14.1,
+        -19
+      ]
+    },
+    {
+      "id": "rn2l",
+      "part": "runner",
+      "size": [
+        1.2,
+        1.4,
+        42
+      ],
+      "pos": [
+        -17.8,
+        3.2,
+        1.4
+      ]
+    },
+    {
+      "id": "rn2r",
+      "part": "runner",
+      "size": [
+        1.2,
+        1.4,
+        42
+      ],
+      "pos": [
+        17.8,
+        3.2,
+        1.4
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Stand one side panel on its edge, holes facing in. Screw in two cam pins by hand, then tap in two dowels.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -18.4,
+              0.8,
+              15.36
+            ],
+            [
+              -18.4,
+              0.8,
+              -15.36
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -18.4,
+              0.8,
+              6.14
+            ],
+            [
+              -18.4,
+              0.8,
+              -6.14
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Slide the bottom panel onto the pins at the low end. Two cam locks go in, arrow toward the pin, then a firm clockwise turn.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -15,
+              1.6,
+              15.36
+            ],
+            [
+              -15,
+              1.6,
+              -15.36
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Side two. Lock 2.",
+      "say": "Pins and dowels go into the ends of the panels on this side too. Lower the second side onto all of them at once, then lock the last two cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              18.4,
+              0.8,
+              15.36
+            ],
+            [
+              18.4,
+              0.8,
+              -15.36
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              18.4,
+              0.8,
+              6.14
+            ],
+            [
+              18.4,
+              0.8,
+              -6.14
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              15,
+              1.6,
+              15.36
+            ],
+            [
+              15,
+              1.6,
+              -15.36
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Top on. Lock 4.",
+      "say": "Tap four dowels into the top edges of the sides. Set the top panel on, good side up, then lock it from inside with four cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -19.2,
+              53.2,
+              7.68
+            ],
+            [
+              -19.2,
+              53.2,
+              -7.68
+            ],
+            [
+              19.2,
+              53.2,
+              7.68
+            ],
+            [
+              19.2,
+              53.2,
+              -7.68
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+x",
+          "at": [
+            [
+              -18.4,
+              49.7,
+              15.36
+            ],
+            [
+              -18.4,
+              49.7,
+              -15.36
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "cam",
+          "axis": "-x",
+          "at": [
+            [
+              18.4,
+              49.7,
+              15.36
+            ],
+            [
+              18.4,
+              49.7,
+              -15.36
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Flip it face down",
+      "say": "Tip the frame onto its front, on a rug or the flattened box so nothing gets scratched.",
+      "pose": [
+        90,
+        0,
+        0
+      ],
+      "view": {
+        "az": 60,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Nail on the back",
+      "say": "Lay the back panel on, smooth side facing in. Line it up with one corner and nail it along the edges, about every twenty centimeters. If the corners line up, the frame is square.",
+      "add": [
+        "back"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Stand it up",
+      "say": "Stand it back up on its feet. Nice, the box is done.",
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 18
+      }
+    },
+    {
+      "caption": "Runners: 2 pairs",
+      "say": "Runner time. Two pairs, one on each wall of every opening, screwed into the pre-drilled holes. Left and right runners are mirror images, so check the labels.",
+      "add": [
+        "rn1l",
+        "rn1r",
+        "rn2l",
+        "rn2r"
+      ],
+      "from": [
+        0,
+        0,
+        30
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -18.4,
+              29,
+              15.4
+            ],
+            [
+              -18.4,
+              29,
+              -12.6
+            ],
+            [
+              -18.4,
+              3.2,
+              15.4
+            ],
+            [
+              -18.4,
+              3.2,
+              -12.6
+            ]
+          ]
+        },
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              18.4,
+              29,
+              15.4
+            ],
+            [
+              18.4,
+              29,
+              -12.6
+            ],
+            [
+              18.4,
+              3.2,
+              15.4
+            ],
+            [
+              18.4,
+              3.2,
+              -12.6
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Drawer 1: front + sides",
+      "say": "First drawer. Lay the drawer front face down on something soft. Tap in four dowels, then press both drawer sides onto them, grooves facing in.",
+      "add": [
+        "d1f",
+        "d1l",
+        "d1r"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "-z",
+          "at": [
+            [
+              -16.5,
+              33.78,
+              22.4
+            ],
+            [
+              -16.5,
+              44.53,
+              22.4
+            ],
+            [
+              16.5,
+              33.78,
+              22.4
+            ],
+            [
+              16.5,
+              44.53,
+              22.4
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "Slide in the bottom",
+      "say": "The drawer bottom slides into the grooves from the back. Shiny side up. Push it home against the front.",
+      "add": [
+        "d1b"
+      ],
+      "from": [
+        0,
+        0,
+        -35
+      ],
+      "view": {
+        "az": 30,
+        "el": 45,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "Drawer back. 4 screws.",
+      "say": "Close the drawer with its back panel, then drive four screws through the back into the sides. Snug, not cranked.",
+      "add": [
+        "d1k"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-z",
+          "at": [
+            [
+              -16.5,
+              33.78,
+              -19.6
+            ],
+            [
+              -16.5,
+              44.53,
+              -19.6
+            ],
+            [
+              16.5,
+              33.78,
+              -19.6
+            ],
+            [
+              16.5,
+              44.53,
+              -19.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 30,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "Build drawer two",
+      "say": "Now the second drawer, exactly the same way: front, sides, bottom, back. Then slide every drawer in onto its runners until it stops. Take a break halfway if you need one.",
+      "add": [
+        "d2f",
+        "d2l",
+        "d2r",
+        "d2b",
+        "d2k"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "count": 4
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Fix the wall bracket to the back edge of the top, then into the wall with fixings made for your wall type. Tip-overs are real. Anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              50.2,
+              -24.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your MALM chest of 2 drawers is built. Give it a proud little pat."
+}

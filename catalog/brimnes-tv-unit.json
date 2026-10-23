@@ -1,0 +1,43 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "brimnes-tv-unit",
+  "name": "BRIMNES",
+  "title": "TV unit",
+  "archetype": "chest",
+  "category": "storage",
+  "size": [
+    120,
+    41,
+    53
+  ],
+  "worksWith": "IKEA® BRIMNES TV unit, 120×41×53 cm (47¼×16⅛×20⅞\")",
+  "productUrl": "https://www.ikea.com/us/en/p/brimnes-tv-unit-white-60569485/",
+  "color": "#f3efe8",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/brimnes-tv-unit-white-60569485/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open"
+      },
+      {
+        "type": "drawer",
+        "cols": 2,
+        "h": 0.9
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "plinth",
+      "h": 4
+    }
+  },
+  "tags": [
+    "tv",
+    "media",
+    "living room"
+  ]
+}

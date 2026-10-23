@@ -1,0 +1,45 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "malm-4",
+  "name": "MALM",
+  "title": "Chest of 4 drawers",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    80,
+    48,
+    100
+  ],
+  "worksWith": "IKEA® MALM chest of 4 drawers, 80×48×100 cm (31½×18⅞×39⅜\")",
+  "productUrl": "https://www.ikea.com/se/en/p/malm-chest-of-4-drawers-white-30403571/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/se/en/p/malm-chest-of-4-drawers-white-30403571/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "none"
+    }
+  },
+  "tags": [
+    "dresser",
+    "tall"
+  ]
+}

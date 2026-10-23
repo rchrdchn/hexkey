@@ -1,0 +1,52 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "alex-drawers",
+  "name": "ALEX",
+  "title": "Drawer unit",
+  "archetype": "chest",
+  "category": "desks",
+  "size": [
+    36,
+    58,
+    70
+  ],
+  "worksWith": "IKEA® ALEX drawer unit, 36×58×70 cm (14⅛×22⅞×27½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/alex-drawer-unit-white-00473546/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/us/en/p/alex-drawer-unit-white-00473546/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "plinth",
+      "h": 3
+    },
+    "drawerDepth": 50
+  },
+  "tags": [
+    "desk",
+    "office",
+    "craft",
+    "makeup"
+  ]
+}

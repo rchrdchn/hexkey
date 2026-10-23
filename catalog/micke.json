@@ -1,0 +1,30 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "micke",
+  "name": "MICKE",
+  "title": "Desk",
+  "archetype": "desk",
+  "category": "desks",
+  "size": [
+    105,
+    50,
+    75
+  ],
+  "worksWith": "IKEA® MICKE desk, 105×50×75 cm (41⅜×19⅝×29½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/micke-desk-white-80213074/",
+  "color": "#f3efe8",
+  "confidence": "low",
+  "sources": [
+    "https://www.ikea.com/us/en/p/micke-desk-white-80213074/"
+  ],
+  "options": {
+    "tower": 35
+  },
+  "tags": [
+    "office",
+    "home office",
+    "desk",
+    "drawer"
+  ],
+  "notes": "Panel layout simplified: one drawer over an open compartment on the right."
+}

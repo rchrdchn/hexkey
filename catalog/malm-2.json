@@ -1,0 +1,39 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "malm-2",
+  "name": "MALM",
+  "title": "Chest of 2 drawers",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    40,
+    48,
+    55
+  ],
+  "worksWith": "IKEA® MALM chest of 2 drawers, 40×48×55 cm (15¾×18⅞×21⅝\")",
+  "productUrl": "https://www.ikea.com/de/en/p/malm-chest-of-2-drawers-white-80214549/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/de/en/p/malm-chest-of-2-drawers-white-80214549/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "none"
+    }
+  },
+  "tags": [
+    "nightstand",
+    "small"
+  ]
+}

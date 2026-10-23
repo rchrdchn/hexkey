@@ -1,0 +1,543 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/ivar.json by scripts/generate.mjs (archetype \"ladder\"). Edit the spec, not this file.",
+  "slug": "ivar",
+  "name": "IVAR",
+  "title": "Shelving unit",
+  "worksWith": "IKEA® IVAR shelving unit, 89×30×179 cm (35×11¾×70½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/ivar-shelving-unit-pine-s29403845/",
+  "size": [
+    89,
+    179,
+    31
+  ],
+  "minutes": 25,
+  "people": 2,
+  "level": 2,
+  "color": "#e2c595",
+  "category": "shelving",
+  "archetype": "ladder",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/ivar-shelving-unit-pine-s29403845/"
+  ],
+  "parts": [
+    {
+      "id": "sideunit",
+      "label": "Side unit"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "plural": "Shelves"
+    },
+    {
+      "id": "brace",
+      "label": "X-brace"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "spin",
+      "label": "Shelf pin",
+      "kind": "shelfpin"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "sideunit",
+      "size": [
+        3.4,
+        179,
+        30
+      ],
+      "pos": [
+        -42.8,
+        89.5,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            3.4,
+            179,
+            3.4
+          ],
+          "p": [
+            0,
+            0,
+            -13.3
+          ]
+        },
+        {
+          "s": [
+            3.4,
+            179,
+            3.4
+          ],
+          "p": [
+            0,
+            0,
+            13.3
+          ]
+        },
+        {
+          "s": [
+            2,
+            3,
+            23.2
+          ],
+          "p": [
+            0,
+            -81.5,
+            0
+          ]
+        },
+        {
+          "s": [
+            2,
+            3,
+            23.2
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            2,
+            3,
+            23.2
+          ],
+          "p": [
+            0,
+            85.5,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "sideunit",
+      "size": [
+        3.4,
+        179,
+        30
+      ],
+      "pos": [
+        42.8,
+        89.5,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            3.4,
+            179,
+            3.4
+          ],
+          "p": [
+            0,
+            0,
+            -13.3
+          ]
+        },
+        {
+          "s": [
+            3.4,
+            179,
+            3.4
+          ],
+          "p": [
+            0,
+            0,
+            13.3
+          ]
+        },
+        {
+          "s": [
+            2,
+            3,
+            23.2
+          ],
+          "p": [
+            0,
+            -81.5,
+            0
+          ]
+        },
+        {
+          "s": [
+            2,
+            3,
+            23.2
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            2,
+            3,
+            23.2
+          ],
+          "p": [
+            0,
+            85.5,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shelf1",
+      "part": "shelf",
+      "size": [
+        83,
+        2.2,
+        29.4
+      ],
+      "pos": [
+        0,
+        10.9,
+        0
+      ]
+    },
+    {
+      "id": "shelf2",
+      "part": "shelf",
+      "size": [
+        83,
+        2.2,
+        29.4
+      ],
+      "pos": [
+        0,
+        65.57,
+        0
+      ]
+    },
+    {
+      "id": "shelf3",
+      "part": "shelf",
+      "size": [
+        83,
+        2.2,
+        29.4
+      ],
+      "pos": [
+        0,
+        120.23,
+        0
+      ]
+    },
+    {
+      "id": "shelf4",
+      "part": "shelf",
+      "size": [
+        83,
+        2.2,
+        29.4
+      ],
+      "pos": [
+        0,
+        174.9,
+        0
+      ]
+    },
+    {
+      "id": "brace",
+      "part": "brace",
+      "size": [
+        82.2,
+        89.5,
+        1
+      ],
+      "pos": [
+        0,
+        89.5,
+        -15.5
+      ],
+      "boxes": [
+        {
+          "s": [
+            121.52,
+            1.6,
+            0.3
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ],
+          "r": [
+            0,
+            0,
+            47.43452211237436
+          ]
+        },
+        {
+          "s": [
+            121.52,
+            1.6,
+            0.3
+          ],
+          "p": [
+            0,
+            0,
+            0.35
+          ],
+          "r": [
+            0,
+            0,
+            -47.43452211237436
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Pins in one side",
+      "say": "Lean one side unit against the wall. Push shelf pins into the holes at the heights you want for the bottom and top shelves.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "spin",
+          "axis": "+x",
+          "at": [
+            [
+              -41.1,
+              9.6,
+              13.3
+            ],
+            [
+              -41.1,
+              9.6,
+              -13.3
+            ],
+            [
+              -41.1,
+              173.6,
+              13.3
+            ],
+            [
+              -41.1,
+              173.6,
+              -13.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Bottom + top shelf",
+      "say": "With a helper holding the side, rest the bottom shelf and the top shelf on their pins. The clips under each shelf grip the pins.",
+      "add": [
+        "shelf1",
+        "shelf4"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "view": {
+        "az": 35,
+        "el": 20
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Second side unit",
+      "say": "Pins into the second side unit at matching heights, then slide it under the free ends of the shelves.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "spin",
+          "axis": "-x",
+          "at": [
+            [
+              41.1,
+              9.6,
+              13.3
+            ],
+            [
+              41.1,
+              9.6,
+              -13.3
+            ],
+            [
+              41.1,
+              173.6,
+              13.3
+            ],
+            [
+              41.1,
+              173.6,
+              -13.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": -35,
+        "el": 20
+      }
+    },
+    {
+      "caption": "2 middle shelves",
+      "say": "Now the middle shelves. Pins in on both sides at the same height, then drop each shelf on.",
+      "add": [
+        "shelf2",
+        "shelf3"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "spin",
+          "axis": "+x",
+          "at": [
+            [
+              -41.1,
+              64.27,
+              13.3
+            ],
+            [
+              -41.1,
+              64.27,
+              -13.3
+            ],
+            [
+              -41.1,
+              118.93,
+              13.3
+            ],
+            [
+              -41.1,
+              118.93,
+              -13.3
+            ]
+          ]
+        },
+        {
+          "id": "spin",
+          "axis": "-x",
+          "at": [
+            [
+              41.1,
+              64.27,
+              13.3
+            ],
+            [
+              41.1,
+              64.27,
+              -13.3
+            ],
+            [
+              41.1,
+              118.93,
+              13.3
+            ],
+            [
+              41.1,
+              118.93,
+              -13.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 20
+      }
+    },
+    {
+      "caption": "X-brace on the back",
+      "say": "Screw the metal X-brace across the back. It is what stops the whole thing leaning sideways, so do not skip it.",
+      "add": [
+        "brace"
+      ],
+      "from": [
+        0,
+        0,
+        -40
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 160,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Fix the top of a side unit to the wall with a bracket and screws that suit your wall. Tall and narrow means anchor it, always.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              -42.8,
+              173,
+              -15
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your IVAR shelving unit is built. Give it a proud little pat."
+}

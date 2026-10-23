@@ -1,0 +1,28 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "bekvam-stool",
+  "name": "BEKVÄM",
+  "title": "Step stool",
+  "archetype": "stool",
+  "category": "kids",
+  "size": [
+    43,
+    40,
+    50
+  ],
+  "worksWith": "IKEA® BEKVÄM step stool, 43×40×50 cm (16⅞×15¾×19⅝\")",
+  "productUrl": "https://www.ikea.com/us/en/p/bekvaem-step-stool-white-40611032/",
+  "color": "#f3efe8",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/bekvaem-step-stool-white-40611032/"
+  ],
+  "options": {},
+  "tags": [
+    "kitchen",
+    "stool",
+    "small"
+  ],
+  "people": 1,
+  "done": "Step stool done. Kitchen top shelves just got a lot closer."
+}

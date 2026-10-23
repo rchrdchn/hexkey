@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "billy-40",
+  "name": "BILLY",
+  "title": "Narrow bookcase",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    40,
+    28,
+    202
+  ],
+  "worksWith": "IKEA® BILLY bookcase, 40×28×202 cm (15¾×11×79½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/billy-bookcase-white-50522040/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": [
+    "https://www.ikea.com/us/en/p/billy-bookcase-white-50522040/"
+  ],
+  "options": {
+    "t": 1.5,
+    "fixed": [
+      0.5
+    ],
+    "shelves": 4,
+    "base": {
+      "type": "plinth",
+      "h": 6.5
+    },
+    "lying": true
+  },
+  "tags": [
+    "books",
+    "tall",
+    "narrow"
+  ]
+}

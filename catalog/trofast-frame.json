@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "trofast-frame",
+  "name": "TROFAST",
+  "title": "Storage frame",
+  "archetype": "bookcase",
+  "category": "kids",
+  "size": [
+    46,
+    30,
+    94
+  ],
+  "worksWith": "IKEA® TROFAST frame, 46×30×94 cm (18⅛×11¾×37\")",
+  "productUrl": "https://www.ikea.com/us/en/p/trofast-frame-white-30091452/",
+  "color": "#f3efe8",
+  "confidence": "low",
+  "sources": [
+    "https://www.ikea.com/us/en/p/trofast-frame-white-30091452/"
+  ],
+  "options": {
+    "t": 1.6,
+    "base": {
+      "type": "none"
+    },
+    "back": "none",
+    "top": "overlay",
+    "tt": 1.6,
+    "lying": false,
+    "finale": {
+      "caption": "Slide in the bins",
+      "say": "Slide the bins into the grooves in the sides. Mix big and small ones, it all fits the same frame. Toys away, done."
+    }
+  },
+  "tags": [
+    "toys",
+    "kids",
+    "bins"
+  ],
+  "notes": "Bin grooves are part of the side panels; the 3D shows the frame only. Bins are sold separately."
+}

@@ -1,0 +1,384 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/trofast-frame.json by scripts/generate.mjs (archetype \"bookcase\"). Edit the spec, not this file.",
+  "slug": "trofast-frame",
+  "name": "TROFAST",
+  "title": "Storage frame",
+  "worksWith": "IKEA® TROFAST frame, 46×30×94 cm (18⅛×11¾×37\")",
+  "productUrl": "https://www.ikea.com/us/en/p/trofast-frame-white-30091452/",
+  "size": [
+    46,
+    94,
+    30
+  ],
+  "minutes": 20,
+  "people": 1,
+  "level": 1,
+  "color": "#f3efe8",
+  "category": "kids",
+  "archetype": "bookcase",
+  "confidence": "low",
+  "sources": [
+    "https://www.ikea.com/us/en/p/trofast-frame-white-30091452/"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom panel"
+    },
+    {
+      "id": "top",
+      "label": "Top panel"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        92.4,
+        30
+      ],
+      "pos": [
+        -22.2,
+        46.2,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        92.4,
+        30
+      ],
+      "pos": [
+        22.2,
+        46.2,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "bottom",
+      "size": [
+        42.8,
+        1.6,
+        29.6
+      ],
+      "pos": [
+        0,
+        0.8,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        46,
+        1.6,
+        30
+      ],
+      "pos": [
+        0,
+        93.2,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Stand one side panel on its edge, holes facing in. Screw in two cam pins by hand, then tap in two dowels.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -21.4,
+              0.8,
+              9.6
+            ],
+            [
+              -21.4,
+              0.8,
+              -9.6
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -21.4,
+              0.8,
+              3.84
+            ],
+            [
+              -21.4,
+              0.8,
+              -3.84
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Push the bottom panel onto the low pins and dowels. Drop two cam locks into the round holes, arrows facing the pins, and turn them clockwise until they grab.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -18,
+              1.6,
+              9.6
+            ],
+            [
+              -18,
+              1.6,
+              -9.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Side two. Lock 2.",
+      "say": "Pins and dowels go into the ends of the panels on this side too. Lower the second side onto all of them at once, then lock the last two cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              21.4,
+              0.8,
+              9.6
+            ],
+            [
+              21.4,
+              0.8,
+              -9.6
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              21.4,
+              0.8,
+              3.84
+            ],
+            [
+              21.4,
+              0.8,
+              -3.84
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              18,
+              1.6,
+              9.6
+            ],
+            [
+              18,
+              1.6,
+              -9.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Top on. Lock 4.",
+      "say": "Tap four dowels into the top edges of the sides. Set the top panel on, good side up, then lock it from inside with four cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -22.2,
+              92.4,
+              4.8
+            ],
+            [
+              -22.2,
+              92.4,
+              -4.8
+            ],
+            [
+              22.2,
+              92.4,
+              4.8
+            ],
+            [
+              22.2,
+              92.4,
+              -4.8
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+x",
+          "at": [
+            [
+              -21.4,
+              88.9,
+              9.6
+            ],
+            [
+              -21.4,
+              88.9,
+              -9.6
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "cam",
+          "axis": "-x",
+          "at": [
+            [
+              21.4,
+              88.9,
+              9.6
+            ],
+            [
+              21.4,
+              88.9,
+              -9.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Slide in the bins",
+      "say": "Slide the bins into the grooves in the sides. Mix big and small ones, it all fits the same frame. Toys away, done.",
+      "view": {
+        "az": 25,
+        "el": 18
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Last step, and the most important. Screw the wall bracket to the top at the back, then fix it to the wall with screws that suit your wall. Furniture can tip over. Always anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              89.4,
+              -15.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your TROFAST storage frame is built. Give it a proud little pat.",
+  "notes": "Bin grooves are part of the side panels; the 3D shows the frame only. Bins are sold separately."
+}

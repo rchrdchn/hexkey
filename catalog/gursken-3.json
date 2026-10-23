@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "gursken-3",
+  "name": "GURSKEN",
+  "title": "Chest of 3 drawers",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    69,
+    38,
+    67
+  ],
+  "worksWith": "IKEA® GURSKEN chest of 3 drawers, 69×38×67 cm (27⅛×15×26⅜\")",
+  "productUrl": "https://www.ikea.com/gb/en/p/gursken-chest-of-3-drawers-light-beige-00486327/",
+  "color": "#e9dcc5",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/gb/en/p/gursken-chest-of-3-drawers-light-beige-00486327/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.6,
+    "base": {
+      "type": "legs",
+      "h": 9,
+      "leg": 3
+    },
+    "knobs": 1,
+    "knobWord": "handles"
+  },
+  "tags": [
+    "small",
+    "budget"
+  ]
+}

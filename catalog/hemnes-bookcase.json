@@ -1,0 +1,41 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hemnes-bookcase",
+  "name": "HEMNES",
+  "title": "Bookcase",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    90,
+    37,
+    197
+  ],
+  "worksWith": "IKEA® HEMNES bookcase, 90×37×197 cm (35⅜×14⅝×77½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/hemnes-bookcase-white-stain-90371765/",
+  "color": "#eee8dc",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/hemnes-bookcase-white-stain-90371765/"
+  ],
+  "options": {
+    "t": 2.2,
+    "top": "overlay",
+    "tt": 2.8,
+    "overhang": 1.5,
+    "fixed": [
+      0.45
+    ],
+    "shelves": 3,
+    "base": {
+      "type": "plinth",
+      "h": 8
+    },
+    "lying": true
+  },
+  "tags": [
+    "books",
+    "solid wood",
+    "tall"
+  ],
+  "notes": "Shelf count and plinth height approximated from public photos and dimensions."
+}
