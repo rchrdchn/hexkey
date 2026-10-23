@@ -1,0 +1,56 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "storkcraft-kyoto-6-drawer",
+  "name": "KYOTO",
+  "title": "6-drawer double dresser",
+  "brand": "storkcraft",
+  "archetype": "chest",
+  "category": "kids",
+  "size": [
+    121.2,
+    45.7,
+    84.1
+  ],
+  "worksWith": "Storkcraft® Kyoto 6-drawer double dresser (03766-70B), 47.72×17.99×33.11\" (W×D×H)",
+  "productUrl": "https://www.storkcraft.com/products/storkcraft®-kyoto-6-drawer-dresser",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--rdc8Z3or--/zb2zqcoxmoaxvy1oi2oh",
+  "color": "#2d2d2d",
+  "confidence": "medium",
+  "sources": [
+    "https://www.storkcraft.com/products/storkcraft®-kyoto-6-drawer-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1,
+    "runners": "preinstalled"
+  },
+  "tags": [
+    "dresser",
+    "6 drawer",
+    "double dresser",
+    "storkcraft",
+    "nursery",
+    "kids"
+  ],
+  "notes": "Brand page: 47.72×17.99×33.11\", 6 drawers (3 rows of 2) on pre-installed Euro glides, interlocking drawer system (one drawer opens at a time) and a tip-over restraint kit, 2 people recommended. Base simplified to a plinth.",
+  "people": 2
+}

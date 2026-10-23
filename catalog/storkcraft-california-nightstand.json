@@ -1,0 +1,50 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "storkcraft-california-nightstand",
+  "name": "CALIFORNIA",
+  "title": "2-drawer nightstand",
+  "brand": "storkcraft",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    45.0,
+    45.0,
+    55.9
+  ],
+  "worksWith": "Storkcraft® California 2-drawer nightstand (03761-217), 17.72×17.72×22.01\" (W×D×H)",
+  "productUrl": "https://www.storkcraft.com/products/storkcraft®-california-drawer-nightstand",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--DYd1f0Zn--/mvyk6kdmw3e8zopmeauz",
+  "color": "#f2f0ea",
+  "confidence": "medium",
+  "sources": [
+    "https://www.storkcraft.com/products/storkcraft®-california-drawer-nightstand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1,
+    "runners": "preinstalled"
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "2 drawer",
+    "storkcraft",
+    "nursery",
+    "kids"
+  ],
+  "notes": "Brand page: 17.72×17.72×22.01\", 2 drawers on pre-installed Euro glides (the tracks come fitted), wood framing and wood composites, knobs, 2 people recommended. Base simplified to a plinth.",
+  "people": 2
+}

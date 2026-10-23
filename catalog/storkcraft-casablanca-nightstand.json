@@ -1,0 +1,50 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "storkcraft-casablanca-nightstand",
+  "name": "CASABLANCA",
+  "title": "2-drawer nightstand",
+  "brand": "storkcraft",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    51.0,
+    45.7,
+    55.6
+  ],
+  "worksWith": "Storkcraft® Casablanca® 2-drawer nightstand (03761-407D), 20.08×17.99×21.89\" (W×D×H)",
+  "productUrl": "https://www.storkcraft.com/products/storkcraft®-casablanca™-2-drawer-nightstand",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--XoDK7uTA--/wkan6hyuakwn45b5rnoh",
+  "color": "#d8cdb9",
+  "confidence": "medium",
+  "sources": [
+    "https://www.storkcraft.com/products/storkcraft®-casablanca™-2-drawer-nightstand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1,
+    "runners": "preinstalled"
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "2 drawer",
+    "storkcraft",
+    "nursery",
+    "kids"
+  ],
+  "notes": "Brand page: 20.08×17.99×21.89\", 2 drawers on pre-installed Euro glides (the tracks come fitted), wood framing and wood composites, knobs, 2 people recommended. Base simplified to a plinth.",
+  "people": 2
+}

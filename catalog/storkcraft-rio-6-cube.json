@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "storkcraft-rio-6-cube",
+  "name": "RIO",
+  "title": "6-cube organizer bookcase",
+  "brand": "storkcraft",
+  "archetype": "cubes",
+  "category": "kids",
+  "size": [
+    117.0,
+    33.3,
+    84.1
+  ],
+  "worksWith": "Storkcraft® Rio 6-cube organizer bookcase (03767-60Y), 46.06×13.11×33.11\" (W×D×H)",
+  "productUrl": "https://www.storkcraft.com/products/storkcraft-rio-6-cube-storage-organizer-bookcase",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s---8qyDybV--/oobxrsbevhhyuhdeaq2h",
+  "color": "#cfc6b8",
+  "confidence": "low",
+  "sources": [
+    "https://www.storkcraft.com/products/storkcraft-rio-6-cube-storage-organizer-bookcase"
+  ],
+  "options": {
+    "cols": 3,
+    "rows": 2,
+    "cell": 36.8,
+    "outer": 1.8,
+    "inner": 1.5
+  },
+  "tags": [
+    "cube storage",
+    "cubby",
+    "bookcase",
+    "organizer",
+    "storkcraft",
+    "nursery",
+    "kids"
+  ],
+  "notes": "Brand page: 46.06×13.11×33.11\", six open cubbies, solid-wood turned feet. We draw the box without its feet, so cells are sized from the width; board thickness is our guess.",
+  "people": 2
+}

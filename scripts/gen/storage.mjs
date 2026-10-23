@@ -71,7 +71,13 @@ function drawers(b, g, slots, opt) {
       b.obj(`rn${k}r`, 'runner', [1.2, 1.4, dd], [s.xb - 0.6, s.ya + 1.6, zs - pull]);
     }
   });
-  if (runners) b.step({
+  if (opt.runners === 'preinstalled') b.step({
+    caption: 'Tracks: already fitted',
+    say: `Good news: the drawer tracks come already fitted inside the frame on this one, ${say(ids.length)} pairs. Check each one is tight and level, and that nothing got bent in the box.`,
+    add: ids.flatMap(({ k }) => [`rn${k}l`, `rn${k}r`]), from: [0, 0, 30],
+    view: { az: 20, el: 25 },
+  });
+  else if (runners) b.step({
     caption: `Runners: ${ids.length} pairs`,
     say: pick(slug, 'runners', [
       `Screw the metal runners inside the frame, one pair for each drawer, ${say(ids.length * 2)} in all. Use the pre-drilled holes so every pair sits level.`,

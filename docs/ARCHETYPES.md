@@ -36,7 +36,7 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 | Archetype | Used by | Key options |
 |---|---|---|
 | `bookcase` | BILLY 40/106, HEMNES bookcase, BESTÅ frame, TROFAST frame | `t` panel thickness, `top` `inset`\|`overlay`, `tt`, `overhang`, `base` (`none`, `plinth`, `legs`, `apron`, `casters` + `h`), `shelves` (adjustable count), `fixed` (fixed shelf heights as fractions), `lying` (build on its back; default when taller than 140), `back`, `finale` (extra closing step) |
-| `chest` | MALM 2/3/4/6, HEMNES 3/8, RAST, TARVA, GURSKEN, BRIMNES, ALEX | `rows` top to bottom: `{ "type": "drawer", "cols": 2, "h": 1.4 }` (`h` is a relative height weight, default 1) or `{ "type": "open" }`/`{ "type": "door" }`; `knobs` per drawer and `knobWord`; `runners` (false = wooden rails); `drawerDepth`; `anchor`; plus the carcass options above |
+| `chest` | MALM 2/3/4/6, HEMNES 3/8, RAST, TARVA, GURSKEN, BRIMNES, ALEX | `rows` top to bottom: `{ "type": "drawer", "cols": 2, "h": 1.4 }` (`h` is a relative height weight, default 1) or `{ "type": "open" }`/`{ "type": "door" }`; `knobs` per drawer and `knobWord`; `runners` (false = wooden rails, `"preinstalled"` = tracks come fitted, so the step is a check instead of screws); `drawerDepth`; `anchor`; plus the carcass options above |
 | `cubes` | KALLAX 1×4, 2×4, 4×4 | `cols`, `rows` (33.5 cm cells, 3.9 cm outer and 1.5 cm inner boards) |
 | `table` | LACK coffee table and TV bench, LAGKAPTEN/ADILS | `tt` top thickness, `leg` size, `shelf` (lower shelf), `mount` (`dbolt` double-ended screws or `plate`), `feet` (levelling feet), `topLabel` |
 | `apron-table` | INGO | `tt`, `leg`, `apron` |

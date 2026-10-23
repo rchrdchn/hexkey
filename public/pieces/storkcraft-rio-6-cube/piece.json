@@ -1,0 +1,593 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/storkcraft-rio-6-cube.json by scripts/generate.mjs (archetype \"cubes\"). Edit the spec, not this file.",
+  "slug": "storkcraft-rio-6-cube",
+  "name": "RIO",
+  "title": "6-cube organizer bookcase",
+  "brand": "Storkcraft",
+  "brandId": "storkcraft",
+  "disclaimer": "Not affiliated with or endorsed by Storkcraft.",
+  "worksWith": "Storkcraft® Rio 6-cube organizer bookcase (03767-60Y), 46.06×13.11×33.11\" (W×D×H)",
+  "productUrl": "https://www.storkcraft.com/products/storkcraft-rio-6-cube-storage-organizer-bookcase",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s---8qyDybV--/oobxrsbevhhyuhdeaq2h",
+  "size": [
+    117,
+    79,
+    33
+  ],
+  "minutes": 30,
+  "people": 2,
+  "level": 2,
+  "color": "#cfc6b8",
+  "category": "kids",
+  "archetype": "cubes",
+  "confidence": "low",
+  "sources": [
+    "https://www.storkcraft.com/products/storkcraft-rio-6-cube-storage-organizer-bookcase"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "end",
+      "label": "End panel"
+    },
+    {
+      "id": "long",
+      "label": "Long shelf",
+      "plural": "Long shelves"
+    },
+    {
+      "id": "div",
+      "label": "Divider"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.8,
+        78.7,
+        33.3
+      ],
+      "pos": [
+        -57.6,
+        39.35,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.8,
+        78.7,
+        33.3
+      ],
+      "pos": [
+        57.6,
+        39.35,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "end",
+      "size": [
+        113.4,
+        1.8,
+        33.3
+      ],
+      "pos": [
+        0,
+        0.9,
+        0
+      ]
+    },
+    {
+      "id": "top",
+      "part": "end",
+      "size": [
+        113.4,
+        1.8,
+        33.3
+      ],
+      "pos": [
+        0,
+        77.8,
+        0
+      ]
+    },
+    {
+      "id": "long1",
+      "part": "long",
+      "size": [
+        113.4,
+        1.5,
+        33.3
+      ],
+      "pos": [
+        0,
+        39.35,
+        0
+      ]
+    },
+    {
+      "id": "div1_1",
+      "part": "div",
+      "size": [
+        1.5,
+        36.8,
+        33.3
+      ],
+      "pos": [
+        -19.15,
+        20.2,
+        0
+      ]
+    },
+    {
+      "id": "div1_2",
+      "part": "div",
+      "size": [
+        1.5,
+        36.8,
+        33.3
+      ],
+      "pos": [
+        19.15,
+        20.2,
+        0
+      ]
+    },
+    {
+      "id": "div2_1",
+      "part": "div",
+      "size": [
+        1.5,
+        36.8,
+        33.3
+      ],
+      "pos": [
+        -19.15,
+        58.5,
+        0
+      ]
+    },
+    {
+      "id": "div2_2",
+      "part": "div",
+      "size": [
+        1.5,
+        36.8,
+        33.3
+      ],
+      "pos": [
+        19.15,
+        58.5,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Stand one thick side panel on its edge, holes in. Screw in four cam pins at the ends, and tap two dowels into the holes for the long shelves.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -56.7,
+              0.9,
+              10.65
+            ],
+            [
+              -56.7,
+              0.9,
+              -10.65
+            ],
+            [
+              -56.7,
+              77.8,
+              10.65
+            ],
+            [
+              -56.7,
+              77.8,
+              -10.65
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -56.7,
+              39.35,
+              10.65
+            ],
+            [
+              -56.7,
+              39.35,
+              -10.65
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Push one of the thick end panels onto the low pins, then lock it with two cam locks, arrows toward the pins, turned clockwise.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -53.3,
+              1.8,
+              10.65
+            ],
+            [
+              -53.3,
+              1.8,
+              -10.65
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Row 1: dividers",
+      "say": "Tap dowels into the panel below, two per divider, and stand the two short dividers on them. They set the cube width, so push them fully home.",
+      "add": [
+        "div1_1",
+        "div1_2"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -19.15,
+              1.8,
+              10.65
+            ],
+            [
+              -19.15,
+              1.8,
+              -10.65
+            ],
+            [
+              -19.15,
+              38.6,
+              10.65
+            ],
+            [
+              -19.15,
+              38.6,
+              -10.65
+            ],
+            [
+              19.15,
+              1.8,
+              10.65
+            ],
+            [
+              19.15,
+              1.8,
+              -10.65
+            ],
+            [
+              19.15,
+              38.6,
+              10.65
+            ],
+            [
+              19.15,
+              38.6,
+              -10.65
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Long shelf 1",
+      "say": "Lower a long shelf onto the divider dowels and the side dowels at the same time. Wiggle it down evenly, a little at each end.",
+      "add": [
+        "long1"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Row 2: dividers",
+      "say": "Next row of dividers, same as before: dowels down, dividers on.",
+      "add": [
+        "div2_1",
+        "div2_2"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -19.15,
+              40.1,
+              10.65
+            ],
+            [
+              -19.15,
+              40.1,
+              -10.65
+            ],
+            [
+              -19.15,
+              76.9,
+              10.65
+            ],
+            [
+              -19.15,
+              76.9,
+              -10.65
+            ],
+            [
+              19.15,
+              40.1,
+              10.65
+            ],
+            [
+              19.15,
+              40.1,
+              -10.65
+            ],
+            [
+              19.15,
+              76.9,
+              10.65
+            ],
+            [
+              19.15,
+              76.9,
+              -10.65
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Top on. Lock 2.",
+      "say": "Top end panel onto its pins and the top dowels. Lock two cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -53.3,
+              78.7,
+              10.65
+            ],
+            [
+              -53.3,
+              78.7,
+              -10.65
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Side two. Lock 4.",
+      "say": "Pins into the ends of the top and bottom, dowels into the long shelves, then press the second side on and lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              56.7,
+              0.9,
+              10.65
+            ],
+            [
+              56.7,
+              0.9,
+              -10.65
+            ],
+            [
+              56.7,
+              77.8,
+              10.65
+            ],
+            [
+              56.7,
+              77.8,
+              -10.65
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              56.7,
+              39.35,
+              10.65
+            ],
+            [
+              56.7,
+              39.35,
+              -10.65
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              53.3,
+              1.8,
+              10.65
+            ],
+            [
+              53.3,
+              1.8,
+              -10.65
+            ],
+            [
+              53.3,
+              78.7,
+              10.65
+            ],
+            [
+              53.3,
+              78.7,
+              -10.65
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Screw the wall bracket to the top at the back, then into the wall with fixings for your wall. Fill the bottom cubes first and the top ones last. And always anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              -29.25,
+              75.7,
+              -16.95
+            ],
+            [
+              29.25,
+              75.7,
+              -16.95
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your RIO 6-cube organizer bookcase is built. Give it a proud little pat.",
+  "notes": "Brand page: 46.06×13.11×33.11\", six open cubbies, solid-wood turned feet. We draw the box without its feet, so cells are sized from the width; board thickness is our guess."
+}

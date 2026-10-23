@@ -1,0 +1,56 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "storkcraft-alpine-4-drawer",
+  "name": "ALPINE",
+  "title": "4-drawer chest",
+  "brand": "storkcraft",
+  "archetype": "chest",
+  "category": "kids",
+  "size": [
+    78.5,
+    42.5,
+    101.0
+  ],
+  "worksWith": "Storkcraft® Alpine 4-drawer chest (03664-40A), 30.91×16.73×39.76\" (W×D×H)",
+  "productUrl": "https://www.storkcraft.com/products/storkcraft®-alpine-4-drawer-chest",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--UjzOAeG2--/wkfxz4guund4q5yt5f6x",
+  "color": "#f4f2ee",
+  "confidence": "medium",
+  "sources": [
+    "https://www.storkcraft.com/products/storkcraft®-alpine-4-drawer-chest"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1,
+    "runners": "preinstalled"
+  },
+  "tags": [
+    "dresser",
+    "chest",
+    "4 drawer",
+    "storkcraft",
+    "nursery",
+    "kids"
+  ],
+  "notes": "Brand page: 30.91×16.73×39.76\", 4 drawers on pre-installed Euro glides, interlocking drawer system on models made after 09/2023, PU-coated engineered wood, 2 people recommended. The brand links separate instructions per model-number suffix (\"AC\"/\"FC\", before and after the interlock); we link the \"AC\" one.",
+  "people": 2
+}

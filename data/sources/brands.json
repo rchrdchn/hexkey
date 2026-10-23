@@ -880,6 +880,28 @@
    "disclaimer": "Not affiliated with or endorsed by Fully (Herman Miller).",
    "checked": "unverified (general knowledge, site not checked)",
    "short": "Fully"
+  },
+  {
+   "id": "storkcraft",
+   "name": "Storkcraft",
+   "label": "Storkcraft®",
+   "tier": "medium",
+   "site": "https://www.storkcraft.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Product page \"Assembly Instructions\" link → Salsify-hosted PDF (one per model; some per model-number suffix)",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed (10 s between requests)",
+   "products": [
+    "Rio 4/6-cube organizer bookcases",
+    "Casablanca and California cube bookcases",
+    "Santorini, California and Casablanca 2-drawer nightstands",
+    "Rio, Kyoto and Sorrento 6-drawer dressers",
+    "Alpine 4-drawer chest"
+   ],
+   "note": "Assembled W×D×H listed under \"Product Dimensions\" on each page; \"2 people recommended\" and pre-installed drawer tracks noted in copy. Graco®-licensed lines skipped (licensed brand name).",
+   "checked": "verified 2026-10-23",
+   "disclaimer": "Not affiliated with or endorsed by Storkcraft."
   }
  ]
 }
