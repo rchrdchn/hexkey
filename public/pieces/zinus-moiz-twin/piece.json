@@ -1,0 +1,643 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/zinus-moiz-twin.json by scripts/generate.mjs (archetype \"platform-bed\"). Edit the spec, not this file.",
+  "slug": "zinus-moiz-twin",
+  "name": "MOIZ",
+  "title": "Wood platform bed (twin)",
+  "brand": "Zinus",
+  "brandId": "zinus",
+  "disclaimer": "Not affiliated with or endorsed by Zinus.",
+  "worksWith": "Zinus® Moiz deluxe wood platform bed frame, twin, 38×74.5\" footprint, 14\" tall",
+  "productUrl": "https://www.zinus.com/products/moiz-deluxe-wood-platform-bed-frame",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/2097/4191/files/Moiz_Platform_Bed__Assembly_Guide-Twin-Zinus.pdf",
+  "size": [
+    97,
+    37,
+    189
+  ],
+  "minutes": 50,
+  "people": 2,
+  "level": 1,
+  "color": "#b98d5f",
+  "category": "bedroom",
+  "archetype": "platform-bed",
+  "confidence": "medium",
+  "sources": [
+    "https://www.zinus.com/products/moiz-deluxe-wood-platform-bed-frame"
+  ],
+  "parts": [
+    {
+      "id": "rail",
+      "label": "Side rail"
+    },
+    {
+      "id": "end",
+      "label": "End rail"
+    },
+    {
+      "id": "beam",
+      "label": "Center beam"
+    },
+    {
+      "id": "slats",
+      "label": "Slat roll"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "railL",
+      "part": "rail",
+      "size": [
+        4,
+        35.5,
+        189
+      ],
+      "pos": [
+        -46.25,
+        17.75,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            8,
+            189
+          ],
+          "p": [
+            0,
+            13.75,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            27.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            -89.5
+          ]
+        },
+        {
+          "s": [
+            5,
+            27.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            89.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railR",
+      "part": "rail",
+      "size": [
+        4,
+        35.5,
+        189
+      ],
+      "pos": [
+        46.25,
+        17.75,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            8,
+            189
+          ],
+          "p": [
+            0,
+            13.75,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            27.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            -89.5
+          ]
+        },
+        {
+          "s": [
+            5,
+            27.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            89.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endH",
+      "part": "end",
+      "size": [
+        88.5,
+        8,
+        4
+      ],
+      "pos": [
+        0,
+        31.5,
+        -92.5
+      ]
+    },
+    {
+      "id": "endF",
+      "part": "end",
+      "size": [
+        88.5,
+        8,
+        4
+      ],
+      "pos": [
+        0,
+        31.5,
+        92.5
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        4,
+        35.5,
+        181
+      ],
+      "pos": [
+        0,
+        17.75,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            5.6,
+            181
+          ],
+          "p": [
+            0,
+            14.95,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            29.9,
+            5
+          ],
+          "p": [
+            0,
+            -2.8,
+            -64.5
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            5,
+            29.9,
+            5
+          ],
+          "p": [
+            0,
+            -2.8,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            5,
+            29.9,
+            5
+          ],
+          "p": [
+            0,
+            -2.8,
+            64.5
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "slats",
+      "part": "slats",
+      "size": [
+        87.5,
+        1.8,
+        179
+      ],
+      "pos": [
+        0,
+        36.4,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -86.5
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -76.89
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -67.28
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -57.67
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -48.06
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -38.44
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -28.83
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -19.22
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -9.61
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            9.61
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            19.22
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            28.83
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            38.44
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            48.06
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            57.67
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            67.28
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            76.89
+          ]
+        },
+        {
+          "s": [
+            87.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            86.5
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Unbox in the bedroom",
+      "say": "Open the box in the room the bed will live in. Lay every part out on the flattened carton and match the hardware to the parts list.",
+      "view": {
+        "az": 30,
+        "el": 35
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Legs onto side rails",
+      "say": "Screw the legs onto both side rails, hand tight for now.",
+      "add": [
+        "railL",
+        "railR"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Head + foot rails",
+      "say": "Join the head rail and the foot rail between the side rails, one bolt per corner to start. Leave them a little loose until the frame is square.",
+      "add": [
+        "endH",
+        "endF"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+z",
+          "at": [
+            [
+              -46.25,
+              31.5,
+              -92.5
+            ],
+            [
+              46.25,
+              31.5,
+              -92.5
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "bolt",
+          "axis": "-z",
+          "at": [
+            [
+              -46.25,
+              31.5,
+              92.5
+            ],
+            [
+              46.25,
+              31.5,
+              92.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Center beam + legs",
+      "say": "Drop the center beam in from head to foot and stand up its three support legs. The middle of the bed carries the most weight, so make sure every foot touches the floor.",
+      "add": [
+        "beam"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 2
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Square, then tighten",
+      "say": "Measure corner to corner both ways. When the diagonals match, the frame is square. Now tighten every bolt.",
+      "view": {
+        "az": 0,
+        "el": 80
+      }
+    },
+    {
+      "caption": "Lay 19 slats",
+      "say": "Unroll the slats across the frame and screw or clip each end down. Nineteen slats, evenly spaced.",
+      "add": [
+        "slats"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Mattress on",
+      "say": "Push the bed into place, check it does not rock, and lay the mattress on. No box spring needed on a platform bed.",
+      "view": {
+        "az": 25,
+        "el": 25
+      }
+    }
+  ],
+  "done": "Done. Your MOIZ wood platform bed (twin) is built. Give it a proud little pat.",
+  "notes": "Brand page: 8\" under-bed clearance, slats about 3.5\" apart, under an hour with a friend. Twin size: outer-frame footprint from the brand page's Dimensions and Weight list. Slat count is our estimate from the queen."
+}

@@ -3,9 +3,9 @@
 **Flat-pack, talked through.** Hexkey is an open-source, voice-guided 3D assembly guide for flat-pack furniture.
 Pick your piece, check off what's in the box, then build it step by step. A voice tells you what to do, the 3D model shows you, and you can keep your hands on the furniture.
 
-> Works with 68 pieces from 13 brands:
+> Works with 77 pieces from 13 brands:
 > - **35 IKEA® pieces:** LACK, KALLAX, BILLY, MALM, HEMNES, ALEX, BRIMNES, TARVA, RAST, GURSKEN, IVAR, BESTÅ, TROFAST, SNIGLAR, BEKVÄM, INGO, MICKE and LAGKAPTEN/ADILS.
-> - **33 pieces from 12 other brands:** Walker Edison®, Ameriwood Home® and Novogratz® (Dorel Home), Zinus®, Nathan James®, Tribesigns®, FlexiSpot®, UPLIFT Desk®, Delta Children®, ClosetMaid®, Prepac®, South Shore® and Sauder®.
+> - **42 pieces from 12 other brands:** Walker Edison®, Ameriwood Home® and Novogratz® (Dorel Home), Zinus®, Nathan James®, Tribesigns®, FlexiSpot®, UPLIFT Desk®, Delta Children®, ClosetMaid®, Prepac®, South Shore® and Sauder®.
 >
 > **Hexkey is not affiliated with, sponsored by or endorsed by any of these brands** (Inter IKEA Systems B.V., Dorel Industries and the others listed in [data/sources/brands.json](data/sources/brands.json)).
 > The steps here are our own and are a demo. Always follow the official instructions that came in your box.
@@ -16,7 +16,7 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 
 ## What's in the catalog
 
-68 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 65 (32 IKEA, 33 from other brands) are generated from short specs by [archetypes](docs/ARCHETYPES.md).
+77 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 74 (32 IKEA, 42 from other brands) are generated from short specs by [archetypes](docs/ARCHETYPES.md).
 Confidence says how sure we are about the internals: **high** = dimensions and construction match the product page; **medium** = dimensions right, drawer/shelf layout or hardware counts are our best guess; **low** = simplified. Every guide is a demo: always follow the official instructions in your box. The app does not show confidence badges; instead every parts list says counts are our best estimate.
 
 | Piece | Category | Steps | Parts | Hardware | Built by | Confidence |

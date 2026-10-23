@@ -676,7 +676,7 @@
     },
     {
       "caption": "Center beam + legs",
-      "say": "Drop the center beam in from head to foot and stand up its three support legs. The middle of a queen carries the most weight, so make sure every foot touches the floor.",
+      "say": "Drop the center beam in from head to foot and stand up its three support legs. The middle of the bed carries the most weight, so make sure every foot touches the floor.",
       "add": [
         "beam"
       ],

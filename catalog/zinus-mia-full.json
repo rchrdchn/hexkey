@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "zinus-mia-full",
+  "name": "MIA",
+  "title": "Metal platform bed (full)",
+  "brand": "zinus",
+  "archetype": "platform-bed",
+  "category": "bedroom",
+  "size": [
+    136.0,
+    189.0,
+    96.5
+  ],
+  "worksWith": "Zinus® Mia metal platform bed frame, full, 53.5×74.5\" footprint, 38\" tall",
+  "productUrl": "https://www.zinus.com/products/mia-metal-platform-bed-frame",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/2097/4191/files/Mia_Platform_Bed__Assembly_Guide-Full_Queen_King-Zinus.pdf",
+  "color": "#3a3a3a",
+  "confidence": "medium",
+  "sources": [
+    "https://www.zinus.com/products/mia-metal-platform-bed-frame"
+  ],
+  "options": {
+    "height": 35.5,
+    "material": "metal",
+    "headboard": true,
+    "slats": 13
+  },
+  "tags": [
+    "bed",
+    "full",
+    "platform bed",
+    "metal",
+    "zinus"
+  ],
+  "notes": "Brand page: wood slats on a steel frame, headboard included, tools in the box, under an hour. Full size: outer-frame footprint from the brand page's Dimensions and Weight list. Slat count is our estimate from the queen.",
+  "minutes": 50
+}

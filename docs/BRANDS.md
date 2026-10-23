@@ -25,7 +25,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | IKEA | 35 |
 | Walker Edison | 8 |
 | Dorel Home (Ameriwood Home, DHP, Novogratz, Cosco) | 5 |
-| Zinus | 4 |
+| Zinus | 13 |
 | Sauder | 1 |
 | South Shore | 1 |
 | Prepac | 1 |
@@ -35,16 +35,16 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | FlexiSpot | 1 |
 | UPLIFT Desk | 1 |
 | Delta Children | 2 |
-| **total** | **68** |
+| **total** | **77** |
 
 ## Big brands and big-box retailers
 
 | Brand | Status | Fit | Where instructions live | Access | robots.txt / terms | Popular flat-pack | Notes |
 |---|---|---|---|---|---|---|---|
-| [IKEA](https://www.ikea.com) | included | 5 | Product page → "Assembly and documents" (PDF per article) | public, no login | allows /p/ pages | KALLAX, BILLY, MALM, HEMNES, LACK, BRIMNES, MICKE, IVAR | Existing 32 pieces. |
+| [IKEA](https://www.ikea.com) | included | 5 | Product page → "Assembly and documents" (PDF per article) | public, no login | allows /p/ pages | KALLAX, BILLY, MALM, HEMNES, LACK, BRIMNES, MICKE, IVAR | 35 pieces in the catalog. |
 | [Walker Edison](https://www.walkeredison.com) | included | 5 | Product page "Assembly Instructions" PDF (images.salsify.com) + Assembly Guides/Videos help pages | public, no login | Shopify default; /products/*.json not disallowed | Holmes bookcase, Rebecca 6-drawer dresser, Domm nightstand, Kelm TV stand, Amira bookshelf | Specs from product JSON; dims listed H × L × W. |
 | [Dorel Home (Ameriwood Home, DHP, Novogratz, Cosco)](https://www.dorelhome.com) | included | 4 | Product page "Assembly Instructions" PDF on cdn.dorelhome.com/DorelHomeFiles/ProductDocuments/ | public, no login | Shopify default; allowed | Parsons desk/tables/TV stand, Her Majesty nightstand, Westerleigh dresser, Farmington cabinet | Product pages often leave dimension fields blank; dims cross-checked with retailer listings quoting manufacturer copy → medium confidence. |
-| [Zinus](https://www.zinus.com) | included | 5 | Product page "Assembly Instructions" PDF on Shopify CDN | public, no login | Crawl-delay 10; products allowed | Mia metal platform bed, Moiz wood platform bed, Allen bed, Linda bed | Suzanne page returned 503 → skipped. |
+| [Zinus](https://www.zinus.com) | included | 5 | Product page "Assembly Instructions" PDF on Shopify CDN | public, no login | Crawl-delay 10; products allowed | Mia metal platform bed, Moiz wood platform bed, Allen bed, Linda bed | Mia, Moiz and Allen in twin, full, queen and king (outer-frame sizes from each page's "Dimensions and Weight" list); Linda queen only (its page lists no per-size dimensions); Suzanne page returned 503 → skipped. |
 | [Sauder](https://www.sauder.com) | included | 4 | Instruction book lookup/request by model number (/service/instruction-book-request) | public | Disallows /Dimensions, /services/, /compare; spec panel loads from a disallowed endpoint so specs were NOT fetched | Beginnings bookcases, Select bookcases, Cannery Bridge, standing desks | Facts from retailer listings via web search only → medium confidence, 1 piece. |
 | [South Shore](https://www.southshorefurniture.com) | included | 4 | Product page assembly PDF / support "Assembly instructions" by model | site returned 423 to our fetcher | n/a (blocked) | Axess bookcase, Step One dresser, Libra | Site blocked (HTTP 423) → not crawled; 1 piece from retailer listings via web search, medium confidence. |
 | [Prepac](https://www.prepacmfg.com) | included | 4 | Product page "Assembly Instructions" PDF | TLS connection refused for our fetcher | n/a (blocked) | Sonoma/Fremont 6-drawer dresser, Elite storage, shoe cubbies | Site unreachable (TLS failure) → 1 piece from retailer listings via web search, medium confidence. |
@@ -131,7 +131,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 
 1. **Walker Edison** (fit 5): 64" metal-X bookshelf, ladder bookshelf 68", Ivy 3-drawer TV console, mid-century nightstands, platform beds. All have public Salsify PDFs and full specs in product JSON.
 2. **Dorel Home**: Westerleigh 6-drawer dresser, Farmington cabinet, Large Parsons 2-drawer desk (need dimensions from a public listing).
-3. **Zinus**: twin/full/king variants of Mia/Moiz/Allen/Linda (same archetype, change size), Suzanne when the page is up.
+3. **Zinus**: ~~twin/full/king of Mia, Moiz, Allen~~ (done, batch 2). Linda twin/full/king once its page lists per-size dimensions; Suzanne when the page is up.
 4. **Delta Children**: Sutton 3-drawer, Epic bookcase hutch, 6-shelf storage with 2 drawers.
 5. **Tribesigns**: L-shaped desks (needs an `l-desk` archetype), 6-tier bookcase.
 6. **Standing desks**: Autonomous SmartDesk Core, VIVO frames, Branch Duo, Fully Jarvis (archetype ready).
