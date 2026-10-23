@@ -2,6 +2,8 @@ name: ci
 on: [push, pull_request]
 jobs:
   check:
+    # Private-repo minutes are billed; run only once the repo is public (free).
+    if: ${{ !github.event.repository.private }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
