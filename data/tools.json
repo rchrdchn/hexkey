@@ -4,6 +4,7 @@
     {
       "id": "hex-key",
       "name": "Hex key set",
+      "short": "Hex keys",
       "note": "Most boxes include one; a set with a handle is kinder to your wrist.",
       "query": "hex key allen wrench set metric",
       "icon": "hex"
@@ -11,6 +12,7 @@
     {
       "id": "phillips",
       "name": "Phillips #2 screwdriver",
+      "short": "Phillips #2",
       "note": "The one screwdriver almost every build needs.",
       "query": "phillips 2 screwdriver",
       "icon": "phillips"
@@ -18,6 +20,7 @@
     {
       "id": "flathead",
       "name": "Flathead screwdriver",
+      "short": "Flathead",
       "note": "Turns cam locks and pries out stuck dowels.",
       "query": "flathead screwdriver",
       "icon": "flathead"
@@ -25,6 +28,7 @@
     {
       "id": "stubby",
       "name": "Stubby screwdriver",
+      "short": "Stubby driver",
       "note": "For screws inside drawers and tight corners.",
       "query": "stubby screwdriver phillips",
       "icon": "stubby"
@@ -32,6 +36,7 @@
     {
       "id": "mallet",
       "name": "Rubber mallet",
+      "short": "Mallet",
       "note": "Taps dowels and back-panel nails in without dents.",
       "query": "rubber mallet",
       "icon": "mallet"
@@ -39,6 +44,7 @@
     {
       "id": "drill",
       "name": "Cordless drill/driver with bits",
+      "short": "Drill",
       "note": "Saves your hands on long screw runs. Use a low clutch setting.",
       "query": "cordless drill driver with bit set",
       "icon": "drill"
@@ -46,6 +52,7 @@
     {
       "id": "tape",
       "name": "Tape measure",
+      "short": "Tape measure",
       "note": "Checks it fits the spot and marks where the wall studs are.",
       "query": "tape measure 25 ft",
       "icon": "tape"
@@ -53,6 +60,7 @@
     {
       "id": "level",
       "name": "Level",
+      "short": "Level",
       "note": "Keeps shelves, drawers and desktops true.",
       "query": "torpedo level",
       "icon": "level"
@@ -60,6 +68,7 @@
     {
       "id": "glue",
       "name": "Wood glue",
+      "short": "Wood glue",
       "note": "Optional: a drop on wobbly dowel joints.",
       "query": "wood glue",
       "icon": "glue"
@@ -67,6 +76,7 @@
     {
       "id": "pads",
       "name": "Furniture pads",
+      "short": "Felt pads",
       "note": "Felt pads protect floors and help it slide.",
       "query": "felt furniture pads",
       "icon": "pads"
@@ -74,6 +84,7 @@
     {
       "id": "anchors",
       "name": "Wall-anchor kit",
+      "short": "Wall anchors",
       "note": "For tip-over straps and wall mounting. Anchor dressers and tall shelves to the wall.",
       "query": "furniture anti tip wall anchor kit",
       "icon": "anchor"
@@ -81,6 +92,7 @@
     {
       "id": "knife",
       "name": "Utility knife",
+      "short": "Utility knife",
       "note": "Opens the box. Cut shallow so you don't scratch panels.",
       "query": "utility knife retractable",
       "icon": "knife"

@@ -2,7 +2,7 @@ import data from '../data/tools.json';
 import type { Piece } from './types';
 import { amazonSearch } from './config/affiliates';
 
-export interface Tool { id: string; name: string; note: string; query: string; icon: string; url: string }
+export interface Tool { id: string; name: string; short: string; note: string; query: string; icon: string; url: string }
 interface Rules {
   default: string[]; category: Record<string, string[]>; archetype: Record<string, string[]>; combo: Record<string, string[]>; hardware: Record<string, string[]>;
   tall: { minHeightCm: number; tools: string[] }; slugs: Record<string, { add?: string[]; drop?: string[] }>;

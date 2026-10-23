@@ -13,7 +13,7 @@ for (const t of tools) {
   if (!/^[a-z0-9-]+$/.test(t.id || '')) err(`bad id "${t.id}"`);
   if (ids.has(t.id)) err(`duplicate id "${t.id}"`);
   ids.add(t.id);
-  for (const k of ['name', 'note', 'query', 'icon']) if (typeof t[k] !== 'string' || !t[k]) err(`${t.id}: missing ${k}`);
+  for (const k of ['name', 'short', 'note', 'query', 'icon']) if (typeof t[k] !== 'string' || !t[k]) err(`${t.id}: missing ${k}`);
   if (/amazon|http|\$|★/i.test(`${t.name} ${t.note}`)) err(`${t.id}: name/note must be our own plain words (no links, prices or ratings)`);
 }
 const lists = [['default', rules.default], ['tall', rules.tall?.tools],

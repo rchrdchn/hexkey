@@ -11,6 +11,7 @@ import { IsoPart, HwIcon, Logo, I } from './ui/icons';
 import { makeCard, shareCard, fmtTime } from './share';
 import { ContributeModal, RequestModal } from './ui/Community';
 import { Catalog } from './ui/Catalog';
+import { ToolsCard, NeedTools, AMAZON_DISCLOSURE } from './ui/Tools';
 
 type Route = { mode: Mode; slug: string; step: number; open?: boolean };
 const PICKER = 'pieces'; // #pieces opens the full picker on phones (deep-linkable, closes on browser back)
@@ -285,6 +286,7 @@ export default function App() {
                   ? <button className="cta" onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>Build {piece.name} {I.next}</button>
                   : <button className="cta" disabled aria-busy>Loading…</button>}
                 {piece && <Legal p={piece} />}
+                <p className="legal">{AMAZON_DISCLOSURE}</p>
               </div>
             </>
           ) : (
@@ -295,7 +297,7 @@ export default function App() {
                 {I.next}
               </button>
               <p className="legal">
-                Works with furniture from IKEA® and other brands. Not affiliated with or endorsed by any of them. Demo steps: always follow the official instructions in your box.
+                Works with furniture from IKEA® and other brands. Not affiliated with or endorsed by any of them. Demo steps: always follow the official instructions in your box. {AMAZON_DISCLOSURE}
               </p>
             </div>
           )}
@@ -331,6 +333,7 @@ export default function App() {
           <button className={`cta ${checked.size === total ? 'pop' : ''}`} onClick={next}>
             {checked.size === total ? 'All here. Build!' : 'Start building'} {I.next}
           </button>
+          <ToolsCard piece={piece} />
           <Legal p={piece} />
         </div>
       )}
@@ -376,6 +379,7 @@ export default function App() {
             <button className="next alt" onClick={() => { gesture(); openCard(); }}>{I.share} Share card</button>
           </div>
           <button className="link" onClick={() => { gesture(); go('#/'); }}>Build something else</button>
+          <NeedTools piece={piece} />
           <Legal p={piece} />
         </div>
       )}

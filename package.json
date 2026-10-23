@@ -14,7 +14,8 @@
     "shots": "node scripts/shots.mjs",
     "shots:catalog": "node scripts/shots-catalog.mjs",
     "shots:community": "node scripts/shots-community.mjs",
-    "shots:home": "node scripts/shots-home.mjs"
+    "shots:home": "node scripts/shots-home.mjs",
+    "shots:tools": "node scripts/shots-tools.mjs"
   },
   "license": "MIT",
   "type": "module",
