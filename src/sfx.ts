@@ -5,7 +5,7 @@ export const sfx = {
   unlock() {
     try {
       ctx ??= new (window.AudioContext || (window as any).webkitAudioContext)();
-      if (ctx.state === 'suspended') ctx.resume();
+      if (ctx.state === 'suspended') ctx.resume().catch(() => {}); // no audio device (e.g. headless): stay silent
     } catch { /* no audio */ }
   },
   setMuted(m: boolean) { muted = m; },

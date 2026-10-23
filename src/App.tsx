@@ -9,6 +9,7 @@ import { sfx } from './sfx';
 import { partColor } from './palette';
 import { IsoPart, HwIcon, Logo, I } from './ui/icons';
 import { makeCard, shareCard, fmtTime } from './share';
+import { ContributeModal, RequestModal } from './ui/Community';
 
 type Route = { mode: Mode; slug: string; step: number };
 function parse(): Route {
@@ -95,17 +96,20 @@ export default function App() {
     if (route.mode === 'pick') voice.stop();
   }, [piece, route.mode, step, say]);
 
+  // community modals
+  const [comm, setComm] = useState<null | 'contrib' | { req: { url: string; name: string } | undefined }>(null);
+
   // keyboard
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
-      if ((e.target as HTMLElement)?.tagName === 'INPUT') return;
+      if (comm || /^(INPUT|SELECT|TEXTAREA)$/.test((e.target as HTMLElement)?.tagName)) return;
       if (e.key === 'ArrowRight' || (e.key === ' ' && route.mode === 'build') || (e.key === 'Enter' && route.mode !== 'pick')) { e.preventDefault(); next(); }
       else if (e.key === 'ArrowLeft') back();
       else if (e.key.toLowerCase() === 'r') repeat();
     };
     addEventListener('keydown', k);
     return () => removeEventListener('keydown', k);
-  }, [next, back, repeat, route.mode]);
+  }, [next, back, repeat, route.mode, comm]);
 
   // voice commands
   const handlers = useRef({ next, back, repeat, count });
@@ -212,6 +216,12 @@ export default function App() {
         )}
         {mode !== 'build' && mode !== 'pick' && piece && <div className="ttl">{piece.name}</div>}
         <div className="spacer" />
+        {(mode === 'pick' || mode === 'done') && (
+          <nav className="community" aria-label="Community">
+            <button className="pill" onClick={() => { gesture(); sfx.tick(); setComm('contrib'); }} aria-haspopup="dialog">{I.wrench}<span>Contribute</span></button>
+            <button className="pill alt" onClick={() => { gesture(); sfx.tick(); setComm({ req: undefined }); }} aria-haspopup="dialog" aria-label="Request furniture">{I.bulb}<span className="lg">Request furniture</span><span className="sm">Request</span></button>
+          </nav>
+        )}
         {mode === 'build' && canListen() && (
           <button className={`icon ${ears === 'listening' ? 'live' : ''}`} aria-label="Hands-free voice commands" aria-pressed={ears === 'listening'} onClick={toggleEars}>{I.mic}</button>
         )}
@@ -326,6 +336,9 @@ export default function App() {
           <Legal p={piece} />
         </div>
       )}
+
+      {comm === 'contrib' && <ContributeModal onClose={() => setComm(null)} toRequest={(url, name) => setComm({ req: { url, name } })} />}
+      {comm && comm !== 'contrib' && <RequestModal key={comm.req?.url ?? 'r'} init={comm.req} onClose={() => setComm(null)} />}
 
       {card && piece && (
         <div className="modal" onClick={() => setCard(null)}>

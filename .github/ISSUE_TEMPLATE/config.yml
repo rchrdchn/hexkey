@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 👍 Vote on existing furniture requests
+    url: https://github.com/rchrdchn/hexkey/issues?q=is%3Aissue+is%3Aopen+label%3Afurniture-request+sort%3Areactions-%2B1-desc
+    about: The most-wanted pieces get built first. Add a thumbs-up instead of opening a duplicate.
+  - name: 📖 How to add a piece (CONTRIBUTING.md)
+    url: https://github.com/rchrdchn/hexkey/blob/main/CONTRIBUTING.md
+    about: Measure, write steps in your own words, validate, open a pull request.

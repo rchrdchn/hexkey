@@ -31,6 +31,16 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 - Safety callouts (wall anchoring, two-person lifts) are part of the data, so every piece gets them.
 - Progress for the parts check-off is saved on the device. No accounts, no tracking, no backend.
 
+## Help it grow
+
+Hexkey is meant to grow through its community, one piece of furniture at a time.
+
+- **Contribute** (button in the app): a 30-second fit check, then a pre-filled [Contribute furniture](https://github.com/rchrdchn/hexkey/issues/new?template=contribute-furniture.yml) issue. Full guide: [CONTRIBUTING.md](CONTRIBUTING.md).
+- **Request furniture** (button in the app): 👍 an [existing request](https://github.com/rchrdchn/hexkey/issues?q=is%3Aissue+is%3Aopen+label%3Afurniture-request+sort%3Areactions-%2B1-desc) or open a [new one](https://github.com/rchrdchn/hexkey/issues/new?template=furniture-request.yml). The most-wanted pieces get built first.
+- **Feedback / bug report:** [open an issue](https://github.com/rchrdchn/hexkey/issues/new?template=bug-report.yml).
+
+Issue forms live in `.github/ISSUE_TEMPLATE/` and use the labels `furniture-request`, `contribution` and `bug`. The in-app forms live in `src/ui/Community.tsx`: they only accept ikea.com product page links and fill GitHub's issue forms through URL parameters, so there is no backend.
+
 ## Run it
 
 ```bash
@@ -56,7 +66,7 @@ Everything about a piece lives in one open JSON file: `public/pieces/<slug>/piec
    PYTHON=/path/to/venv-with-kokoro/bin/python npm run voice -- <slug>
    ```
    Needs `pip install kokoro soundfile` and `ffmpeg`. Only changed lines are regenerated.
-7. Open a pull request with screenshots.
+7. Open a pull request with screenshots. See [CONTRIBUTING.md](CONTRIBUTING.md) for the checklist.
 
 ### Rules for contributions (please read)
 
@@ -123,6 +133,7 @@ Units are **centimeters**, angles are **degrees**. Axes: **x** to the right, **y
 - `src/data.ts` expands a piece (step poses, hardware instances, counts). `src/scene/math.ts` does poses, the flat lay and camera framing. `src/scene/Scene.tsx` animates everything in one frame loop.
 - `src/voice.ts`: narration (one reused `<audio>` element so iOS keeps it unlocked), `speechSynthesis` fallback, voice commands, Media Session, Wake Lock.
 - Sound effects are synthesized with Web Audio; no files.
+- `src/ui/Community.tsx`: the Contribute and Request modals (fit check, ikea.com link check, pre-filled GitHub issue links, focus trap and Esc).
 - Routes are hash-based: `#/billy` (check the box), `#/billy/7` (step 7), `#/billy/done`.
 
 ## Browser support

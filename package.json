@@ -9,7 +9,8 @@
     "validate": "node scripts/validate.mjs",
     "typecheck": "tsc --noEmit -p .",
     "voice": "${PYTHON:-python3} scripts/voice.py",
-    "shots": "node scripts/shots.mjs"
+    "shots": "node scripts/shots.mjs",
+    "shots:community": "node scripts/shots-community.mjs"
   },
   "license": "MIT",
   "type": "module",

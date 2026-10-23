@@ -1,0 +1,56 @@
+name: Contribute furniture
+description: Add a new piece to Hexkey (step data, measurements or a review). Tip - use the Contribute button in the app to fill this in for you.
+title: "[Contribute] "
+labels: ["contribution"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping Hexkey grow! Read [CONTRIBUTING.md](https://github.com/rchrdchn/hexkey/blob/main/CONTRIBUTING.md) and the [data format](https://github.com/rchrdchn/hexkey/blob/main/README.md#data-format) first.
+        **Write every step in your own words. Never upload IKEA manuals, PDFs, drawings, photos or 3D models.**
+  - type: input
+    id: product
+    attributes: { label: Product name (as printed on the box), placeholder: HEMNES }
+    validations: { required: true }
+  - type: input
+    id: url
+    attributes:
+      label: IKEA product page
+      description: An ikea.com product page (…/p/…). Not a PDF or image link.
+      placeholder: https://www.ikea.com/us/en/p/hemnes-8-drawer-dresser-white-stain-80318604/
+    validations: { required: true }
+  - type: input
+    id: category
+    attributes: { label: Type, placeholder: "Shelves & bookcases / Tables / Storage & dressers / Desks / Chairs & stools / Beds / Wardrobes / Kitchen / Kids / Outdoor / Other" }
+    validations: { required: true }
+  - type: input
+    id: steps
+    attributes: { label: Approx. number of steps in the manual, placeholder: "12" }
+  - type: input
+    id: has
+    attributes: { label: Do you have the piece?, placeholder: "Built it / Still in the box / Don't have it" }
+    validations: { required: true }
+  - type: input
+    id: gives
+    attributes: { label: What you can provide, placeholder: "Step data (piece.json) / Measurements / Review / test only" }
+    validations: { required: true }
+  - type: input
+    id: level
+    attributes: { label: Your level, placeholder: "New to this / Some JSON / Comfortable with 3D/code" }
+  - type: input
+    id: fit
+    attributes: { label: Fit check result from the app (optional), placeholder: "Great fit / Could work / Better as a request" }
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Measurements, tricky steps, hardware kinds you'll need, anything else. Text only.
+  - type: checkboxes
+    id: rules
+    attributes:
+      label: Rules
+      options:
+        - label: I will write the steps in my own words and will not upload IKEA manuals, PDFs, images or 3D models.
+          required: true
+        - label: I agree my contribution is licensed MIT (code) and CC BY-SA 4.0 (furniture data and audio).
+          required: true
