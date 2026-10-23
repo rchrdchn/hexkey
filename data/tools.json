@@ -1,5 +1,5 @@
 {
-  "$comment": "Tools for each build. Our own words; Amazon links are plain search links built from `query` (no ASINs, prices, ratings or images). Rules add up: default, then category, archetype, category+archetype combos, hardware kinds, then tall pieces. `slugs` can add or drop tools for one piece. Checked by scripts/tools-check.mjs.",
+  "$comment": "Tools for each build. Our own words; Amazon links are plain search links built from `query` (no ASINs, prices, ratings or images). Rules add up: default, then category, archetype, category+archetype combos, hardware kinds, then tall pieces. `slugs` can add or drop tools for one piece. Checked by scripts/tools-check.mjs. Each tool's `why` list gives the one-line reason shown in the Tools window: the first entry whose `if` matches the piece wins (`if` keys: category, archetype, hardware = all of these kinds, anchors = the piece gets the wall-anchor kit); the last entry has no `if`. `must` tools are listed first; the wall-anchor kit joins them when a piece can tip.",
   "tools": [
     {
       "id": "hex-key",
@@ -7,7 +7,38 @@
       "short": "Hex keys",
       "note": "Most boxes include one; a set with a handle is kinder to your wrist.",
       "query": "hex key allen wrench set metric",
-      "icon": "hex"
+      "icon": "hex",
+      "why": [
+        {
+          "if": {
+            "hardware": [
+              "bolt",
+              "campin"
+            ]
+          },
+          "text": "Tightens the bolts and cam pins. A handled set saves your wrist."
+        },
+        {
+          "if": {
+            "hardware": [
+              "bolt"
+            ]
+          },
+          "text": "Tightens the bolts. A handled set saves your wrist."
+        },
+        {
+          "if": {
+            "hardware": [
+              "campin"
+            ]
+          },
+          "text": "Turns the cam pins in. A handled set saves your wrist."
+        },
+        {
+          "text": "Most boxes include one; a handled set saves your wrist."
+        }
+      ],
+      "must": true
     },
     {
       "id": "phillips",
@@ -15,7 +46,29 @@
       "short": "Phillips #2",
       "note": "The one screwdriver almost every build needs.",
       "query": "phillips 2 screwdriver",
-      "icon": "phillips"
+      "icon": "phillips",
+      "why": [
+        {
+          "if": {
+            "hardware": [
+              "hinge"
+            ]
+          },
+          "text": "Drives the screws and sets the door hinges."
+        },
+        {
+          "if": {
+            "hardware": [
+              "screw"
+            ]
+          },
+          "text": "Drives the screws that hold it together."
+        },
+        {
+          "text": "The one screwdriver almost every build needs."
+        }
+      ],
+      "must": true
     },
     {
       "id": "flathead",
@@ -23,7 +76,20 @@
       "short": "Flathead",
       "note": "Turns cam locks and pries out stuck dowels.",
       "query": "flathead screwdriver",
-      "icon": "flathead"
+      "icon": "flathead",
+      "why": [
+        {
+          "if": {
+            "hardware": [
+              "cam"
+            ]
+          },
+          "text": "Turns the cam locks that pull the panels tight."
+        },
+        {
+          "text": "Pries out stuck dowels and nudges panels into line."
+        }
+      ]
     },
     {
       "id": "stubby",
@@ -31,7 +97,28 @@
       "short": "Stubby driver",
       "note": "For screws inside drawers and tight corners.",
       "query": "stubby screwdriver phillips",
-      "icon": "stubby"
+      "icon": "stubby",
+      "why": [
+        {
+          "if": {
+            "hardware": [
+              "knob"
+            ]
+          },
+          "text": "Fits the knob screws inside the drawer fronts."
+        },
+        {
+          "if": {
+            "archetype": [
+              "chest"
+            ]
+          },
+          "text": "Reaches the screws inside the drawers."
+        },
+        {
+          "text": "For screws in tight corners."
+        }
+      ]
     },
     {
       "id": "mallet",
@@ -39,7 +126,37 @@
       "short": "Mallet",
       "note": "Taps dowels and back-panel nails in without dents.",
       "query": "rubber mallet",
-      "icon": "mallet"
+      "icon": "mallet",
+      "why": [
+        {
+          "if": {
+            "hardware": [
+              "dowel",
+              "nail"
+            ]
+          },
+          "text": "Taps the dowels and back-panel nails in without dents."
+        },
+        {
+          "if": {
+            "hardware": [
+              "dowel"
+            ]
+          },
+          "text": "Taps the dowels in without dents."
+        },
+        {
+          "if": {
+            "hardware": [
+              "nail"
+            ]
+          },
+          "text": "Taps the back-panel nails in."
+        },
+        {
+          "text": "Seats tight joints without dents."
+        }
+      ]
     },
     {
       "id": "drill",
@@ -47,7 +164,43 @@
       "short": "Drill",
       "note": "Saves your hands on long screw runs. Use a low clutch setting.",
       "query": "cordless drill driver with bit set",
-      "icon": "drill"
+      "icon": "drill",
+      "why": [
+        {
+          "if": {
+            "archetype": [
+              "wall-shelf"
+            ]
+          },
+          "text": "Drills the holes for the wall brackets."
+        },
+        {
+          "if": {
+            "archetype": [
+              "bed",
+              "platform-bed"
+            ]
+          },
+          "text": "Drives the long frame screws so your hands don't have to."
+        },
+        {
+          "if": {
+            "archetype": [
+              "standing-desk"
+            ]
+          },
+          "text": "Drives the frame screws into the desktop."
+        },
+        {
+          "if": {
+            "anchors": true
+          },
+          "text": "Drills the wall holes for the anchor strap. Use a low clutch setting."
+        },
+        {
+          "text": "Saves your hands on long screw runs. Use a low clutch setting."
+        }
+      ]
     },
     {
       "id": "tape",
@@ -55,7 +208,26 @@
       "short": "Tape measure",
       "note": "Checks it fits the spot and marks where the wall studs are.",
       "query": "tape measure 25 ft",
-      "icon": "tape"
+      "icon": "tape",
+      "why": [
+        {
+          "if": {
+            "archetype": [
+              "wall-shelf"
+            ]
+          },
+          "text": "Marks the bracket holes and finds the wall studs."
+        },
+        {
+          "if": {
+            "anchors": true
+          },
+          "text": "Finds the wall studs for the anchor and checks it fits the spot."
+        },
+        {
+          "text": "Checks it fits the spot before you build."
+        }
+      ]
     },
     {
       "id": "level",
@@ -63,7 +235,50 @@
       "short": "Level",
       "note": "Keeps shelves, drawers and desktops true.",
       "query": "torpedo level",
-      "icon": "level"
+      "icon": "level",
+      "why": [
+        {
+          "if": {
+            "archetype": [
+              "wall-shelf"
+            ]
+          },
+          "text": "Gets the shelf straight before you drill."
+        },
+        {
+          "if": {
+            "archetype": [
+              "crib"
+            ]
+          },
+          "text": "Checks the base sits flat and square."
+        },
+        {
+          "if": {
+            "category": [
+              "dressers"
+            ]
+          },
+          "text": "Keeps the drawers running straight."
+        },
+        {
+          "if": {
+            "category": [
+              "desks"
+            ]
+          },
+          "text": "Keeps the desktop flat."
+        },
+        {
+          "if": {
+            "anchors": true
+          },
+          "text": "Checks it stands straight before you anchor it."
+        },
+        {
+          "text": "Keeps shelves and tops true."
+        }
+      ]
     },
     {
       "id": "glue",
@@ -71,7 +286,12 @@
       "short": "Wood glue",
       "note": "Optional: a drop on wobbly dowel joints.",
       "query": "wood glue",
-      "icon": "glue"
+      "icon": "glue",
+      "why": [
+        {
+          "text": "Optional: a drop on wobbly dowel joints keeps it from rocking."
+        }
+      ]
     },
     {
       "id": "pads",
@@ -79,7 +299,12 @@
       "short": "Felt pads",
       "note": "Felt pads protect floors and help it slide.",
       "query": "felt furniture pads",
-      "icon": "pads"
+      "icon": "pads",
+      "why": [
+        {
+          "text": "Protects your floor and helps it slide into place."
+        }
+      ]
     },
     {
       "id": "anchors",
@@ -87,7 +312,20 @@
       "short": "Wall anchors",
       "note": "For tip-over straps and wall mounting. Anchor dressers and tall shelves to the wall.",
       "query": "furniture anti tip wall anchor kit",
-      "icon": "anchor"
+      "icon": "anchor",
+      "why": [
+        {
+          "if": {
+            "archetype": [
+              "wall-shelf"
+            ]
+          },
+          "text": "Holds it on the wall. Pick anchors that suit your wall."
+        },
+        {
+          "text": "Anchors it to the wall so it can't tip over."
+        }
+      ]
     },
     {
       "id": "knife",
@@ -95,7 +333,12 @@
       "short": "Utility knife",
       "note": "Opens the box. Cut shallow so you don't scratch panels.",
       "query": "utility knife retractable",
-      "icon": "knife"
+      "icon": "knife",
+      "why": [
+        {
+          "text": "Opens the box. Cut shallow so you don't scratch panels."
+        }
+      ]
     }
   ],
   "rules": {

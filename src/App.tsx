@@ -11,7 +11,7 @@ import { IsoPart, HwIcon, Logo, I } from './ui/icons';
 import { makeCard, shareCard, fmtTime } from './share';
 import { ContributeModal, RequestModal } from './ui/Community';
 import { Catalog } from './ui/Catalog';
-import { ToolsCard, NeedTools, AMAZON_DISCLOSURE } from './ui/Tools';
+import { ToolsButton, NeedTools, AMAZON_DISCLOSURE } from './ui/Tools';
 
 type Route = { mode: Mode; slug: string; step: number; open?: boolean };
 const PICKER = 'pieces'; // #pieces opens the full picker on phones (deep-linkable, closes on browser back)
@@ -255,6 +255,7 @@ export default function App() {
             <button className="pill alt" onClick={() => { gesture(); sfx.tick(); setComm({ req: undefined }); }} aria-haspopup="dialog" aria-label="Request furniture">{I.bulb}<span className="lg">Request furniture</span><span className="sm">Request</span></button>
           </nav>
         )}
+        {(mode === 'parts' || mode === 'build') && piece && <ToolsButton piece={piece} onOpen={() => { gesture(); sfx.tick(); }} />}
         {mode === 'build' && canListen() && (
           <button className={`icon ${ears === 'listening' ? 'live' : ''}`} aria-label="Hands-free voice commands" aria-pressed={ears === 'listening'} onClick={toggleEars}>{I.mic}</button>
         )}
@@ -333,7 +334,6 @@ export default function App() {
           <button className={`cta ${checked.size === total ? 'pop' : ''}`} onClick={next}>
             {checked.size === total ? 'All here. Build!' : 'Start building'} {I.next}
           </button>
-          <ToolsCard piece={piece} />
           <Legal p={piece} />
         </div>
       )}

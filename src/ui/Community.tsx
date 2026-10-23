@@ -35,15 +35,18 @@ export function parseIkea(raw: string) {
   return { state: 'ok' as const, url: clean, name, nice: [name, ...words.slice(1, 3)].join(' '), id: m[2] };
 }
 
-/* ---------------- modal shell: focus trap, Esc, restore focus ---------------- */
-function Modal({ title, onClose, children, kind }: { title: string; onClose: () => void; children: ReactNode; kind: string }) {
+/* ---------------- modal shell: focus trap, Esc, backdrop close, body scroll lock, restore focus ---------------- */
+export function Modal({ title, sub, onClose, children, kind }: { title: string; sub?: ReactNode; onClose: () => void; children: ReactNode; kind: string }) {
   const box = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const prev = document.activeElement as HTMLElement | null;
     const el = box.current!;
     const focusables = () => [...el.querySelectorAll<HTMLElement>('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')];
     (el.querySelector<HTMLElement>('[data-autofocus]') ?? focusables()[0])?.focus({ preventScroll: true });
-    return () => prev?.focus?.({ preventScroll: true });
+    const html = document.documentElement, body = document.body;
+    const was = [html.style.overflow, body.style.overflow];
+    html.style.overflow = body.style.overflow = 'hidden';
+    return () => { [html.style.overflow, body.style.overflow] = was; prev?.focus?.({ preventScroll: true }); };
   }, []);
   const onKey = (e: React.KeyboardEvent) => {
     e.stopPropagation(); // keep the app's arrow/space/enter shortcuts out of the form
@@ -59,7 +62,7 @@ function Modal({ title, onClose, children, kind }: { title: string; onClose: () 
     <div className="modal cm-back" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }} onKeyDown={onKey}>
       <div ref={box} className={`cm ${kind}`} role="dialog" aria-modal="true" aria-labelledby={`${kind}-t`}>
         <div className="cm-head">
-          <h2 id={`${kind}-t`}>{title}</h2>
+          <div className="cm-ttl"><h2 id={`${kind}-t`}>{title}</h2>{sub && <p className="cm-sub">{sub}</p>}</div>
           <button className="icon cm-x" aria-label="Close" onClick={onClose}>{I.close}</button>
         </div>
         <div className="cm-body">{children}</div>

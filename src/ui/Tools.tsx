@@ -1,6 +1,8 @@
-import { useMemo, type ReactElement } from 'react';
+import { useMemo, useState, type ReactElement } from 'react';
+import { createPortal } from 'react-dom';
 import type { Piece } from '../types';
-import { toolsFor, needsAnchor, type Tool } from '../tools';
+import { toolsFor, toolRows, needsAnchor, type Tool, type ToolRow } from '../tools';
+import { Modal } from './Community';
 import { AFF_REL, AMAZON_DISCLOSURE } from '../config/affiliates';
 import './tools.css';
 
@@ -19,32 +21,48 @@ const ICONS: Record<string, ReactElement> = {
   pads: <g {...P}><circle cx="8" cy="9" r="4" /><circle cx="16" cy="15" r="4" /></g>,
   anchor: <g {...P}><path d="M4 3v18M4 12h6M10 9v6l10-3z" /></g>,
   knife: <g {...P}><path d="M3 15l9-9 6 3-9 9H3zM14 11l3-3" /></g>,
+  wrench: <path {...P} d="M14.5 4.5a4.5 4.5 0 0 0-4.3 5.8L4 16.5 7.5 20l6.2-6.2a4.5 4.5 0 0 0 5.8-4.3l-2.6 2.6-3-.5-.5-3 2.6-2.6c-.5-.3-1-.5-1.5-.5z" />,
 };
 const ToolIcon = ({ t }: { t: Tool }) => <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>{ICONS[t.icon] ?? ICONS.hex}</svg>;
 const Disclosure = () => <p className="aff-note">{AMAZON_DISCLOSURE}</p>;
 
-/** Parts screen: a closed-by-default card under the Start button, so it never covers the model or the button. */
-export function ToolsCard({ piece }: { piece: Piece }) {
-  const tools = useMemo(() => toolsFor(piece), [piece]);
+/** Top bar: a "Tools" pill next to the sound button (parts screen and every build step). Opens the Tools window. */
+export function ToolsButton({ piece, onOpen }: { piece: Piece; onOpen?: () => void }) {
+  const [open, setOpen] = useState(false);
+  const n = useMemo(() => toolsFor(piece).length, [piece]);
   return (
-    <details className="tools">
-      <summary>
-        <span className="t-ico" aria-hidden><svg viewBox="0 0 24 24" width="18" height="18">{ICONS.hex}</svg></span>
-        <span className="t-sum"><b>Tools for this build</b><small>{tools.slice(0, 3).map((t) => t.name).join(', ')}{tools.length > 3 ? ` +${tools.length - 3}` : ''}</small></span>
-        <span className="t-chev" aria-hidden>›</span>
-      </summary>
-      <p className="t-lead">A hex key and a Phillips #2 do most of it. The rest makes it easier. Links open Amazon.</p>
-      <ul className="t-list">
-        {tools.map((t) => (
-          <li key={t.id}>
-            <a href={t.url} target="_blank" rel={AFF_REL} title={t.note} aria-label={`${t.name} on Amazon (opens a new tab). ${t.note}`}>
-              <ToolIcon t={t} /><span>{t.name}</span>
-            </a>
-          </li>
-        ))}
-      </ul>
-      <Disclosure />
-    </details>
+    <>
+      <button className="pill tools-btn" aria-haspopup="dialog" aria-expanded={open} aria-label={`Tools for this build (${n})`}
+        onClick={() => { onOpen?.(); setOpen(true); }}>
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden>{ICONS.wrench}</svg>
+        <span className="tb-l">Tools</span>
+        <span className="tb-n" aria-hidden>{n}</span>
+      </button>
+      {open && createPortal(<ToolsDialog piece={piece} onClose={() => setOpen(false)} />, document.body)}
+    </>
+  );
+}
+
+/** The Tools window: bottom sheet on phones, centered dialog on desktop (Community's Modal shell). */
+function ToolsDialog({ piece, onClose }: { piece: Piece; onClose: () => void }) {
+  const rows = useMemo(() => toolRows(piece), [piece]);
+  const must = rows.filter((r) => r.must), rest = rows.filter((r) => !r.must);
+  const tips = rows.some((r) => r.tool.id === 'anchors') && piece.archetype !== 'wall-shelf';
+  const Row = ({ r }: { r: ToolRow }) => (
+    <li className={r.tool.id === 'anchors' ? 'td-safe' : undefined}>
+      <span className="td-ico"><ToolIcon t={r.tool} /></span>
+      <span className="td-txt"><b>{r.tool.name}</b><small>{r.why}</small></span>
+      <a className="td-buy" href={r.tool.url} target="_blank" rel={AFF_REL} aria-label={`Find ${r.tool.name} on Amazon (opens a new tab)`}>Find on Amazon <span aria-hidden>↗</span></a>
+    </li>
+  );
+  return (
+    <Modal kind="tools-d" title="Tools for this build" sub={piece.name} onClose={onClose}>
+      {tips && <p className="td-warn" role="note"><span aria-hidden>⚠</span><span><b>This one can tip over.</b> Anchor it to the wall before you fill it.</span></p>}
+      <h3 className="td-h">Must-have</h3>
+      <ul className="td-list">{must.map((r) => <Row key={r.tool.id} r={r} />)}</ul>
+      {rest.length > 0 && <><h3 className="td-h">Makes it easier</h3><ul className="td-list">{rest.map((r) => <Row key={r.tool.id} r={r} />)}</ul></>}
+      <p className="aff-note td-note">{AMAZON_DISCLOSURE}</p>
+    </Modal>
   );
 }
 
