@@ -17,6 +17,9 @@ export const HW = {
   dbolt: { label: 'Double-ended screw', kind: 'bolt' },
   knob: { label: 'Knob', kind: 'knob' },
   hinge: { label: 'Hinge', kind: 'hinge' },
+  sleeve: { label: 'Plastic sleeve', kind: 'shelfpin' },
+  foot: { label: 'Levelling foot', kind: 'bolt' },
+  caster: { label: 'Caster wheel', kind: 'bolt' },
 };
 
 export class Build {

@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "seville-ultradurable-6-tier-48",
+  "name": "UltraDurable",
+  "title": "6-tier steel shelving 48×18\"",
+  "brand": "seville",
+  "archetype": "wire-shelf",
+  "category": "shelving",
+  "size": [
+    121.9,
+    45.7,
+    191.8
+  ],
+  "worksWith": "Seville Classics® 6-tier steel shelving 48×18\" (SHE18497NB), 48×18×75.5\"",
+  "productUrl": "https://www.sevilleclassics.com/products/ultrahd®-6-tier-nsf-steel-shelving",
+  "instructionsUrl": "https://files.elfsightcdn.com/1dc66879-82b0-43f4-b29a-b0cd089a9b1e/3bbbfdbf-6a22-4f50-873d-048b24ae2186/SHE18496VB-SHE18497VB-SHE18498VB-SHE18499VB-SHE18500VB-Assembly-Instructions.pdf",
+  "color": "#8d9094",
+  "confidence": "medium",
+  "sources": [
+    "https://www.sevilleclassics.com/products/ultrahd®-6-tier-nsf-steel-shelving"
+  ],
+  "options": {
+    "shelves": 6,
+    "pole": 2.5,
+    "wheels": 8.9,
+    "sections": 1
+  },
+  "tags": [
+    "wire shelving",
+    "steel shelving",
+    "garage",
+    "tool-free",
+    "seville classics"
+  ],
+  "notes": "Brand page: 48×18×75.5\" on wheels (72\" H on levelling feet), 6 wire shelves, 1\" poles, 3\" wheels (2 locking), no tools needed. Shelf heights are our even spread; set yours by groove. Fitted shelf liners come in the box; lay one on each shelf at the end.",
+  "people": 2,
+  "minutes": 30
+}

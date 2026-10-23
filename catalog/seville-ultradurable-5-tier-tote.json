@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "seville-ultradurable-5-tier-tote",
+  "name": "UltraDurable",
+  "title": "5-tier steel tote shelving",
+  "brand": "seville",
+  "archetype": "wire-shelf",
+  "category": "shelving",
+  "size": [
+    63.5,
+    83.8,
+    195.6
+  ],
+  "worksWith": "Seville Classics® 5-tier steel tote shelving (SHE24330B), 25×33×77\"",
+  "productUrl": "https://www.sevilleclassics.com/products/ultradurable®-5-tier-nsf-certified-steel-shelving",
+  "instructionsUrl": "https://files.elfsightcdn.com/1dc66879-82b0-43f4-b29a-b0cd089a9b1e/20b39a3a-1ee8-4b3f-b844-2ed2928543dc/SHE24331B_SHE24330B_English-AI-2026-01-22.pdf",
+  "color": "#b9bdc1",
+  "confidence": "medium",
+  "sources": [
+    "https://www.sevilleclassics.com/products/ultradurable®-5-tier-nsf-certified-steel-shelving"
+  ],
+  "options": {
+    "shelves": 5,
+    "pole": 2.5,
+    "wheels": 7.6,
+    "sections": 1
+  },
+  "tags": [
+    "wire shelving",
+    "steel shelving",
+    "garage",
+    "tool-free",
+    "seville classics"
+  ],
+  "notes": "Brand page: 25×33×77\" on wheels (74\" H on levelling feet), 5 wire shelves, 1\" poles, 3\" wheels (2 locking), no tools needed. Shelf heights are our even spread; set yours by groove. Shelves fit 27-gallon totes.",
+  "people": 2,
+  "minutes": 30
+}

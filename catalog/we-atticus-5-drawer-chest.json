@@ -1,0 +1,58 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-atticus-5-drawer-chest",
+  "name": "ATTICUS",
+  "title": "Mid-century 5-drawer chest",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "storage",
+  "size": [
+    76.2,
+    48.3,
+    134.3
+  ],
+  "worksWith": "Walker Edison® Atticus solid wood 5-drawer chest (BR5DATTDRCA-T), 30×19×52.88\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/atticus-5-drawer-chest",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--lfIszw-d--/v4o9pxqbu3ylabukawv5",
+  "color": "#a8733f",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/atticus-5-drawer-chest"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 14,
+      "leg": 4
+    },
+    "runners": false
+  },
+  "tags": [
+    "dresser",
+    "chest",
+    "5 drawer",
+    "mid-century",
+    "walker edison"
+  ],
+  "notes": "Brand page: 30×19×52.88\", 5 drawers on wood glides, tapered solid wood legs, wall-mounting hardware included. Leg height is our guess; drawer fronts simplified.",
+  "people": 2
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "bestar-universel-modular-5-shelf",
+  "name": "UNIVERSEL",
+  "title": "Modular 5-shelf bookcase 36\"",
+  "brand": "bestar",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    91.4,
+    30.5,
+    167.6
+  ],
+  "worksWith": "Bestar® Universel modular 5-shelf bookcase, 36×12×66\"",
+  "productUrl": "https://www.bestar.com/products/d-uni-wbck",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--4RLsmpJl--/36778f8d98d02b75707eae1112f2556dfa744b57.pdf",
+  "color": "#e9e6e0",
+  "confidence": "medium",
+  "sources": [
+    "https://www.bestar.com/products/d-uni-wbck"
+  ],
+  "options": {
+    "t": 1.6,
+    "top": "overlay",
+    "tt": 2,
+    "shelves": 3,
+    "fixed": [
+      0.45
+    ],
+    "base": {
+      "type": "plinth",
+      "h": 6
+    }
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "modular",
+    "bestar"
+  ],
+  "notes": "Brand page: 2 fixed and 3 adjustable shelves; size from the page's assembled width, depth and height (36×12×66\"). Which shelves are fixed is our guess.",
+  "people": 2
+}

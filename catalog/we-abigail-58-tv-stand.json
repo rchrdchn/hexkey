@@ -1,0 +1,44 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-abigail-58-tv-stand",
+  "name": "ABIGAIL",
+  "title": "Farmhouse 4-door TV stand 58\"",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "storage",
+  "size": [
+    147.3,
+    40.6,
+    71.1
+  ],
+  "worksWith": "Walker Edison® Abigail 58\" farmhouse 4-door TV stand (W58ABG4DRO), 58×16×28\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/abigail-58-farmhouse-4-door-tv-stand",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--v6aveDJc--/21314deb3b4de05176957545890f21b2e1d3b23d",
+  "color": "#8a6a4a",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/abigail-58-farmhouse-4-door-tv-stand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "door"
+      }
+    ],
+    "doors": 4,
+    "top": "overlay",
+    "tt": 2.5,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    }
+  },
+  "tags": [
+    "tv stand",
+    "media console",
+    "farmhouse",
+    "walker edison"
+  ],
+  "notes": "Brand page: 58×16×28\", four glass doors on soft-close hinges, adjustable shelves, cord management, for TVs up to 64\". Glass, fretwork and inner shelves simplified.",
+  "people": 2
+}

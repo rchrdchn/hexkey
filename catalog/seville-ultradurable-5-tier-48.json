@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "seville-ultradurable-5-tier-48",
+  "name": "UltraDurable",
+  "title": "5-tier steel shelving 48×24\"",
+  "brand": "seville",
+  "archetype": "wire-shelf",
+  "category": "shelving",
+  "size": [
+    121.9,
+    61.0,
+    193.0
+  ],
+  "worksWith": "Seville Classics® 5-tier steel shelving 48×24\" (WEB564), 48×24×76\"",
+  "productUrl": "https://www.sevilleclassics.com/products/ultradurable®-5-tier-nsf-steel-shelving-48-w-x-24-d-x-72-h-2",
+  "instructionsUrl": "https://files.elfsightcdn.com/1dc66879-82b0-43f4-b29a-b0cd089a9b1e/b876ac04-e7e5-45f4-a675-71d89e6d2d90/SHE48245B-SHE48246B-WEB564-English-AI-2025-10-01.pdf",
+  "color": "#c2c6ca",
+  "confidence": "medium",
+  "sources": [
+    "https://www.sevilleclassics.com/products/ultradurable®-5-tier-nsf-steel-shelving-48-w-x-24-d-x-72-h-2"
+  ],
+  "options": {
+    "shelves": 5,
+    "pole": 2.5,
+    "wheels": 10.1,
+    "sections": 1
+  },
+  "tags": [
+    "wire shelving",
+    "steel shelving",
+    "garage",
+    "tool-free",
+    "seville classics"
+  ],
+  "notes": "Brand page: 48×24×76\" on wheels (72\" H on levelling feet), 5 wire shelves, 1\" poles, 4\" wheels (2 locking), no tools needed. Shelf heights are our even spread; set yours by groove.",
+  "people": 2,
+  "minutes": 30
+}

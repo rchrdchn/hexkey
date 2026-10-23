@@ -676,16 +676,17 @@
    "label": "Seville Classics®",
    "tier": "medium",
    "site": "https://www.sevilleclassics.com",
-   "status": "research-only",
-   "fit": 3,
-   "instructions": "Manuals per product",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Product page \"View assembly instructions\" PDF (files.elfsightcdn.com)",
    "access": "public",
-   "robots": "Crawl-delay 10",
+   "robots": "Shopify; Crawl-delay 10; /products.json allowed",
    "products": [
-    "UltraDurable shelving",
-    "Airlift desks"
+    "UltraDurable 4/5/6-tier wire shelving",
+    "HOME 4-tier shelving",
+    "airLIFT desks"
    ],
-   "note": "Queued.",
+   "note": "Specs from product JSON body (assembled W×D×H, height on levelling feet). Tool-free wire shelving uses the wire-shelf archetype; airLIFT desks queued.",
    "disclaimer": "Not affiliated with or endorsed by Seville Classics.",
    "checked": "verified 2026-10-23"
   },

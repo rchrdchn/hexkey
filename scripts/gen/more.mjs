@@ -1,5 +1,6 @@
 // Archetypes added for non-IKEA brands: metal/wood platform beds (Zinus-style), electric standing desks
-// (FlexiSpot/UPLIFT-style frames) and screw-together frame shelves (ladder/etagere bookcases).
+// (FlexiSpot/UPLIFT-style frames), screw-together frame shelves (ladder/etagere bookcases) and tool-free
+// wire shelving (four poles, split plastic sleeves, wire shelves with tapered corner collars).
 // Steps are written in our own words from public facts; they are a demo, never a copy of any manual.
 import { r, say, Say, pick, spread } from './lib.mjs';
 
@@ -91,4 +92,44 @@ export function frameShelf(b) {
   if (n > 2) b.step({ caption: `${n - 2} middle shelves`, say: 'Fit the middle shelves one by one, two screws each side.', add: ys.slice(1, -1).map((_, i) => `shelf${i + 2}`), from: [0, 0, 35], hardware: scr(ys.slice(1, -1)), view: { az: 25, el: 20 } });
   b.step({ caption: 'Stand up, tighten', say: 'Stand it upright on a flat floor, check it does not rock, and tighten every screw. Adjust the levelling feet if it has them.', view: { az: 25, el: 15 } });
   b.step({ caption: 'Anchor it', say: 'Fix the top to the wall with the anti-tip strap or bracket and screws that suit your wall. Tall shelves always get anchored.', hardware: [b.H('anchor', '-z', [[0, H - 4, -D / 2]])], view: { az: 150, el: 25, tight: true, zoom: 0.8 }, safety: 'Tip-over risk. Always anchor to the wall.' });
+}
+
+/** Wire shelving: 4 round poles, split plastic sleeves snapped into the pole grooves, wire shelves whose corner collars
+ *  wedge onto the sleeves. Options: shelves, pole (diameter, cm), wheels (caster height in cm, 0 = levelling feet), sections (pole pieces per corner), bottom (lowest shelf height). size = W×D×H (H includes wheels). */
+export function wireShelf(b) {
+  const s = b.spec, o = b.o, slug = s.slug;
+  const [W, D, H] = s.size;
+  const n = o.shelves ?? 5, pd = o.pole ?? 2.5, wh = o.wheels ?? 0, secs = o.sections ?? (H > 130 ? 2 : 1);
+  const px = W / 2 - pd / 2 - 0.5, pz = D / 2 - pd / 2 - 0.5;
+  const corners = [[-px, pz], [px, pz], [px, -pz], [-px, -pz]];
+  const ph = H - wh;
+  b.part('pole', secs > 1 ? 'Pole (assembled)' : 'Pole', secs > 1 ? 'Poles (assembled)' : 'Poles');
+  b.part('shelf', 'Wire shelf', 'Wire shelves');
+  corners.forEach(([x, z], i) => b.obj(`pole${i + 1}`, 'pole', [pd, ph, pd], [x, wh + ph / 2, z], { shape: 'cyl' }));
+  const ys = spread(wh + (o.bottom ?? 12), H - 3, n).map(r);
+  const wires = Math.max(4, Math.round(W / 8));
+  const shelfBoxes = [
+    { s: [W, 2.5, 1], p: [0, 0, D / 2 - 0.5] }, { s: [W, 2.5, 1], p: [0, 0, -D / 2 + 0.5] },
+    { s: [1, 2.5, D], p: [W / 2 - 0.5, 0, 0] }, { s: [1, 2.5, D], p: [-W / 2 + 0.5, 0, 0] },
+    ...spread(-W / 2 + 4, W / 2 - 4, wires).map((x) => ({ s: [0.5, 1, D - 1], p: [x, -0.6, 0] })),
+    ...[-D / 4, D / 4].map((z) => ({ s: [W - 1, 1.2, 0.6], p: [0, -1, z] })),
+    ...corners.map(([x, z]) => ({ s: [pd + 1.6, 4, pd + 1.6], p: [x, -0.5, z], shape: 'cyl' })),
+  ];
+  ys.forEach((y, i) => b.obj(`shelf${i + 1}`, 'shelf', [W, 2.5, D], [0, y, 0], { boxes: shelfBoxes }));
+  const sleeveAt = (list) => b.H('sleeve', '+y', list.flatMap((y) => corners.map(([x, z]) => [x, y - 2.5, z])));
+  const feet = wh ? b.H('caster', '-y', corners.map(([x, z]) => [x, wh / 2, z]), { spin: true }) : b.H('foot', '-y', corners.map(([x, z]) => [x, 1, z]), { spin: true });
+  b.step({
+    caption: secs > 1 ? 'Join poles, add feet' : (wh ? 'Wheels on' : 'Feet on'),
+    say: (secs > 1 ? `Each pole comes in ${say(secs)} pieces. Screw them together by hand until the joint is tight and the grooves line up. ` : 'If your poles come in pieces, screw them together by hand first. ') + (wh ? 'Then thread a wheel into the bottom of each pole. The two locking wheels go on the same side.' : 'Then screw a levelling foot into the bottom of each pole, all the way in for now.'),
+    add: ['pole1', 'pole2', 'pole3', 'pole4'], from: [0, 30, 0], hardware: [feet], view: { az: 30, el: 25 },
+  });
+  b.step({
+    caption: `Sleeves: ${n * 4}`,
+    say: pick(slug, 'sleeve', ['The poles have a groove every inch or so. Choose a groove for each shelf and snap a pair of plastic sleeve halves around it, narrow end up. Count grooves so all four poles match.', 'Pick your shelf heights, then clip a split plastic sleeve onto the same groove on every pole, thin end pointing up. Count from the bottom so each shelf sits level.']),
+    hardware: [sleeveAt(ys)], view: { az: 35, el: 20 },
+  });
+  b.step({ caption: 'Bottom shelf', say: 'Stand the poles upright and slide the bottom shelf down over all four at once, until its corner collars rest on the sleeves. A helper keeps the poles straight.', add: ['shelf1'], from: [0, 60, 0], view: { az: 30, el: 30 }, safety: 'Two people make this easier.' });
+  b.step({ caption: 'Top shelf', say: 'Now the top shelf, the same way. With the top and bottom on, it stands on its own.', add: [`shelf${n}`], from: [0, 40, 0], view: { az: 30, el: 35 } });
+  if (n > 2) b.step({ caption: `${n - 2} middle shelves`, say: `Slide the ${n - 2 === 1 ? 'last shelf' : `other ${say(n - 2)} shelves`} down from the top onto their sleeves.`, add: ys.slice(1, -1).map((_, i) => `shelf${i + 2}`), from: [0, 40, 0], view: { az: 25, el: 25 } });
+  b.step({ caption: 'Tap down + level', say: 'Tap each shelf corner down with a rubber mallet or the heel of your hand, so the collars lock onto the sleeves. Check it does not rock, then ' + (wh ? 'lock the two braking wheels.' : 'turn the feet to level it.'), view: { az: 20, el: 15 }, safety: 'Load heavy things on the lower shelves.' });
 }

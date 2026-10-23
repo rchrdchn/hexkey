@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "seville-home-4-tier",
+  "name": "HOME",
+  "title": "4-tier steel shelving 36×14\"",
+  "brand": "seville",
+  "archetype": "wire-shelf",
+  "category": "shelving",
+  "size": [
+    91.4,
+    35.6,
+    143.5
+  ],
+  "worksWith": "Seville Classics® 4-tier steel shelving 36×14\" (SHE15395B), 36×14×56.5\"",
+  "productUrl": "https://www.sevilleclassics.com/products/4-tier-steel-shelving-with-shelf-liners",
+  "instructionsUrl": "https://files.elfsightcdn.com/1dc66879-82b0-43f4-b29a-b0cd089a9b1e/aea1e78e-fc63-4753-bd0c-f1c3ac7932b6/SHE15395B_SHE15396B_SHE15397B-Assembly-Instructions.pdf",
+  "color": "#c9c9c4",
+  "confidence": "medium",
+  "sources": [
+    "https://www.sevilleclassics.com/products/4-tier-steel-shelving-with-shelf-liners"
+  ],
+  "options": {
+    "shelves": 4,
+    "pole": 2.5,
+    "wheels": 6.3,
+    "sections": 1
+  },
+  "tags": [
+    "wire shelving",
+    "steel shelving",
+    "garage",
+    "tool-free",
+    "seville classics"
+  ],
+  "notes": "Brand page: 36×14×56.5\" on wheels (54\" H on levelling feet), 4 wire shelves, 1\" poles, 2\" wheels (2 locking), no tools needed. Shelf heights are our even spread; set yours by groove. Shelves adjust in 3\" steps; liners included.",
+  "people": 2,
+  "minutes": 30
+}

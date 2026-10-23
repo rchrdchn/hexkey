@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "seville-ultradurable-4-tier-60",
+  "name": "UltraDurable",
+  "title": "4-tier steel shelving 60×24\"",
+  "brand": "seville",
+  "archetype": "wire-shelf",
+  "category": "shelving",
+  "size": [
+    152.4,
+    61.0,
+    193.0
+  ],
+  "worksWith": "Seville Classics® 4-tier steel shelving 60×24\" (SHE24601B), 60×24×76\"",
+  "productUrl": "https://www.sevilleclassics.com/products/ultradurable®-4-tier-nsf-steel-shelving-60-w-x-24-d-x-76-h",
+  "instructionsUrl": "https://files.elfsightcdn.com/1dc66879-82b0-43f4-b29a-b0cd089a9b1e/447f19eb-1c0a-4917-972e-af5d40383999/SHE24611-Assembly-Instructions072023.pdf",
+  "color": "#c2c6ca",
+  "confidence": "medium",
+  "sources": [
+    "https://www.sevilleclassics.com/products/ultradurable®-4-tier-nsf-steel-shelving-60-w-x-24-d-x-76-h"
+  ],
+  "options": {
+    "shelves": 4,
+    "pole": 2.5,
+    "wheels": 10.1,
+    "sections": 1
+  },
+  "tags": [
+    "wire shelving",
+    "steel shelving",
+    "garage",
+    "tool-free",
+    "seville classics"
+  ],
+  "notes": "Brand page: 60×24×76\" on wheels (72\" H on levelling feet), 4 wire shelves, 1\" poles, 4\" wheels (2 locking), no tools needed. Shelf heights are our even spread; set yours by groove.",
+  "people": 2,
+  "minutes": 30
+}

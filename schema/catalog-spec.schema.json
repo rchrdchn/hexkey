@@ -9,7 +9,7 @@
     "slug": { "type": "string", "pattern": "^[a-z0-9-]+$" },
     "name": { "type": "string" },
     "title": { "type": "string" },
-    "archetype": { "enum": ["bookcase", "cubes", "chest", "table", "apron-table", "desk", "wall-shelf", "bed", "crib", "ladder", "stool", "platform-bed", "standing-desk", "frame-shelf"] },
+    "archetype": { "enum": ["bookcase", "cubes", "chest", "table", "apron-table", "desk", "wall-shelf", "bed", "crib", "ladder", "stool", "platform-bed", "standing-desk", "frame-shelf", "wire-shelf"] },
     "category": { "enum": ["shelving", "dressers", "bedroom", "storage", "tables", "desks", "kids"] },
     "size": { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3, "description": "Width × depth × height in cm, in the order product pages list them (beds: width × length × headboard height)" },
     "brand": { "type": "string", "description": "Brand id from data/sources/brands.json (default ikea). Sets the label and the not-affiliated line.", "default": "ikea" },

@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "vivo-pro-71x30",
+  "name": "VIVO PRO",
+  "title": "Dual-motor standing desk 71×30\"",
+  "brand": "vivo",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    180,
+    75,
+    73.5
+  ],
+  "worksWith": "VIVO® PRO 71×30\" dual-motor electric desk (PRO-DESK-KIT-23B71B), 70.9×29.5\" top, 25.1–50.7\" height range",
+  "productUrl": "https://www.vivo-us.com/products/pro-desk-kit-23b71b",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/1190/2562/files/PRO-DESKE23B_REV1_online.pdf?v=1788010555",
+  "color": "#2f2f2f",
+  "confidence": "medium",
+  "sources": [
+    "https://www.vivo-us.com/products/pro-desk-kit-23b71b"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 12
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "dual motor",
+    "vivo"
+  ],
+  "notes": "Brand page: 70.9×29.5×1\" top, 330 lb frame capacity, 23.5\" feet, separate frame and top manuals; height range from the same PRO frame. Shown at sitting height.",
+  "people": 2,
+  "minutes": 45
+}

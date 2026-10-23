@@ -49,6 +49,7 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 | `platform-bed` | Zinus Mia, Moiz, Allen, Linda | `height` (frame top, cm), `material` (`metal`\|`wood`), `headboard` (false for none), `railH`, `sideLegs`, `centerLegs`, `slats`. Size is W×L×headboard H |
 | `standing-desk` | FlexiSpot E7, UPLIFT V2 | `tt` top thickness, `inset` (column distance from the ends). Built upside down: brackets + crossbeam, columns, feet, control box, cables, flip, reset |
 | `frame-shelf` | Nathan James Theo/Haven, Tribesigns ladder | `shelves` (fixed, screwed), `lean` (top shelf depth in cm for ladder shelves that taper), `post`, `st`, `bottom` |
+| `wire-shelf` | Seville Classics UltraDurable | `shelves`, `pole` (diameter, cm), `wheels` (caster height in cm; 0 = levelling feet), `sections` (pole pieces per corner), `bottom` (lowest shelf height). Tool-free: poles, split sleeves, shelves tapped down. Size is W×D×H including wheels |
 
 `table` also takes `bars` (height in cm of two side support bars between the front and back legs, for metal-frame desks).
 

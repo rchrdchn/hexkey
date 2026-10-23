@@ -14,16 +14,16 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | Tier | Brands | Included (pieces) | Research-only (queued) | Skipped (blocked/terms) |
 |---|---|---|---|---|
 | big | 16 | 8 | 5 | 3 |
-| medium | 19 | 8 | 6 | 5 |
+| medium | 19 | 9 | 5 | 5 |
 | small | 10 | 2 | 8 | 0 |
-| **total** | **45** | **18** | **19** | **8** |
+| **total** | **45** | **19** | **18** | **8** |
 
 ## Pieces in the catalog by brand
 
 | Brand | Pieces |
 |---|---|
 | IKEA | 35 |
-| Walker Edison | 8 |
+| Walker Edison | 10 |
 | Dorel Home (Ameriwood Home, DHP, Novogratz, Cosco) | 5 |
 | Zinus | 13 |
 | Sauder | 1 |
@@ -35,12 +35,13 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | SONGMICS / VASAGLE | 2 |
 | FlexiSpot | 1 |
 | UPLIFT Desk | 1 |
-| Bestar | 2 |
+| Bestar | 4 |
 | Linon | 2 |
 | Delta Children | 2 |
+| Seville Classics | 6 |
 | Branch | 3 |
-| VIVO | 1 |
-| **total** | **87** |
+| VIVO | 2 |
+| **total** | **98** |
 
 ## Big brands and big-box retailers
 
@@ -85,7 +86,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | [Delta Children](https://www.deltachildren.com) | included | 5 | Product page "Assembly Instructions" PDF on Shopify CDN + tips video | public | Shopify default; allowed | Rowen 4-drawer dresser, Haven 6-drawer dresser, Sutton dresser, toy organizers |  |
 | [KidKraft](https://www.kidkraft.com) | research-only | 3 | Instructions lookup by item number | public | Crawl-delay 10 | play kitchens, bookcases | Toys dominate; queued. |
 | [Furinno](https://www.furinno.com) | research-only | 4 | Instructions on product pages | sitemap 502 | unverified (general knowledge, site not checked) | Pasir 3-tier shelf, Turn-N-Tube | Server error → queued. |
-| [Seville Classics](https://www.sevilleclassics.com) | research-only | 3 | Manuals per product | public | Crawl-delay 10 | UltraDurable shelving, Airlift desks | Queued. |
+| [Seville Classics](https://www.sevilleclassics.com) | included | 4 | Product page "View assembly instructions" PDF (files.elfsightcdn.com) | public | Shopify; Crawl-delay 10; /products.json allowed | UltraDurable 4/5/6-tier wire shelving, HOME 4-tier shelving, airLIFT desks | Specs from product JSON body (assembled W×D×H, height on levelling feet). Tool-free wire shelving uses the wire-shelf archetype; airLIFT desks queued. |
 
 ## Small / direct-to-consumer
 

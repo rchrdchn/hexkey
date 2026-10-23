@@ -1,0 +1,795 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/bestar-universel-modular-5-shelf.json by scripts/generate.mjs (archetype \"bookcase\"). Edit the spec, not this file.",
+  "slug": "bestar-universel-modular-5-shelf",
+  "name": "UNIVERSEL",
+  "title": "Modular 5-shelf bookcase 36\"",
+  "brand": "Bestar",
+  "brandId": "bestar",
+  "disclaimer": "Not affiliated with or endorsed by Bestar.",
+  "worksWith": "Bestar® Universel modular 5-shelf bookcase, 36×12×66\"",
+  "productUrl": "https://www.bestar.com/products/d-uni-wbck",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--4RLsmpJl--/36778f8d98d02b75707eae1112f2556dfa744b57.pdf",
+  "size": [
+    91,
+    168,
+    31
+  ],
+  "minutes": 40,
+  "people": 2,
+  "level": 2,
+  "color": "#e9e6e0",
+  "category": "shelving",
+  "archetype": "bookcase",
+  "confidence": "medium",
+  "sources": [
+    "https://www.bestar.com/products/d-uni-wbck"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom panel"
+    },
+    {
+      "id": "top",
+      "label": "Top panel"
+    },
+    {
+      "id": "fixed",
+      "label": "Fixed shelf",
+      "plural": "Fixed shelves"
+    },
+    {
+      "id": "plinth",
+      "label": "Plinth"
+    },
+    {
+      "id": "back",
+      "label": "Back panel"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "plural": "Shelves"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "nail",
+      "label": "Nail",
+      "kind": "nail"
+    },
+    {
+      "id": "spin",
+      "label": "Shelf pin",
+      "kind": "shelfpin"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        165.6,
+        30.5
+      ],
+      "pos": [
+        -44.9,
+        82.8,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        165.6,
+        30.5
+      ],
+      "pos": [
+        44.9,
+        82.8,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "bottom",
+      "size": [
+        88.2,
+        1.6,
+        30.1
+      ],
+      "pos": [
+        0,
+        6.8,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        91.4,
+        2,
+        30.5
+      ],
+      "pos": [
+        0,
+        166.6,
+        0
+      ]
+    },
+    {
+      "id": "fixed1",
+      "part": "fixed",
+      "size": [
+        88.2,
+        1.6,
+        30.1
+      ],
+      "pos": [
+        0,
+        78.7,
+        0.2
+      ]
+    },
+    {
+      "id": "plinth",
+      "part": "plinth",
+      "size": [
+        88.2,
+        6,
+        1.6
+      ],
+      "pos": [
+        0,
+        3,
+        12.95
+      ]
+    },
+    {
+      "id": "backLow",
+      "part": "back",
+      "size": [
+        91,
+        78.2,
+        0.3
+      ],
+      "pos": [
+        0,
+        39.6,
+        -15.4
+      ]
+    },
+    {
+      "id": "backUp",
+      "part": "back",
+      "size": [
+        91,
+        86.7,
+        0.3
+      ],
+      "pos": [
+        0,
+        122.05,
+        -15.4
+      ]
+    },
+    {
+      "id": "shelf1",
+      "part": "shelf",
+      "size": [
+        87.8,
+        1.6,
+        28.1
+      ],
+      "pos": [
+        0,
+        43.15,
+        -0.6
+      ]
+    },
+    {
+      "id": "shelf2",
+      "part": "shelf",
+      "size": [
+        87.8,
+        1.6,
+        28.1
+      ],
+      "pos": [
+        0,
+        107.67,
+        -0.6
+      ]
+    },
+    {
+      "id": "shelf3",
+      "part": "shelf",
+      "size": [
+        87.8,
+        1.6,
+        28.1
+      ],
+      "pos": [
+        0,
+        136.63,
+        -0.6
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Lay one side panel flat, holes facing up. Screw in four cam pins and tap in four wood dowels.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "pose": [
+        -90,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -44.1,
+              6.8,
+              9.76
+            ],
+            [
+              -44.1,
+              6.8,
+              -9.76
+            ],
+            [
+              -44.1,
+              78.7,
+              9.76
+            ],
+            [
+              -44.1,
+              78.7,
+              -9.76
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -44.1,
+              6.8,
+              3.9
+            ],
+            [
+              -44.1,
+              6.8,
+              -3.9
+            ],
+            [
+              -44.1,
+              78.7,
+              3.9
+            ],
+            [
+              -44.1,
+              78.7,
+              -3.9
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Push the bottom panel onto the low pins and dowels. Drop two cam locks into the round holes, arrows facing the pins, and turn them clockwise until they grab.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -40.7,
+              7.6,
+              9.76
+            ],
+            [
+              -40.7,
+              7.6,
+              -9.76
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Fixed shelf. Lock 2.",
+      "say": "The fixed shelf holds the bookcase square, so it goes in now. Slide onto the pins and lock with cam locks, clockwise.",
+      "add": [
+        "fixed1"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -40.7,
+              79.5,
+              9.76
+            ],
+            [
+              -40.7,
+              79.5,
+              -9.76
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Side two. Lock 4.",
+      "say": "Pins and dowels go into the ends of the panels on this side too. With a helper, lower the second side onto all of them at once, then lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              44.1,
+              6.8,
+              9.76
+            ],
+            [
+              44.1,
+              6.8,
+              -9.76
+            ],
+            [
+              44.1,
+              78.7,
+              9.76
+            ],
+            [
+              44.1,
+              78.7,
+              -9.76
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              44.1,
+              6.8,
+              3.9
+            ],
+            [
+              44.1,
+              6.8,
+              -3.9
+            ],
+            [
+              44.1,
+              78.7,
+              3.9
+            ],
+            [
+              44.1,
+              78.7,
+              -3.9
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              40.7,
+              7.6,
+              9.76
+            ],
+            [
+              40.7,
+              7.6,
+              -9.76
+            ],
+            [
+              40.7,
+              79.5,
+              9.76
+            ],
+            [
+              40.7,
+              79.5,
+              -9.76
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 50
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Top on. Lock 4.",
+      "say": "Tap four dowels into the top edges of the sides. Set the top panel on, good side up, then lock it from inside with four cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -44.9,
+              165.6,
+              4.88
+            ],
+            [
+              -44.9,
+              165.6,
+              -4.88
+            ],
+            [
+              44.9,
+              165.6,
+              4.88
+            ],
+            [
+              44.9,
+              165.6,
+              -4.88
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+x",
+          "at": [
+            [
+              -44.1,
+              162.1,
+              9.76
+            ],
+            [
+              -44.1,
+              162.1,
+              -9.76
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "cam",
+          "axis": "-x",
+          "at": [
+            [
+              44.1,
+              162.1,
+              9.76
+            ],
+            [
+              44.1,
+              162.1,
+              -9.76
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Plinth",
+      "say": "Tap four dowels into the ends of the plinth board and press it in under the bottom panel, at the front.",
+      "add": [
+        "plinth"
+      ],
+      "from": [
+        0,
+        0,
+        30
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+z",
+          "at": [
+            [
+              -44.1,
+              1.8,
+              12.95
+            ],
+            [
+              -44.1,
+              4.2,
+              12.95
+            ],
+            [
+              44.1,
+              1.8,
+              12.95
+            ],
+            [
+              44.1,
+              4.2,
+              12.95
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 50,
+        "tight": true,
+        "zoom": 0.85
+      }
+    },
+    {
+      "caption": "Flip it face down",
+      "say": "Roll the bookcase over so it lies on its front. Ask your helper, and put the flattened box underneath to save the finish.",
+      "pose": [
+        -90,
+        180,
+        0
+      ],
+      "view": {
+        "az": 60,
+        "el": 50
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Back, lower half",
+      "say": "Lay the back panel on, smooth side facing in. Line it up with the bottom corners and nail it along the edges, about every twenty centimeters. If the corners line up, the bookcase is square.",
+      "add": [
+        "backLow"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Back, upper half",
+      "say": "Second back piece, butted tight against the first. Same nailing pattern along every edge.",
+      "add": [
+        "backUp"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Stand it up",
+      "say": "Stand it up together. Lift with your legs, not your back.",
+      "pose": [
+        0,
+        360,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 18
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "3 shelves in",
+      "say": "Push twelve shelf pins into the holes at the heights you like, four per shelf, then rest each shelf on top. Move them any time.",
+      "add": [
+        "shelf1",
+        "shelf2",
+        "shelf3"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "spin",
+          "axis": "+x",
+          "at": [
+            [
+              -44.1,
+              42.05,
+              7.81
+            ],
+            [
+              -44.1,
+              42.05,
+              -7.81
+            ],
+            [
+              -44.1,
+              106.57,
+              7.81
+            ],
+            [
+              -44.1,
+              106.57,
+              -7.81
+            ],
+            [
+              -44.1,
+              135.53,
+              7.81
+            ],
+            [
+              -44.1,
+              135.53,
+              -7.81
+            ]
+          ]
+        },
+        {
+          "id": "spin",
+          "axis": "-x",
+          "at": [
+            [
+              44.1,
+              42.05,
+              7.81
+            ],
+            [
+              44.1,
+              42.05,
+              -7.81
+            ],
+            [
+              44.1,
+              106.57,
+              7.81
+            ],
+            [
+              44.1,
+              106.57,
+              -7.81
+            ],
+            [
+              44.1,
+              135.53,
+              7.81
+            ],
+            [
+              44.1,
+              135.53,
+              -7.81
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Last step, and the most important. Screw the wall bracket to the top at the back, then fix it to the wall with screws that suit your wall. Furniture can tip over. Always anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              162.6,
+              -15.55
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your UNIVERSEL modular 5-shelf bookcase 36\" is built. Give it a proud little pat.",
+  "notes": "Brand page: 2 fixed and 3 adjustable shelves; size from the page's assembled width, depth and height (36×12×66\"). Which shelves are fixed is our guess."
+}
