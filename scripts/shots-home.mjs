@@ -11,6 +11,31 @@ const ok = (c, m) => { if (!c) fails.push(m); console.log(`${c ? 'PASS' : 'FAIL'
 const navRound = (page) => page.evaluate(() => [...document.querySelectorAll('.top .icon, .top .pill.alt')].filter((b) => getComputedStyle(b).display !== 'none' && b.getBoundingClientRect().width < 60).map((b) => {
   const r = b.getBoundingClientRect(); return { label: b.getAttribute('aria-label'), w: +r.width.toFixed(2), h: +r.height.toFixed(2), rad: getComputedStyle(b).borderRadius, right: r.right, vw: innerWidth };
 }));
+// the picked card must be fully inside the list (not clipped), carry the check badge, and show its name, brand and size
+const pickedVisible = (page) => page.evaluate(() => {
+  const r = document.querySelector('.cards.rail'), c = document.querySelector('.card.on');
+  if (!r || !c) return { ok: false, why: 'no picked card' };
+  const a = r.getBoundingClientRect(), b = c.getBoundingClientRect();
+  const inside = b.top >= a.top - 1 && b.bottom <= a.bottom + 1 && b.left >= a.left - 1 && b.right <= a.right + 1;
+  const txt = (s) => c.querySelector(s)?.textContent?.trim() || '';
+  return { ok: inside && !!c.querySelector('.sel-badge') && !!txt('b') && !!txt('.by') && /\d+×\d+×\d+/.test(txt('.dims')), slug: c.dataset.slug, name: txt('b'), brand: txt('.by'), dims: txt('.dims'), inside };
+});
+const brandAndSearch = async (page, tag) => {
+  const sel = page.locator('.brand-pick select');
+  await sel.selectOption('zinus'); await sleep(300);
+  const z = await page.locator('.card').evaluateAll((els) => els.map((e) => e.querySelector('.by')?.textContent));
+  ok(z.length > 0 && z.every((b) => b === 'Zinus'), `${tag} Brand dropdown filters to Zinus (${z.length} cards)`);
+  const cats = await page.locator('.cats button').count();
+  ok(cats >= 2, `${tag} category chips follow the brand (${cats} chips)`);
+  await page.locator('.cats button').nth(1).click(); await sleep(250);
+  const n2 = await page.locator('.card').count();
+  ok(n2 > 0 && n2 <= z.length, `${tag} brand + category together (${n2} cards)`);
+  await page.locator('.search input').fill('bed'); await sleep(250);
+  const n3 = await page.locator('.card').evaluateAll((els) => els.map((e) => e.querySelector('.by')?.textContent));
+  ok(n3.every((b) => b === 'Zinus'), `${tag} search stays inside the brand (${n3.length} cards)`);
+  await page.locator('.search input').fill(''); await sel.selectOption('all'); await page.locator('.cats button').first().click(); await sleep(300);
+  ok(await page.locator('.card').count() > 100, `${tag} All brands restores the full list`);
+};
 const runs = [
   ['webkit', 'iphone15', { ...devices['iPhone 15'] }],
   ['webkit', 'iphoneSE3-375', { ...devices['iPhone SE (3rd gen)'] }],
@@ -55,6 +80,13 @@ for (const [eng, name, opts] of runs) {
     await page.locator('.card').first().tap();
     await page.waitForSelector('.sheet.pick .cta:not([disabled])'); await sleep(500);
     await page.screenshot({ path: `${out}/${eng}-${name}-03-search-picked.png` });
+    const pv = await pickedVisible(page);
+    ok(pv.ok, `${tag} picked card fully visible with badge, name, brand, size: ${JSON.stringify(pv)}`);
+    await page.locator('.search input').fill(''); await sleep(500);
+    const pv2 = await pickedVisible(page);
+    ok(pv2.ok && pv2.slug === pv.slug, `${tag} picked card scrolled into view after clearing search: ${JSON.stringify(pv2)}`);
+    await brandAndSearch(page, tag);
+    ok(await overflow() <= 0, `${tag} no sideways overflow after brand filter`);
     ok(await overflow() <= 0, `${tag} no sideways overflow with picker open`);
     // close button
     await page.locator('.pick-head .close').tap(); await sleep(500);
@@ -79,6 +111,12 @@ for (const [eng, name, opts] of runs) {
   } else {
     ok(await page.locator('.catalog').isVisible() && await page.locator('.start-cta').count() === 0, `${tag} desktop keeps the picker`);
     await page.screenshot({ path: `${out}/${eng}-${name}-01-home.png` });
+    const pv = await pickedVisible(page);
+    ok(pv.ok, `${tag} picked card fully visible with badge, name, brand, size: ${JSON.stringify(pv)}`);
+    await page.locator('.card').nth(5).click(); await sleep(400);
+    const pv2 = await pickedVisible(page);
+    ok(pv2.ok, `${tag} clicked card becomes the visible pick: ${JSON.stringify(pv2)}`);
+    await brandAndSearch(page, tag);
     await page.goto(base + '/#pieces'); await sleep(800);
     ok(await page.locator('.catalog').isVisible(), `${tag} #pieces on desktop shows picker`);
   }

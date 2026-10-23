@@ -1,7 +1,19 @@
 /* Catalog picker. Kept out of styles.css so the main sheet styles stay small. */
 .sheet.pick { display: flex; flex-direction: column; max-height: min(64vh, 560px); padding-top: 12px; }
 .catalog { display: flex; flex-direction: column; gap: 8px; min-height: 0; flex: 1; }
-.find { display: flex; gap: 8px; }
+.find { display: flex; flex-wrap: wrap; gap: 8px; }
+.find .search { flex: 1 1 0; min-width: 130px; }
+/* brand: a native <select> (best picker on iPhone), styled like the search box; one line, never scrolls sideways */
+.brand-pick { position: relative; flex: 0 1 178px; min-width: 0; max-width: 100%; display: flex; align-items: center; height: 42px; border-radius: 14px; background: var(--bg); border: 2px solid transparent; transition: border-color .15s, background .15s; }
+.brand-pick:focus-within { border-color: var(--acc); background: #fff; }
+.brand-pick.on { background: #fff1e8; border-color: #ffc7b5; }
+.bp-l { display: none; position: absolute; left: 12px; top: 50%; transform: translateY(-50%); font-size: 11px; font-weight: 900; letter-spacing: .05em; text-transform: uppercase; color: var(--mute); pointer-events: none; }
+.brand-pick select { width: 100%; min-width: 0; height: 100%; padding: 0 30px 0 12px; border: 0; border-radius: 12px; background: transparent; font: inherit; font-size: 16px; font-weight: 800; color: var(--ink); text-overflow: ellipsis; white-space: nowrap; cursor: pointer; outline: none; -webkit-appearance: none; appearance: none; }
+.bp-chev { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); color: var(--mute); pointer-events: none; }
+.brand-pick.on .bp-chev, .brand-pick.on .bp-l { color: #b5401f; }
+.card small .by { font-style: normal; font-weight: 800; color: #c2401c; }
+.card small .by::after { content: ' · '; color: var(--mute); font-weight: 600; }
+
 .search { flex: 1; display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 12px; border-radius: 14px; background: var(--bg); color: var(--mute); border: 2px solid transparent; transition: border-color .15s; }
 .search:focus-within { border-color: var(--acc); background: #fff; }
 .search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: 16px; font-weight: 600; color: var(--ink); outline: none; -webkit-appearance: none; appearance: none; }
@@ -14,21 +26,26 @@
 .cats button i { font-style: normal; font-weight: 700; font-size: 11.5px; color: var(--mute); }
 .cats button.on { background: var(--ink); color: #fff; }
 .cats button.on i { color: #cfc6bb; }
-/* brand row: lighter, always one scrolling line so it never pushes the cards down */
-.cats.brands button { height: 28px; padding: 0 10px; font-size: 12.5px; font-weight: 700; background: transparent; box-shadow: inset 0 0 0 1.5px var(--bg); }
-.cats.brands button.on { background: var(--acc); color: #fff; box-shadow: none; }
-.cats.brands button.on i { color: #fff; opacity: .8; }
-.card small .by { font-style: normal; font-weight: 800; color: var(--acc); }
-.card small .by::after { content: ' · '; color: var(--mute); font-weight: 600; }
-
-.cards.rail { display: flex; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; margin: 0 -16px; padding: 4px 16px 6px; scroll-padding: 16px; scrollbar-width: none; grid-template-columns: none; }
-.cards.rail::-webkit-scrollbar { display: none; }
-.cards.rail .card { flex: none; width: 138px; min-height: 0; padding: 6px 6px 9px; scroll-snap-align: start; }
-.cards.rail .card b { font-size: 15px; padding: 4px 4px 0; line-height: 1.1; }
-.cards.rail .card small { padding: 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.cards.rail .card .chips { padding: 6px 4px 0; gap: 2px 6px; font-size: 11px; }
-.cards.rail .card .lvl { padding: 0 4px; align-items: center; }
 .card .pcs { margin-left: auto; font-size: 10.5px; font-weight: 700; color: var(--mute); }
+/* the list: vertical scroll only, everywhere (phones: 2-3 column cards in the sheet; desktop: one row per piece) */
+.cards.rail { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: max-content; align-content: start; gap: 8px; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; flex: 1; min-height: 0; margin: 0 -16px; padding: 4px 16px 8px; touch-action: pan-y; }
+.cards.rail .card { position: relative; width: auto; min-width: 0; min-height: 0; padding: 6px 6px 9px; border: 2px solid transparent; box-shadow: none; transition: border-color .15s, background .15s, box-shadow .15s; }
+.cards.rail .card:hover { border-color: var(--line); }
+.c-txt { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
+.cards.rail .card b { display: block; font-size: 15px; padding: 5px 4px 0; line-height: 1.1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cards.rail .card small { display: block; padding: 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.dims { display: block; padding: 0 4px; font-size: 11.5px; font-weight: 700; color: var(--ink); opacity: .72; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-variant-numeric: tabular-nums; }
+.dims .cm { display: none; }
+.meta { display: flex; flex-direction: column; }
+.cards.rail .card .thumb { aspect-ratio: 16 / 10; }
+.cards.rail .card .chips { padding: 5px 4px 0; gap: 2px 6px; font-size: 11px; }
+.cards.rail .card .lvl { padding: 0 4px; align-items: center; }
+/* selected: thick orange ring, warm tint, check badge; it never lifts out of the clipped list */
+.cards.rail .card.on { border-color: transparent; background: #fff1e8; box-shadow: inset 0 0 0 3px var(--acc), 0 6px 16px rgba(255, 90, 54, .18); transform: none; }
+.cards.rail .card.on b { color: #b5401f; }
+.cards.rail .card.on .dims { opacity: 1; }
+.sel-badge { position: absolute; z-index: 2; top: 6px; right: 6px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: var(--acc); color: #fff; box-shadow: 0 0 0 2.5px #fff, 0 2px 6px rgba(0,0,0,.18); }
+.sel-badge svg { width: 16px; height: 16px; }
 .thumb { position: relative; display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: 13px; overflow: hidden; background: #ece5da; }
 .thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(#f6f1ea, #efe7dc); z-index: 0; }
 .thumb img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; display: block; }
@@ -55,25 +72,40 @@
 .pick-head { flex: none; margin: 0 0 10px; }
 .pick-head h2 { font-size: 21px; }
 .pick-head .icon.close { width: 40px; height: 40px; min-width: 40px; min-height: 40px; background: var(--bg); box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
-.sheet.pick.open .cards.rail { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: max-content; align-content: start; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scroll-snap-type: none; flex: 1; min-height: 0; margin: 0 -16px; padding: 4px 16px 8px; touch-action: pan-y; }
-.sheet.pick.open .cards.rail .card { width: auto; }
-.sheet.pick.open .cards.rail .card.on { transform: none; }
 @media (min-width: 520px) { .sheet.pick.open .cards.rail { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 
 @media (max-height: 760px) and (max-width: 899px) {
   .m-pick .hero p { display: none; }
-  .cards.rail .card { width: 124px; }
   .cards.rail .card .chips i:last-child { display: none; }
 }
 @media (min-width: 900px) {
   .sheet.pick { top: auto; max-height: calc(100vh - 48px - var(--hero-h, 230px)); width: 440px; }
-  .cards.rail { display: grid; grid-template-columns: repeat(3, 1fr); overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain; scroll-snap-type: none; margin: 0 -8px; padding: 4px 8px 8px; min-height: 0; flex: 1; scrollbar-width: thin; }
-  .cards.rail { grid-auto-rows: max-content; align-content: start; }
-  .cards.rail .card { width: auto; min-height: auto; }
+  /* desktop: one row per piece (thumb left, name/brand/size right) so names scan and the picked one is never cut off */
+  .cards.rail { grid-template-columns: minmax(0, 1fr); gap: 6px; margin: 0 -8px; padding: 4px 8px 8px; scrollbar-width: thin; }
+  .cards.rail .card { display: grid; grid-template-columns: 84px minmax(0, 1fr); align-items: center; gap: 10px; padding: 6px 10px 6px 6px; border-radius: 16px; }
+  .cards.rail .card .thumb { border-radius: 11px; }
+  .cards.rail .card b { padding: 0; font-size: 16px; }
+  .cards.rail .card small, .cards.rail .card .dims, .cards.rail .card .lvl { padding: 0; }
+  .cards.rail .card .chips { padding: 3px 0 0; }
+  .dims .cm { display: inline; font-weight: 600; }
+  .cards.rail .card .thumb { aspect-ratio: 4 / 3; }
+  .meta { flex-direction: row; align-items: center; gap: 10px; padding-top: 3px; }
+  .cards.rail .card .meta .chips { padding: 0; margin: 0; flex-wrap: nowrap; }
+  .cards.rail .card .meta .lvl { flex: 1; gap: 3px; margin: 0; }
+  .brand-pick { flex: 0 1 226px; }
+  .bp-l { display: block; }
+  .brand-pick select { padding-left: 62px; font-size: 15px; }
+  .sel-badge { top: 4px; right: 4px; width: 22px; height: 22px; }
+  .sel-badge svg { width: 14px; height: 14px; }
   .cats { flex-wrap: wrap; margin: 0; padding: 0; overflow: visible; }
-  /* 13+ brands would wrap into 4-5 rows on desktop: keep them on one scrolling line instead */
-  .cats.brands { flex: none; flex-wrap: nowrap; overflow-x: auto; scrollbar-width: thin; padding-bottom: 4px; mask-image: linear-gradient(90deg, #000 85%, transparent); -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent); }
   .cats button { height: 30px; font-size: 13px; }
   .m-pick .hero { top: 84px; }
   .m-pick .hero h1 { font-size: 48px; }
+}
+/* short desktop windows (laptops): drop the hero subline and start the picker higher so the list keeps 2+ rows */
+@media (min-width: 900px) and (max-height: 860px) {
+  .m-pick .hero { top: 74px; }
+  .m-pick .hero h1 { font-size: 42px; }
+  .m-pick .hero p { display: none; }
+  .sheet.pick { max-height: calc(100vh - 24px - 168px); }
 }

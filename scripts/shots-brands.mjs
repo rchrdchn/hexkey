@@ -1,4 +1,4 @@
-// Brand picker checks on WebKit iPhone 15 + Chromium desktop: brand chips filter the list, search finds brands,
+// Brand picker checks on WebKit iPhone 15 + Chromium desktop: the Brand dropdown filters the list, search finds brands,
 // cards show the brand, the guide's legal line names the right brand and links its own instructions, no console errors, no sideways overflow.
 // Usage: node scripts/shots-brands.mjs [baseUrl] [outDir] [chipBrands=walker-edison,zinus] [searchBrand=tribesigns] [pieces=slug|Brand word|instructions host;...]
 import { chromium, webkit, devices } from 'playwright';
@@ -31,15 +31,20 @@ for (const [eng, name, bt, opts] of runs) {
   const shot = (l) => page.screenshot({ path: `${out}/${eng}-${name}-${l}.png` });
   await page.goto(base + '/#/');
   if (name === 'iphone') { await page.waitForSelector('.start-cta'); await page.locator('.start-cta').tap(); }
-  await page.waitForSelector('.cats.brands button');
+  const sel = page.locator('.brand-pick select');
+  await sel.waitFor();
   await sleep(1200);
-  const chips = await page.locator('.cats.brands button').count();
+  const opts = await sel.locator('option').evaluateAll((els) => els.map((e) => ({ v: e.value, t: e.textContent })));
   const nBrands = new Set(cat.map((e) => e.brandId)).size;
-  ok(chips === nBrands + 1, `${tag} ${chips} brand chips (All + ${nBrands} brands)`);
-  ok(await overflow() <= 0, `${tag} no sideways overflow with brand row`);
+  ok(opts.length === nBrands + 1, `${tag} ${opts.length} brand options (All + ${nBrands} brands)`);
+  ok(opts[0].v === 'all' && opts[0].t === `All brands (${cat.length})`, `${tag} first option "${opts[0].t}"`);
+  const ns = opts.slice(1).map((o) => +o.t.match(/\((\d+)\)$/)[1]);
+  ok(ns.every((n, i) => i === 0 || n <= ns[i - 1]), `${tag} brands sorted by count: ${opts.slice(1, 4).map((o) => o.t).join(', ')}…`);
+  ok(await page.getByLabel('Brand').count() >= 1, `${tag} dropdown is labelled "Brand"`);
+  ok(await overflow() <= 0, `${tag} no sideways overflow with brand dropdown`);
   await shot('01-picker');
   for (const id of chipBrands) {
-    await page.locator(`.cats.brands button[data-brand="${id}"]`).click();
+    await sel.selectOption(id);
     await sleep(500);
     const want = cat.filter((e) => e.brandId === id).length;
     const got = await page.locator('.cards .card').count();
@@ -47,7 +52,7 @@ for (const [eng, name, bt, opts] of runs) {
     ok(await page.locator('.card small .by').first().isVisible(), `${tag} cards show the brand name`);
     await shot(`02-brand-${id}`);
   }
-  await page.locator('.cats.brands button[data-brand="all"]').click();
+  await sel.selectOption('all');
   await page.locator('.search input').fill('standing desk');
   await sleep(500);
   const sd = await page.locator('.cards .card').evaluateAll((els) => els.map((e) => e.getAttribute('data-slug')));

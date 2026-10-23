@@ -22,7 +22,7 @@ for (const eng of ['chromium', 'webkit']) {
     page.on('pageerror', (e) => errors.push(`[${tag}] pageerror: ${e.message}`));
     const shot = (l) => page.screenshot({ path: `${out}/${eng}-${name}-${l}.png` });
     await page.goto(base + '/#/');
-    await page.waitForSelector('.card b');
+    await page.waitForSelector('.card b, .start-cta'); // phones show the Pick-your-furniture button, desktop the picker
     await sleep(2200);
     await shot('01-nav');
     // header must not overflow
