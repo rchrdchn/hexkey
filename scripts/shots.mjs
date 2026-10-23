@@ -42,6 +42,7 @@ for (const eng of engines) {
       await sleep(800);
       await shot(`${slug}-03-parts`);
       await tiles.nth(n - 1).click();
+      await sleep(2500); // let the all-set confetti settle
       await page.locator('.cta').click({ force: true });
       await page.waitForSelector('.cap');
       const steps = await page.locator('.progress button').count();
