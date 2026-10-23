@@ -1,0 +1,39 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-amira-bookshelf",
+  "name": "AMIRA",
+  "title": "Open bookshelf",
+  "brand": "walker-edison",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    81.5,
+    39.0,
+    183.5
+  ],
+  "worksWith": "Walker Edison® Amira modern wood open bookshelf (WEAMI41OS1BL1), 32×15.38×72.25\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/modern-wood-bookshelf-shelving-unit",
+  "color": "#2b2724",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/modern-wood-bookshelf-shelving-unit"
+  ],
+  "options": {
+    "t": 1.8,
+    "top": "overlay",
+    "tt": 2,
+    "shelves": 3,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    }
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "open",
+    "walker edison"
+  ],
+  "notes": "Brand page: 4 shelves, about 90 minutes to build. Curved trim drawn as a plain box.",
+  "minutes": 90
+}

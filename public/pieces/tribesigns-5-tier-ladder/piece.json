@@ -1,0 +1,441 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/tribesigns-5-tier-ladder.json by scripts/generate.mjs (archetype \"frame-shelf\"). Edit the spec, not this file.",
+  "slug": "tribesigns-5-tier-ladder",
+  "name": "5-TIER",
+  "title": "Ladder bookshelf",
+  "brand": "Tribesigns",
+  "brandId": "tribesigns",
+  "disclaimer": "Not affiliated with or endorsed by Tribesigns.",
+  "worksWith": "Tribesigns® 5-tier industrial ladder bookshelf (SFQNC-OUBTE98GK), 23.6×15.7×56.5\" (W×D×H)",
+  "productUrl": "https://tribesigns.com/products/326-tribesigns-5-tier-bookshelf-industrial-bookcase-home-office",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0506/8963/8555/files/B083WDWHG3_HOGA-HL0141_installationmanual.pdf",
+  "size": [
+    60,
+    144,
+    40
+  ],
+  "minutes": 30,
+  "people": 2,
+  "level": 2,
+  "color": "#6b4e36",
+  "category": "shelving",
+  "archetype": "frame-shelf",
+  "confidence": "medium",
+  "sources": [
+    "https://tribesigns.com/products/326-tribesigns-5-tier-bookshelf-industrial-bookcase-home-office"
+  ],
+  "parts": [
+    {
+      "id": "frame",
+      "label": "Side frame"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "plural": "Shelves"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "frame",
+      "size": [
+        2.5,
+        143.5,
+        40
+      ],
+      "pos": [
+        -28.75,
+        71.75,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            2.5,
+            143.5,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            -18.75
+          ]
+        },
+        {
+          "s": [
+            2.5,
+            143.5,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            18.75
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "frame",
+      "size": [
+        2.5,
+        143.5,
+        40
+      ],
+      "pos": [
+        28.75,
+        71.75,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            2.5,
+            143.5,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            -18.75
+          ]
+        },
+        {
+          "s": [
+            2.5,
+            143.5,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            18.75
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shelf1",
+      "part": "shelf",
+      "size": [
+        55,
+        1.8,
+        40
+      ],
+      "pos": [
+        0,
+        8.9,
+        0
+      ]
+    },
+    {
+      "id": "shelf2",
+      "part": "shelf",
+      "size": [
+        55,
+        1.8,
+        35
+      ],
+      "pos": [
+        0,
+        42.33,
+        -2.5
+      ]
+    },
+    {
+      "id": "shelf3",
+      "part": "shelf",
+      "size": [
+        55,
+        1.8,
+        30
+      ],
+      "pos": [
+        0,
+        75.75,
+        -5
+      ]
+    },
+    {
+      "id": "shelf4",
+      "part": "shelf",
+      "size": [
+        55,
+        1.8,
+        25
+      ],
+      "pos": [
+        0,
+        109.18,
+        -7.5
+      ]
+    },
+    {
+      "id": "shelf5",
+      "part": "shelf",
+      "size": [
+        55,
+        1.8,
+        20
+      ],
+      "pos": [
+        0,
+        142.6,
+        -10
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Lay out the frames",
+      "say": "Lay both side frames on the floor, inside faces up, and sort the shelves from biggest to smallest if they differ.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "view": {
+        "az": 40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Bottom + top shelf",
+      "say": "Screw the bottom shelf and the top shelf to the first frame. Hand tight for now so the frame can still settle.",
+      "add": [
+        "shelf1",
+        "shelf5"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -27.5,
+              8.9,
+              10
+            ],
+            [
+              -27.5,
+              8.9,
+              -10
+            ],
+            [
+              -27.5,
+              142.6,
+              10
+            ],
+            [
+              -27.5,
+              142.6,
+              -10
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Second frame",
+      "say": "Bring in the second frame and screw it to the same two shelves. Now it stands as a box.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              27.5,
+              8.9,
+              10
+            ],
+            [
+              27.5,
+              8.9,
+              -10
+            ],
+            [
+              27.5,
+              142.6,
+              10
+            ],
+            [
+              27.5,
+              142.6,
+              -10
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -35,
+        "el": 25
+      },
+      "safety": "Two people make this easier."
+    },
+    {
+      "caption": "3 middle shelves",
+      "say": "Fit the middle shelves one by one, two screws each side.",
+      "add": [
+        "shelf2",
+        "shelf3",
+        "shelf4"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -27.5,
+              42.33,
+              10
+            ],
+            [
+              -27.5,
+              42.33,
+              -10
+            ],
+            [
+              -27.5,
+              75.75,
+              10
+            ],
+            [
+              -27.5,
+              75.75,
+              -10
+            ],
+            [
+              -27.5,
+              109.18,
+              10
+            ],
+            [
+              -27.5,
+              109.18,
+              -10
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              27.5,
+              42.33,
+              10
+            ],
+            [
+              27.5,
+              42.33,
+              -10
+            ],
+            [
+              27.5,
+              75.75,
+              10
+            ],
+            [
+              27.5,
+              75.75,
+              -10
+            ],
+            [
+              27.5,
+              109.18,
+              10
+            ],
+            [
+              27.5,
+              109.18,
+              -10
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Stand up, tighten",
+      "say": "Stand it upright on a flat floor, check it does not rock, and tighten every screw. Adjust the levelling feet if it has them.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Fix the top to the wall with the anti-tip strap or bracket and screws that suit your wall. Tall shelves always get anchored.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              139.5,
+              -20
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your 5-TIER ladder bookshelf is built. Give it a proud little pat.",
+  "notes": "Brand page: metal frame with particleboard shelves, under 30 minutes."
+}

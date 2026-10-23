@@ -1,0 +1,47 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-annette-nightstand",
+  "name": "ANNETTE",
+  "title": "3-drawer nightstand",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    77.0,
+    47.5,
+    66.5
+  ],
+  "worksWith": "Walker Edison® Annette contemporary 3-drawer nightstand (WEANN013D1EO1), 30.25×18.75×26.13\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/annette-contemporary-3-drawer-dresser-wood",
+  "color": "#5b4a3c",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/annette-contemporary-3-drawer-dresser-wood"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "plinth",
+      "h": 4
+    },
+    "anchor": false
+  },
+  "tags": [
+    "nightstand",
+    "3 drawer",
+    "walker edison"
+  ],
+  "notes": "Brand page: 3 drawers with EZ-assembly drawer boxes. Base simplified."
+}

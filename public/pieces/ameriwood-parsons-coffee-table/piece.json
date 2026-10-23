@@ -1,0 +1,230 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/ameriwood-parsons-coffee-table.json by scripts/generate.mjs (archetype \"table\"). Edit the spec, not this file.",
+  "slug": "ameriwood-parsons-coffee-table",
+  "name": "PARSONS",
+  "title": "Coffee table",
+  "brand": "Dorel Home",
+  "brandId": "dorel",
+  "disclaimer": "Not affiliated with or endorsed by Dorel Industries.",
+  "worksWith": "Ameriwood Home® Parsons coffee table (5099096), 39×19×17.5\" (W×D×H)",
+  "productUrl": "https://www.dorelhome.com/products/parsons-coffee-table-espresso",
+  "instructionsUrl": "https://cdn.dorelhome.com/DorelHomeFiles/ProductDocuments/565486_AI-B34509909600-KX-2022-05-10(1PC-CNT).pdf",
+  "size": [
+    99,
+    45,
+    49
+  ],
+  "minutes": 10,
+  "people": 1,
+  "level": 1,
+  "color": "#3b2f2a",
+  "category": "tables",
+  "archetype": "table",
+  "confidence": "medium",
+  "sources": [
+    "https://www.dorelhome.com/products/parsons-coffee-table-espresso"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Table top"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "dbolt",
+      "label": "Double-ended screw",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        99,
+        4,
+        48.5
+      ],
+      "pos": [
+        0,
+        42.5,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        5,
+        40.5,
+        5
+      ],
+      "pos": [
+        -47,
+        20.25,
+        21.75
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        5,
+        40.5,
+        5
+      ],
+      "pos": [
+        47,
+        20.25,
+        21.75
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        5,
+        40.5,
+        5
+      ],
+      "pos": [
+        47,
+        20.25,
+        -21.75
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        5,
+        40.5,
+        5
+      ],
+      "pos": [
+        -47,
+        20.25,
+        -21.75
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Flip the top onto something soft, underside up. Pre-drilled holes should be facing you.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "4 double screws",
+      "say": "Twist a double-ended screw into each corner hole by hand, halfway in. The other half is for the leg.",
+      "hardware": [
+        {
+          "id": "dbolt",
+          "axis": "-y",
+          "at": [
+            [
+              -47,
+              40.5,
+              21.75
+            ],
+            [
+              47,
+              40.5,
+              21.75
+            ],
+            [
+              47,
+              40.5,
+              -21.75
+            ],
+            [
+              -47,
+              40.5,
+              -21.75
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "2 legs on",
+      "say": "Twist on the first two legs, clockwise, until they are snug and straight. Hand tight is right.",
+      "add": [
+        "leg1",
+        "leg2"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Last 2 legs",
+      "say": "And the last two. Check they all stand straight.",
+      "add": [
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": -30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "Turn it right side up. Lift it, don't drag it on two legs.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      }
+    }
+  ],
+  "done": "Done. Your PARSONS coffee table is built. Give it a proud little pat.",
+  "notes": "Four legs onto a ready-made top. Dimensions from retailer listings quoting the maker."
+}

@@ -10,10 +10,11 @@ import { fileURLToPath } from 'node:url';
 import { Build, r } from './gen/lib.mjs';
 import { chest, bookcase, cubes } from './gen/storage.mjs';
 import { table, apronTable, desk, wallShelf, bed, crib, ladder, stool } from './gen/frames.mjs';
+import { platformBed, standingDesk, frameShelf } from './gen/more.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CHECK = process.argv.includes('--check');
-export const ARCHETYPES = { chest, bookcase, cubes, table, 'apron-table': apronTable, desk, 'wall-shelf': wallShelf, bed, crib, ladder, stool };
+export const ARCHETYPES = { chest, bookcase, cubes, table, 'apron-table': apronTable, desk, 'wall-shelf': wallShelf, bed, crib, ladder, stool, 'platform-bed': platformBed, 'standing-desk': standingDesk, 'frame-shelf': frameShelf };
 /** Hand-authored pieces keep their order at the front. */
 const HAND = ['lack', 'kallax', 'billy'];
 /** Brands (id -> label + not-affiliated line) come from the research file data/sources/brands.json. */
@@ -32,7 +33,7 @@ function estimate(p, spec) {
   const drawers = p.objects.filter((o) => /^d\d+f$/.test(o.id)).length;
   const minutes = Math.max(10, Math.round((4 + objs * 1.2 + hw * 0.25 + drawers * 6 + p.steps.length) / 5) * 5);
   const [W, H] = p.size;
-  const people = spec.people ?? (spec.archetype === 'bed' || H >= 120 || W >= 140 ? 2 : 1);
+  const people = spec.people ?? (/bed/.test(spec.archetype) || H >= 120 || W >= 140 ? 2 : 1);
   const level = spec.level ?? (minutes <= 20 ? 1 : minutes <= 75 ? 2 : 3);
   return { minutes: spec.minutes ?? minutes, people, level };
 }

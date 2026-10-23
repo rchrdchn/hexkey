@@ -1,0 +1,57 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "delta-rowen-4-drawer",
+  "name": "ROWEN",
+  "title": "4-drawer dresser",
+  "brand": "delta-children",
+  "archetype": "chest",
+  "category": "kids",
+  "size": [
+    96.5,
+    47.5,
+    85.5
+  ],
+  "worksWith": "Delta Children® Rowen 4-drawer dresser, 38×18.75×33.75\" (W×D×H)",
+  "productUrl": "https://www.deltachildren.com/products/4-drawer-dresser-1",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0911/1270/files/25745-530040-dresser_Assembly_Instructions.pdf",
+  "color": "#9b9a97",
+  "confidence": "medium",
+  "sources": [
+    "https://www.deltachildren.com/products/4-drawer-dresser-1"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "h": 0.8
+      },
+      {
+        "type": "drawer",
+        "h": 0.8
+      },
+      {
+        "type": "drawer",
+        "h": 1.1
+      },
+      {
+        "type": "drawer",
+        "h": 1.1
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "nursery",
+    "kids",
+    "4 drawer",
+    "delta children"
+  ],
+  "notes": "Brand page: 2 medium drawers over 2 large ones on metal glides with safety stops."
+}

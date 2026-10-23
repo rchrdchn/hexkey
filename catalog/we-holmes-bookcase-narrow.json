@@ -1,0 +1,57 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-holmes-bookcase-narrow",
+  "name": "HOLMES",
+  "title": "Narrow bookcase with drawer",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "shelving",
+  "size": [
+    56.0,
+    42.5,
+    178.0
+  ],
+  "worksWith": "Walker Edison® Holmes reeded narrow bookshelf (WEHOL41OS2CO0), 22×16.75×70\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/holmes-modern-narrow-bookcase",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--2ov9GBiD--/bfbfp1flagpaqeon9jhs.pdf",
+  "color": "#c8a77f",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/holmes-modern-narrow-bookcase"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "drawer",
+        "h": 0.6
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    },
+    "noun": "bookcase"
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "narrow",
+    "drawer",
+    "walker edison"
+  ],
+  "notes": "Brand page: 4 shelves plus 1 drawer. Shelves modeled as fixed."
+}

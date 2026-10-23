@@ -1,0 +1,52 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "novogratz-her-majesty-nightstand",
+  "name": "HER MAJESTY",
+  "title": "2-drawer nightstand",
+  "brand": "dorel",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    75.5,
+    40.0,
+    61.0
+  ],
+  "worksWith": "Novogratz® Her Majesty 2-drawer nightstand (9407872COM), 29.7×15.8×24\" (W×D×H)",
+  "productUrl": "https://www.dorelhome.com/products/her-majesty-2-drawer-nightstand-emerald-green",
+  "instructionsUrl": "https://cdn.dorelhome.com/DorelHomeFiles/ProductDocuments/593862_AI-9407XXXCOM00HSY-31-Oct-2024(approved).pdf",
+  "color": "#1f5e4b",
+  "confidence": "medium",
+  "sources": [
+    "https://www.dorelhome.com/products/her-majesty-2-drawer-nightstand-emerald-green"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open",
+        "h": 0.9
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "legs",
+      "h": 9.1,
+      "leg": 4
+    },
+    "anchor": false
+  },
+  "tags": [
+    "nightstand",
+    "novogratz",
+    "2 drawer",
+    "dorel"
+  ],
+  "notes": "Brand copy: open cubby over 2 drawers on metal slides, 3.6\" wood legs, 2 adults to assemble.",
+  "people": 2
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "uplift-v2",
+  "name": "UPLIFT V2",
+  "title": "Standing desk",
+  "brand": "uplift",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    152.5,
+    76.0,
+    73.5
+  ],
+  "worksWith": "UPLIFT Desk® V2 standing desk with a 60×30\" top, 60×30×29\" (W×D×H)",
+  "productUrl": "https://www.upliftdesk.com/",
+  "instructionsUrl": "https://checkout.upliftdesk.com/uplift-desk-assembly-programming/",
+  "color": "#c79a6b",
+  "confidence": "medium",
+  "sources": [
+    "https://www.upliftdesk.com/",
+    "https://checkout.upliftdesk.com/frequently-asked-questions/"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 12
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "uplift"
+  ],
+  "notes": "Brand pages: dual motor, 3-stage, 24.3–49.9\" without a top, about an hour with an Allen wrench and a Phillips screwdriver.",
+  "people": 2,
+  "minutes": 60
+}

@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "delta-haven-6-drawer",
+  "name": "HAVEN",
+  "title": "6-drawer dresser",
+  "brand": "delta-children",
+  "archetype": "chest",
+  "category": "kids",
+  "size": [
+    120.5,
+    48.5,
+    85.0
+  ],
+  "worksWith": "Delta Children® Haven 6-drawer dresser (79706), 47.5×19×33.5\" (W×D×H)",
+  "productUrl": "https://www.deltachildren.com/products/haven-6-drawer-dresser-white",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0522/6912/1736/files/43822-79706_J_-NC-AI-R0-2023-03-11_5.pdf",
+  "color": "#f4f2ee",
+  "confidence": "medium",
+  "sources": [
+    "https://www.deltachildren.com/products/haven-6-drawer-dresser-white"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "nursery",
+    "kids",
+    "6 drawer",
+    "delta children"
+  ],
+  "notes": "Brand page: 6 drawers on ball-bearing glides with safety stops, anti-tip kit, meets ASTM F2057."
+}

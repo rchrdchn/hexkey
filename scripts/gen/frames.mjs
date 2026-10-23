@@ -35,6 +35,14 @@ export function table(b) {
   });
   b.step({ caption: '2 legs on', say: 'Twist on the first two legs, clockwise, until they are snug and straight. Hand tight is right.', add: ['leg1', 'leg2'], from: [0, -30, 0], twist: true, view: { az: 30, el: 45 } });
   b.step({ caption: 'Last 2 legs', say: pick(slug, 'legs2', ['Same with the last two legs.', 'And the last two. Check they all stand straight.']), add: ['leg3', 'leg4'], from: [0, -30, 0], twist: true, view: { az: -30, el: 45 } });
+  if (o.bars) {
+    // side support bars between the front and back legs (metal-frame desks)
+    const by = o.bars;
+    b.part('bar', 'Support bar');
+    b.obj('barL', 'bar', [2.5, 2.5, 2 * lz - ls], [-lx, by, 0]);
+    b.obj('barR', 'bar', [2.5, 2.5, 2 * lz - ls], [lx, by, 0]);
+    b.step({ caption: '2 support bars', say: 'Screw a support bar between the front and back leg on each side. They stop the desk swaying when you type.', add: ['barL', 'barR'], from: [0, -25, 0], hardware: [b.H('screw', '+z', [[-lx, by, -lz + ls / 2], [lx, by, -lz + ls / 2]], { spin: true }), b.H('screw', '-z', [[-lx, by, lz - ls / 2], [lx, by, lz - ls / 2]], { spin: true })], view: { az: 30, el: 35 } });
+  }
   if (o.shelf) {
     const sy = o.shelf.y, st = o.shelf.t ?? 1.6;
     const sw = W - 2 * (inset + ls), sd = D - 2 * inset - 0.6;

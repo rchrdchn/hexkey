@@ -1,0 +1,33 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "nj-haven-bookcase",
+  "name": "HAVEN",
+  "title": "5-shelf metal bookcase",
+  "brand": "nathan-james",
+  "archetype": "frame-shelf",
+  "category": "shelving",
+  "size": [
+    83.5,
+    30.0,
+    183.0
+  ],
+  "worksWith": "Nathan James® Haven metal 5-shelf bookcase, 32.8×11.8×72.1\" (W×D×H)",
+  "productUrl": "https://nathanjameshome.com/products/haven-bookcase-oak-finish-shelves",
+  "color": "#2e2e2e",
+  "confidence": "medium",
+  "sources": [
+    "https://nathanjameshome.com/products/haven-bookcase-oak-finish-shelves"
+  ],
+  "options": {
+    "shelves": 5,
+    "post": 2.5
+  },
+  "tags": [
+    "bookcase",
+    "metal",
+    "industrial",
+    "nathan james"
+  ],
+  "notes": "Brand page: 5 fixed shelves on a metal frame, about 60 minutes.",
+  "minutes": 60
+}

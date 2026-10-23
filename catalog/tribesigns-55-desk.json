@@ -1,0 +1,39 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "tribesigns-55-desk",
+  "name": "55\" DESK",
+  "title": "Computer desk",
+  "brand": "tribesigns",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    140.0,
+    60.0,
+    76.0
+  ],
+  "worksWith": "Tribesigns® 55\" computer desk (SFQNC-OUO0KIYMK), 55.12×23.62×29.92\" (W×D×H)",
+  "productUrl": "https://tribesigns.com/products/tribesigns-55-inches-computer-desk-writing-gaming-table-for-workstation",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0506/8963/8555/files/F1157.pdf",
+  "color": "#7a5a3e",
+  "confidence": "medium",
+  "sources": [
+    "https://tribesigns.com/products/tribesigns-55-inches-computer-desk-writing-gaming-table-for-workstation"
+  ],
+  "options": {
+    "tt": 2.5,
+    "leg": {
+      "s": 5,
+      "inset": 3
+    },
+    "bars": 15,
+    "mount": "plate",
+    "topLabel": "Desk top"
+  },
+  "tags": [
+    "desk",
+    "computer desk",
+    "tribesigns"
+  ],
+  "notes": "Brand page: under 20 minutes. Leg frame simplified to four legs and two side bars.",
+  "minutes": 20
+}

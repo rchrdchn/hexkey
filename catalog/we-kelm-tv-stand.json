@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-kelm-tv-stand",
+  "name": "KELM",
+  "title": "70\" TV stand",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "storage",
+  "size": [
+    178.0,
+    38.0,
+    56.0
+  ],
+  "worksWith": "Walker Edison® Kelm mid-century 3-door TV stand (KELM3FMO), 70×15×22\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/mid-century-modern-3-door-tv-stand",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--6GcbS3h1--/g2rsznujahmbga4ktikr.pdf",
+  "color": "#8a5a3b",
+  "confidence": "low",
+  "sources": [
+    "https://www.walkeredison.com/products/mid-century-modern-3-door-tv-stand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open",
+        "cols": 3,
+        "h": 0.7
+      },
+      {
+        "type": "door"
+      }
+    ],
+    "doors": 3,
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 12,
+      "leg": 4
+    }
+  },
+  "tags": [
+    "tv stand",
+    "media console",
+    "mid-century",
+    "walker edison"
+  ],
+  "notes": "Brand page: 3 open cubbies over 3 doors. The real doors drop down; ours swing to the side, so follow the official instructions for the hinges."
+}

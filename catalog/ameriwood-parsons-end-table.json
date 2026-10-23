@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ameriwood-parsons-end-table",
+  "name": "PARSONS",
+  "title": "End table",
+  "brand": "dorel",
+  "archetype": "table",
+  "category": "tables",
+  "size": [
+    51.0,
+    51.0,
+    44.5
+  ],
+  "worksWith": "Ameriwood Home® Parsons end table (2094157), 20×20×17.5\" (W×D×H)",
+  "productUrl": "https://www.dorelhome.com/products/parsons-end-table-white",
+  "instructionsUrl": "https://cdn.dorelhome.com/DorelHomeFiles/ProductDocuments/565451_AI-B34519909600-KX-2022-05-10(1PC-CNT).pdf",
+  "color": "#f1efea",
+  "confidence": "medium",
+  "sources": [
+    "https://www.dorelhome.com/products/parsons-end-table-white"
+  ],
+  "options": {
+    "tt": 4,
+    "leg": {
+      "s": 5,
+      "inset": 0
+    }
+  },
+  "tags": [
+    "end table",
+    "side table",
+    "parsons",
+    "ameriwood",
+    "dorel"
+  ],
+  "notes": "Four legs onto a ready-made top. Dimensions from retailer listings quoting the maker.",
+  "minutes": 10
+}

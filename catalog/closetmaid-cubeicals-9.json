@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "closetmaid-cubeicals-9",
+  "name": "CUBEICALS",
+  "title": "9-cube organizer",
+  "brand": "closetmaid",
+  "archetype": "cubes",
+  "category": "storage",
+  "size": [
+    91.0,
+    29.5,
+    91.0
+  ],
+  "worksWith": "ClosetMaid® Cubeicals 9-cube organizer, 35.79×11.69×35.91\" (W×D×H)",
+  "productUrl": "https://www.homebyames.com/en-us/ho/closetmaid/cubes-bins/cube-storage/cubeicals/500501003.html",
+  "color": "#f6f4f0",
+  "confidence": "medium",
+  "sources": [
+    "https://www.homebyames.com/en-us/ho/closetmaid/cubes-bins/cube-storage/cubeicals/500501003.html",
+    "https://www.lowes.com/pd/ClosetMaid-9-White-Laminate-Storage-Cubes/3277003"
+  ],
+  "options": {
+    "cols": 3,
+    "rows": 3,
+    "cell": 27.9,
+    "outer": 2.1,
+    "inner": 1.5
+  },
+  "tags": [
+    "cube",
+    "cubby",
+    "storage",
+    "organizer",
+    "closetmaid"
+  ],
+  "notes": "Dimensions from the brand listing (via search). Panel thicknesses estimated."
+}

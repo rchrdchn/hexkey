@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "zinus-allen-queen",
+  "name": "ALLEN",
+  "title": "Wood platform bed (queen)",
+  "brand": "zinus",
+  "archetype": "platform-bed",
+  "category": "bedroom",
+  "size": [
+    154.0,
+    208.5,
+    90.0
+  ],
+  "worksWith": "Zinus® Allen wood platform bed frame, queen, 60.71×82.09\" footprint, 35.4\" tall",
+  "productUrl": "https://www.zinus.com/products/allen-wood-platform-bed-frame",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/2097/4191/files/Allen_Platform_Bed__Assembly_Guide-Full_Queen_King-Zinus.pdf",
+  "color": "#c7a37a",
+  "confidence": "medium",
+  "sources": [
+    "https://www.zinus.com/products/allen-wood-platform-bed-frame"
+  ],
+  "options": {
+    "height": 30.5,
+    "material": "wood",
+    "headboard": true,
+    "slats": 20
+  },
+  "tags": [
+    "bed",
+    "queen",
+    "platform bed",
+    "pine",
+    "headboard",
+    "zinus"
+  ],
+  "notes": "Brand page: pine, 12\" frame height, 35.4\" headboard.",
+  "minutes": 55
+}

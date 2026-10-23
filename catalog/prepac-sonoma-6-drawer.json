@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "prepac-sonoma-6-drawer",
+  "name": "SONOMA",
+  "title": "6-drawer dresser",
+  "brand": "prepac",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    150.0,
+    44.5,
+    73.5
+  ],
+  "worksWith": "Prepac® Sonoma 6-drawer double dresser (BDC-6330-K), 59×17.5×29\" (W×D×H)",
+  "productUrl": "https://www.prepacmfg.com/products/sonoma-6-drawer-double-dresser",
+  "color": "#222222",
+  "confidence": "medium",
+  "sources": [
+    "https://www.prepacmfg.com/products/sonoma-6-drawer-double-dresser",
+    "https://www.staples.com/prepac-29-sonoma-6-drawer-dresser-black-bdc-6330-k/product_269805"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 4
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "6 drawer",
+    "low dresser",
+    "prepac"
+  ],
+  "notes": "The brand site refused our connection, so dimensions come from retailer listings: 6 drawers, each about 24.75×5×12.5\".",
+  "people": 2
+}

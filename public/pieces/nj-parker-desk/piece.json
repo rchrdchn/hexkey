@@ -1,0 +1,229 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/nj-parker-desk.json by scripts/generate.mjs (archetype \"table\"). Edit the spec, not this file.",
+  "slug": "nj-parker-desk",
+  "name": "PARKER",
+  "title": "Writing desk with drawer",
+  "brand": "Nathan James",
+  "brandId": "nathan-james",
+  "disclaimer": "Not affiliated with or endorsed by Nathan James.",
+  "worksWith": "Nathan James® Parker solid wood desk with drawer, 41.9×24×30\" (W×D×H)",
+  "productUrl": "https://nathanjameshome.com/products/parker-desk-1-drawer-solid-wood",
+  "size": [
+    107,
+    76,
+    61
+  ],
+  "minutes": 15,
+  "people": 1,
+  "level": 1,
+  "color": "#d7b98f",
+  "category": "desks",
+  "archetype": "table",
+  "confidence": "medium",
+  "sources": [
+    "https://nathanjameshome.com/products/parker-desk-1-drawer-solid-wood"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top (drawer built in)"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "dbolt",
+      "label": "Double-ended screw",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        106.5,
+        4,
+        61
+      ],
+      "pos": [
+        0,
+        74,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        4.5,
+        72,
+        4.5
+      ],
+      "pos": [
+        -50,
+        36,
+        27.25
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        4.5,
+        72,
+        4.5
+      ],
+      "pos": [
+        50,
+        36,
+        27.25
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        4.5,
+        72,
+        4.5
+      ],
+      "pos": [
+        50,
+        36,
+        -27.25
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        4.5,
+        72,
+        4.5
+      ],
+      "pos": [
+        -50,
+        36,
+        -27.25
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Flip the top onto something soft, underside up. Pre-drilled holes should be facing you.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "4 double screws",
+      "say": "Twist a double-ended screw into each corner hole by hand, halfway in. The other half is for the leg.",
+      "hardware": [
+        {
+          "id": "dbolt",
+          "axis": "-y",
+          "at": [
+            [
+              -50,
+              72,
+              27.25
+            ],
+            [
+              50,
+              72,
+              27.25
+            ],
+            [
+              50,
+              72,
+              -27.25
+            ],
+            [
+              -50,
+              72,
+              -27.25
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "2 legs on",
+      "say": "Twist on the first two legs, clockwise, until they are snug and straight. Hand tight is right.",
+      "add": [
+        "leg1",
+        "leg2"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Last 2 legs",
+      "say": "And the last two. Check they all stand straight.",
+      "add": [
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": -30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "Turn it right side up. Lift it, don't drag it on two legs.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      }
+    }
+  ],
+  "done": "Done. Your PARKER writing desk with drawer is built. Give it a proud little pat.",
+  "notes": "Brand page: solid wood legs onto a top with its drawer built in, about 15 minutes."
+}

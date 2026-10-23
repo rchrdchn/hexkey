@@ -1,0 +1,803 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/sauder-beginnings-5-shelf.json by scripts/generate.mjs (archetype \"bookcase\"). Edit the spec, not this file.",
+  "slug": "sauder-beginnings-5-shelf",
+  "name": "BEGINNINGS",
+  "title": "5-shelf bookcase",
+  "brand": "Sauder",
+  "brandId": "sauder",
+  "disclaimer": "Not affiliated with or endorsed by Sauder.",
+  "worksWith": "Sauder® Beginnings 5-shelf bookcase (409090), 24.567×11.496×71.181\" (W×D×H)",
+  "productUrl": "https://www.sauder.com/furniture/409090/5-shelf-bookcase",
+  "instructionsUrl": "https://www.sauder.com/service/instruction-book-request",
+  "size": [
+    63,
+    181,
+    29
+  ],
+  "minutes": 40,
+  "people": 2,
+  "level": 2,
+  "color": "#7b3f2a",
+  "category": "shelving",
+  "archetype": "bookcase",
+  "confidence": "medium",
+  "sources": [
+    "https://www.sauder.com/furniture/409090/5-shelf-bookcase",
+    "https://www.homedepot.com/p/SAUDER-71-18-in-Cinnamon-Cherry-Faux-Wood-5-shelf-Standard-Bookcase-with-Adjustable-Shelves-409090/205438351"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom panel"
+    },
+    {
+      "id": "top",
+      "label": "Top panel"
+    },
+    {
+      "id": "fixed",
+      "label": "Fixed shelf",
+      "plural": "Fixed shelves"
+    },
+    {
+      "id": "plinth",
+      "label": "Plinth"
+    },
+    {
+      "id": "back",
+      "label": "Back panel"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "plural": "Shelves"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "nail",
+      "label": "Nail",
+      "kind": "nail"
+    },
+    {
+      "id": "spin",
+      "label": "Shelf pin",
+      "kind": "shelfpin"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        181,
+        29
+      ],
+      "pos": [
+        -30.45,
+        90.5,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        181,
+        29
+      ],
+      "pos": [
+        30.45,
+        90.5,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "bottom",
+      "size": [
+        59.3,
+        1.6,
+        28.6
+      ],
+      "pos": [
+        0,
+        6.8,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        59.3,
+        1.6,
+        28.6
+      ],
+      "pos": [
+        0,
+        180.2,
+        0.2
+      ]
+    },
+    {
+      "id": "fixed1",
+      "part": "fixed",
+      "size": [
+        59.3,
+        1.6,
+        28.6
+      ],
+      "pos": [
+        0,
+        93.5,
+        0.2
+      ]
+    },
+    {
+      "id": "plinth",
+      "part": "plinth",
+      "size": [
+        59.3,
+        6,
+        1.6
+      ],
+      "pos": [
+        0,
+        3,
+        12.2
+      ]
+    },
+    {
+      "id": "backLow",
+      "part": "back",
+      "size": [
+        62.1,
+        93,
+        0.3
+      ],
+      "pos": [
+        0,
+        47,
+        -14.65
+      ]
+    },
+    {
+      "id": "backUp",
+      "part": "back",
+      "size": [
+        62.1,
+        87.3,
+        0.3
+      ],
+      "pos": [
+        0,
+        137.15,
+        -14.65
+      ]
+    },
+    {
+      "id": "shelf1",
+      "part": "shelf",
+      "size": [
+        58.9,
+        1.6,
+        26.6
+      ],
+      "pos": [
+        0,
+        36.23,
+        -0.6
+      ]
+    },
+    {
+      "id": "shelf2",
+      "part": "shelf",
+      "size": [
+        58.9,
+        1.6,
+        26.6
+      ],
+      "pos": [
+        0,
+        64.87,
+        -0.6
+      ]
+    },
+    {
+      "id": "shelf3",
+      "part": "shelf",
+      "size": [
+        58.9,
+        1.6,
+        26.6
+      ],
+      "pos": [
+        0,
+        136.45,
+        -0.6
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Lay one side panel flat, holes facing up. Screw in six cam pins and tap in six wood dowels.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "pose": [
+        -90,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -29.65,
+              6.8,
+              9.28
+            ],
+            [
+              -29.65,
+              6.8,
+              -9.28
+            ],
+            [
+              -29.65,
+              93.5,
+              9.28
+            ],
+            [
+              -29.65,
+              93.5,
+              -9.28
+            ],
+            [
+              -29.65,
+              180.2,
+              9.28
+            ],
+            [
+              -29.65,
+              180.2,
+              -9.28
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -29.65,
+              6.8,
+              3.71
+            ],
+            [
+              -29.65,
+              6.8,
+              -3.71
+            ],
+            [
+              -29.65,
+              93.5,
+              3.71
+            ],
+            [
+              -29.65,
+              93.5,
+              -3.71
+            ],
+            [
+              -29.65,
+              180.2,
+              3.71
+            ],
+            [
+              -29.65,
+              180.2,
+              -3.71
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Slide the bottom panel onto the pins at the low end. Two cam locks go in, arrow toward the pin, then a firm clockwise turn.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -26.25,
+              7.6,
+              9.28
+            ],
+            [
+              -26.25,
+              7.6,
+              -9.28
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Fixed shelf. Lock 2.",
+      "say": "The fixed shelf holds the bookcase square, so it goes in now. Slide onto the pins and lock with cam locks, clockwise.",
+      "add": [
+        "fixed1"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -26.25,
+              94.3,
+              9.28
+            ],
+            [
+              -26.25,
+              94.3,
+              -9.28
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Top on. Lock 2.",
+      "say": "Same move at the other end. Push the top panel onto its pins, add two cam locks, and turn them clockwise.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -26.25,
+              181,
+              9.28
+            ],
+            [
+              -26.25,
+              181,
+              -9.28
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Side two. Lock 6.",
+      "say": "Pins and dowels go into the ends of the panels on this side too. With a helper, lower the second side onto all of them at once, then lock the last six cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              29.65,
+              6.8,
+              9.28
+            ],
+            [
+              29.65,
+              6.8,
+              -9.28
+            ],
+            [
+              29.65,
+              93.5,
+              9.28
+            ],
+            [
+              29.65,
+              93.5,
+              -9.28
+            ],
+            [
+              29.65,
+              180.2,
+              9.28
+            ],
+            [
+              29.65,
+              180.2,
+              -9.28
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              29.65,
+              6.8,
+              3.71
+            ],
+            [
+              29.65,
+              6.8,
+              -3.71
+            ],
+            [
+              29.65,
+              93.5,
+              3.71
+            ],
+            [
+              29.65,
+              93.5,
+              -3.71
+            ],
+            [
+              29.65,
+              180.2,
+              3.71
+            ],
+            [
+              29.65,
+              180.2,
+              -3.71
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              26.25,
+              7.6,
+              9.28
+            ],
+            [
+              26.25,
+              7.6,
+              -9.28
+            ],
+            [
+              26.25,
+              94.3,
+              9.28
+            ],
+            [
+              26.25,
+              94.3,
+              -9.28
+            ],
+            [
+              26.25,
+              181,
+              9.28
+            ],
+            [
+              26.25,
+              181,
+              -9.28
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 50
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Plinth",
+      "say": "Tap four dowels into the ends of the plinth board and press it in under the bottom panel, at the front.",
+      "add": [
+        "plinth"
+      ],
+      "from": [
+        0,
+        0,
+        30
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+z",
+          "at": [
+            [
+              -29.65,
+              1.8,
+              12.2
+            ],
+            [
+              -29.65,
+              4.2,
+              12.2
+            ],
+            [
+              29.65,
+              1.8,
+              12.2
+            ],
+            [
+              29.65,
+              4.2,
+              12.2
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 50,
+        "tight": true,
+        "zoom": 0.85
+      }
+    },
+    {
+      "caption": "Flip it face down",
+      "say": "Roll the bookcase over so it lies on its front. Ask your helper, and put the flattened box underneath to save the finish.",
+      "pose": [
+        -90,
+        180,
+        0
+      ],
+      "view": {
+        "az": 60,
+        "el": 50
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Back, lower half",
+      "say": "Lay the back panel on, smooth side facing in. Line it up with the bottom corners and nail it along the edges, about every twenty centimeters. If the corners line up, the bookcase is square.",
+      "add": [
+        "backLow"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Back, upper half",
+      "say": "Second back piece, butted tight against the first. Same nailing pattern along every edge.",
+      "add": [
+        "backUp"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Stand it up",
+      "say": "Stand it up together. Lift with your legs, not your back.",
+      "pose": [
+        0,
+        360,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 18
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "3 shelves in",
+      "say": "Push twelve shelf pins into the holes at the heights you like, four per shelf, then rest each shelf on top. Move them any time.",
+      "add": [
+        "shelf1",
+        "shelf2",
+        "shelf3"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "spin",
+          "axis": "+x",
+          "at": [
+            [
+              -29.65,
+              35.13,
+              7.42
+            ],
+            [
+              -29.65,
+              35.13,
+              -7.42
+            ],
+            [
+              -29.65,
+              63.77,
+              7.42
+            ],
+            [
+              -29.65,
+              63.77,
+              -7.42
+            ],
+            [
+              -29.65,
+              135.35,
+              7.42
+            ],
+            [
+              -29.65,
+              135.35,
+              -7.42
+            ]
+          ]
+        },
+        {
+          "id": "spin",
+          "axis": "-x",
+          "at": [
+            [
+              29.65,
+              35.13,
+              7.42
+            ],
+            [
+              29.65,
+              35.13,
+              -7.42
+            ],
+            [
+              29.65,
+              63.77,
+              7.42
+            ],
+            [
+              29.65,
+              63.77,
+              -7.42
+            ],
+            [
+              29.65,
+              135.35,
+              7.42
+            ],
+            [
+              29.65,
+              135.35,
+              -7.42
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Fix the wall bracket to the back edge of the top, then into the wall with fixings made for your wall type. Tip-overs are real. Anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              178,
+              -14.8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your BEGINNINGS 5-shelf bookcase is built. Give it a proud little pat.",
+  "notes": "Facts from search listings (Sauder spec panels load from a path robots.txt disallows, so we did not fetch them): 3 adjustable shelves, closed back. Instructions: Sauder instruction-book lookup by model number."
+}

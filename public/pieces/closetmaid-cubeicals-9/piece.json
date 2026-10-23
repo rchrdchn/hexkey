@@ -1,0 +1,731 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/closetmaid-cubeicals-9.json by scripts/generate.mjs (archetype \"cubes\"). Edit the spec, not this file.",
+  "slug": "closetmaid-cubeicals-9",
+  "name": "CUBEICALS",
+  "title": "9-cube organizer",
+  "brand": "ClosetMaid",
+  "brandId": "closetmaid",
+  "disclaimer": "Not affiliated with or endorsed by Emerson / The Ames Companies.",
+  "worksWith": "ClosetMaid® Cubeicals 9-cube organizer, 35.79×11.69×35.91\" (W×D×H)",
+  "productUrl": "https://www.homebyames.com/en-us/ho/closetmaid/cubes-bins/cube-storage/cubeicals/500501003.html",
+  "size": [
+    91,
+    91,
+    30
+  ],
+  "minutes": 40,
+  "people": 1,
+  "level": 2,
+  "color": "#f6f4f0",
+  "category": "storage",
+  "archetype": "cubes",
+  "confidence": "medium",
+  "sources": [
+    "https://www.homebyames.com/en-us/ho/closetmaid/cubes-bins/cube-storage/cubeicals/500501003.html",
+    "https://www.lowes.com/pd/ClosetMaid-9-White-Laminate-Storage-Cubes/3277003"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "end",
+      "label": "End panel"
+    },
+    {
+      "id": "long",
+      "label": "Long shelf",
+      "plural": "Long shelves"
+    },
+    {
+      "id": "div",
+      "label": "Divider"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        2.1,
+        90.9,
+        29.5
+      ],
+      "pos": [
+        -44.4,
+        45.45,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        2.1,
+        90.9,
+        29.5
+      ],
+      "pos": [
+        44.4,
+        45.45,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "end",
+      "size": [
+        86.7,
+        2.1,
+        29.5
+      ],
+      "pos": [
+        0,
+        1.05,
+        0
+      ]
+    },
+    {
+      "id": "top",
+      "part": "end",
+      "size": [
+        86.7,
+        2.1,
+        29.5
+      ],
+      "pos": [
+        0,
+        89.85,
+        0
+      ]
+    },
+    {
+      "id": "long1",
+      "part": "long",
+      "size": [
+        86.7,
+        1.5,
+        29.5
+      ],
+      "pos": [
+        0,
+        30.75,
+        0
+      ]
+    },
+    {
+      "id": "long2",
+      "part": "long",
+      "size": [
+        86.7,
+        1.5,
+        29.5
+      ],
+      "pos": [
+        0,
+        60.15,
+        0
+      ]
+    },
+    {
+      "id": "div1_1",
+      "part": "div",
+      "size": [
+        1.5,
+        27.9,
+        29.5
+      ],
+      "pos": [
+        -14.7,
+        16.05,
+        0
+      ]
+    },
+    {
+      "id": "div1_2",
+      "part": "div",
+      "size": [
+        1.5,
+        27.9,
+        29.5
+      ],
+      "pos": [
+        14.7,
+        16.05,
+        0
+      ]
+    },
+    {
+      "id": "div2_1",
+      "part": "div",
+      "size": [
+        1.5,
+        27.9,
+        29.5
+      ],
+      "pos": [
+        -14.7,
+        45.45,
+        0
+      ]
+    },
+    {
+      "id": "div2_2",
+      "part": "div",
+      "size": [
+        1.5,
+        27.9,
+        29.5
+      ],
+      "pos": [
+        14.7,
+        45.45,
+        0
+      ]
+    },
+    {
+      "id": "div3_1",
+      "part": "div",
+      "size": [
+        1.5,
+        27.9,
+        29.5
+      ],
+      "pos": [
+        -14.7,
+        74.85,
+        0
+      ]
+    },
+    {
+      "id": "div3_2",
+      "part": "div",
+      "size": [
+        1.5,
+        27.9,
+        29.5
+      ],
+      "pos": [
+        14.7,
+        74.85,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Stand one thick side panel on its edge, holes in. Screw in four cam pins at the ends, and tap four dowels into the holes for the long shelves.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -43.35,
+              1.05,
+              8.75
+            ],
+            [
+              -43.35,
+              1.05,
+              -8.75
+            ],
+            [
+              -43.35,
+              89.85,
+              8.75
+            ],
+            [
+              -43.35,
+              89.85,
+              -8.75
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -43.35,
+              30.75,
+              8.75
+            ],
+            [
+              -43.35,
+              30.75,
+              -8.75
+            ],
+            [
+              -43.35,
+              60.15,
+              8.75
+            ],
+            [
+              -43.35,
+              60.15,
+              -8.75
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Push one of the thick end panels onto the low pins, then lock it with two cam locks, arrows toward the pins, turned clockwise.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -39.95,
+              2.1,
+              8.75
+            ],
+            [
+              -39.95,
+              2.1,
+              -8.75
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Row 1: dividers",
+      "say": "Tap dowels into the panel below, two per divider, and stand the two short dividers on them. They set the cube width, so push them fully home.",
+      "add": [
+        "div1_1",
+        "div1_2"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -14.7,
+              2.1,
+              8.75
+            ],
+            [
+              -14.7,
+              2.1,
+              -8.75
+            ],
+            [
+              -14.7,
+              30,
+              8.75
+            ],
+            [
+              -14.7,
+              30,
+              -8.75
+            ],
+            [
+              14.7,
+              2.1,
+              8.75
+            ],
+            [
+              14.7,
+              2.1,
+              -8.75
+            ],
+            [
+              14.7,
+              30,
+              8.75
+            ],
+            [
+              14.7,
+              30,
+              -8.75
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Long shelf 1",
+      "say": "Lower a long shelf onto the divider dowels and the side dowels at the same time. Wiggle it down evenly, a little at each end.",
+      "add": [
+        "long1"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Row 2: dividers",
+      "say": "Another row of dividers. You know the drill.",
+      "add": [
+        "div2_1",
+        "div2_2"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -14.7,
+              31.5,
+              8.75
+            ],
+            [
+              -14.7,
+              31.5,
+              -8.75
+            ],
+            [
+              -14.7,
+              59.4,
+              8.75
+            ],
+            [
+              -14.7,
+              59.4,
+              -8.75
+            ],
+            [
+              14.7,
+              31.5,
+              8.75
+            ],
+            [
+              14.7,
+              31.5,
+              -8.75
+            ],
+            [
+              14.7,
+              59.4,
+              8.75
+            ],
+            [
+              14.7,
+              59.4,
+              -8.75
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Long shelf 2",
+      "say": "Long shelf number two, onto the dowels.",
+      "add": [
+        "long2"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Row 3: dividers",
+      "say": "Next row of dividers, same as before: dowels down, dividers on.",
+      "add": [
+        "div3_1",
+        "div3_2"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -14.7,
+              60.9,
+              8.75
+            ],
+            [
+              -14.7,
+              60.9,
+              -8.75
+            ],
+            [
+              -14.7,
+              88.8,
+              8.75
+            ],
+            [
+              -14.7,
+              88.8,
+              -8.75
+            ],
+            [
+              14.7,
+              60.9,
+              8.75
+            ],
+            [
+              14.7,
+              60.9,
+              -8.75
+            ],
+            [
+              14.7,
+              88.8,
+              8.75
+            ],
+            [
+              14.7,
+              88.8,
+              -8.75
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Top on. Lock 2.",
+      "say": "Top end panel onto its pins and the top dowels. Lock two cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -39.95,
+              90.9,
+              8.75
+            ],
+            [
+              -39.95,
+              90.9,
+              -8.75
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Side two. Lock 4.",
+      "say": "Pins into the ends of the top and bottom, dowels into the long shelves, then press the second side on and lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              43.35,
+              1.05,
+              8.75
+            ],
+            [
+              43.35,
+              1.05,
+              -8.75
+            ],
+            [
+              43.35,
+              89.85,
+              8.75
+            ],
+            [
+              43.35,
+              89.85,
+              -8.75
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              43.35,
+              30.75,
+              8.75
+            ],
+            [
+              43.35,
+              30.75,
+              -8.75
+            ],
+            [
+              43.35,
+              60.15,
+              8.75
+            ],
+            [
+              43.35,
+              60.15,
+              -8.75
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              39.95,
+              2.1,
+              8.75
+            ],
+            [
+              39.95,
+              2.1,
+              -8.75
+            ],
+            [
+              39.95,
+              90.9,
+              8.75
+            ],
+            [
+              39.95,
+              90.9,
+              -8.75
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Screw the wall bracket to the top at the back, then into the wall with fixings for your wall. Fill the bottom cubes first and the top ones last. And always anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              87.9,
+              -15.05
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your CUBEICALS 9-cube organizer is built. Give it a proud little pat.",
+  "notes": "Dimensions from the brand listing (via search). Panel thicknesses estimated."
+}

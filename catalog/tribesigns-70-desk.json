@@ -1,0 +1,41 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "tribesigns-70-desk",
+  "name": "71\" DESK",
+  "title": "Computer desk",
+  "brand": "tribesigns",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    180.0,
+    80.0,
+    74.0
+  ],
+  "worksWith": "Tribesigns® 70.9\" computer desk (SFLXY-TPOWITIP802), 70.8×31.5×29.1\" (W×D×H)",
+  "productUrl": "https://tribesigns.com/products/tribesigns-computer-desk-simple-and-modern-office-desk",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0506/8963/8555/files/B0D4LYRSHT_HOGA-U0215_installationmanual.pdf",
+  "color": "#e7e2da",
+  "confidence": "medium",
+  "sources": [
+    "https://tribesigns.com/products/tribesigns-computer-desk-simple-and-modern-office-desk"
+  ],
+  "options": {
+    "tt": 2.5,
+    "leg": {
+      "s": 5,
+      "inset": 3
+    },
+    "bars": 15,
+    "mount": "plate",
+    "topLabel": "Desk top"
+  },
+  "tags": [
+    "desk",
+    "computer desk",
+    "large",
+    "tribesigns"
+  ],
+  "notes": "Brand page: 0.98\" top, 4 legs and 2 support bars, about 15 minutes with 2 people.",
+  "people": 2,
+  "minutes": 15
+}

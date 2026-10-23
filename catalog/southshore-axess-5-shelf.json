@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "southshore-axess-5-shelf",
+  "name": "AXESS",
+  "title": "5-shelf bookcase",
+  "brand": "south-shore",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    70.5,
+    29.0,
+    174.5
+  ],
+  "worksWith": "South Shore® Axess 5-shelf bookcase (7270768), 27.75×11.5×68.75\" (W×D×H)",
+  "productUrl": "https://www.southshorefurniture.com/collections/contemporary",
+  "color": "#222222",
+  "confidence": "medium",
+  "sources": [
+    "https://www.staples.com/south-shore-work-id-5-shelf-bookcase-black-7270768/product_812093",
+    "https://www.homedepot.ca/product/south-shore-axess-5-shelf-bookcase-in-royal-cherry-27-75-in-x-11-5-in-x-68-75-in/1000811414"
+  ],
+  "options": {
+    "t": 1.6,
+    "shelves": 3,
+    "fixed": [
+      0.5
+    ],
+    "base": {
+      "type": "plinth",
+      "h": 6
+    }
+  },
+  "tags": [
+    "bookcase",
+    "5 shelf",
+    "south shore"
+  ],
+  "notes": "The brand site blocked our fetcher (HTTP 423), so facts come from retailer listings: 3 adjustable + 2 fixed shelves, 2 adults. Link goes to the brand collection page.",
+  "people": 2
+}

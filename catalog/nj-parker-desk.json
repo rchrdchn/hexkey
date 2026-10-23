@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "nj-parker-desk",
+  "name": "PARKER",
+  "title": "Writing desk with drawer",
+  "brand": "nathan-james",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    106.5,
+    61.0,
+    76.0
+  ],
+  "worksWith": "Nathan James® Parker solid wood desk with drawer, 41.9×24×30\" (W×D×H)",
+  "productUrl": "https://nathanjameshome.com/products/parker-desk-1-drawer-solid-wood",
+  "color": "#d7b98f",
+  "confidence": "medium",
+  "sources": [
+    "https://nathanjameshome.com/products/parker-desk-1-drawer-solid-wood"
+  ],
+  "options": {
+    "tt": 4,
+    "leg": {
+      "s": 4.5,
+      "inset": 1
+    },
+    "topLabel": "Desk top (drawer built in)"
+  },
+  "tags": [
+    "desk",
+    "writing desk",
+    "solid wood",
+    "nathan james"
+  ],
+  "notes": "Brand page: solid wood legs onto a top with its drawer built in, about 15 minutes.",
+  "minutes": 15
+}

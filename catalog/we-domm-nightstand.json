@@ -1,0 +1,47 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-domm-nightstand",
+  "name": "DOMM",
+  "title": "1-drawer nightstand",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    48.0,
+    39.5,
+    62.0
+  ],
+  "worksWith": "Walker Edison® Domm modern 1-drawer nightstand (DOMB4CBLC), 18.88×15.63×24.38\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/simple-modern-1-drawer-nightstand",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--A6y3MffQ--/hnnrpesdyhpbgbipglof",
+  "color": "#2b2724",
+  "confidence": "low",
+  "sources": [
+    "https://www.walkeredison.com/products/simple-modern-1-drawer-nightstand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "h": 0.7
+      },
+      {
+        "type": "open"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "plinth",
+      "h": 4
+    },
+    "runners": true
+  },
+  "tags": [
+    "nightstand",
+    "bedside",
+    "walker edison",
+    "domm"
+  ],
+  "notes": "Dimensions and the drawer-over-cubby layout come from the brand product page. Base and back simplified. Brand says the drawer runs on metal glides and an anti-tip kit is included."
+}

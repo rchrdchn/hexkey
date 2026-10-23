@@ -1,0 +1,34 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "nj-theo-5-shelf",
+  "name": "THEO",
+  "title": "5-shelf ladder bookcase",
+  "brand": "nathan-james",
+  "archetype": "frame-shelf",
+  "category": "shelving",
+  "size": [
+    60.0,
+    29.5,
+    184.0
+  ],
+  "worksWith": "Nathan James® Theo 5-shelf ladder bookcase, 23.6×11.7×72.5\" (W×D×H)",
+  "productUrl": "https://nathanjameshome.com/products/theo-ladder-bookcase-5-shelf-wood-finish",
+  "color": "#c9a36f",
+  "confidence": "medium",
+  "sources": [
+    "https://nathanjameshome.com/products/theo-ladder-bookcase-5-shelf-wood-finish"
+  ],
+  "options": {
+    "shelves": 5,
+    "lean": 16,
+    "post": 3
+  },
+  "tags": [
+    "ladder shelf",
+    "bookcase",
+    "wall",
+    "nathan james"
+  ],
+  "notes": "Brand page: 5 fixed shelves, wall-mounted, about 35 minutes. Shelf depths taper toward the top here; check your box.",
+  "minutes": 35
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-clyde-nightstand",
+  "name": "CLYDE",
+  "title": "2-drawer nightstand",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    66.0,
+    40.0,
+    64.0
+  ],
+  "worksWith": "Walker Edison® Clyde classic 2-drawer nightstand (BR2DCLNSWO), 26×15.75×25.25\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/classic-2-drawer-side-table-nightstand",
+  "color": "#e9e3d8",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/classic-2-drawer-side-table-nightstand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open",
+        "h": 0.8
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "plinth",
+      "h": 4
+    },
+    "anchor": false
+  },
+  "tags": [
+    "nightstand",
+    "side table",
+    "2 drawer",
+    "walker edison"
+  ],
+  "notes": "Brand page: upper cubby over 2 drawers. Base simplified."
+}

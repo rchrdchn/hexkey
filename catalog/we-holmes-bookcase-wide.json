@@ -1,0 +1,58 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-holmes-bookcase-wide",
+  "name": "HOLMES",
+  "title": "Wide bookcase with drawers",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "shelving",
+  "size": [
+    84.0,
+    42.5,
+    178.0
+  ],
+  "worksWith": "Walker Edison® Holmes reeded wide bookshelf (WEHOL41OS3BL20), 33×16.75×70\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/holmes-modern-bookcase-wide",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--6MMSarHI--/pnk3wsz7sejhmblwkusv.pdf",
+  "color": "#2b2724",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/holmes-modern-bookcase-wide"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "drawer",
+        "cols": 2,
+        "h": 0.6
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    },
+    "noun": "bookcase"
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "drawers",
+    "reeded",
+    "walker edison"
+  ],
+  "notes": "Brand page: 4 open shelves over bottom drawers. Shelves modeled as fixed; reeded drawer fronts drawn flat."
+}

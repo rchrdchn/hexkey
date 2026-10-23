@@ -1,0 +1,40 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ameriwood-parsons-desk",
+  "name": "PARSONS",
+  "title": "Desk with drawer",
+  "brand": "dorel",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    99.0,
+    50.0,
+    76.0
+  ],
+  "worksWith": "Ameriwood Home® Parsons computer desk with drawer (9178196), 39×19.7×30\" (W×D×H)",
+  "productUrl": "https://www.dorelhome.com/products/ameriwood-home-parsons-computer-desk-with-drawer-4",
+  "color": "#f1efea",
+  "confidence": "medium",
+  "sources": [
+    "https://www.dorelhome.com/products/ameriwood-home-parsons-computer-desk-with-drawer-4"
+  ],
+  "options": {
+    "tt": 4,
+    "leg": {
+      "s": 5,
+      "inset": 0
+    },
+    "topLabel": "Desk top (drawer built in)",
+    "mount": "dbolt"
+  },
+  "tags": [
+    "desk",
+    "parsons",
+    "home office",
+    "ameriwood",
+    "dorel"
+  ],
+  "notes": "The top arrives with its drawer already built; you add four legs. Dimensions from retailer listings quoting the maker (the brand page left them blank); Lowe's lists 2 people.",
+  "people": 2,
+  "minutes": 20
+}

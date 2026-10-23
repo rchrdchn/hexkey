@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "nj-andrew-nightstand",
+  "name": "ANDREW",
+  "title": "2-drawer nightstand",
+  "brand": "nathan-james",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    47.0,
+    36.0,
+    60.0
+  ],
+  "worksWith": "Nathan James® Andrew wood and rattan 2-drawer nightstand, 18.5×14.1×23.6\" (W×D×H)",
+  "productUrl": "https://nathanjameshome.com/products/wood-rattan-2-drawer-nightstand-light-oak",
+  "color": "#d8c3a0",
+  "confidence": "low",
+  "sources": [
+    "https://nathanjameshome.com/products/wood-rattan-2-drawer-nightstand-light-oak"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "legs",
+      "h": 12,
+      "leg": 3
+    },
+    "anchor": false
+  },
+  "tags": [
+    "nightstand",
+    "rattan",
+    "2 drawer",
+    "nathan james"
+  ],
+  "notes": "Brand page: 2 drawers on metal legs. Leg height estimated; rattan fronts drawn flat."
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "flexispot-e7",
+  "name": "E7",
+  "title": "Standing desk",
+  "brand": "flexispot",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    152.5,
+    76.0,
+    73.5
+  ],
+  "worksWith": "FlexiSpot® E7 standing desk frame with a 60×30\" top, 60×30×29\" (W×D×H)",
+  "productUrl": "https://www.flexispot.com/products/flexispot-pro-standing-desk-e7",
+  "color": "#ddd4c6",
+  "confidence": "medium",
+  "sources": [
+    "https://www.flexispot.com/products/flexispot-pro-standing-desk-e7",
+    "https://www.flexispot.com/height-adjustable-desks/electric-height-adjustable-desk-frames-3-stagec-leg-option-e7"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 12
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "flexispot"
+  ],
+  "notes": "Brand pages: dual motor, 3-stage legs, frame width 43.3–74.8\", height about 22.8–48.4\" without a top. Shown at sitting height with a 60×30\" top.",
+  "people": 2,
+  "minutes": 45
+}

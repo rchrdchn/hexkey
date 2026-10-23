@@ -1,0 +1,860 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/we-kelm-tv-stand.json by scripts/generate.mjs (archetype \"chest\"). Edit the spec, not this file.",
+  "slug": "we-kelm-tv-stand",
+  "name": "KELM",
+  "title": "70\" TV stand",
+  "brand": "Walker Edison",
+  "brandId": "walker-edison",
+  "disclaimer": "Not affiliated with or endorsed by Walker Edison.",
+  "worksWith": "Walker Edison® Kelm mid-century 3-door TV stand (KELM3FMO), 70×15×22\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/mid-century-modern-3-door-tv-stand",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--6GcbS3h1--/g2rsznujahmbga4ktikr.pdf",
+  "size": [
+    178,
+    56,
+    40
+  ],
+  "minutes": 50,
+  "people": 2,
+  "level": 2,
+  "color": "#8a5a3b",
+  "category": "storage",
+  "archetype": "chest",
+  "confidence": "low",
+  "sources": [
+    "https://www.walkeredison.com/products/mid-century-modern-3-door-tv-stand"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom panel"
+    },
+    {
+      "id": "top",
+      "label": "Top panel"
+    },
+    {
+      "id": "fixed",
+      "label": "Fixed shelf",
+      "plural": "Fixed shelves"
+    },
+    {
+      "id": "divider",
+      "label": "Divider"
+    },
+    {
+      "id": "back",
+      "label": "Back panel"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    },
+    {
+      "id": "door",
+      "label": "Door"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "nail",
+      "label": "Nail",
+      "kind": "nail"
+    },
+    {
+      "id": "hinge",
+      "label": "Hinge",
+      "kind": "hinge"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        42,
+        38
+      ],
+      "pos": [
+        -88.2,
+        33,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        42,
+        38
+      ],
+      "pos": [
+        88.2,
+        33,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "bottom",
+      "size": [
+        174.8,
+        1.6,
+        37.6
+      ],
+      "pos": [
+        0,
+        12.8,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        178,
+        2,
+        38
+      ],
+      "pos": [
+        0,
+        55,
+        0
+      ]
+    },
+    {
+      "id": "fixed1",
+      "part": "fixed",
+      "size": [
+        174.8,
+        1.6,
+        37.6
+      ],
+      "pos": [
+        0,
+        37.22,
+        0.2
+      ]
+    },
+    {
+      "id": "div1",
+      "part": "divider",
+      "size": [
+        1.6,
+        15.98,
+        37.6
+      ],
+      "pos": [
+        -29.4,
+        46.01,
+        0.2
+      ]
+    },
+    {
+      "id": "div2",
+      "part": "divider",
+      "size": [
+        1.6,
+        15.98,
+        37.6
+      ],
+      "pos": [
+        29.4,
+        46.01,
+        0.2
+      ]
+    },
+    {
+      "id": "back",
+      "part": "back",
+      "size": [
+        177.6,
+        41.8,
+        0.3
+      ],
+      "pos": [
+        0,
+        32.9,
+        -19.15
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        4,
+        12,
+        4
+      ],
+      "pos": [
+        -85.5,
+        6,
+        15.5
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        4,
+        12,
+        4
+      ],
+      "pos": [
+        85.5,
+        6,
+        15.5
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        4,
+        12,
+        4
+      ],
+      "pos": [
+        85.5,
+        6,
+        -15.5
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        4,
+        12,
+        4
+      ],
+      "pos": [
+        -85.5,
+        6,
+        -15.5
+      ]
+    },
+    {
+      "id": "door1",
+      "part": "door",
+      "size": [
+        57.97,
+        22.52,
+        1.8
+      ],
+      "pos": [
+        -58.27,
+        25.01,
+        19.9
+      ]
+    },
+    {
+      "id": "door2",
+      "part": "door",
+      "size": [
+        57.97,
+        22.52,
+        1.8
+      ],
+      "pos": [
+        0,
+        25.01,
+        19.9
+      ]
+    },
+    {
+      "id": "door3",
+      "part": "door",
+      "size": [
+        57.97,
+        22.52,
+        1.8
+      ],
+      "pos": [
+        58.27,
+        25.01,
+        19.9
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Stand one side panel on its edge, holes facing in. Screw in four cam pins by hand, then tap in four dowels.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -87.4,
+              12.8,
+              12.16
+            ],
+            [
+              -87.4,
+              12.8,
+              -12.16
+            ],
+            [
+              -87.4,
+              37.22,
+              12.16
+            ],
+            [
+              -87.4,
+              37.22,
+              -12.16
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -87.4,
+              12.8,
+              4.86
+            ],
+            [
+              -87.4,
+              12.8,
+              -4.86
+            ],
+            [
+              -87.4,
+              37.22,
+              4.86
+            ],
+            [
+              -87.4,
+              37.22,
+              -4.86
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Slide the bottom panel onto the pins at the low end. Two cam locks go in, arrow toward the pin, then a firm clockwise turn.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -84,
+              13.6,
+              12.16
+            ],
+            [
+              -84,
+              13.6,
+              -12.16
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Fixed shelf. Lock 2.",
+      "say": "The fixed shelf holds the frame square, so it goes in now. Slide onto the pins and lock with cam locks, clockwise.",
+      "add": [
+        "fixed1"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -84,
+              38.02,
+              12.16
+            ],
+            [
+              -84,
+              38.02,
+              -12.16
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "2 dividers in",
+      "say": "Tap dowels into the panel below, then press the dividers down onto them. Dowels go in the top end too, ready for what sits above.",
+      "add": [
+        "div1",
+        "div2"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -29.4,
+              38.02,
+              7.3
+            ],
+            [
+              -29.4,
+              38.02,
+              -7.3
+            ],
+            [
+              -29.4,
+              54,
+              7.3
+            ],
+            [
+              -29.4,
+              54,
+              -7.3
+            ],
+            [
+              29.4,
+              38.02,
+              7.3
+            ],
+            [
+              29.4,
+              38.02,
+              -7.3
+            ],
+            [
+              29.4,
+              54,
+              7.3
+            ],
+            [
+              29.4,
+              54,
+              -7.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Side two. Lock 4.",
+      "say": "Pins and dowels go into the ends of the panels on this side too. With a helper, lower the second side onto all of them at once, then lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              87.4,
+              12.8,
+              12.16
+            ],
+            [
+              87.4,
+              12.8,
+              -12.16
+            ],
+            [
+              87.4,
+              37.22,
+              12.16
+            ],
+            [
+              87.4,
+              37.22,
+              -12.16
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              87.4,
+              12.8,
+              4.86
+            ],
+            [
+              87.4,
+              12.8,
+              -4.86
+            ],
+            [
+              87.4,
+              37.22,
+              4.86
+            ],
+            [
+              87.4,
+              37.22,
+              -4.86
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              84,
+              13.6,
+              12.16
+            ],
+            [
+              84,
+              13.6,
+              -12.16
+            ],
+            [
+              84,
+              38.02,
+              12.16
+            ],
+            [
+              84,
+              38.02,
+              -12.16
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 30
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Top on. Lock 4.",
+      "say": "Tap four dowels into the top edges of the sides. Set the top panel on, good side up, then lock it from inside with four cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -88.2,
+              54,
+              6.08
+            ],
+            [
+              -88.2,
+              54,
+              -6.08
+            ],
+            [
+              88.2,
+              54,
+              6.08
+            ],
+            [
+              88.2,
+              54,
+              -6.08
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+x",
+          "at": [
+            [
+              -87.4,
+              50.5,
+              12.16
+            ],
+            [
+              -87.4,
+              50.5,
+              -12.16
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "cam",
+          "axis": "-x",
+          "at": [
+            [
+              87.4,
+              50.5,
+              12.16
+            ],
+            [
+              87.4,
+              50.5,
+              -12.16
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Flip it face down",
+      "say": "Roll the frame over so it lies on its front. Ask your helper, and put the flattened box underneath to save the finish.",
+      "pose": [
+        90,
+        0,
+        0
+      ],
+      "view": {
+        "az": 60,
+        "el": 50
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Nail on the back",
+      "say": "Lay the back panel on, smooth side facing in. Line it up with one corner and nail it along the edges, about every twenty centimeters. If the corners line up, the frame is square.",
+      "add": [
+        "back"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "4 legs on",
+      "say": "While it lies on its front, twist a leg into each corner of the bottom. Hand tight, then a quarter turn more.",
+      "add": [
+        "leg1",
+        "leg2",
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Stand it up",
+      "say": "Stand it up together. Lift with your legs, not your back.",
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 18
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Hang the doors",
+      "say": "Press the hinges into the round cups on the back of the doors, then clip each door onto the mounting plates inside the frame. Hold the door while you clip. It's heavier than it looks.",
+      "add": [
+        "door1",
+        "door2",
+        "door3"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "hinge",
+          "axis": "-z",
+          "at": [
+            [
+              -84.75,
+              23.6,
+              19
+            ],
+            [
+              -84.75,
+              26.42,
+              19
+            ],
+            [
+              26.48,
+              23.6,
+              19
+            ],
+            [
+              26.48,
+              26.42,
+              19
+            ],
+            [
+              84.75,
+              23.6,
+              19
+            ],
+            [
+              84.75,
+              26.42,
+              19
+            ]
+          ]
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 12
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    },
+    {
+      "caption": "Line up the gaps",
+      "say": "Close the door and look at the gaps. The screws on each hinge move the door up, down, in and out. A quarter turn at a time until the gaps are even.",
+      "view": {
+        "az": 10,
+        "el": 10,
+        "tight": true
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Fix the two wall brackets to the back edge of the top, then into the wall with fixings made for your wall type. Tip-overs are real. Anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              -44.5,
+              51,
+              -19.3
+            ],
+            [
+              44.5,
+              51,
+              -19.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your KELM 70\" tv stand is built. Give it a proud little pat.",
+  "notes": "Brand page: 3 open cubbies over 3 doors. The real doors drop down; ours swing to the side, so follow the official instructions for the hinges."
+}

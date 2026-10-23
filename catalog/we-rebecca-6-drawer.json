@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "we-rebecca-6-drawer",
+  "name": "REBECCA",
+  "title": "6-drawer dresser",
+  "brand": "walker-edison",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    153.0,
+    47.5,
+    79.5
+  ],
+  "worksWith": "Walker Edison® Rebecca 6-drawer solid wood dresser (BR6DREBDRBLNP-T), 60.25×18.63×31.25\" (W×D×H)",
+  "productUrl": "https://www.walkeredison.com/products/6-drawer-solid-wood-modern-dresser",
+  "color": "#3a332d",
+  "confidence": "medium",
+  "sources": [
+    "https://www.walkeredison.com/products/6-drawer-solid-wood-modern-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "t": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "6 drawer",
+    "solid wood",
+    "pine",
+    "walker edison"
+  ],
+  "notes": "Dimensions, six drawers on wood glides, solid pine and the anti-tip kit are from the brand product page. Drawer split (2 × 3) and base simplified."
+}

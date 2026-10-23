@@ -1,0 +1,785 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/zinus-linda-queen.json by scripts/generate.mjs (archetype \"platform-bed\"). Edit the spec, not this file.",
+  "slug": "zinus-linda-queen",
+  "name": "LINDA",
+  "title": "Wood platform bed (queen)",
+  "brand": "Zinus",
+  "brandId": "zinus",
+  "disclaimer": "Not affiliated with or endorsed by Zinus.",
+  "worksWith": "Zinus® Linda wood platform bed frame, queen, 62.87×82.32\" footprint, 41.34\" tall",
+  "productUrl": "https://www.zinus.com/products/linda-wood-platform-bed-frame",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/2097/4191/files/Linda_Platform_Bed__Assembly_Guide-Full_Queen_King-Zinus.pdf",
+  "size": [
+    160,
+    105,
+    213
+  ],
+  "minutes": 55,
+  "people": 2,
+  "level": 2,
+  "color": "#a9825c",
+  "category": "bedroom",
+  "archetype": "platform-bed",
+  "confidence": "medium",
+  "sources": [
+    "https://www.zinus.com/products/linda-wood-platform-bed-frame"
+  ],
+  "parts": [
+    {
+      "id": "rail",
+      "label": "Side rail"
+    },
+    {
+      "id": "end",
+      "label": "End rail"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    },
+    {
+      "id": "beam",
+      "label": "Center beam"
+    },
+    {
+      "id": "slats",
+      "label": "Slat roll"
+    },
+    {
+      "id": "head",
+      "label": "Headboard"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "railL",
+      "part": "rail",
+      "size": [
+        4,
+        30.5,
+        209
+      ],
+      "pos": [
+        -77.75,
+        15.25,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            8,
+            209
+          ],
+          "p": [
+            0,
+            11.25,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            22.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            -99.5
+          ]
+        },
+        {
+          "s": [
+            5,
+            22.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            22.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            99.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railR",
+      "part": "rail",
+      "size": [
+        4,
+        30.5,
+        209
+      ],
+      "pos": [
+        77.75,
+        15.25,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            8,
+            209
+          ],
+          "p": [
+            0,
+            11.25,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            22.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            -99.5
+          ]
+        },
+        {
+          "s": [
+            5,
+            22.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            22.5,
+            5
+          ],
+          "p": [
+            0,
+            -4,
+            99.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endH",
+      "part": "end",
+      "size": [
+        151.5,
+        8,
+        4
+      ],
+      "pos": [
+        0,
+        26.5,
+        -102.5
+      ]
+    },
+    {
+      "id": "endF",
+      "part": "end",
+      "size": [
+        151.5,
+        8,
+        4
+      ],
+      "pos": [
+        0,
+        26.5,
+        102.5
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        4,
+        30.5,
+        201
+      ],
+      "pos": [
+        0,
+        15.25,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            5.6,
+            201
+          ],
+          "p": [
+            0,
+            12.45,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            24.9,
+            5
+          ],
+          "p": [
+            0,
+            -2.8,
+            -74.5
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            5,
+            24.9,
+            5
+          ],
+          "p": [
+            0,
+            -2.8,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            5,
+            24.9,
+            5
+          ],
+          "p": [
+            0,
+            -2.8,
+            74.5
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "slats",
+      "part": "slats",
+      "size": [
+        150.5,
+        1.8,
+        199
+      ],
+      "pos": [
+        0,
+        31.4,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -96.5
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -86.34
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -76.18
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -66.03
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -55.87
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -45.71
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -35.55
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -25.39
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -15.24
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -5.08
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            5.08
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            15.24
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            25.39
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            35.55
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            45.71
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            55.87
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            66.03
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            76.18
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            86.34
+          ]
+        },
+        {
+          "s": [
+            150.5,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            96.5
+          ]
+        }
+      ]
+    },
+    {
+      "id": "head",
+      "part": "head",
+      "size": [
+        159.5,
+        105,
+        4
+      ],
+      "pos": [
+        0,
+        52.5,
+        -106.5
+      ],
+      "boxes": [
+        {
+          "s": [
+            159.5,
+            84.5,
+            3
+          ],
+          "p": [
+            0,
+            10.25,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            105,
+            4
+          ],
+          "p": [
+            -77.25,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            105,
+            4
+          ],
+          "p": [
+            77.25,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Unbox in the bedroom",
+      "say": "Build it where it will stay. Spread the parts on the empty box and count the bolts against the parts list before you start.",
+      "view": {
+        "az": 30,
+        "el": 35
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Legs onto side rails",
+      "say": "Screw the legs onto both side rails, hand tight for now.",
+      "add": [
+        "railL",
+        "railR"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 6
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Head + foot rails",
+      "say": "Join the head rail and the foot rail between the side rails, one bolt per corner to start. Leave them a little loose until the frame is square.",
+      "add": [
+        "endH",
+        "endF"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+z",
+          "at": [
+            [
+              -77.75,
+              26.5,
+              -102.5
+            ],
+            [
+              77.75,
+              26.5,
+              -102.5
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "bolt",
+          "axis": "-z",
+          "at": [
+            [
+              -77.75,
+              26.5,
+              102.5
+            ],
+            [
+              77.75,
+              26.5,
+              102.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Center beam + legs",
+      "say": "Drop the center beam in from head to foot and stand up its three support legs. The middle of a queen carries the most weight, so make sure every foot touches the floor.",
+      "add": [
+        "beam"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 2
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Square, then tighten",
+      "say": "Measure corner to corner both ways. When the diagonals match, the frame is square. Now tighten every bolt.",
+      "view": {
+        "az": 0,
+        "el": 80
+      }
+    },
+    {
+      "caption": "Headboard on",
+      "say": "Stand the headboard at the head end and bolt it to the frame, two bolts each side. A helper holds it upright while you thread the first bolt.",
+      "add": [
+        "head"
+      ],
+      "from": [
+        0,
+        0,
+        -40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+z",
+          "at": [
+            [
+              -77.75,
+              24.5,
+              -104.5
+            ],
+            [
+              -77.75,
+              28.5,
+              -104.5
+            ],
+            [
+              77.75,
+              24.5,
+              -104.5
+            ],
+            [
+              77.75,
+              28.5,
+              -104.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Lay 20 slats",
+      "say": "Unroll the slats across the frame and screw or clip each end down. Twenty slats, evenly spaced.",
+      "add": [
+        "slats"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Mattress on",
+      "say": "Push the bed into place, check it does not rock, and lay the mattress on. No box spring needed on a platform bed.",
+      "view": {
+        "az": 25,
+        "el": 25
+      }
+    }
+  ],
+  "done": "Done. Your LINDA wood platform bed (queen) is built. Give it a proud little pat.",
+  "notes": "Brand page: pine on a steel base, 41.34\" headboard, under an hour with a friend."
+}

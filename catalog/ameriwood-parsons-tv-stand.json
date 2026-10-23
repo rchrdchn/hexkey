@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ameriwood-parsons-tv-stand",
+  "name": "PARSONS",
+  "title": "TV stand",
+  "brand": "dorel",
+  "archetype": "chest",
+  "category": "storage",
+  "size": [
+    115.5,
+    40.0,
+    53.0
+  ],
+  "worksWith": "Ameriwood Home® Parsons TV stand for TVs up to 50\" (7085015WCOM), 45.375×15.75×20.875\" (W×D×H)",
+  "productUrl": "https://www.dorelhome.com/products/parsons-tv-stand-for-tvs-up-to-50-white",
+  "instructionsUrl": "https://cdn.dorelhome.com/DorelHomeFiles/ProductDocuments/49717_AI-7085015WCOM-MPP-20191210.pdf",
+  "color": "#f1efea",
+  "confidence": "medium",
+  "sources": [
+    "https://www.dorelhome.com/products/parsons-tv-stand-for-tvs-up-to-50-white"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open",
+        "cols": 3
+      },
+      {
+        "type": "open",
+        "cols": 3
+      }
+    ],
+    "top": "overlay",
+    "tt": 2.5,
+    "base": {
+      "type": "plinth",
+      "h": 3
+    }
+  },
+  "tags": [
+    "tv stand",
+    "media",
+    "parsons",
+    "ameriwood",
+    "dorel"
+  ],
+  "notes": "Brand copy: 6 open shelves, 2 in the center. Two adults recommended.",
+  "people": 2
+}

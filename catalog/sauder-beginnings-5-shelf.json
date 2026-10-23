@@ -1,0 +1,41 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "sauder-beginnings-5-shelf",
+  "name": "BEGINNINGS",
+  "title": "5-shelf bookcase",
+  "brand": "sauder",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    62.5,
+    29.0,
+    181.0
+  ],
+  "worksWith": "Sauder® Beginnings 5-shelf bookcase (409090), 24.567×11.496×71.181\" (W×D×H)",
+  "productUrl": "https://www.sauder.com/furniture/409090/5-shelf-bookcase",
+  "instructionsUrl": "https://www.sauder.com/service/instruction-book-request",
+  "color": "#7b3f2a",
+  "confidence": "medium",
+  "sources": [
+    "https://www.sauder.com/furniture/409090/5-shelf-bookcase",
+    "https://www.homedepot.com/p/SAUDER-71-18-in-Cinnamon-Cherry-Faux-Wood-5-shelf-Standard-Bookcase-with-Adjustable-Shelves-409090/205438351"
+  ],
+  "options": {
+    "t": 1.6,
+    "shelves": 3,
+    "fixed": [
+      0.5
+    ],
+    "base": {
+      "type": "plinth",
+      "h": 6
+    }
+  },
+  "tags": [
+    "bookcase",
+    "5 shelf",
+    "beginnings",
+    "sauder"
+  ],
+  "notes": "Facts from search listings (Sauder spec panels load from a path robots.txt disallows, so we did not fetch them): 3 adjustable shelves, closed back. Instructions: Sauder instruction-book lookup by model number."
+}

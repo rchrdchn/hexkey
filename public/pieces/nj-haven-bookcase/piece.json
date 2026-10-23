@@ -1,0 +1,440 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/nj-haven-bookcase.json by scripts/generate.mjs (archetype \"frame-shelf\"). Edit the spec, not this file.",
+  "slug": "nj-haven-bookcase",
+  "name": "HAVEN",
+  "title": "5-shelf metal bookcase",
+  "brand": "Nathan James",
+  "brandId": "nathan-james",
+  "disclaimer": "Not affiliated with or endorsed by Nathan James.",
+  "worksWith": "Nathan James® Haven metal 5-shelf bookcase, 32.8×11.8×72.1\" (W×D×H)",
+  "productUrl": "https://nathanjameshome.com/products/haven-bookcase-oak-finish-shelves",
+  "size": [
+    84,
+    183,
+    30
+  ],
+  "minutes": 60,
+  "people": 2,
+  "level": 2,
+  "color": "#2e2e2e",
+  "category": "shelving",
+  "archetype": "frame-shelf",
+  "confidence": "medium",
+  "sources": [
+    "https://nathanjameshome.com/products/haven-bookcase-oak-finish-shelves"
+  ],
+  "parts": [
+    {
+      "id": "frame",
+      "label": "Side frame"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "plural": "Shelves"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "frame",
+      "size": [
+        2.5,
+        183,
+        30
+      ],
+      "pos": [
+        -40.5,
+        91.5,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            2.5,
+            183,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            -13.75
+          ]
+        },
+        {
+          "s": [
+            2.5,
+            183,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            13.75
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "frame",
+      "size": [
+        2.5,
+        183,
+        30
+      ],
+      "pos": [
+        40.5,
+        91.5,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            2.5,
+            183,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            -13.75
+          ]
+        },
+        {
+          "s": [
+            2.5,
+            183,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            13.75
+          ]
+        }
+      ]
+    },
+    {
+      "id": "shelf1",
+      "part": "shelf",
+      "size": [
+        78.5,
+        1.8,
+        29.5
+      ],
+      "pos": [
+        0,
+        8.9,
+        0
+      ]
+    },
+    {
+      "id": "shelf2",
+      "part": "shelf",
+      "size": [
+        78.5,
+        1.8,
+        29.5
+      ],
+      "pos": [
+        0,
+        52.2,
+        0
+      ]
+    },
+    {
+      "id": "shelf3",
+      "part": "shelf",
+      "size": [
+        78.5,
+        1.8,
+        29.5
+      ],
+      "pos": [
+        0,
+        95.5,
+        0
+      ]
+    },
+    {
+      "id": "shelf4",
+      "part": "shelf",
+      "size": [
+        78.5,
+        1.8,
+        29.5
+      ],
+      "pos": [
+        0,
+        138.8,
+        0
+      ]
+    },
+    {
+      "id": "shelf5",
+      "part": "shelf",
+      "size": [
+        78.5,
+        1.8,
+        29.5
+      ],
+      "pos": [
+        0,
+        182.1,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Lay out the frames",
+      "say": "Put the two side frames on a rug, holes facing in. Match each shelf to its spot using the hole marks.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "view": {
+        "az": 40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Bottom + top shelf",
+      "say": "Screw the bottom shelf and the top shelf to the first frame. Hand tight for now so the frame can still settle.",
+      "add": [
+        "shelf1",
+        "shelf5"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -39.25,
+              8.9,
+              7.5
+            ],
+            [
+              -39.25,
+              8.9,
+              -7.5
+            ],
+            [
+              -39.25,
+              182.1,
+              7.5
+            ],
+            [
+              -39.25,
+              182.1,
+              -7.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Second frame",
+      "say": "Bring in the second frame and screw it to the same two shelves. Now it stands as a box.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              39.25,
+              8.9,
+              7.5
+            ],
+            [
+              39.25,
+              8.9,
+              -7.5
+            ],
+            [
+              39.25,
+              182.1,
+              7.5
+            ],
+            [
+              39.25,
+              182.1,
+              -7.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -35,
+        "el": 25
+      },
+      "safety": "Two people make this easier."
+    },
+    {
+      "caption": "3 middle shelves",
+      "say": "Fit the middle shelves one by one, two screws each side.",
+      "add": [
+        "shelf2",
+        "shelf3",
+        "shelf4"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -39.25,
+              52.2,
+              7.5
+            ],
+            [
+              -39.25,
+              52.2,
+              -7.5
+            ],
+            [
+              -39.25,
+              95.5,
+              7.5
+            ],
+            [
+              -39.25,
+              95.5,
+              -7.5
+            ],
+            [
+              -39.25,
+              138.8,
+              7.5
+            ],
+            [
+              -39.25,
+              138.8,
+              -7.5
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              39.25,
+              52.2,
+              7.5
+            ],
+            [
+              39.25,
+              52.2,
+              -7.5
+            ],
+            [
+              39.25,
+              95.5,
+              7.5
+            ],
+            [
+              39.25,
+              95.5,
+              -7.5
+            ],
+            [
+              39.25,
+              138.8,
+              7.5
+            ],
+            [
+              39.25,
+              138.8,
+              -7.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Stand up, tighten",
+      "say": "Stand it upright on a flat floor, check it does not rock, and tighten every screw. Adjust the levelling feet if it has them.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Fix the top to the wall with the anti-tip strap or bracket and screws that suit your wall. Tall shelves always get anchored.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              179,
+              -15
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your HAVEN 5-shelf metal bookcase is built. Give it a proud little pat.",
+  "notes": "Brand page: 5 fixed shelves on a metal frame, about 60 minutes."
+}

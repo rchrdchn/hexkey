@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ameriwood-parsons-coffee-table",
+  "name": "PARSONS",
+  "title": "Coffee table",
+  "brand": "dorel",
+  "archetype": "table",
+  "category": "tables",
+  "size": [
+    99.0,
+    48.5,
+    44.5
+  ],
+  "worksWith": "Ameriwood Home® Parsons coffee table (5099096), 39×19×17.5\" (W×D×H)",
+  "productUrl": "https://www.dorelhome.com/products/parsons-coffee-table-espresso",
+  "instructionsUrl": "https://cdn.dorelhome.com/DorelHomeFiles/ProductDocuments/565486_AI-B34509909600-KX-2022-05-10(1PC-CNT).pdf",
+  "color": "#3b2f2a",
+  "confidence": "medium",
+  "sources": [
+    "https://www.dorelhome.com/products/parsons-coffee-table-espresso"
+  ],
+  "options": {
+    "tt": 4,
+    "leg": {
+      "s": 5,
+      "inset": 0
+    }
+  },
+  "tags": [
+    "coffee table",
+    "parsons",
+    "ameriwood",
+    "dorel"
+  ],
+  "notes": "Four legs onto a ready-made top. Dimensions from retailer listings quoting the maker.",
+  "minutes": 10
+}

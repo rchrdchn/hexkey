@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "zinus-linda-queen",
+  "name": "LINDA",
+  "title": "Wood platform bed (queen)",
+  "brand": "zinus",
+  "archetype": "platform-bed",
+  "category": "bedroom",
+  "size": [
+    159.5,
+    209.0,
+    105.0
+  ],
+  "worksWith": "Zinus® Linda wood platform bed frame, queen, 62.87×82.32\" footprint, 41.34\" tall",
+  "productUrl": "https://www.zinus.com/products/linda-wood-platform-bed-frame",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/2097/4191/files/Linda_Platform_Bed__Assembly_Guide-Full_Queen_King-Zinus.pdf",
+  "color": "#a9825c",
+  "confidence": "medium",
+  "sources": [
+    "https://www.zinus.com/products/linda-wood-platform-bed-frame"
+  ],
+  "options": {
+    "height": 30.5,
+    "material": "wood",
+    "headboard": true,
+    "slats": 20
+  },
+  "tags": [
+    "bed",
+    "queen",
+    "platform bed",
+    "pine",
+    "headboard",
+    "zinus"
+  ],
+  "notes": "Brand page: pine on a steel base, 41.34\" headboard, under an hour with a friend.",
+  "minutes": 55
+}
