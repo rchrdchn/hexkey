@@ -68,7 +68,18 @@ Confidence says how sure we are about the internals: **high** = dimensions and c
 - **Screen stays on** while you build (Screen Wake Lock).
 - Keyboard: ← → or Space, R to repeat. Swipe the bottom card left/right on a phone.
 - Safety callouts (wall anchoring, two-person lifts) are part of the data, so every piece gets them.
-- Progress for the parts check-off is saved on the device. No accounts, no tracking, no backend.
+- Progress for the parts check-off is saved on the device. No accounts, no tracking, no backend. (The optional tool links go to Amazon, which has its own privacy policy.)
+
+## Tools and affiliate links
+
+The parts screen has a small **Tools for this build** card under the Start button (closed until you tap it), and the finish screen has a one-line **Need tools?** reminder. Dressers, kids' chests and tall shelving lead with the wall-anchor kit.
+
+- **The tools catalog** is `data/tools.json`: 12 tools (hex key set, Phillips #2, flathead, stubby, rubber mallet, cordless drill/driver, tape measure, level, wood glue, felt pads, wall-anchor kit, utility knife) written in our own words.
+- **The rules** in the same file decide which tools a piece needs. Every piece gets a hex key and a Phillips #2. Tools are then added by category, archetype, category+archetype, hardware kind (cam locks add a flathead, nails and dowels add a mallet), and height (100 cm or taller adds anchors, a level and a drill). `slugs` adds or drops tools for one piece. `src/tools.ts` resolves them and `npm run validate` checks them (`node scripts/tools-check.mjs --list` prints every piece's list).
+- **Links** are plain Amazon search links (`https://www.amazon.com/s?k=<query>&tag=…`). We don't use product pages, prices, star ratings or product images. Every link opens in a new tab with `rel="sponsored noopener nofollow"`.
+- **The Associates tag** lives in one place: `src/config/affiliates.ts`.
+- **Disclosure:** As an Amazon Associate, Hexkey earns from qualifying purchases. It's shown next to the links and in the app's footer line. Hexkey has no other sponsors, and no brand named here sponsors it.
+- `npm run shots:tools` checks the tag, rel and disclosure on the parts and finish screens. It also checks there's no sideways scroll at 320, 375 and 393 px, and saves screenshots.
 
 ## Help it grow
 
