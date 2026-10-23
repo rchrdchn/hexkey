@@ -30,7 +30,7 @@ for (const eng of engines) {
     for (const slug of only) {
       await page.goto(`${base}/#/`);
       await page.waitForSelector('.card b');
-      await page.locator('.card', { hasText: slug.toUpperCase() }).click();
+      await page.locator(`.card[data-slug="${slug}"]`).click();
       await sleep(1200);
       if (slug === 'billy') await shot('02-pick-billy');
       await page.locator('.cta').first().click();

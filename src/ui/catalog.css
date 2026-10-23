@@ -42,7 +42,8 @@
 @media (min-width: 900px) {
   .sheet.pick { top: auto; max-height: calc(100vh - 48px - var(--hero-h, 230px)); width: 440px; }
   .cards.rail { display: grid; grid-template-columns: repeat(3, 1fr); overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain; scroll-snap-type: none; margin: 0 -8px; padding: 4px 8px 8px; min-height: 0; flex: 1; scrollbar-width: thin; }
-  .cards.rail .card { width: auto; }
+  .cards.rail { grid-auto-rows: max-content; align-content: start; }
+  .cards.rail .card { width: auto; min-height: auto; }
   .cats { flex-wrap: wrap; margin: 0; padding: 0; overflow: visible; }
   .cats button { height: 30px; font-size: 13px; }
   .m-pick .hero { top: 84px; }

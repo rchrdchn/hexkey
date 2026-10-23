@@ -3,20 +3,55 @@
 **Flat-pack, talked through.** Hexkey is an open-source, voice-guided 3D assembly guide for flat-pack furniture.
 Pick your piece, check off what's in the box, then build it step by step. A voice tells you what to do, the 3D model shows you, and you can keep your hands on the furniture.
 
-> Works with IKEA® LACK, KALLAX and BILLY. **Hexkey is not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V.**
+> Works with 35 IKEA® pieces: LACK, KALLAX, BILLY, MALM, HEMNES, ALEX, BRIMNES, TARVA, RAST, GURSKEN, IVAR, BESTÅ, TROFAST, SNIGLAR, BEKVÄM, INGO, MICKE and LAGKAPTEN/ADILS. **Hexkey is not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V.**
 > The steps here are our own and are a demo. Always follow the official instructions that came in your box.
 
 | Pick | Check the box | Build | Done |
 |---|---|---|---|
 | Choose a piece. It spins in 3D. | Tap each part and hardware bag as you find it. Parts are color-matched to the 3D model. | Parts lift off the floor and fly into a glowing ghost outline. Hardware pops in with ×N counts; cam locks turn. | Confetti, a turntable and a share card with your build time. |
 
-## What's in the demo
+## What's in the catalog
 
-| Piece | Steps | Parts | Hardware | Shows off |
-|---|---|---|---|---|
-| **LACK** side table 55×55 | 5 | 5 | 4 | The quick opener: legs spin on, the table flips over |
-| **KALLAX** 2×2 shelf unit | 8 | 7 | 29 | Cam pins, dowels and cam locks that actually turn |
-| **BILLY** 80×202 bookcase | 14 | 12 | 86 | The hero: lying down, rolled over to nail the back, stood up, shelves in, anchored |
+35 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 32 are generated from short specs by [archetypes](docs/ARCHETYPES.md).
+Confidence says how sure we are about the internals: **high** = dimensions and construction match the product page; **medium** = dimensions right, drawer/shelf layout or hardware counts are our best guess; **low** = simplified. Every guide is a demo: always follow the official instructions in your box.
+
+| Piece | Category | Steps | Parts | Hardware | Built by | Confidence |
+|---|---|---|---|---|---|---|
+| **KALLAX** Shelf unit 2×2 | shelving | 8 | 7 | 29 | hand-made | ●●● high |
+| **BILLY** Bookcase | shelving | 14 | 12 | 86 | hand-made | ●●● high |
+| **BILLY** Low bookcase | shelving | 10 | 8 | 37 | bookcase | ●●○ medium |
+| **BILLY** Narrow bookcase | shelving | 12 | 12 | 57 | bookcase | ●●● high |
+| **HEMNES** Bookcase | shelving | 12 | 11 | 49 | bookcase | ●●○ medium |
+| **IVAR** Shelving unit | shelving | 6 | 7 | 21 | ladder | ●●○ medium |
+| **KALLAX** Shelf unit 1×4 | shelving | 9 | 7 | 29 | cubes | ●●● high |
+| **KALLAX** Shelf unit 2×4 | shelving | 13 | 11 | 45 | cubes | ●●● high |
+| **KALLAX** Shelf unit 4×4 | shelving | 13 | 19 | 78 | cubes | ●●● high |
+| **LACK** Wall shelf | shelving | 4 | 2 | 6 | wall-shelf | ●●○ medium |
+| **GURSKEN** Chest of 3 drawers | dressers | 15 | 30 | 60 | chest | ●●○ medium |
+| **HEMNES** 3-drawer dresser | dressers | 15 | 31 | 68 | chest | ●●○ medium |
+| **HEMNES** 8-drawer dresser | dressers | 16 | 67 | 134 | chest | ●●○ medium |
+| **MALM** Chest of 2 drawers | dressers | 13 | 19 | 45 | chest | ●●● high |
+| **MALM** Chest of 3 drawers | dressers | 13 | 26 | 57 | chest | ●●● high |
+| **MALM** Chest of 4 drawers | dressers | 13 | 33 | 69 | chest | ●●● high |
+| **MALM** Chest of 6 drawers | dressers | 14 | 48 | 98 | chest | ●●● high |
+| **RAST** Chest of 3 drawers | dressers | 13 | 20 | 45 | chest | ●●○ medium |
+| **TARVA** 3-drawer dresser | dressers | 15 | 30 | 60 | chest | ●●○ medium |
+| **BRIMNES** Nightstand | bedroom | 14 | 14 | 48 | chest | ●●○ medium |
+| **HEMNES** Nightstand | bedroom | 14 | 24 | 50 | chest | ●●○ medium |
+| **MALM** Bed frame, Queen | bedroom | 7 | 8 | 28 | bed | ●●○ medium |
+| **TARVA** Bed frame, Queen | bedroom | 7 | 8 | 28 | bed | ●●○ medium |
+| **BESTÅ** Frame | storage | 9 | 6 | 29 | bookcase | ●●○ medium |
+| **BRIMNES** TV unit | storage | 16 | 22 | 66 | chest | ●●○ medium |
+| **LACK** Side table | tables | 5 | 5 | 4 | hand-made | ●●● high |
+| **INGO** Table | tables | 5 | 9 | 22 | apron-table | ●●○ medium |
+| **LACK** Coffee table | tables | 6 | 6 | 12 | table | ●●● high |
+| **LACK** TV bench | tables | 6 | 6 | 12 | table | ●●○ medium |
+| **ALEX** Drawer unit | desks | 14 | 41 | 85 | chest | ●●● high |
+| **LAGKAPTEN / ADILS** Desk | desks | 6 | 9 | 16 | table | ●●● high |
+| **MICKE** Desk | desks | 6 | 9 | 41 | desk | ●○○ low |
+| **BEKVÄM** Step stool | kids | 4 | 5 | 11 | stool | ●●○ medium |
+| **SNIGLAR** Crib | kids | 5 | 5 | 16 | crib | ●●○ medium |
+| **TROFAST** Storage frame | kids | 6 | 4 | 21 | bookcase | ●○○ low |
 
 ## Features
 
@@ -54,11 +89,36 @@ Node 20+. The output in `dist/` is a static site; it is deployed on Cloudflare P
 
 ## Add a piece of furniture
 
-Everything about a piece lives in one open JSON file: `public/pieces/<slug>/piece.json`. No code changes are needed.
+**Fastest: write a catalog spec.** If your piece is a bookcase, chest of drawers, cube shelf, table, bed or similar, describe it in ~20 lines of JSON in `catalog/<slug>.json` and run `npm run gen`. The generator places every panel, the hardware, the steps, the camera, the flips and the safety callouts. See [docs/ARCHETYPES.md](docs/ARCHETYPES.md) for every option.
+
+```json
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "malm-3",
+  "name": "MALM",
+  "title": "Chest of 3 drawers",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [80, 48, 78],
+  "worksWith": "IKEA® MALM chest of 3 drawers, 80×48×78 cm (31½×18⅞×30¾\")",
+  "productUrl": "https://www.ikea.com/de/en/p/malm-chest-of-3-drawers-white-20403562/",
+  "color": "#f3efe8",
+  "confidence": "high",
+  "sources": ["https://www.ikea.com/de/en/p/malm-chest-of-3-drawers-white-20403562/"],
+  "options": {
+    "rows": [{ "type": "drawer" }, { "type": "drawer" }, { "type": "drawer" }],
+    "top": "overlay", "tt": 1.8, "base": { "type": "none" }
+  }
+}
+```
+
+`size` is W×D×H in cm, in the order the product page prints it. `npm run gen` writes `public/pieces/<slug>/piece.json`, `index.json` and `catalog.json` (the picker list); `npm run validate` fails if any of them are stale.
+
+**Fully custom: write `piece.json` by hand.** For anything the archetypes can't express, everything about a piece lives in one open JSON file: `public/pieces/<slug>/piece.json`. No code changes are needed.
 
 1. **Measure.** Use the dimensions printed on the product page and a tape measure. Dimensions are facts; anyone can use them.
 2. **Write `piece.json`** (format below). Start by placing every panel where it ends up in the finished piece, then write the steps that add them.
-3. **Add the slug** to `public/pieces/index.json` (and to `SLUGS` in `src/data.ts`).
+3. **Register it** in `HAND` and `HAND_META` in `scripts/generate.mjs` and run `npm run gen` (it rebuilds `index.json` and `catalog.json`).
 4. `npm run validate` checks ids, references, counts and audio.
 5. `npm run dev`, open `/#/<slug>` and step through it. Tweak `view`, `from` and `pose` until each step reads at a glance.
 6. **Generate the voice** (optional; the browser voice is used until you do):
@@ -124,7 +184,10 @@ Units are **centimeters**, angles are **degrees**. Axes: **x** to the right, **y
 | `hardware[].axis` | The side the hardware goes in from (`+x -x +y -y +z -z`). Pins and dowels stick out that way; cam locks face that way. |
 | `hardware[].at` / `line`+`n` / `count` | Exact points, `n` points spread along a line, or a count with no 3D placement. Counts in the check-off and tray are computed from these. |
 | `hardware[].spin` | Cam locks turn half a turn, screws spin in. |
-| `hardware kinds` | `dowel`, `campin`, `cam`, `screw`, `nail`, `bolt`, `shelfpin`, `bracket` (see `src/scene/Hardware.tsx`). |
+| `hardware kinds` | `dowel`, `campin`, `cam`, `screw`, `nail`, `bolt`, `shelfpin`, `bracket`, `hinge`, `knob` (see `src/scene/Hardware.tsx`). |
+| `objects[].shape` / `boxes` | `cyl` for round legs; `boxes` are sub-shapes of one part (a pre-assembled frame, a slat roll, crib bars). |
+| `env` | Static scenery that isn't a part, such as the wall a shelf hangs on. |
+| `category`, `confidence`, `sources` | Picker category, how sure we are, and the https pages the facts came from (required for generated pieces). |
 | `view` | Camera azimuth (0 = front, 90 = right side) and elevation. The camera frames the new parts plus what's built; `tight: true` frames only the new parts and hardware. |
 
 ## How it works
@@ -134,6 +197,7 @@ Units are **centimeters**, angles are **degrees**. Axes: **x** to the right, **y
 - `src/voice.ts`: narration (one reused `<audio>` element so iOS keeps it unlocked), `speechSynthesis` fallback, voice commands, Media Session, Wake Lock.
 - Sound effects are synthesized with Web Audio; no files.
 - `src/ui/Community.tsx`: the Contribute and Request modals (fit check, ikea.com link check, pre-filled GitHub issue links, focus trap and Esc).
+- `scripts/generate.mjs` + `scripts/gen/*.mjs`: the catalog generator (archetypes). The picker only loads `pieces/catalog.json` and small WebP thumbnails; a piece's full JSON loads when you open it.
 - Routes are hash-based: `#/billy` (check the box), `#/billy/7` (step 7), `#/billy/done`.
 
 ## Browser support
@@ -159,6 +223,6 @@ Units are **centimeters**, angles are **degrees**. Axes: **x** to the right, **y
 
 ## Trademarks and disclaimer
 
-IKEA, LACK, KALLAX and BILLY are trademarks of Inter IKEA Systems B.V. They are used here only to say which products these guides are written for.
+IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. They are used here only to say which products these guides are written for.
 Hexkey is an independent project and is **not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V.** It contains no IKEA instructions, drawings, images or 3D models; every model is built in code from public dimensions and every step is written from scratch.
 The guides are provided as-is. Check your parts against the official instructions, anchor tall furniture to the wall, and get help for heavy lifts.

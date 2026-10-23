@@ -7,9 +7,12 @@
     "build": "node scripts/validate.mjs && tsc --noEmit -p . && vite build",
     "preview": "vite preview --port 4173",
     "validate": "node scripts/validate.mjs",
+    "gen": "node scripts/generate.mjs",
+    "thumbs": "node scripts/thumbs.mjs",
     "typecheck": "tsc --noEmit -p .",
     "voice": "${PYTHON:-python3} scripts/voice.py",
     "shots": "node scripts/shots.mjs",
+    "shots:catalog": "node scripts/shots-catalog.mjs",
     "shots:community": "node scripts/shots-community.mjs"
   },
   "license": "MIT",

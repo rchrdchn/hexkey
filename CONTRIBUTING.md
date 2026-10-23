@@ -31,7 +31,18 @@ The **Contribute** button in the app runs a quick fit check and fills in the iss
 
 Pull requests that include manufacturer assets will be closed.
 
-## Add a piece, step by step
+## Add a piece with a catalog spec (easiest)
+
+Most pieces fit an archetype: bookcase, chest of drawers, cube shelf, table, desk, bed, crib, wall shelf, ladder shelf, stool.
+
+1. Copy a similar spec from `catalog/` (for example `catalog/malm-3.json`) to `catalog/<slug>.json`.
+2. Fill in `size` (W×D×H cm, from the product page), `worksWith`, `productUrl`, `category`, `options`, and be honest in `confidence` and `sources`.
+3. `npm run gen && npm run validate`, then open `http://localhost:5173/#/<slug>` and step through it.
+4. Optional: `npm run thumbs` with `npm run preview` running renders the picker thumbnail.
+
+All options are in [docs/ARCHETYPES.md](docs/ARCHETYPES.md). If your piece almost fits, an option or a new archetype is a welcome code PR.
+
+## Add a piece by hand, step by step
 
 ```bash
 git clone https://github.com/rchrdchn/hexkey && cd hexkey
@@ -43,7 +54,7 @@ npm run dev            # http://localhost:5173
 2. **Create `public/pieces/<slug>/piece.json`.** Copying `public/pieces/lack/piece.json` is the easiest start. The [data format](README.md#data-format) explains every field, and [`schema/piece.schema.json`](schema/piece.schema.json) gives you autocomplete in VS Code.
    - First place every panel (`objects`) where it sits in the finished piece.
    - Then write `steps` that `add` those objects in build order, with a 2-5 word `caption` and a one or two sentence `say`.
-3. **Register it:** add the slug to `public/pieces/index.json` and to `SLUGS` in `src/data.ts`.
+3. **Register it:** add the slug to `HAND` (and its category to `HAND_META`) in `scripts/generate.mjs` and run `npm run gen`.
 4. **Validate:**
    ```bash
    npm run validate     # ids, references, counts, productUrl, audio
