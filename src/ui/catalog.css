@@ -1,0 +1,50 @@
+/* Catalog picker. Kept out of styles.css so the main sheet styles stay small. */
+.sheet.pick { display: flex; flex-direction: column; max-height: min(64vh, 560px); padding-top: 12px; }
+.catalog { display: flex; flex-direction: column; gap: 8px; min-height: 0; flex: 1; }
+.find { display: flex; gap: 8px; }
+.search { flex: 1; display: flex; align-items: center; gap: 8px; height: 42px; padding: 0 12px; border-radius: 14px; background: var(--bg); color: var(--mute); border: 2px solid transparent; transition: border-color .15s; }
+.search:focus-within { border-color: var(--acc); background: #fff; }
+.search input { flex: 1; min-width: 0; border: 0; background: transparent; font: inherit; font-size: 16px; font-weight: 600; color: var(--ink); outline: none; -webkit-appearance: none; appearance: none; }
+.search input::-webkit-search-cancel-button { display: none; }
+.search .clear { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; color: var(--mute); }
+.search .clear svg { width: 16px; height: 16px; }
+.cats { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; scroll-padding: 16px; }
+.cats::-webkit-scrollbar { display: none; }
+.cats button { flex: none; height: 32px; padding: 0 12px; border-radius: 99px; background: var(--bg); font-weight: 800; font-size: 13.5px; color: var(--ink); display: inline-flex; align-items: center; gap: 6px; transition: background .15s, color .15s; }
+.cats button i { font-style: normal; font-weight: 700; font-size: 11.5px; color: var(--mute); }
+.cats button.on { background: var(--ink); color: #fff; }
+.cats button.on i { color: #cfc6bb; }
+
+.cards.rail { display: flex; gap: 8px; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x proximity; margin: 0 -16px; padding: 4px 16px 6px; scroll-padding: 16px; scrollbar-width: none; grid-template-columns: none; }
+.cards.rail::-webkit-scrollbar { display: none; }
+.cards.rail .card { flex: none; width: 138px; min-height: 0; padding: 6px 6px 9px; scroll-snap-align: start; }
+.cards.rail .card b { font-size: 15px; padding: 4px 4px 0; line-height: 1.1; }
+.cards.rail .card small { padding: 0 4px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.cards.rail .card .chips { padding: 6px 4px 0; gap: 2px 6px; font-size: 11px; }
+.cards.rail .card .lvl { padding: 0 4px; align-items: center; }
+.card .pcs { margin-left: auto; font-size: 10.5px; font-weight: 700; color: var(--mute); }
+.thumb { position: relative; display: block; width: 100%; aspect-ratio: 4 / 3; border-radius: 13px; overflow: hidden; background: #ece5da; }
+.thumb::after { content: ""; position: absolute; inset: 0; background: linear-gradient(#f6f1ea, #efe7dc); z-index: 0; }
+.thumb img { position: relative; z-index: 1; width: 100%; height: 100%; object-fit: cover; display: block; }
+.conf { position: absolute; z-index: 2; top: 6px; left: 6px; font-style: normal; font-size: 10px; font-weight: 800; letter-spacing: .02em; padding: 2px 7px; border-radius: 99px; background: rgba(255, 253, 249, .92); color: var(--mute); }
+.conf.low { color: var(--warn); }
+.empty { flex: 1; min-width: 220px; display: flex; flex-direction: column; align-items: flex-start; gap: 8px; padding: 10px 4px; color: var(--mute); }
+.empty p { margin: 0; font-weight: 700; }
+.empty .pill { pointer-events: auto; }
+.sheet.pick .cta { flex: none; }
+.sheet.pick .cta[disabled] { opacity: .5; }
+
+@media (max-height: 760px) and (max-width: 899px) {
+  .m-pick .hero p { display: none; }
+  .cards.rail .card { width: 124px; }
+  .cards.rail .card .chips i:last-child { display: none; }
+}
+@media (min-width: 900px) {
+  .sheet.pick { top: auto; max-height: calc(100vh - 48px - var(--hero-h, 230px)); width: 440px; }
+  .cards.rail { display: grid; grid-template-columns: repeat(3, 1fr); overflow-x: hidden; overflow-y: auto; overscroll-behavior-y: contain; scroll-snap-type: none; margin: 0 -8px; padding: 4px 8px 8px; min-height: 0; flex: 1; scrollbar-width: thin; }
+  .cards.rail .card { width: auto; }
+  .cats { flex-wrap: wrap; margin: 0; padding: 0; overflow: visible; }
+  .cats button { height: 30px; font-size: 13px; }
+  .m-pick .hero { top: 84px; }
+  .m-pick .hero h1 { font-size: 48px; }
+}

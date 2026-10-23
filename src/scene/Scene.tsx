@@ -13,9 +13,11 @@ const HWS = 1.8; // hardware is drawn 1.8x so it reads on a phone
 const POSE_T = 1.5;
 const FLY_T = 1.15;
 
-interface Props { piece: Piece; mode: Mode; step: number; highlight?: string | null; onSnap?: (fn: () => string) => void; reduced?: boolean; inset: { top: number; bottom: number; left: number } }
+interface Props { piece: Piece; mode: Mode; step: number; highlight?: string | null; onSnap?: (fn: () => string) => void; reduced?: boolean; still?: boolean; inset: { top: number; bottom: number; left: number } }
 
 const FINAL: V3 = [0, 0, 0];
+// in the finished piece only show hardware you'd actually see (screw shafts and dowels would poke through the 1.8x models)
+const SHOWN_DONE = new Set(['cam', 'knob', 'bracket', 'shelfpin', 'nail']);
 const ghostMat = new THREE.MeshBasicMaterial({ color: '#ff5a36', transparent: true, opacity: 0.15, depthWrite: false });
 
 /** One object: a single box/cylinder, or a handful of sub-shapes (pre-assembled frames, slat rolls). */
@@ -34,7 +36,7 @@ function Body({ o, mat, edges }: { o: ObjectDef; mat: THREE.Material; edges: str
   </>);
 }
 
-export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: Props) {
+export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, inset }: Props) {
   const { camera, size, invalidate, gl, scene, clock } = useThree();
   const controls = useRef<CameraControls>(null);
   const meshes = useRef<Record<string, THREE.Group | null>>({});
@@ -88,7 +90,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
       if (s.view) { az = s.view.az; el = s.view.el; zoom = s.view.zoom ?? 1; }
     } else {
       piece.objects.forEach((o) => pts.push(...objectCorners(o, M.clone().multiply(locals[o.id]))));
-      zoom = mode === 'done' ? 0.95 : 1.12;
+      zoom = still ? (piece.size[1] > 1.6 * Math.max(piece.size[0], piece.size[2]) ? 0.95 : 1.3) : mode === 'done' ? 0.95 : 1.12;
       el = 18;
     }
     const box = new THREE.Box3().setFromPoints(pts);
@@ -114,7 +116,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
     let busy = false;
 
     // turntable on pick/done (pauses while the user is dragging)
-    if ((mode === 'pick' || mode === 'done') && controls.current && now - a.userAt > 2.5) {
+    if ((mode === 'pick' || mode === 'done') && !still && controls.current && now - a.userAt > 2.5) {
       controls.current.rotate(dt * 0.35, 0, false);
       busy = true;
     }
@@ -193,7 +195,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, inset }: 
       const r = ringRefs.current[h.key];
       if (!g) return;
       const internal = h.kind === 'dowel' || h.kind === 'campin' || h.kind === 'bolt' || h.kind === 'hinge';
-      const show = mode === 'pick' || mode === 'done' ? !internal : mode === 'build' && (h.step === step || (h.step < step && (!internal || h.step === step - 1)));
+      const show = mode === 'pick' || mode === 'done' ? SHOWN_DONE.has(h.kind) : mode === 'build' && (h.step === step || (h.step < step && (!internal || h.step === step - 1)));
       g.visible = show;
       if (r) r.visible = false;
       if (!show) return;

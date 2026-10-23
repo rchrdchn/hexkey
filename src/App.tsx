@@ -1,8 +1,8 @@
 import { Suspense, useCallback, useEffect, useRef, useState } from 'react';
 import { Canvas } from '@react-three/fiber';
 import confetti from 'canvas-confetti';
-import type { Piece } from './types';
-import { SLUGS, loadPiece, stepHardware, stepParts, howManyText, plural } from './data';
+import type { Piece, CatalogEntry } from './types';
+import { loadCatalog, isSlug, loadPiece, stepHardware, stepParts, howManyText, plural } from './data';
 import { Scene, type Mode } from './scene/Scene';
 import { voice, Ears, canListen, mediaSession, keepAwake, type Command } from './voice';
 import { sfx } from './sfx';
@@ -10,11 +10,12 @@ import { partColor } from './palette';
 import { IsoPart, HwIcon, Logo, I } from './ui/icons';
 import { makeCard, shareCard, fmtTime } from './share';
 import { ContributeModal, RequestModal } from './ui/Community';
+import { Catalog } from './ui/Catalog';
 
 type Route = { mode: Mode; slug: string; step: number };
 function parse(): Route {
   const [slug, sub] = location.hash.replace(/^#\/?/, '').split('/');
-  if (!slug || !(SLUGS as readonly string[]).includes(slug)) return { mode: 'pick', slug: localStorage.getItem('hk-last') || 'lack', step: 0 };
+  if (!slug || !isSlug(slug)) return { mode: 'pick', slug: localStorage.getItem('hk-last') || 'lack', step: 0 };
   if (!sub) return { mode: 'parts', slug, step: 0 };
   if (sub === 'done') return { mode: 'done', slug, step: 0 };
   return { mode: 'build', slug, step: Math.max(0, (parseInt(sub, 10) || 1) - 1) };
@@ -34,13 +35,24 @@ export default function App() {
   useEffect(() => {
     const on = () => setRoute(parse());
     addEventListener('hashchange', on);
-    Promise.all(SLUGS.map(loadPiece)).then((ps) => setPieces(Object.fromEntries(ps.map((p) => [p.slug, p])))).catch((e) => setErr(String(e)));
+    loadCatalog().then(setEntries).catch((e) => setErr(String(e)));
     return () => removeEventListener('hashchange', on);
   }, []);
+  const [entries, setEntries] = useState<CatalogEntry[]>([]);
   const [pick, setPick] = useState(route.slug);
   useEffect(() => { if (route.mode !== 'pick') setPick(route.slug); }, [route]);
   const slug = route.mode === 'pick' ? pick : route.slug;
   const piece = pieces[slug];
+  // load one piece at a time, only when it's picked or opened
+  useEffect(() => {
+    if (pieces[slug]) return;
+    let live = true;
+    loadPiece(slug).then((p) => live && setPieces((m) => ({ ...m, [p.slug]: p }))).catch(() => {
+      if (!live) return;
+      if (route.mode === 'pick') { if (slug !== 'lack') setPick('lack'); else setErr('piece data unavailable'); } else go('#/');
+    });
+    return () => { live = false; };
+  }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
   const step = piece ? Math.min(route.step, piece.steps.length - 1) : 0;
 
   // ---- voice state ----
@@ -238,23 +250,11 @@ export default function App() {
             <p>Pick it. Check the box. Build it with a voice in your ear.</p>
           </div>
           <div className="sheet pick">
-            <div className="cards">
-              {SLUGS.map((sl) => {
-                const p = pieces[sl];
-                if (!p) return <div key={sl} className="card sk" />;
-                return (
-                  <button key={sl} className={`card ${sl === pick ? 'on' : ''}`} onClick={() => { gesture(); setPick(sl); localStorage.setItem('hk-last', sl); voice.prefetch(sl); sfx.tick(); }}>
-                    <b>{p.name}</b>
-                    <small>{p.title}</small>
-                    <span className="chips">
-                      <i>{I.clock}{p.minutes}m</i><i>{I.people}{p.people}</i><i>{p.steps.length} steps</i>
-                    </span>
-                    <span className="lvl">{[1, 2, 3].map((n) => <u key={n} className={n <= p.level ? 'f' : ''} />)}</span>
-                  </button>
-                );
-              })}
-            </div>
-            {piece && <button className="cta" onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>Build {piece.name} {I.next}</button>}
+            <Catalog entries={entries} pick={pick} onRequest={(name) => setComm({ req: { url: '', name } })}
+              onPick={(sl) => { gesture(); setPick(sl); localStorage.setItem('hk-last', sl); voice.prefetch(sl); sfx.tick(); }} />
+            {piece && piece.slug === pick
+              ? <button className="cta" onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>Build {piece.name} {I.next}</button>
+              : <button className="cta" disabled aria-busy>Loading…</button>}
             {piece && <Legal p={piece} />}
           </div>
         </>

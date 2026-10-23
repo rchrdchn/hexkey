@@ -9,7 +9,7 @@
   "size": [
     163,
     96,
-    52
+    75
   ],
   "minutes": 180,
   "people": 2,
@@ -279,7 +279,7 @@
       "pos": [
         -39.5,
         85.61,
-        24.2
+        48.4
       ]
     },
     {
@@ -293,7 +293,7 @@
       "pos": [
         -76.1,
         84.46,
-        1.4
+        25.6
       ]
     },
     {
@@ -307,7 +307,7 @@
       "pos": [
         -2.9,
         84.46,
-        1.4
+        25.6
       ]
     },
     {
@@ -321,7 +321,7 @@
       "pos": [
         -39.5,
         80.03,
-        1.6
+        25.8
       ]
     },
     {
@@ -335,7 +335,7 @@
       "pos": [
         -39.5,
         85.21,
-        -20
+        4.2
       ]
     },
     {
@@ -1648,29 +1648,29 @@
             [
               -76.1,
               81.75,
-              23.4
+              47.6
             ],
             [
               -76.1,
               87.18,
-              23.4
+              47.6
             ],
             [
               -2.9,
               81.75,
-              23.4
+              47.6
             ],
             [
               -2.9,
               87.18,
-              23.4
+              47.6
             ]
           ]
         }
       ],
       "view": {
         "az": 25,
-        "el": 25,
+        "el": 40,
         "tight": true,
         "zoom": 0.9
       }
@@ -1712,37 +1712,37 @@
             [
               -76.1,
               81.75,
-              -20.6
+              3.6
             ],
             [
               -76.1,
               87.18,
-              -20.6
+              3.6
             ],
             [
               -2.9,
               81.75,
-              -20.6
+              3.6
             ],
             [
               -2.9,
               87.18,
-              -20.6
+              3.6
             ]
           ],
           "spin": true
         }
       ],
       "view": {
-        "az": 150,
-        "el": 30,
+        "az": 25,
+        "el": 38,
         "tight": true,
         "zoom": 0.9
       }
     },
     {
       "caption": "Build 7 more",
-      "say": "Now the other seven drawers, exactly the same way: front, sides, bottom, back. Then slide every drawer in onto its runners until it stops. Take a break halfway if you need one.",
+      "say": "Now the other seven drawers, exactly the same way: front, sides, bottom, back. Then slide every drawer in onto its runners until it stops. The demo leaves drawer one pulled open so you can see inside. Take a break halfway if you need one.",
       "add": [
         "d2f",
         "d2l",
@@ -1813,7 +1813,7 @@
             [
               -39.5,
               85.61,
-              25
+              49.2
             ],
             [
               39.5,

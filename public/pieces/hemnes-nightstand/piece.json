@@ -9,7 +9,7 @@
   "size": [
     48,
     70,
-    36
+    51
   ],
   "minutes": 70,
   "people": 1,
@@ -251,7 +251,7 @@
       "pos": [
         0,
         55.3,
-        16.7
+        32.65
       ]
     },
     {
@@ -265,7 +265,7 @@
       "pos": [
         -19.3,
         54.15,
-        1.4
+        17.35
       ]
     },
     {
@@ -279,7 +279,7 @@
       "pos": [
         19.3,
         54.15,
-        1.4
+        17.35
       ]
     },
     {
@@ -293,7 +293,7 @@
       "pos": [
         0,
         44.8,
-        1.6
+        17.55
       ]
     },
     {
@@ -307,7 +307,7 @@
       "pos": [
         0,
         54.9,
-        -12.5
+        3.45
       ]
     },
     {
@@ -853,29 +853,29 @@
             [
               -19.3,
               48.98,
-              15.9
+              31.85
             ],
             [
               -19.3,
               59.33,
-              15.9
+              31.85
             ],
             [
               19.3,
               48.98,
-              15.9
+              31.85
             ],
             [
               19.3,
               59.33,
-              15.9
+              31.85
             ]
           ]
         }
       ],
       "view": {
         "az": 25,
-        "el": 25,
+        "el": 40,
         "tight": true,
         "zoom": 0.9
       }
@@ -917,37 +917,37 @@
             [
               -19.3,
               48.98,
-              -13.1
+              2.85
             ],
             [
               -19.3,
               59.33,
-              -13.1
+              2.85
             ],
             [
               19.3,
               48.98,
-              -13.1
+              2.85
             ],
             [
               19.3,
               59.33,
-              -13.1
+              2.85
             ]
           ],
           "spin": true
         }
       ],
       "view": {
-        "az": 150,
-        "el": 30,
+        "az": 25,
+        "el": 38,
         "tight": true,
         "zoom": 0.9
       }
     },
     {
       "caption": "Build drawer two",
-      "say": "Now the second drawer, exactly the same way: front, sides, bottom, back. Then slide every drawer in onto its runners until it stops. Take a break halfway if you need one.",
+      "say": "Now the second drawer, exactly the same way: front, sides, bottom, back. Then slide every drawer in onto its runners until it stops. The demo leaves drawer one pulled open so you can see inside. Take a break halfway if you need one.",
       "add": [
         "d2f",
         "d2l",
@@ -988,7 +988,7 @@
             [
               0,
               55.3,
-              17.5
+              33.45
             ],
             [
               0,

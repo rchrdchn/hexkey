@@ -48,7 +48,9 @@ export function flatLayout(p: Piece) {
   const order = [...p.objects].sort((a, z) => (p.addedAt[a.id] ?? 99) - (p.addedAt[z.id] ?? 99));
   const out: Record<string, THREE.Matrix4> = {};
   const gap = 5;
-  const maxRow = Math.max(110, reach * 1.6);
+  // keep the spread roughly square, so big kits (6 drawers = 30+ boards) don't become a tall column
+  const area = p.objects.reduce((a, o) => { const d = [...o.size].sort((m, n) => m - n); return a + (d[1] + gap) * (d[2] + gap * 2); }, 0);
+  const maxRow = Math.max(110, reach * 1.6, Math.sqrt(area) * 1.15);
   let x = 0, z = 0, rowDepth = 0;
   const x0 = Math.max(b.max.x, reach * 0.55) + 30;
   order.forEach((o) => {

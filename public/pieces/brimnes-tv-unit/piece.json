@@ -9,7 +9,7 @@
   "size": [
     120,
     53,
-    41
+    61
   ],
   "minutes": 75,
   "people": 1,
@@ -228,7 +228,7 @@
       "pos": [
         -29.6,
         16.02,
-        19.7
+        38.95
       ]
     },
     {
@@ -242,7 +242,7 @@
       "pos": [
         -56.5,
         14.87,
-        1.4
+        20.65
       ]
     },
     {
@@ -256,7 +256,7 @@
       "pos": [
         -2.7,
         14.87,
-        1.4
+        20.65
       ]
     },
     {
@@ -270,7 +270,7 @@
       "pos": [
         -29.6,
         7.6,
-        1.6
+        20.85
       ]
     },
     {
@@ -284,7 +284,7 @@
       "pos": [
         -29.6,
         15.62,
-        -15.5
+        3.75
       ]
     },
     {
@@ -959,29 +959,29 @@
             [
               -56.5,
               10.74,
-              18.9
+              38.15
             ],
             [
               -56.5,
               19.01,
-              18.9
+              38.15
             ],
             [
               -2.7,
               10.74,
-              18.9
+              38.15
             ],
             [
               -2.7,
               19.01,
-              18.9
+              38.15
             ]
           ]
         }
       ],
       "view": {
         "az": 25,
-        "el": 25,
+        "el": 40,
         "tight": true,
         "zoom": 0.9
       }
@@ -1023,37 +1023,37 @@
             [
               -56.5,
               10.74,
-              -16.1
+              3.15
             ],
             [
               -56.5,
               19.01,
-              -16.1
+              3.15
             ],
             [
               -2.7,
               10.74,
-              -16.1
+              3.15
             ],
             [
               -2.7,
               19.01,
-              -16.1
+              3.15
             ]
           ],
           "spin": true
         }
       ],
       "view": {
-        "az": 150,
-        "el": 30,
+        "az": 25,
+        "el": 38,
         "tight": true,
         "zoom": 0.9
       }
     },
     {
       "caption": "Build drawer two",
-      "say": "Now the second drawer, exactly the same way: front, sides, bottom, back. Then slide every drawer in onto its runners until it stops. Take a break halfway if you need one.",
+      "say": "Now the second drawer, exactly the same way: front, sides, bottom, back. Then slide every drawer in onto its runners until it stops. The demo leaves drawer one pulled open so you can see inside. Take a break halfway if you need one.",
       "add": [
         "d2f",
         "d2l",

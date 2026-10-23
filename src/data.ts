@@ -1,4 +1,4 @@
-import type { Piece, PieceDef, HwInst, V3 } from './types';
+import type { Piece, PieceDef, HwInst, V3, CatalogEntry } from './types';
 
 const AXES: Record<string, V3> = { '+x': [1, 0, 0], '-x': [-1, 0, 0], '+y': [0, 1, 0], '-y': [0, -1, 0], '+z': [0, 0, 1], '-z': [0, 0, -1] };
 export const axisVec = (a: string): V3 => AXES[a] ?? [0, 1, 0];
@@ -34,7 +34,16 @@ export function derive(def: PieceDef): Piece {
   return { ...def, addedAt, hw, poses, partCount, hwCount, totalHw: Object.values(hwCount).reduce((a, b) => a + b, 0) };
 }
 
-export const SLUGS = ['lack', 'kallax', 'billy'] as const;
+/** The picker list (public/pieces/catalog.json, written by scripts/generate.mjs). Small; full pieces load on demand. */
+let catalog: Promise<CatalogEntry[]> | null = null;
+export function loadCatalog(): Promise<CatalogEntry[]> {
+  catalog ??= fetch(`${import.meta.env.BASE_URL}pieces/catalog.json`).then((r) => {
+    if (!r.ok) throw new Error(`catalog: ${r.status}`);
+    return r.json();
+  });
+  return catalog;
+}
+export const isSlug = (s: string) => /^[a-z0-9-]{2,40}$/.test(s);
 const cache = new Map<string, Promise<Piece>>();
 export function loadPiece(slug: string): Promise<Piece> {
   if (!cache.has(slug)) {
@@ -42,6 +51,7 @@ export function loadPiece(slug: string): Promise<Piece> {
       if (!r.ok) throw new Error(`piece ${slug}: ${r.status}`);
       return r.json();
     }).then(derive));
+    cache.get(slug)!.catch(() => cache.delete(slug));
   }
   return cache.get(slug)!;
 }

@@ -9,7 +9,7 @@
   "size": [
     62,
     70,
-    30
+    44
   ],
   "minutes": 70,
   "people": 1,
@@ -169,7 +169,7 @@
       "pos": [
         0,
         57.13,
-        14.2
+        27.4
       ]
     },
     {
@@ -183,7 +183,7 @@
       "pos": [
         -28.4,
         55.98,
-        1.4
+        14.6
       ]
     },
     {
@@ -197,7 +197,7 @@
       "pos": [
         28.4,
         55.98,
-        1.4
+        14.6
       ]
     },
     {
@@ -211,7 +211,7 @@
       "pos": [
         0,
         48.07,
-        1.6
+        14.8
       ]
     },
     {
@@ -225,7 +225,7 @@
       "pos": [
         0,
         56.73,
-        -10
+        3.2
       ]
     },
     {
@@ -672,29 +672,29 @@
             [
               -28.4,
               51.53,
-              13.4
+              26.6
             ],
             [
               -28.4,
               60.44,
-              13.4
+              26.6
             ],
             [
               28.4,
               51.53,
-              13.4
+              26.6
             ],
             [
               28.4,
               60.44,
-              13.4
+              26.6
             ]
           ]
         }
       ],
       "view": {
         "az": 25,
-        "el": 25,
+        "el": 40,
         "tight": true,
         "zoom": 0.9
       }
@@ -736,37 +736,37 @@
             [
               -28.4,
               51.53,
-              -10.6
+              2.6
             ],
             [
               -28.4,
               60.44,
-              -10.6
+              2.6
             ],
             [
               28.4,
               51.53,
-              -10.6
+              2.6
             ],
             [
               28.4,
               60.44,
-              -10.6
+              2.6
             ]
           ],
           "spin": true
         }
       ],
       "view": {
-        "az": 150,
-        "el": 30,
+        "az": 25,
+        "el": 38,
         "tight": true,
         "zoom": 0.9
       }
     },
     {
       "caption": "Build 2 more",
-      "say": "Now the other two drawers, exactly the same way: front, sides, bottom, back. Then slide every drawer in until it stops. Take a break halfway if you need one.",
+      "say": "Now the other two drawers, exactly the same way: front, sides, bottom, back. Then slide every drawer in until it stops. The demo leaves drawer one pulled open so you can see inside. Take a break halfway if you need one.",
       "add": [
         "d2f",
         "d2l",

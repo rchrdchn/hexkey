@@ -54,7 +54,9 @@ function drawers(b, g, slots, opt) {
     const cx = (s.xa + s.xb) / 2, cy = (s.ya + s.yb) / 2;
     const bw = s.xb - s.xa - 2 * rw, bh = Math.max(6, fh - 4);
     const by = s.ya + 1 + bh / 2;
-    const zf = D2 - ft / 2 + (opt.overlay ? ft : 0);
+    // drawer 1 is built (and left) pulled half open, so its sides, bottom and back stay visible
+    const pull = n === 0 && slots.length > 1 && opt.pullFirst !== false ? r(dd * 0.55) : 0;
+    const zf = D2 - ft / 2 + (opt.overlay ? ft : 0) + pull;
     const zfront = zf - ft / 2; // back face of the front
     const zs = zfront - dd / 2;
     b.obj(`d${k}f`, fpart(s.yb - s.ya), [fw, fh, ft], [cx, cy, zf]);
@@ -62,11 +64,11 @@ function drawers(b, g, slots, opt) {
     b.obj(`d${k}r`, 'dside', [st, bh, dd], [cx + bw / 2 - st / 2, by, zs]);
     b.obj(`d${k}b`, 'dbottom', [bw - 2 * st + 0.8, 0.3, dd - 1.5], [cx, s.ya + 2, zs + 0.2]);
     b.obj(`d${k}k`, 'dback', [bw - 2 * st, bh - 1.5, st], [cx, by + 0.75, zfront - dd + st / 2]);
-    ids.push({ k, cx, cy, bw, by, bh, zfront, zs, s, fw });
+    ids.push({ k, cx, cy, bw, by, bh, zfront, zs: zs - pull, s, fw });
     if (runners) {
       b.part('runner', 'Drawer runner');
-      b.obj(`rn${k}l`, 'runner', [1.2, 1.4, dd], [s.xa + 0.6, s.ya + 1.6, zs]);
-      b.obj(`rn${k}r`, 'runner', [1.2, 1.4, dd], [s.xb - 0.6, s.ya + 1.6, zs]);
+      b.obj(`rn${k}l`, 'runner', [1.2, 1.4, dd], [s.xa + 0.6, s.ya + 1.6, zs - pull]);
+      b.obj(`rn${k}r`, 'runner', [1.2, 1.4, dd], [s.xb - 0.6, s.ya + 1.6, zs - pull]);
     }
   });
   if (runners) b.step({
@@ -93,7 +95,7 @@ function drawers(b, g, slots, opt) {
     say: 'First drawer. Lay the drawer front face down on something soft. Tap in four dowels, then press both drawer sides onto them, grooves facing in.',
     add: [`d${f.k}f`, `d${f.k}l`, `d${f.k}r`], from: [0, 0, 35],
     hardware: [b.H('dowel', '-z', [[f.cx - f.bw / 2 + 0.6, f.by - f.bh / 4, f.zfront], [f.cx - f.bw / 2 + 0.6, f.by + f.bh / 4, f.zfront], [f.cx + f.bw / 2 - 0.6, f.by - f.bh / 4, f.zfront], [f.cx + f.bw / 2 - 0.6, f.by + f.bh / 4, f.zfront]])],
-    view: { az: 25, el: 25, tight: true, zoom: 0.9 },
+    view: { az: 25, el: 40, tight: true, zoom: 0.9 },
   });
   b.step({
     caption: 'Slide in the bottom',
@@ -105,12 +107,12 @@ function drawers(b, g, slots, opt) {
     say: 'Close the drawer with its back panel, then drive four screws through the back into the sides. Snug, not cranked.',
     add: [`d${f.k}k`], from: [0, 0, -30],
     hardware: [b.H('screw', '-z', [[f.cx - f.bw / 2 + 0.6, f.by - f.bh / 4, f.zfront - dd], [f.cx - f.bw / 2 + 0.6, f.by + f.bh / 4, f.zfront - dd], [f.cx + f.bw / 2 - 0.6, f.by - f.bh / 4, f.zfront - dd], [f.cx + f.bw / 2 - 0.6, f.by + f.bh / 4, f.zfront - dd]], { spin: true })],
-    view: { az: 150, el: 30, tight: true, zoom: 0.9 },
+    view: { az: 25, el: 38, tight: true, zoom: 0.9 },
   });
   const rest = ids.slice(1);
   if (rest.length) b.step({
     caption: rest.length > 1 ? `Build ${rest.length} more` : 'Build drawer two',
-    say: `${rest.length > 1 ? `Now the other ${say(rest.length)} drawers` : 'Now the second drawer'}, exactly the same way: front, sides, bottom, back. Then slide every drawer in${runners ? ' onto its runners' : ''} until it stops. Take a break halfway if you need one.`,
+    say: `${rest.length > 1 ? `Now the other ${say(rest.length)} drawers` : 'Now the second drawer'}, exactly the same way: front, sides, bottom, back. Then slide every drawer in${runners ? ' onto its runners' : ''} until it stops. The demo leaves drawer one pulled open so you can see inside. Take a break halfway if you need one.`,
     add: rest.flatMap(({ k }) => [`d${k}f`, `d${k}l`, `d${k}r`, `d${k}b`, `d${k}k`]), from: [0, 0, 40],
     hardware: [b.C('dowel', rest.length * 4), b.C('screw', rest.length * 4)],
     view: { az: 20, el: 20 },
@@ -228,7 +230,7 @@ export function cubes(b) {
   const W = IW + 2 * T, H = IH + 2 * T;
   const lying = o.lying ?? H > 100;
   const big = H >= 120 || W >= 120;
-  b.part('side', 'Side panel'); b.part('end', 'Top/bottom panel');
+  b.part('side', 'Side panel'); b.part('end', 'End panel');
   b.obj('sideL', 'side', [T, H, D], [-W / 2 + T / 2, H / 2, 0]);
   b.obj('sideR', 'side', [T, H, D], [W / 2 - T / 2, H / 2, 0]);
   b.obj('bottom', 'end', [IW, T, D], [0, T / 2, 0]);
