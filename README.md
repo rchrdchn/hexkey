@@ -3,7 +3,11 @@
 **Flat-pack, talked through.** Hexkey is an open-source, voice-guided 3D assembly guide for flat-pack furniture.
 Pick your piece, check off what's in the box, then build it step by step. A voice tells you what to do, the 3D model shows you, and you can keep your hands on the furniture.
 
-> Works with 35 IKEA® pieces: LACK, KALLAX, BILLY, MALM, HEMNES, ALEX, BRIMNES, TARVA, RAST, GURSKEN, IVAR, BESTÅ, TROFAST, SNIGLAR, BEKVÄM, INGO, MICKE and LAGKAPTEN/ADILS. **Hexkey is not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V.**
+> Works with 68 pieces from 13 brands:
+> - **35 IKEA® pieces:** LACK, KALLAX, BILLY, MALM, HEMNES, ALEX, BRIMNES, TARVA, RAST, GURSKEN, IVAR, BESTÅ, TROFAST, SNIGLAR, BEKVÄM, INGO, MICKE and LAGKAPTEN/ADILS.
+> - **33 pieces from 12 other brands:** Walker Edison®, Ameriwood Home® and Novogratz® (Dorel Home), Zinus®, Nathan James®, Tribesigns®, FlexiSpot®, UPLIFT Desk®, Delta Children®, ClosetMaid®, Prepac®, South Shore® and Sauder®.
+>
+> **Hexkey is not affiliated with, sponsored by or endorsed by any of these brands** (Inter IKEA Systems B.V., Dorel Industries and the others listed in [data/sources/brands.json](data/sources/brands.json)).
 > The steps here are our own and are a demo. Always follow the official instructions that came in your box.
 
 | Pick | Check the box | Build | Done |
@@ -12,7 +16,7 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 
 ## What's in the catalog
 
-35 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 32 are generated from short specs by [archetypes](docs/ARCHETYPES.md).
+68 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 65 (32 IKEA, 33 from other brands) are generated from short specs by [archetypes](docs/ARCHETYPES.md).
 Confidence says how sure we are about the internals: **high** = dimensions and construction match the product page; **medium** = dimensions right, drawer/shelf layout or hardware counts are our best guess; **low** = simplified. Every guide is a demo: always follow the official instructions in your box. The app does not show confidence badges; instead every parts list says counts are our best estimate.
 
 | Piece | Category | Steps | Parts | Hardware | Built by | Confidence |
@@ -132,7 +136,10 @@ Node 20+. The output in `dist/` is a static site; it is deployed on Cloudflare P
 
 - **Write your own steps.** Do not copy text, drawings or step layouts from any manufacturer's manual, and never add their PDFs, images, photos or 3D models to this repo.
 - **Model parts in code** from dimensions: every panel is a box; hardware comes from the built-in kit.
-- **Link to the official product page** in `productUrl` (not to PDFs or other files).
+- **Link to the official product page** in `productUrl` (not to PDFs or other files). For IKEA that's an ikea.com `/p/` page; for other brands it must be on the brand's own site from `data/sources/brands.json`.
+- **Link, don't copy, the official instructions.** `instructionsUrl` can point at the brand's own instructions PDF or help page. We only link it; never download, rehost or quote it.
+- **Set `brand`** to an id from [data/sources/brands.json](data/sources/brands.json) (default `ikea`). It drives the brand chip in the picker, the "Works with BRAND®" label and the brand's own not-affiliated line. New brand? Add it there first, with where its instructions live, the robots.txt/terms notes and a fit score.
+- **Fetch politely.** Respect robots.txt and site terms, go slow, no logins, never get around bot protection. If a site blocks you, skip it and note it in brands.json.
 - Keep captions to 2-5 words and narration to one or two short sentences.
 - Always include the safety steps the real product needs (anchoring, two people).
 
@@ -223,6 +230,10 @@ Units are **centimeters**, angles are **degrees**. Axes: **x** to the right, **y
 
 ## Trademarks and disclaimer
 
-IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. They are used here only to say which products these guides are written for.
-Hexkey is an independent project and is **not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V.** It contains no IKEA instructions, drawings, images or 3D models; every model is built in code from public dimensions and every step is written from scratch.
+IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. Walker Edison, Ameriwood Home, Novogratz, Zinus, Nathan James, Tribesigns, FlexiSpot, UPLIFT Desk, Delta Children, ClosetMaid, Prepac, South Shore, Sauder and their product names are trademarks of their respective owners. They are used here only to say which products these guides are written for.
+Hexkey is an independent project and is **not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V. or any other brand named here.** It contains no manufacturer instructions, drawings, images or 3D models; every model is built in code from public dimensions and every step is written from scratch. Each piece links to its brand's own product page and, where public, the brand's own instructions.
+
+### Brand research
+
+`data/sources/brands.json` lists 45 furniture brands (big, medium and small/direct-to-consumer): where each one keeps its assembly instructions, whether they're public, robots.txt and terms notes, popular flat-pack products and a 1–5 fit score for Hexkey's archetypes. `status` is `included` (pieces in the catalog), `research-only` (queued) or `skipped` (the site blocked our polite fetcher, or its terms bar automated collection).
 The guides are provided as-is. Check your parts against the official instructions, anchor tall furniture to the wall, and get help for heavy lifts.

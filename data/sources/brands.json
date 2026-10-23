@@ -162,7 +162,7 @@
    "status": "included",
    "fit": 4,
    "instructions": "Product page instructions PDF (Cubeicals)",
-   "access": "redirects closetmaid.com → homebyames.com",
+   "access": "public (closetmaid.com redirects to homebyames.com)",
    "robots": "not crawled",
    "products": [
     "Cubeicals 9-cube",
@@ -171,7 +171,7 @@
    ],
    "note": "1 piece from retailer listings via web search, medium confidence.",
    "disclaimer": "Not affiliated with or endorsed by Emerson / The Ames Companies.",
-   "checked": "unverified (general knowledge, site not checked)",
+   "checked": "via web search 2026-10-23 (brand listing on homebyames.com)",
    "short": "ClosetMaid"
   },
   {

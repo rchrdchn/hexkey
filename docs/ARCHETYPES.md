@@ -22,7 +22,9 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 | `archetype` | One of the archetypes below. |
 | `category` | `shelving`, `dressers`, `bedroom`, `storage`, `tables`, `desks`, `kids` (picker chips). |
 | `size` | Outer size in cm, in product-page order: **W×D×H** (beds: W×L×headboard H; cribs: L×W×H). |
-| `worksWith`, `productUrl` | The "Works with IKEA® …" line and the official product page (never a PDF). |
+| `brand` | Brand id from `data/sources/brands.json` (default `ikea`). Sets the picker's brand chip and the brand's not-affiliated line. |
+| `worksWith`, `productUrl` | The "Works with BRAND® …" line and the official product page on the brand's own site (never a PDF). |
+| `instructionsUrl` | Optional link to the brand's own official instructions (PDF or help page). Linked from the guide; never copied or rehosted. |
 | `confidence` | `high`: dimensions and construction match the product page and common knowledge. `medium`: dimensions are right, internal layout or hardware counts are our best guess. `low`: simplified. Not shown as a badge: every parts list carries one disclaimer that counts are our best estimate. |
 | `sources` | https pages the facts came from (product pages, not files). |
 | `options` | Archetype knobs (below). |
@@ -44,6 +46,11 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 | `crib` | SNIGLAR | `bars`, `base` (mattress base heights) |
 | `ladder` | IVAR | `shelves`, `shelfW` |
 | `stool` | BEKVÄM | none |
+| `platform-bed` | Zinus Mia, Moiz, Allen, Linda | `height` (frame top, cm), `material` (`metal`\|`wood`), `headboard` (false for none), `railH`, `sideLegs`, `centerLegs`, `slats`. Size is W×L×headboard H |
+| `standing-desk` | FlexiSpot E7, UPLIFT V2 | `tt` top thickness, `inset` (column distance from the ends). Built upside down: brackets + crossbeam, columns, feet, control box, cables, flip, reset |
+| `frame-shelf` | Nathan James Theo/Haven, Tribesigns ladder | `shelves` (fixed, screwed), `lean` (top shelf depth in cm for ladder shelves that taper), `post`, `st`, `bottom` |
+
+`table` also takes `bars` (height in cm of two side support bars between the front and back legs, for metal-frame desks).
 
 ### How the carcass archetypes build
 
