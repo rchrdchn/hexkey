@@ -21,9 +21,9 @@ a { color: inherit; }
 .spacer { flex: 1; pointer-events: none !important; }
 .brand { display: flex; align-items: center; gap: 9px; font-weight: 800; font-size: 22px; letter-spacing: -0.02em; }
 .ttl { font-weight: 800; font-size: 18px; letter-spacing: 0.02em; }
-.icon { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 253, 249, 0.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 4px 14px rgba(60, 40, 20, 0.08); transition: transform .15s; }
+.icon { width: 44px; height: 44px; min-width: 44px; min-height: 44px; flex: 0 0 auto; aspect-ratio: 1; padding: 0; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 253, 249, 0.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 1px 0 rgba(0,0,0,.04), 0 4px 14px rgba(60, 40, 20, 0.08); transition: transform .15s; }
 .icon:active { transform: scale(0.92); }
-.icon.big { width: 56px; height: 56px; }
+.icon.big { width: 56px; height: 56px; min-width: 56px; min-height: 56px; }
 .icon.live { background: var(--ok); color: #fff; animation: live 1.6s infinite; }
 .icon.talk svg { animation: talk .5s infinite alternate; }
 @keyframes live { 0% { box-shadow: 0 0 0 0 rgba(43,182,115,.5); } 100% { box-shadow: 0 0 0 16px rgba(43,182,115,0); } }
@@ -139,14 +139,24 @@ h2 { margin: 0; font-size: 22px; letter-spacing: -0.02em; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 
 /* community: nav pills + contribute / request modals */
-.community { display: flex; gap: 8px; }
+.community { display: flex; gap: 8px; flex: 0 0 auto; }
+.top .brand, .top .community, .top .pill, .top .icon { flex-shrink: 0; }
 .pill { height: 44px; padding: 0 14px 0 12px; border-radius: 99px; display: inline-flex; align-items: center; gap: 6px; font-weight: 800; font-size: 15px; background: var(--ink); color: #fff; box-shadow: 0 4px 14px rgba(60,40,20,.14); transition: transform .15s; white-space: nowrap; }
 .pill.alt { background: rgba(255,253,249,.9); color: var(--ink); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
 .pill:active { transform: scale(.94); }
 .pill:hover svg { animation: wiggle .5s; }
 @keyframes wiggle { 30% { transform: rotate(-14deg); } 70% { transform: rotate(10deg); } }
 .pill .lg { display: none; }
-@media (max-width: 429px) { .pill.alt { width: 44px; padding: 0; justify-content: center; } .pill.alt .sm { display: none; } .m-done .pill:not(.alt) span { display: none; } .m-done .pill:not(.alt) { width: 44px; padding: 0; justify-content: center; } }
+@media (max-width: 429px) { .pill.alt { width: 44px; min-width: 44px; aspect-ratio: 1; padding: 0; justify-content: center; border-radius: 50%; } .pill.alt .sm { display: none; } .m-done .pill:not(.alt) span { display: none; } .m-done .pill:not(.alt) { width: 44px; padding: 0; justify-content: center; } }
+/* small phones: tighten the bar so the round buttons never get squeezed */
+@media (max-width: 400px) {
+  .top { gap: 6px; padding-left: 12px; padding-right: 12px; }
+  .community { gap: 6px; }
+  .m-pick .brand { gap: 7px; font-size: 20px; }
+  .m-pick .brand svg { width: 30px; height: 30px; }
+  .m-pick .pill:not(.alt) { padding: 0 12px 0 10px; font-size: 14px; gap: 5px; }
+}
+@media (max-width: 340px) { .m-pick .brand span { display: none; } }
 @media (min-width: 900px) { .pill .lg { display: inline; } .pill .sm { display: none; } }
 :focus-visible { outline: 3px solid var(--acc); outline-offset: 2px; }
 

@@ -12,10 +12,11 @@ import { makeCard, shareCard, fmtTime } from './share';
 import { ContributeModal, RequestModal } from './ui/Community';
 import { Catalog } from './ui/Catalog';
 
-type Route = { mode: Mode; slug: string; step: number };
+type Route = { mode: Mode; slug: string; step: number; open?: boolean };
+const PICKER = 'pieces'; // #pieces opens the full picker on phones (deep-linkable, closes on browser back)
 function parse(): Route {
   const [slug, sub] = location.hash.replace(/^#\/?/, '').split('/');
-  if (!slug || !isSlug(slug)) return { mode: 'pick', slug: localStorage.getItem('hk-last') || 'lack', step: 0 };
+  if (!slug || slug === PICKER || !isSlug(slug)) return { mode: 'pick', slug: localStorage.getItem('hk-last') || 'lack', step: 0, open: slug === PICKER };
   if (!sub) return { mode: 'parts', slug, step: 0 };
   if (sub === 'done') return { mode: 'done', slug, step: 0 };
   return { mode: 'build', slug, step: Math.max(0, (parseInt(sub, 10) || 1) - 1) };
@@ -26,6 +27,9 @@ const COMMON = {
   allset: "Everything's here. Let's build.",
 };
 const gesture = () => { voice.unlock(); sfx.unlock(); };
+const PHONE_MQ = '(max-width: 899px)'; // same breakpoint as the desktop layout in CSS
+const isPhone = () => typeof matchMedia !== 'undefined' && matchMedia(PHONE_MQ).matches;
+let pushedPicker = false; // true when we opened #pieces ourselves, so Close can just go back
 const reduced = typeof matchMedia !== 'undefined' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 export default function App() {
@@ -33,12 +37,27 @@ export default function App() {
   const [pieces, setPieces] = useState<Record<string, Piece>>({});
   const [err, setErr] = useState('');
   useEffect(() => {
-    const on = () => setRoute(parse());
+    const on = () => { const r = parse(); if (!r.open) pushedPicker = false; setRoute(r); };
     addEventListener('hashchange', on);
     loadCatalog().then(setEntries).catch((e) => setErr(String(e)));
     return () => removeEventListener('hashchange', on);
   }, []);
   const [entries, setEntries] = useState<CatalogEntry[]>([]);
+  const [phone, setPhone] = useState(isPhone);
+  useEffect(() => {
+    const mq = matchMedia(PHONE_MQ);
+    const on = () => setPhone(mq.matches);
+    mq.addEventListener('change', on);
+    return () => mq.removeEventListener('change', on);
+  }, []);
+  // phones land on the hero + one button; the full picker opens as a sheet
+  const showPicker = !phone || !!route.open;
+  const openPicker = () => { gesture(); sfx.tick(); pushedPicker = true; location.hash = PICKER; };
+  const closePicker = () => {
+    gesture();
+    if (pushedPicker) { pushedPicker = false; history.back(); }
+    else { history.replaceState(null, '', location.pathname + location.search); setRoute(parse()); }
+  };
   const [pick, setPick] = useState(route.slug);
   useEffect(() => { if (route.mode !== 'pick') setPick(route.slug); }, [route]);
   const slug = route.mode === 'pick' ? pick : route.slug;
@@ -114,6 +133,7 @@ export default function App() {
   // keyboard
   useEffect(() => {
     const k = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && route.mode === 'pick' && phone && route.open && !comm) { closePicker(); return; }
       if (comm || /^(INPUT|SELECT|TEXTAREA)$/.test((e.target as HTMLElement)?.tagName)) return;
       if (e.key === 'ArrowRight' || (e.key === ' ' && route.mode === 'build') || (e.key === 'Enter' && route.mode !== 'pick')) { e.preventDefault(); next(); }
       else if (e.key === 'ArrowLeft') back();
@@ -121,7 +141,7 @@ export default function App() {
     };
     addEventListener('keydown', k);
     return () => removeEventListener('keydown', k);
-  }, [next, back, repeat, route.mode, comm]);
+  }, [next, back, repeat, route.mode, route.open, phone, comm]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // voice commands
   const handlers = useRef({ next, back, repeat, count });
@@ -181,7 +201,7 @@ export default function App() {
     document.querySelectorAll('.sheet, .hero').forEach((el) => ro.observe(el));
     addEventListener('resize', measure);
     return () => { ro.disconnect(); clearInterval(t); removeEventListener('resize', measure); };
-  }, [route.mode, slug]);
+  }, [route.mode, slug, showPicker]);
 
   // share
   const snap = useRef<() => string>(() => '');
@@ -249,14 +269,36 @@ export default function App() {
             <h1>Flat-pack,<br /><em>talked through.</em></h1>
             <p>Pick it. Check the box. Build it with a voice in your ear.</p>
           </div>
-          <div className="sheet pick">
-            <Catalog entries={entries} pick={pick} onRequest={(name) => setComm({ req: { url: '', name } })}
-              onPick={(sl) => { gesture(); setPick(sl); localStorage.setItem('hk-last', sl); voice.prefetch(sl); sfx.tick(); }} />
-            {piece && piece.slug === pick
-              ? <button className="cta" onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>Build {piece.name} {I.next}</button>
-              : <button className="cta" disabled aria-busy>Loading…</button>}
-            {piece && <Legal p={piece} />}
-          </div>
+          {showPicker ? (
+            <>
+              {phone && <div className="scrim" onClick={closePicker} aria-hidden />}
+              <div className={`sheet pick ${phone ? 'open' : ''}`} key="picker" role={phone ? 'dialog' : undefined} aria-modal={phone || undefined} aria-label={phone ? 'Pick your furniture' : undefined}>
+                {phone && (
+                  <div className="row pick-head">
+                    <h2>Pick your furniture</h2>
+                    <button className="icon close" aria-label="Close" onClick={closePicker}>{I.close}</button>
+                  </div>
+                )}
+                <Catalog entries={entries} pick={pick} onRequest={(name) => setComm({ req: { url: '', name } })}
+                  onPick={(sl) => { gesture(); setPick(sl); localStorage.setItem('hk-last', sl); voice.prefetch(sl); sfx.tick(); }} />
+                {piece && piece.slug === pick
+                  ? <button className="cta" onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>Build {piece.name} {I.next}</button>
+                  : <button className="cta" disabled aria-busy>Loading…</button>}
+                {piece && <Legal p={piece} />}
+              </div>
+            </>
+          ) : (
+            <div className="sheet pick start" key="start">
+              <button className="cta start-cta" onClick={openPicker} aria-haspopup="dialog">
+                <span className="ico">{I.hammer}</span>
+                <span className="lbl"><b>Pick your furniture</b><small>{entries.length ? `See all ${entries.length} pieces` : 'See all pieces'}</small></span>
+                {I.next}
+              </button>
+              <p className="legal">
+                Works with IKEA® furniture. Not affiliated with or endorsed by Inter IKEA Systems B.V. Demo steps: always follow the official instructions in your box.
+              </p>
+            </div>
+          )}
         </>
       )}
 

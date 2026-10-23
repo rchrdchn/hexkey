@@ -13,7 +13,8 @@
     "voice": "${PYTHON:-python3} scripts/voice.py",
     "shots": "node scripts/shots.mjs",
     "shots:catalog": "node scripts/shots-catalog.mjs",
-    "shots:community": "node scripts/shots-community.mjs"
+    "shots:community": "node scripts/shots-community.mjs",
+    "shots:home": "node scripts/shots-home.mjs"
   },
   "license": "MIT",
   "type": "module",
