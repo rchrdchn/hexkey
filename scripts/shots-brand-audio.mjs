@@ -13,14 +13,16 @@ const root = new URL('../public/pieces/', import.meta.url);
 const slugs = JSON.parse(fs.readFileSync(new URL('index.json', root)));
 const piece = (s) => JSON.parse(fs.readFileSync(new URL(`${s}/piece.json`, root)));
 const fails = [], errors = [];
+const get = async (u, n = 3) => { for (;;) { try { return await fetch(u); } catch (e) { if (--n <= 0) throw e; await sleep(1000); } } };
 const ok = (c, m) => { if (!c) { console.log(`✗ ${m}`); fails.push(m); } return c; };
 
+// (content types are checked too: the SPA fallback answers unknown paths with index.html and a 200)
 // 1) HTTP sweep
 let clips = 0;
 const nonIkea = slugs.filter((s) => (piece(s).brandId || 'ikea') !== 'ikea');
 for (const s of nonIkea) {
   const p = piece(s);
-  const r = await fetch(`${base}/audio/${s}/index.json`);
+  const r = await get(`${base}/audio/${s}/index.json`);
   if (!ok(r.ok, `${s}: audio index ${r.status}`)) continue;
   const idx = await r.json();
   p.steps.forEach((st, i) => {
@@ -29,7 +31,8 @@ for (const s of nonIkea) {
   });
   ok(idx.done?.text === p.done, `${s}: done clip text matches`);
   const files = Object.values(idx).map((v) => v.file);
-  const res = await Promise.all(files.map((f) => fetch(`${base}/audio/${s}/${f}`, { method: 'GET' }).then((x) => x.status)));
+  const res = [];
+  for (const f of files) res.push(await get(`${base}/audio/${s}/${f}`).then((x) => (x.ok && /audio\/mpeg/.test(x.headers.get('content-type') || '') ? 200 : `${x.status} ${x.headers.get('content-type')}`)));
   res.forEach((st, i) => ok(st === 200, `${s}: ${files[i]} → ${st}`));
   clips += files.length;
 }
@@ -53,7 +56,9 @@ for (const [eng, name, bt, opts] of runs) {
     page.on('response', (r) => {
       const u = r.url();
       if (!u.includes('/audio/')) return;
-      if (r.status() >= 400) audioBad.push(`${r.status()} ${u}`); else if (u.endsWith('.mp3')) audioOk.add(u.split('/').pop().split('-').slice(0, 2).join('-'));
+      // WebKit reports media fetches as status 0 with no headers; the HTTP sweep above checks those files' content types
+      const ct = r.headers()['content-type'] || '';
+      if (r.status() >= 400 || (u.endsWith('.mp3') && r.status() > 0 && !/audio/.test(ct))) audioBad.push(`${r.status()} ${ct} ${u}`); else if (u.endsWith('.mp3')) audioOk.add(u.split('/').pop().split('-').slice(0, 2).join('-'));
     });
     const overflow = () => page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
     await page.goto(`${base}/#pieces`);
