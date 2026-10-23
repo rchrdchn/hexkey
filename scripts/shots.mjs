@@ -3,7 +3,7 @@
 import { chromium, webkit, devices } from 'playwright';
 import fs from 'node:fs';
 const base = process.argv[2] || 'http://localhost:4173';
-const out = process.argv[3] || '/workspace/hexkey-shots';
+const out = process.argv[3] || 'shots';
 const engines = (process.argv[4] || 'chromium,webkit').split(',');
 const only = (process.argv[5] || 'lack,kallax,billy').split(',');
 fs.mkdirSync(out, { recursive: true });

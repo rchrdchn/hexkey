@@ -2,8 +2,8 @@
 """Pre-generate narration clips with Kokoro-82M (Apache-2.0), voice af_heart.
 
 Run with a Python env that has `kokoro` installed, e.g.
-    /home/box/tts2/kokoro-venv/bin/python scripts/voice.py            # all pieces
-    /home/box/tts2/kokoro-venv/bin/python scripts/voice.py billy      # one piece
+    /path/to/kokoro-venv/bin/python scripts/voice.py            # all pieces
+    /path/to/kokoro-venv/bin/python scripts/voice.py billy      # one piece
 Writes public/audio/<slug>/*.mp3 + index.json ({key: {file, text}}). Unchanged lines are skipped.
 The app plays a clip only if its text still matches the JSON, otherwise it falls back to the browser voice.
 Keep how_many() in sync with howManyText() in src/data.ts.

@@ -3,7 +3,7 @@
 import { chromium, webkit, devices } from 'playwright';
 import fs from 'node:fs';
 const base = process.argv[2] || 'http://localhost:4173';
-const out = process.argv[3] || '/workspace/hexkey-shots/contribute';
+const out = process.argv[3] || 'shots/contribute';
 fs.mkdirSync(out, { recursive: true });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const errors = [], checks = [];
