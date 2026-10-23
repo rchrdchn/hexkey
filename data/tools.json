@@ -1,0 +1,231 @@
+{
+  "$comment": "Tools for each build. Our own words; Amazon links are plain search links built from `query` (no ASINs, prices, ratings or images). Rules add up: default, then category, archetype, category+archetype combos, hardware kinds, then tall pieces. `slugs` can add or drop tools for one piece. Checked by scripts/tools-check.mjs.",
+  "tools": [
+    {
+      "id": "hex-key",
+      "name": "Hex key set",
+      "note": "Most boxes include one; a set with a handle is kinder to your wrist.",
+      "query": "hex key allen wrench set metric",
+      "icon": "hex"
+    },
+    {
+      "id": "phillips",
+      "name": "Phillips #2 screwdriver",
+      "note": "The one screwdriver almost every build needs.",
+      "query": "phillips 2 screwdriver",
+      "icon": "phillips"
+    },
+    {
+      "id": "flathead",
+      "name": "Flathead screwdriver",
+      "note": "Turns cam locks and pries out stuck dowels.",
+      "query": "flathead screwdriver",
+      "icon": "flathead"
+    },
+    {
+      "id": "stubby",
+      "name": "Stubby screwdriver",
+      "note": "For screws inside drawers and tight corners.",
+      "query": "stubby screwdriver phillips",
+      "icon": "stubby"
+    },
+    {
+      "id": "mallet",
+      "name": "Rubber mallet",
+      "note": "Taps dowels and back-panel nails in without dents.",
+      "query": "rubber mallet",
+      "icon": "mallet"
+    },
+    {
+      "id": "drill",
+      "name": "Cordless drill/driver with bits",
+      "note": "Saves your hands on long screw runs. Use a low clutch setting.",
+      "query": "cordless drill driver with bit set",
+      "icon": "drill"
+    },
+    {
+      "id": "tape",
+      "name": "Tape measure",
+      "note": "Checks it fits the spot and marks where the wall studs are.",
+      "query": "tape measure 25 ft",
+      "icon": "tape"
+    },
+    {
+      "id": "level",
+      "name": "Level",
+      "note": "Keeps shelves, drawers and desktops true.",
+      "query": "torpedo level",
+      "icon": "level"
+    },
+    {
+      "id": "glue",
+      "name": "Wood glue",
+      "note": "Optional: a drop on wobbly dowel joints.",
+      "query": "wood glue",
+      "icon": "glue"
+    },
+    {
+      "id": "pads",
+      "name": "Furniture pads",
+      "note": "Felt pads protect floors and help it slide.",
+      "query": "felt furniture pads",
+      "icon": "pads"
+    },
+    {
+      "id": "anchors",
+      "name": "Wall-anchor kit",
+      "note": "For tip-over straps and wall mounting. Anchor dressers and tall shelves to the wall.",
+      "query": "furniture anti tip wall anchor kit",
+      "icon": "anchor"
+    },
+    {
+      "id": "knife",
+      "name": "Utility knife",
+      "note": "Opens the box. Cut shallow so you don't scratch panels.",
+      "query": "utility knife retractable",
+      "icon": "knife"
+    }
+  ],
+  "rules": {
+    "default": [
+      "hex-key",
+      "phillips"
+    ],
+    "category": {
+      "dressers": [
+        "knife",
+        "stubby",
+        "mallet",
+        "drill",
+        "tape",
+        "level",
+        "anchors",
+        "pads"
+      ],
+      "shelving": [
+        "knife",
+        "mallet",
+        "tape",
+        "pads"
+      ],
+      "storage": [
+        "knife",
+        "mallet",
+        "tape",
+        "pads"
+      ],
+      "bedroom": [
+        "knife",
+        "drill",
+        "tape",
+        "pads"
+      ],
+      "tables": [
+        "knife",
+        "pads"
+      ],
+      "desks": [
+        "knife",
+        "drill",
+        "tape",
+        "level",
+        "pads"
+      ],
+      "kids": [
+        "knife",
+        "mallet",
+        "tape",
+        "pads"
+      ]
+    },
+    "archetype": {
+      "wall-shelf": [
+        "drill",
+        "tape",
+        "level",
+        "anchors"
+      ],
+      "chest": [
+        "stubby"
+      ],
+      "standing-desk": [
+        "drill",
+        "level"
+      ],
+      "crib": [
+        "level"
+      ],
+      "bed": [
+        "drill"
+      ],
+      "platform-bed": [
+        "drill"
+      ],
+      "stool": [
+        "glue"
+      ],
+      "ladder": [
+        "glue"
+      ]
+    },
+    "combo": {
+      "kids+chest": [
+        "anchors",
+        "level",
+        "drill"
+      ]
+    },
+    "hardware": {
+      "cam": [
+        "flathead"
+      ],
+      "dowel": [
+        "mallet"
+      ],
+      "nail": [
+        "mallet"
+      ],
+      "knob": [
+        "stubby"
+      ]
+    },
+    "tall": {
+      "minHeightCm": 100,
+      "tools": [
+        "anchors",
+        "level",
+        "drill"
+      ]
+    },
+    "slugs": {
+      "lack": {
+        "add": [
+          "knife",
+          "pads"
+        ]
+      },
+      "kallax": {
+        "add": [
+          "knife",
+          "mallet",
+          "tape",
+          "pads"
+        ]
+      },
+      "billy": {
+        "add": [
+          "knife",
+          "mallet",
+          "tape",
+          "pads"
+        ]
+      },
+      "lack-wall-shelf": {
+        "drop": [
+          "pads",
+          "mallet"
+        ]
+      }
+    }
+  }
+}

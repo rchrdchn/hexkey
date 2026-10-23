@@ -4,9 +4,9 @@
   "description": "Voice-guided 3D assembly for flat-pack furniture. Open source.",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/validate.mjs && tsc --noEmit -p . && vite build",
+    "build": "node scripts/validate.mjs && node scripts/tools-check.mjs && tsc --noEmit -p . && vite build",
     "preview": "vite preview --port 4173",
-    "validate": "node scripts/validate.mjs",
+    "validate": "node scripts/validate.mjs && node scripts/tools-check.mjs",
     "gen": "node scripts/generate.mjs",
     "thumbs": "node scripts/thumbs.mjs",
     "typecheck": "tsc --noEmit -p .",
