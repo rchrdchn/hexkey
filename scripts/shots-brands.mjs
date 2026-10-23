@@ -65,7 +65,7 @@ for (const [eng, name, bt, opts] of runs) {
     await page.locator(`.card[data-slug="${slug}"]`).click();
     await page.waitForSelector('.cta:not([disabled])');
     await sleep(1500);
-    const legal = page.locator('.legal').last();
+    const legal = page.locator('.legal', { hasText: 'official instructions' }).last(); // the Amazon disclosure line now follows it
     const text = await legal.innerText();
     const href = await legal.locator('a').first().getAttribute('href');
     ok(text.includes(`${brandWord}®`) && /Not affiliated/.test(text) && !/Inter IKEA/.test(text), `${tag} ${slug} legal names ${brandWord}® and its own disclaimer`);
