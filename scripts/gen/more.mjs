@@ -10,7 +10,7 @@ export function platformBed(b) {
   const FH = o.height ?? 35, rh = o.railH ?? 8, metal = o.material !== 'wood';
   const hb = o.headboard !== false, HB = hb ? Hs : FH;
   const legS = metal ? 3 : 5, ry = FH - rh / 2, rw = metal ? 3 : 4;
-  b.part('rail', 'Side rail'); b.part('end', 'End rail'); b.part('leg', 'Leg'); b.part('beam', 'Center beam'); b.part('slats', metal ? 'Slat set' : 'Slat roll');
+  b.part('rail', 'Side rail'); b.part('end', 'End rail'); b.part('beam', 'Center beam'); b.part('slats', metal ? 'Slat set' : 'Slat roll');
   const rx = W / 2 - rw / 2, ez = L / 2 - rw / 2;
   const nSide = o.sideLegs ?? (L > 190 ? 3 : 2);
   const lz = spread(-L / 2 + legS, L / 2 - legS, nSide);

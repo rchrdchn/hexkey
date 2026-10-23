@@ -35,10 +35,6 @@
       "label": "End rail"
     },
     {
-      "id": "leg",
-      "label": "Leg"
-    },
-    {
       "id": "beam",
       "label": "Center beam"
     },

@@ -34,7 +34,7 @@ for (const eng of engines) {
     };
     await open();
     const shot = (label) => page.screenshot({ path: `${out}/${eng}-${name}-${label}.png` });
-    await page.goto(base + '/#/');
+    await page.goto(base + '/#pieces');
     await page.waitForSelector('.card[data-slug]');
     await sleep(2500);
     await shot('00-pick');
@@ -43,7 +43,7 @@ for (const eng of engines) {
       if (done++ && done % RECYCLE === 1) await open();
       cur = slug;
       const t0 = Date.now();
-      await page.goto(`${base}/#/`);
+      await page.goto(`${base}/#pieces`);
       await page.waitForSelector(`.card[data-slug="${slug}"]`);
       await page.locator(`.card[data-slug="${slug}"]`).click();
       await page.waitForSelector('.cta:not([disabled])');

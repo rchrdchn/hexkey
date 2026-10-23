@@ -72,6 +72,8 @@ for (const slug of slugs) {
     if (s.view && (typeof s.view.az !== 'number' || typeof s.view.el !== 'number')) err(at, 'view needs az and el (degrees)');
   });
   for (const id of objs.keys()) if (!added.has(id)) err(slug, `object ${id} is never added in a step`);
+  // the parts list draws each part from one of its objects, so a part with no object breaks the parts screen
+  for (const id of parts) if (![...objs.values()].some((o) => o.part === id)) err(slug, `part ${id} has no object (the parts list needs one to draw it)`);
   // audio
   const idxf = `${root}public/audio/${slug}/index.json`;
   if (!fs.existsSync(idxf)) { if (!QUIET_AUDIO) warn(slug, 'no audio yet (browser voice will be used). Run scripts/voice.py'); }
