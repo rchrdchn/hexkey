@@ -53,12 +53,16 @@
     },
     "worksWith": {
       "type": "string",
-      "description": "Descriptive line, e.g. 'IKEA® BILLY bookcase, 80×28×202 cm'"
+      "description": "Descriptive line, e.g. 'IKEA® BILLY bookcase, 80×28×202 cm' or 'Walker Edison® Holmes bookcase, ...'"
     },
     "productUrl": {
       "type": "string",
       "description": "Official product page (never a PDF or asset URL)"
     },
+    "brand": { "type": "string", "description": "Brand display name, e.g. IKEA, Walker Edison" },
+    "brandId": { "type": "string", "description": "Brand id in data/sources/brands.json" },
+    "disclaimer": { "type": "string", "description": "Not-affiliated line for this brand" },
+    "instructionsUrl": { "type": "string", "description": "Link to the brand's own official instructions (linked, never rehosted)" },
     "size": {
       "$ref": "#/$defs/v3",
       "description": "Assembled width, height, depth (cm)"

@@ -1,0 +1,875 @@
+{
+ "$comment": "Brand research for Hexkey. Facts only; no brand PDFs, images or text are copied. status: included = pieces in catalog, research-only = queued, skipped = site blocked us or terms bar scraping. fit: 1-5 Hexkey archetype fit.",
+ "updated": "2026-10-23",
+ "brands": [
+  {
+   "id": "ikea",
+   "name": "IKEA",
+   "label": "IKEA®",
+   "tier": "big",
+   "site": "https://www.ikea.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Product page → \"Assembly and documents\" (PDF per article)",
+   "access": "public, no login",
+   "robots": "allows /p/ pages",
+   "products": [
+    "KALLAX",
+    "BILLY",
+    "MALM",
+    "HEMNES",
+    "LACK",
+    "BRIMNES",
+    "MICKE",
+    "IVAR"
+   ],
+   "note": "Existing 32 pieces.",
+   "disclaimer": "Not affiliated with or endorsed by Inter IKEA Systems B.V..",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "walker-edison",
+   "name": "Walker Edison",
+   "label": "Walker Edison®",
+   "tier": "big",
+   "site": "https://www.walkeredison.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Product page \"Assembly Instructions\" PDF (images.salsify.com) + Assembly Guides/Videos help pages",
+   "access": "public, no login",
+   "robots": "Shopify default; /products/*.json not disallowed",
+   "products": [
+    "Holmes bookcase",
+    "Rebecca 6-drawer dresser",
+    "Domm nightstand",
+    "Kelm TV stand",
+    "Amira bookshelf"
+   ],
+   "note": "Specs from product JSON; dims listed H × L × W.",
+   "disclaimer": "Not affiliated with or endorsed by Walker Edison.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "dorel",
+   "name": "Dorel Home (Ameriwood Home, DHP, Novogratz, Cosco)",
+   "label": "Dorel Home (Ameriwood Home, DHP, Novogratz, Cosco)®",
+   "tier": "big",
+   "site": "https://www.dorelhome.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Product page \"Assembly Instructions\" PDF on cdn.dorelhome.com/DorelHomeFiles/ProductDocuments/",
+   "access": "public, no login",
+   "robots": "Shopify default; allowed",
+   "products": [
+    "Parsons desk/tables/TV stand",
+    "Her Majesty nightstand",
+    "Westerleigh dresser",
+    "Farmington cabinet"
+   ],
+   "note": "Product pages often leave dimension fields blank; dims cross-checked with retailer listings quoting manufacturer copy → medium confidence.",
+   "disclaimer": "Not affiliated with or endorsed by Dorel Industries.",
+   "checked": "verified 2026-10-23",
+   "short": "Dorel Home"
+  },
+  {
+   "id": "zinus",
+   "name": "Zinus",
+   "label": "Zinus®",
+   "tier": "big",
+   "site": "https://www.zinus.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Product page \"Assembly Instructions\" PDF on Shopify CDN",
+   "access": "public, no login",
+   "robots": "Crawl-delay 10; products allowed",
+   "products": [
+    "Mia metal platform bed",
+    "Moiz wood platform bed",
+    "Allen bed",
+    "Linda bed"
+   ],
+   "note": "Suzanne page returned 503 → skipped.",
+   "disclaimer": "Not affiliated with or endorsed by Zinus.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "sauder",
+   "name": "Sauder",
+   "label": "Sauder®",
+   "tier": "big",
+   "site": "https://www.sauder.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Instruction book lookup/request by model number (/service/instruction-book-request)",
+   "access": "public",
+   "robots": "Disallows /Dimensions, /services/, /compare; spec panel loads from a disallowed endpoint so specs were NOT fetched",
+   "products": [
+    "Beginnings bookcases",
+    "Select bookcases",
+    "Cannery Bridge",
+    "standing desks"
+   ],
+   "note": "Facts from retailer listings via web search only → medium confidence, 1 piece.",
+   "disclaimer": "Not affiliated with or endorsed by Sauder.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "south-shore",
+   "name": "South Shore",
+   "label": "South Shore®",
+   "tier": "big",
+   "site": "https://www.southshorefurniture.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Product page assembly PDF / support \"Assembly instructions\" by model",
+   "access": "site returned 423 to our fetcher",
+   "robots": "n/a (blocked)",
+   "products": [
+    "Axess bookcase",
+    "Step One dresser",
+    "Libra"
+   ],
+   "note": "Site blocked (HTTP 423) → not crawled; 1 piece from retailer listings via web search, medium confidence.",
+   "disclaimer": "Not affiliated with or endorsed by South Shore.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "prepac",
+   "name": "Prepac",
+   "label": "Prepac®",
+   "tier": "big",
+   "site": "https://www.prepacmfg.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Product page \"Assembly Instructions\" PDF",
+   "access": "TLS connection refused for our fetcher",
+   "robots": "n/a (blocked)",
+   "products": [
+    "Sonoma/Fremont 6-drawer dresser",
+    "Elite storage",
+    "shoe cubbies"
+   ],
+   "note": "Site unreachable (TLS failure) → 1 piece from retailer listings via web search, medium confidence.",
+   "disclaimer": "Not affiliated with or endorsed by Prepac.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "closetmaid",
+   "name": "ClosetMaid (Home by Ames)",
+   "label": "ClosetMaid (Home by Ames)®",
+   "tier": "big",
+   "site": "https://www.homebyames.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Product page instructions PDF (Cubeicals)",
+   "access": "redirects closetmaid.com → homebyames.com",
+   "robots": "not crawled",
+   "products": [
+    "Cubeicals 9-cube",
+    "3-cube",
+    "6-cube"
+   ],
+   "note": "1 piece from retailer listings via web search, medium confidence.",
+   "disclaimer": "Not affiliated with or endorsed by Emerson / The Ames Companies.",
+   "checked": "unverified (general knowledge, site not checked)",
+   "short": "ClosetMaid"
+  },
+  {
+   "id": "bush",
+   "name": "Bush Furniture",
+   "label": "Bush Furniture®",
+   "tier": "big",
+   "site": "https://www.bushfurniture.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Assembly instructions by model in support section",
+   "access": "TLS/connection failure",
+   "robots": "n/a (blocked)",
+   "products": [
+    "Cabot",
+    "Somerset",
+    "Studio C desks"
+   ],
+   "note": "Site unreachable → queued.",
+   "disclaimer": "Not affiliated with or endorsed by Bush Furniture.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "hon",
+   "name": "HON",
+   "label": "HON®",
+   "tier": "big",
+   "site": "https://www.hon.com",
+   "status": "research-only",
+   "fit": 2,
+   "instructions": "Product documents / installation instructions per series",
+   "access": "public",
+   "robots": "Crawl-delay 60",
+   "products": [
+    "office desking",
+    "files"
+   ],
+   "note": "Mostly contract office furniture; low flat-pack fit.",
+   "disclaimer": "Not affiliated with or endorsed by HON.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "ashley",
+   "name": "Ashley (Signature Design RTA)",
+   "label": "Ashley (Signature Design RTA)®",
+   "tier": "big",
+   "site": "https://www.ashleyfurniture.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Assembly instructions linked on RTA product pages",
+   "access": "public",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Signature Design RTA dressers/bookcases"
+   ],
+   "note": "Mostly delivered assembled; queued.",
+   "disclaimer": "Not affiliated with or endorsed by Ashley (Signature Design RTA).",
+   "checked": "unverified (general knowledge, site not checked)",
+   "short": "Ashley"
+  },
+  {
+   "id": "wayfair",
+   "name": "Wayfair (incl. AllModern)",
+   "label": "Wayfair (incl. AllModern)®",
+   "tier": "big",
+   "site": "https://www.wayfair.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "Marketplace; manufacturer PDFs per listing",
+   "access": "HTTP 429 on home page",
+   "robots": "n/a (rate-limited)",
+   "products": [
+    "marketplace"
+   ],
+   "note": "Blocked → skipped. Marketplace, not a brand.",
+   "disclaimer": "Not affiliated with or endorsed by Wayfair (incl. AllModern).",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "target",
+   "name": "Target (Room Essentials, Threshold, Brightroom)",
+   "label": "Target (Room Essentials, Threshold, Brightroom)®",
+   "tier": "big",
+   "site": "https://www.target.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "\"Assembly instructions\" PDF links on some product pages",
+   "access": "JS-rendered pages",
+   "robots": "robots reachable; terms bar scraping",
+   "products": [
+    "Room Essentials 3-shelf bookcase",
+    "Brightroom cubes"
+   ],
+   "note": "Terms bar automated collection → no pieces.",
+   "disclaimer": "Not affiliated with or endorsed by Target (Room Essentials, Threshold, Brightroom).",
+   "checked": "verified 2026-10-23",
+   "short": "Target"
+  },
+  {
+   "id": "walmart",
+   "name": "Walmart (Mainstays)",
+   "label": "Walmart (Mainstays)®",
+   "tier": "big",
+   "site": "https://www.walmart.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Manuals linked on some listings; mainstays.com unreachable",
+   "access": "JS pages",
+   "robots": "Crawl-delay 5; terms bar scraping",
+   "products": [
+    "Mainstays 3/5-shelf bookcase",
+    "Mainstays 9-cube"
+   ],
+   "note": "Terms bar automated collection → no pieces.",
+   "disclaimer": "Not affiliated with or endorsed by Walmart (Mainstays).",
+   "checked": "verified 2026-10-23",
+   "short": "Walmart"
+  },
+  {
+   "id": "amazon",
+   "name": "Amazon Basics",
+   "label": "Amazon Basics®",
+   "tier": "big",
+   "site": "https://www.amazon.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "\"User Manual (PDF)\" under product docs",
+   "access": "202 bot challenge",
+   "robots": "n/a",
+   "products": [
+    "Amazon Basics desks/shelves"
+   ],
+   "note": "Bot challenge → skipped (no bypass).",
+   "disclaimer": "Not affiliated with or endorsed by Amazon.com, Inc..",
+   "checked": "verified 2026-10-23",
+   "short": "Amazon Basics"
+  },
+  {
+   "id": "home-depot",
+   "name": "The Home Depot (StyleWell, Hampton Bay)",
+   "label": "The Home Depot (StyleWell, Hampton Bay)®",
+   "tier": "big",
+   "site": "https://www.homedepot.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "\"Instructions / Assembly\" PDFs under Specifications",
+   "access": "HTTP 403",
+   "robots": "n/a (blocked)",
+   "products": [
+    "StyleWell"
+   ],
+   "note": "Blocked → skipped.",
+   "disclaimer": "Not affiliated with or endorsed by The Home Depot (StyleWell, Hampton Bay).",
+   "checked": "verified 2026-10-23",
+   "short": "The Home Depot"
+  },
+  {
+   "id": "west-elm",
+   "name": "West Elm",
+   "label": "West Elm®",
+   "tier": "medium",
+   "site": "https://www.westelm.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "Care & assembly PDFs on product pages",
+   "access": "HTTP 403",
+   "robots": "n/a (blocked)",
+   "products": [
+    "Mid-Century dresser"
+   ],
+   "note": "Blocked → skipped; most pieces arrive assembled.",
+   "disclaimer": "Not affiliated with or endorsed by West Elm.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "pottery-barn",
+   "name": "Pottery Barn",
+   "label": "Pottery Barn®",
+   "tier": "medium",
+   "site": "https://www.potterybarn.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "Assembly instructions on product pages",
+   "access": "HTTP 403",
+   "robots": "n/a (blocked)",
+   "products": [],
+   "note": "Blocked → skipped.",
+   "disclaimer": "Not affiliated with or endorsed by Pottery Barn.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "cb2",
+   "name": "CB2",
+   "label": "CB2®",
+   "tier": "medium",
+   "site": "https://www.cb2.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "Assembly PDFs on product pages",
+   "access": "HTTP 403 even on robots.txt",
+   "robots": "n/a (blocked)",
+   "products": [],
+   "note": "Blocked → skipped.",
+   "disclaimer": "Not affiliated with or endorsed by CB2.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "crate-barrel",
+   "name": "Crate & Barrel",
+   "label": "Crate & Barrel®",
+   "tier": "medium",
+   "site": "https://www.crateandbarrel.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "Assembly PDFs on product pages",
+   "access": "HTTP 403 even on robots.txt",
+   "robots": "n/a (blocked)",
+   "products": [],
+   "note": "Blocked → skipped.",
+   "disclaimer": "Not affiliated with or endorsed by Crate & Barrel.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "room-board",
+   "name": "Room & Board",
+   "label": "Room & Board®",
+   "tier": "medium",
+   "site": "https://www.roomandboard.com",
+   "status": "skipped",
+   "fit": 2,
+   "instructions": "Assembly instructions on product pages",
+   "access": "HTTP 403",
+   "robots": "Crawl-delay 10",
+   "products": [],
+   "note": "Blocked → skipped; mostly delivered assembled.",
+   "disclaimer": "Not affiliated with or endorsed by Room & Board.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "article",
+   "name": "Article",
+   "label": "Article®",
+   "tier": "medium",
+   "site": "https://www.article.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Assembly guides per product (help centre)",
+   "access": "public",
+   "robots": "Crawl-delay 1",
+   "products": [
+    "Sofas (bolt-on legs)",
+    "beds"
+   ],
+   "note": "Mostly upholstered; low archetype fit. Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Article.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "floyd",
+   "name": "Floyd",
+   "label": "Floyd®",
+   "tier": "medium",
+   "site": "https://floydhome.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Assembly videos/guides per product",
+   "access": "public",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Floyd Bed",
+    "Floyd Table",
+    "Shelving System"
+   ],
+   "note": "Good fit (bolt-together); queued.",
+   "disclaimer": "Not affiliated with or endorsed by Floyd.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "burrow",
+   "name": "Burrow",
+   "label": "Burrow®",
+   "tier": "medium",
+   "site": "https://burrow.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Assembly guides per product",
+   "access": "public",
+   "robots": "Crawl-delay 10",
+   "products": [
+    "Range shelving",
+    "Serif"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Burrow.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "tribesigns",
+   "name": "Tribesigns",
+   "label": "Tribesigns®",
+   "tier": "medium",
+   "site": "https://www.tribesigns.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Product page installation manual PDF on Shopify CDN",
+   "access": "public",
+   "robots": "Crawl-delay 10",
+   "products": [
+    "5-tier ladder bookshelf",
+    "computer desks",
+    "L-desks"
+   ],
+   "note": "One page returned 503 → skipped that item.",
+   "disclaimer": "Not affiliated with or endorsed by Tribesigns.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "nathan-james",
+   "name": "Nathan James",
+   "label": "Nathan James®",
+   "tier": "medium",
+   "site": "https://nathanjameshome.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Instructions in box; product pages list assembly minutes (no PDF seen)",
+   "access": "public",
+   "robots": "Crawl-delay 10; .json 404 so HTML specs used",
+   "products": [
+    "Theo ladder shelf",
+    "Parker desk",
+    "Haven bookcase",
+    "Andrew nightstand"
+   ],
+   "note": "",
+   "disclaimer": "Not affiliated with or endorsed by Nathan James.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "songmics",
+   "name": "SONGMICS / VASAGLE",
+   "label": "SONGMICS / VASAGLE®",
+   "tier": "medium",
+   "site": "https://www.songmics.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Manual PDFs on product pages / Amazon",
+   "access": "sitemap 503; vasagle.com TLS failure",
+   "robots": "Crawl-delay 10",
+   "products": [
+    "VASAGLE industrial bookcase",
+    "cube storage"
+   ],
+   "note": "Unreachable → queued.",
+   "disclaimer": "Not affiliated with or endorsed by Ziel Home Furnishing.",
+   "checked": "verified 2026-10-23",
+   "short": "VASAGLE"
+  },
+  {
+   "id": "flexispot",
+   "name": "FlexiSpot",
+   "label": "FlexiSpot®",
+   "tier": "medium",
+   "site": "https://www.flexispot.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Product page \"Downloads\" → E7 manual",
+   "access": "public",
+   "robots": "verified 2026-10-23",
+   "products": [
+    "E7 standing desk frame",
+    "E5",
+    "Comhar"
+   ],
+   "note": "",
+   "disclaimer": "Not affiliated with or endorsed by FlexiSpot.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "uplift",
+   "name": "UPLIFT Desk",
+   "label": "UPLIFT Desk®",
+   "tier": "medium",
+   "site": "https://www.upliftdesk.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Assembly & programming page + Specs/Assembly tab",
+   "access": "public",
+   "robots": "verified 2026-10-23",
+   "products": [
+    "UPLIFT V2 standing desk"
+   ],
+   "note": "",
+   "disclaimer": "Not affiliated with or endorsed by UPLIFT Desk.",
+   "checked": "verified 2026-10-23",
+   "short": "UPLIFT Desk"
+  },
+  {
+   "id": "bestar",
+   "name": "Bestar",
+   "label": "Bestar®",
+   "tier": "medium",
+   "site": "https://www.bestar.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Assembly instructions per model",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Pur murphy bed",
+    "Small Space desk"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Bestar.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "linon",
+   "name": "Linon",
+   "label": "Linon®",
+   "tier": "medium",
+   "site": "https://www.linon.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Assembly instructions per item",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "accent tables",
+    "bookcases"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Linon.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "delta-children",
+   "name": "Delta Children",
+   "label": "Delta Children®",
+   "tier": "medium",
+   "site": "https://www.deltachildren.com",
+   "status": "included",
+   "fit": 5,
+   "instructions": "Product page \"Assembly Instructions\" PDF on Shopify CDN + tips video",
+   "access": "public",
+   "robots": "Shopify default; allowed",
+   "products": [
+    "Rowen 4-drawer dresser",
+    "Haven 6-drawer dresser",
+    "Sutton dresser",
+    "toy organizers"
+   ],
+   "note": "",
+   "disclaimer": "Not affiliated with or endorsed by Delta Children.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "kidkraft",
+   "name": "KidKraft",
+   "label": "KidKraft®",
+   "tier": "medium",
+   "site": "https://www.kidkraft.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Instructions lookup by item number",
+   "access": "public",
+   "robots": "Crawl-delay 10",
+   "products": [
+    "play kitchens",
+    "bookcases"
+   ],
+   "note": "Toys dominate; queued.",
+   "disclaimer": "Not affiliated with or endorsed by KidKraft.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "furinno",
+   "name": "Furinno",
+   "label": "Furinno®",
+   "tier": "medium",
+   "site": "https://www.furinno.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Instructions on product pages",
+   "access": "sitemap 502",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Pasir 3-tier shelf",
+    "Turn-N-Tube"
+   ],
+   "note": "Server error → queued.",
+   "disclaimer": "Not affiliated with or endorsed by Furinno.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "seville",
+   "name": "Seville Classics",
+   "label": "Seville Classics®",
+   "tier": "medium",
+   "site": "https://www.sevilleclassics.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Manuals per product",
+   "access": "public",
+   "robots": "Crawl-delay 10",
+   "products": [
+    "UltraDurable shelving",
+    "Airlift desks"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Seville Classics.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "branch",
+   "name": "Branch",
+   "label": "Branch®",
+   "tier": "small",
+   "site": "https://www.branchfurniture.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Assembly guides per product",
+   "access": "public",
+   "robots": "Crawl-delay 10",
+   "products": [
+    "Ergonomic chair",
+    "Duo standing desk"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Branch.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "thuma",
+   "name": "Thuma",
+   "label": "Thuma®",
+   "tier": "small",
+   "site": "https://www.thuma.co",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Tool-free assembly guide/video (\"The Bed\")",
+   "access": "public",
+   "robots": "Crawl-delay 10",
+   "products": [
+    "The Bed",
+    "Nightstand"
+   ],
+   "note": "Joinery bed needs a new archetype; queued.",
+   "disclaimer": "Not affiliated with or endorsed by Thuma.",
+   "checked": "verified 2026-10-23"
+  },
+  {
+   "id": "sabai",
+   "name": "Sabai",
+   "label": "Sabai®",
+   "tier": "small",
+   "site": "https://sabai.design",
+   "status": "research-only",
+   "fit": 2,
+   "instructions": "Assembly videos",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Essential sofa"
+   ],
+   "note": "Upholstered; low fit.",
+   "disclaimer": "Not affiliated with or endorsed by Sabai.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "hem",
+   "name": "Hem",
+   "label": "Hem®",
+   "tier": "small",
+   "site": "https://hem.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Assembly instructions per product",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Palissade",
+    "Kazimir"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Hem.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "castlery",
+   "name": "Castlery",
+   "label": "Castlery®",
+   "tier": "small",
+   "site": "https://www.castlery.com",
+   "status": "research-only",
+   "fit": 2,
+   "instructions": "Assembly guides per product",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Dawson"
+   ],
+   "note": "Mostly upholstered; low fit.",
+   "disclaimer": "Not affiliated with or endorsed by Castlery.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "hodedah",
+   "name": "Hodedah",
+   "label": "Hodedah®",
+   "tier": "small",
+   "site": "https://www.hodedah.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Instructions PDFs per item",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "dressers",
+    "bookcases"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Hodedah.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "yaheetech",
+   "name": "Yaheetech",
+   "label": "Yaheetech®",
+   "tier": "small",
+   "site": "https://www.yaheetech.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Manuals on Amazon/product pages",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "bookcases",
+    "desks"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by Yaheetech.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "autonomous",
+   "name": "Autonomous",
+   "label": "Autonomous®",
+   "tier": "small",
+   "site": "https://www.autonomous.ai",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Assembly guide per desk",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "SmartDesk Core"
+   ],
+   "note": "Standing desk archetype ready; queued.",
+   "disclaimer": "Not affiliated with or endorsed by Autonomous.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "vivo",
+   "name": "VIVO",
+   "label": "VIVO®",
+   "tier": "small",
+   "site": "https://www.vivo-us.com",
+   "status": "research-only",
+   "fit": 4,
+   "instructions": "Manuals per SKU",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "desk frames",
+    "monitor mounts"
+   ],
+   "note": "Queued.",
+   "disclaimer": "Not affiliated with or endorsed by VIVO.",
+   "checked": "unverified (general knowledge, site not checked)"
+  },
+  {
+   "id": "fully",
+   "name": "Fully (Herman Miller)",
+   "label": "Fully (Herman Miller)®",
+   "tier": "small",
+   "site": "https://www.fully.com",
+   "status": "research-only",
+   "fit": 3,
+   "instructions": "Jarvis desk assembly guide",
+   "access": "unverified (general knowledge, site not checked)",
+   "robots": "unverified (general knowledge, site not checked)",
+   "products": [
+    "Jarvis desk"
+   ],
+   "note": "Jarvis now sold via Herman Miller; queued.",
+   "disclaimer": "Not affiliated with or endorsed by Fully (Herman Miller).",
+   "checked": "unverified (general knowledge, site not checked)",
+   "short": "Fully"
+  }
+ ]
+}

@@ -4,6 +4,9 @@
   "slug": "hemnes-bookcase",
   "name": "HEMNES",
   "title": "Bookcase",
+  "brand": "IKEA",
+  "brandId": "ikea",
+  "disclaimer": "Not affiliated with or endorsed by Inter IKEA Systems B.V..",
   "worksWith": "IKEA® HEMNES bookcase, 90×37×197 cm (35⅜×14⅝×77½\")",
   "productUrl": "https://www.ikea.com/us/en/p/hemnes-bookcase-white-stain-90371765/",
   "size": [

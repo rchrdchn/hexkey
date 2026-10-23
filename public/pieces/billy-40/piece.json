@@ -4,6 +4,9 @@
   "slug": "billy-40",
   "name": "BILLY",
   "title": "Narrow bookcase",
+  "brand": "IKEA",
+  "brandId": "ikea",
+  "disclaimer": "Not affiliated with or endorsed by Inter IKEA Systems B.V..",
   "worksWith": "IKEA® BILLY bookcase, 40×28×202 cm (15¾×11×79½\")",
   "productUrl": "https://www.ikea.com/us/en/p/billy-bookcase-white-50522040/",
   "size": [

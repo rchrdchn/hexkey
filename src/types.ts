@@ -11,7 +11,7 @@ export interface EnvDef { id: string; size: V3; pos: V3; color?: string }
 export type Category = 'shelving' | 'dressers' | 'bedroom' | 'storage' | 'tables' | 'desks' | 'kids';
 /** One row of public/pieces/catalog.json: just enough to draw the picker without loading every piece. */
 export interface CatalogEntry {
-  slug: string; name: string; title: string; category: Category; archetype: string; confidence: 'high' | 'medium' | 'low';
+  slug: string; name: string; title: string; brand: string; brandId: string; category: Category; archetype: string; confidence: 'high' | 'medium' | 'low';
   size: V3; minutes: number; people: number; level: number; color: string; steps: number; pieces: number; hardware: number; tags: string[];
 }
 export interface HwUse { id: string; axis: string; at?: V3[]; line?: [V3, V3]; n?: number; spin?: boolean; count?: number }
@@ -28,6 +28,7 @@ export interface StepDef {
 }
 export interface PieceDef {
   slug: string; name: string; title: string; worksWith: string; productUrl: string;
+  brand?: string; brandId?: string; disclaimer?: string; instructionsUrl?: string;
   size: V3; minutes: number; people: number; level: number; color: string;
   parts: PartDef[]; hardware: HwDef[]; objects: ObjectDef[]; steps: StepDef[]; done: string;
   env?: EnvDef[]; category?: Category; archetype?: string; confidence?: 'high' | 'medium' | 'low'; sources?: string[]; notes?: string;

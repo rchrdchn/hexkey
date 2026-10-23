@@ -16,6 +16,9 @@ const CHECK = process.argv.includes('--check');
 export const ARCHETYPES = { chest, bookcase, cubes, table, 'apron-table': apronTable, desk, 'wall-shelf': wallShelf, bed, crib, ladder, stool };
 /** Hand-authored pieces keep their order at the front. */
 const HAND = ['lack', 'kallax', 'billy'];
+/** Brands (id -> label + not-affiliated line) come from the research file data/sources/brands.json. */
+export const BRANDS = Object.fromEntries(JSON.parse(readFileSync(join(root, 'data/sources/brands.json'), 'utf8')).brands.map((b) => [b.id, b]));
+const brandOf = (id = 'ikea') => { const b = BRANDS[id]; if (!b) throw new Error(`unknown brand "${id}" (add it to data/sources/brands.json)`); return b; };
 const HAND_META = {
   lack: { category: 'tables', archetype: 'hand-made', confidence: 'high' },
   kallax: { category: 'shelving', archetype: 'hand-made', confidence: 'high' },
@@ -49,7 +52,9 @@ export function generate(spec) {
   const piece = {
     $schema: '../../../schema/piece.schema.json',
     $generated: `from catalog/${spec.slug}.json by scripts/generate.mjs (archetype "${spec.archetype}"). Edit the spec, not this file.`,
-    slug: spec.slug, name: spec.name, title: spec.title, worksWith: spec.worksWith, productUrl: spec.productUrl,
+    slug: spec.slug, name: spec.name, title: spec.title, brand: brandOf(spec.brand).short ?? brandOf(spec.brand).name, brandId: spec.brand ?? 'ikea',
+    disclaimer: brandOf(spec.brand).disclaimer, worksWith: spec.worksWith, productUrl: spec.productUrl,
+    ...(spec.instructionsUrl ? { instructionsUrl: spec.instructionsUrl } : {}),
     size, minutes: 0, people: 1, level: 1, color: spec.color ?? '#f3efe8',
     category: spec.category, archetype: spec.archetype, confidence: spec.confidence, sources: spec.sources,
     ...(b.env.length ? { env: b.env } : {}),
@@ -65,10 +70,10 @@ function summary(p, meta = {}) {
   let hw = 0;
   for (const s of p.steps) for (const u of s.hardware ?? []) hw += u.count ?? u.at?.length ?? u.n ?? 0;
   return {
-    slug: p.slug, name: p.name, title: p.title, category: p.category ?? meta.category, archetype: p.archetype ?? meta.archetype,
+    slug: p.slug, name: p.name, title: p.title, brand: p.brand ?? 'IKEA', brandId: p.brandId ?? 'ikea', category: p.category ?? meta.category, archetype: p.archetype ?? meta.archetype,
     confidence: p.confidence ?? meta.confidence, size: p.size, minutes: p.minutes, people: p.people, level: p.level, color: p.color,
     steps: p.steps.length, pieces: p.objects.length, hardware: hw,
-    tags: [p.name.toLowerCase(), p.title.toLowerCase(), ...(meta.tags ?? [])],
+    tags: [p.name.toLowerCase(), p.title.toLowerCase(), (p.brand ?? 'IKEA').toLowerCase(), ...(meta.tags ?? [])],
   };
 }
 
@@ -85,6 +90,7 @@ function put(path, text) {
 
 const specs = readdirSync(join(root, 'catalog')).filter((f) => f.endsWith('.json')).sort().map((f) => {
   const s = JSON.parse(readFileSync(join(root, 'catalog', f), 'utf8'));
+  brandOf(s.brand);
   if (s.slug !== f.replace(/\.json$/, '')) throw new Error(`catalog/${f}: slug must match file name`);
   return s;
 });

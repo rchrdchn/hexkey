@@ -4,6 +4,9 @@
   "slug": "kallax-2x4",
   "name": "KALLAX",
   "title": "Shelf unit 2×4",
+  "brand": "IKEA",
+  "brandId": "ikea",
+  "disclaimer": "Not affiliated with or endorsed by Inter IKEA Systems B.V..",
   "worksWith": "IKEA® KALLAX shelf unit, 77×39×147 cm (30⅜×15⅜×57⅞\")",
   "productUrl": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-20631663/",
   "size": [

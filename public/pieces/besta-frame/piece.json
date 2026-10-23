@@ -4,6 +4,9 @@
   "slug": "besta-frame",
   "name": "BESTÅ",
   "title": "Frame",
+  "brand": "IKEA",
+  "brandId": "ikea",
+  "disclaimer": "Not affiliated with or endorsed by Inter IKEA Systems B.V..",
   "worksWith": "IKEA® BESTÅ frame, 60×40×64 cm (23⅝×15¾×25¼\")",
   "productUrl": "https://www.ikea.com/us/en/p/besta-frame-white-30245850/",
   "size": [

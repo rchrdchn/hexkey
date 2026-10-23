@@ -295,7 +295,7 @@ export default function App() {
                 {I.next}
               </button>
               <p className="legal">
-                Works with IKEA® furniture. Not affiliated with or endorsed by Inter IKEA Systems B.V. Demo steps: always follow the official instructions in your box.
+                Works with furniture from IKEA® and other brands. Not affiliated with or endorsed by any of them. Demo steps: always follow the official instructions in your box.
               </p>
             </div>
           )}
@@ -411,8 +411,9 @@ function Ring({ n, of }: { n: number; of: number }) {
 function Legal({ p }: { p: Piece }) {
   return (
     <p className="legal">
-      Works with {p.worksWith}. Not affiliated with or endorsed by Inter IKEA Systems B.V. Demo steps: always follow the{' '}
-      <a href={p.productUrl} target="_blank" rel="noopener noreferrer">official instructions ↗</a>
+      Works with {p.worksWith}. {p.disclaimer ?? 'Not affiliated with or endorsed by Inter IKEA Systems B.V.'} Demo steps: always follow the{' '}
+      <a href={p.instructionsUrl ?? p.productUrl} target="_blank" rel="noopener noreferrer">official instructions ↗</a>
+      {p.instructionsUrl && <>{' · '}<a href={p.productUrl} target="_blank" rel="noopener noreferrer">product page ↗</a></>}
     </p>
   );
 }

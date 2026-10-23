@@ -7,6 +7,8 @@ const slugs = JSON.parse(fs.readFileSync(`${root}public/pieces/index.json`, 'utf
 const KINDS = ['dowel', 'campin', 'cam', 'screw', 'nail', 'bolt', 'shelfpin', 'bracket', 'hinge', 'knob'];
 const CATEGORIES = ['shelving', 'dressers', 'bedroom', 'storage', 'tables', 'desks', 'kids'];
 const AXES = ['+x', '-x', '+y', '-y', '+z', '-z'];
+const BRANDS = Object.fromEntries(JSON.parse(fs.readFileSync(`${root}data/sources/brands.json`, 'utf8')).brands.map((b) => [b.id, b]));
+const host = (u) => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch { return ''; } };
 let errors = 0, warns = 0;
 const err = (s, m) => { errors++; console.error(`✗ ${s}: ${m}`); };
 const warn = (s, m) => { warns++; console.warn(`! ${s}: ${m}`); };
@@ -21,8 +23,18 @@ for (const slug of slugs) {
   try { p = JSON.parse(fs.readFileSync(f, 'utf8')); } catch (e) { err(slug, `cannot read ${f}: ${e.message}`); continue; }
   if (p.slug !== slug) err(slug, `slug "${p.slug}" must match folder`);
   for (const k of ['name', 'title', 'worksWith', 'productUrl', 'done']) if (typeof p[k] !== 'string' || !p[k]) err(slug, `missing ${k}`);
-  if (!/^https:\/\/www\.ikea\.com\/[a-z]{2}\/[a-z]{2}\/p\//.test(p.productUrl || '')) err(slug, 'productUrl must be an ikea.com product page (/p/), never a PDF or asset');
-  if (!/IKEA®/.test(p.worksWith || '')) warn(slug, 'worksWith should say "IKEA® <NAME> ..."');
+  const brand = BRANDS[p.brandId || 'ikea'];
+  if (!brand) err(slug, `brandId "${p.brandId}" is not in data/sources/brands.json`);
+  else if (!p.disclaimer || !p.brand) err(slug, 'brand and disclaimer are required (run npm run gen)');
+  if ((p.brandId || 'ikea') === 'ikea') {
+    if (!/^https:\/\/www\.ikea\.com\/[a-z]{2}\/[a-z]{2}\/p\//.test(p.productUrl || '')) err(slug, 'productUrl must be an ikea.com product page (/p/), never a PDF or asset');
+    if (!/IKEA®/.test(p.worksWith || '')) warn(slug, 'worksWith should say "IKEA® <NAME> ..."');
+  } else if (brand) {
+    const h = host(p.productUrl), site = host(brand.site);
+    if (!/^https:\/\//.test(p.productUrl || '') || !(h === site || h.endsWith('.' + site)) || /\.pdf($|\?)/i.test(p.productUrl)) err(slug, `productUrl must be a ${site} product page, never a PDF or asset`);
+    if (!/®/.test(p.worksWith || '')) warn(slug, `worksWith should say "${brand.label} <PRODUCT> ..."`);
+  }
+  if (p.instructionsUrl && !/^https?:\/\//.test(p.instructionsUrl)) err(slug, 'instructionsUrl must be a link to the brand\'s own instructions (we link, never rehost)');
   if (p.$generated) {
     if (!CATEGORIES.includes(p.category)) err(slug, `category must be one of ${CATEGORIES}`);
     if (!['high', 'medium', 'low'].includes(p.confidence)) err(slug, 'confidence must be high, medium or low');

@@ -4,6 +4,9 @@
   "slug": "ingo",
   "name": "INGO",
   "title": "Table",
+  "brand": "IKEA",
+  "brandId": "ikea",
+  "disclaimer": "Not affiliated with or endorsed by Inter IKEA Systems B.V..",
   "worksWith": "IKEA® INGO table, 120×75×73 cm (47¼×29½×28¾\")",
   "productUrl": "https://www.ikea.com/sg/en/p/ingo-bord-furu-14630009/",
   "size": [

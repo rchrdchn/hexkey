@@ -193,7 +193,7 @@ export function ContributeModal({ onClose, toRequest }: { onClose: () => void; t
 
       <label className="own">
         <input type="checkbox" checked={ownWords} onChange={(e) => setOwnWords(e.target.checked)} />
-        <span>I'll write steps in my own words and never upload IKEA manuals, PDFs or images.</span>
+        <span>I'll write steps in my own words and never upload any brand's manuals, PDFs or images.</span>
       </label>
 
       {v?.k === 'request' && p.state === 'ok'
