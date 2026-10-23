@@ -21,17 +21,26 @@ for (const eng of engines) {
   ];
   for (const [name, opts] of profiles) {
     if (eng === 'chromium') delete opts.defaultBrowserType;
-    const ctx = await browser.newContext({ ...opts });
-    const page = await ctx.newPage();
-    let cur = '';
-    page.on('console', (m) => { if (m.type() === 'error') errors.push(`[${eng}/${name}/${cur}] ${m.text()}`); });
-    page.on('pageerror', (e) => errors.push(`[${eng}/${name}/${cur}] pageerror: ${e.message}`));
+    // Fresh context every RECYCLE pieces: headless WebKit (software GL) runs out of memory after ~10 pieces in one tab.
+    const RECYCLE = Number(process.env.RECYCLE || 6);
+    let ctx, page, cur = '';
+    const open = async () => {
+      if (ctx) await ctx.close();
+      ctx = await browser.newContext({ ...opts });
+      page = await ctx.newPage();
+      page.on('console', (m) => { if (m.type() === 'error') errors.push(`[${eng}/${name}/${cur}] ${m.text()}`); });
+      page.on('crash', () => errors.push(`[${eng}/${name}/${cur}] page crashed`));
+      page.on('pageerror', (e) => errors.push(`[${eng}/${name}/${cur}] pageerror: ${e.message}`));
+    };
+    await open();
     const shot = (label) => page.screenshot({ path: `${out}/${eng}-${name}-${label}.png` });
     await page.goto(base + '/#/');
     await page.waitForSelector('.card[data-slug]');
     await sleep(2500);
     await shot('00-pick');
+    let done = 0;
     for (const slug of slugs) {
+      if (done++ && done % RECYCLE === 1) await open();
       cur = slug;
       const t0 = Date.now();
       await page.goto(`${base}/#/`);
@@ -62,12 +71,12 @@ for (const eng of engines) {
       await shot(`${slug}-3-done`);
       const confetti = await page.locator('canvas').count();
       report[`${eng}/${name}/${slug}`] = { steps, parts: n, safety, hwChips: hw, canvases: confetti, ms: Date.now() - t0 };
-      console.log(eng, name, slug, JSON.stringify(report[`${eng}/${name}/${slug}`]));
+      console.log(eng, name, slug, JSON.stringify(report[`${eng}/${name}/${slug}`]), errors.length ? `errors so far: ${errors.length}` : '');
     }
     await ctx.close();
   }
   await browser.close();
 }
-fs.writeFileSync(`${out}/report.json`, JSON.stringify({ errors, report }, null, 1));
+fs.writeFileSync(`${out}/report-${engines.join("-")}.json`, JSON.stringify({ errors, report }, null, 1));
 console.log(errors.length ? `\n${errors.length} console error(s):\n${errors.join('\n')}` : '\nno console errors');
 process.exit(errors.length ? 1 : 0);
