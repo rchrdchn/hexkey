@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-ark-executive-63x29",
+  "name": "ARK",
+  "title": "Executive standing desk 63\"",
+  "brand": "eureka",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    160.0,
+    74.0,
+    71.1
+  ],
+  "worksWith": "Eureka Ergonomic® Ark executive standing desk 63×29\", 63×29.125×28–49.19\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/modern-standing-desk-walnut-63",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/602-09-0849-ERK-ED-TX63-WN-TX63_-20241016_compressed.pdf?v=1740213048",
+  "color": "#6e4a2e",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/modern-standing-desk-walnut-63"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 12
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "walnut",
+    "executive",
+    "drawers",
+    "eureka"
+  ],
+  "notes": "Brand page: 63\" L × 29 1/8\" W, height 28–49 3/16\", two soft-close drawers, crossbar, walnut veneer. We show the drawers as part of the top. Shown at sitting height.",
+  "people": 2,
+  "minutes": 45
+}

@@ -1,12 +1,15 @@
 // Brand picker checks on WebKit iPhone 15 + Chromium desktop: brand chips filter the list, search finds brands,
 // cards show the brand, the guide's legal line names the right brand and links its own instructions, no console errors, no sideways overflow.
-// Usage: node scripts/shots-brands.mjs [baseUrl] [outDir] [chipBrands=walker-edison,zinus] [searchBrand=tribesigns]
+// Usage: node scripts/shots-brands.mjs [baseUrl] [outDir] [chipBrands=walker-edison,zinus] [searchBrand=tribesigns] [pieces=slug|Brand word|instructions host;...]
 import { chromium, webkit, devices } from 'playwright';
 import fs from 'node:fs';
 const base = process.argv[2] || 'http://localhost:4173';
 const out = process.argv[3] || 'shots/brands';
 const chipBrands = (process.argv[4] || 'walker-edison,zinus').split(',');
 const searchBrand = process.argv[5] || 'tribesigns';
+const openPieces = process.argv[6]
+  ? process.argv[6].split(';').map((x) => x.split('|'))
+  : [['zinus-mia-queen', 'Zinus', 'cdn.shopify.com'], ['we-holmes-bookcase-wide', 'Walker Edison', 'images.salsify.com'], ['flexispot-e7', 'FlexiSpot', 'flexispot.com']];
 fs.mkdirSync(out, { recursive: true });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const cat = JSON.parse(fs.readFileSync(new URL('../public/pieces/catalog.json', import.meta.url)));
@@ -56,7 +59,7 @@ for (const [eng, name, bt, opts] of runs) {
   ok(await overflow() <= 0, `${tag} no sideways overflow after search`);
   // open a piece and check its legal line
   await page.locator('.search input').fill('');
-  for (const [slug, brandWord, host] of [['zinus-mia-queen', 'Zinus', 'cdn.shopify.com'], ['we-holmes-bookcase-wide', 'Walker Edison', 'images.salsify.com'], ['flexispot-e7', 'FlexiSpot', 'flexispot.com']]) {
+  for (const [slug, brandWord, host] of openPieces) {
     await page.goto(`${base}/#pieces`);
     await page.waitForSelector(`.card[data-slug="${slug}"]`);
     await page.locator(`.card[data-slug="${slug}"]`).click();

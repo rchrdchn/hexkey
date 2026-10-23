@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-ark-sd-55x24",
+  "name": "ARK SD",
+  "title": "Standing desk 55\" with drawer",
+  "brand": "eureka",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    141.8,
+    62.2,
+    75.2
+  ],
+  "worksWith": "Eureka Ergonomic® Ark SD standing desk 55×24\", 55.81×24.5×29.62–48\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/ark-sd-standing-desk-55x24",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/Assembly_Instruction--ERK-SD07-SM55.pdf?v=1770712677",
+  "color": "#cbb69a",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/ark-sd-standing-desk-55x24"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 10
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "drawer",
+    "eureka"
+  ],
+  "notes": "Brand page: 55.81\" L × 24.5\" W, height 29.62–48\", one built-in drawer under the top. We show the drawer as part of the top. Shown at sitting height.",
+  "people": 2,
+  "minutes": 45
+}

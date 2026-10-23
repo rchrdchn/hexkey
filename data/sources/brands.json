@@ -437,17 +437,18 @@
    "site": "https://floydhome.com",
    "status": "research-only",
    "fit": 4,
-   "instructions": "Assembly videos/guides per product",
-   "access": "public",
-   "robots": "unverified (general knowledge, site not checked)",
+   "instructions": "Assembly page (/pages/assembly) plus per-product PDF guides and videos linked from product pages",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed (10 s between requests)",
    "products": [
     "Floyd Bed",
-    "Floyd Table",
-    "Shelving System"
+    "Modular Table",
+    "Lift Off coffee table",
+    "Short and Tall Shelf"
    ],
-   "note": "Good fit (bolt-together); queued.",
+   "note": "Checked in batch 2 and left queued: tables use clamp-on legs and lift-off end supports, the shelves are post-and-panel kits. None match an archetype yet, so our steps would be wrong.",
    "disclaimer": "Not affiliated with or endorsed by Floyd.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-23"
   },
   {
    "id": "burrow",
@@ -947,6 +948,51 @@
    "checked": "verified 2026-10-23",
    "short": "Max & Lily",
    "disclaimer": "Not affiliated with or endorsed by Max & Lily."
+  },
+  {
+   "id": "eureka",
+   "name": "Eureka Ergonomic",
+   "label": "Eureka Ergonomic®",
+   "tier": "medium",
+   "site": "https://eurekaergonomic.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Per-product assembly PDF linked from each product page (hosted on the brand's Shopify CDN)",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed (10 s between requests)",
+   "products": [
+    "Norwood, Ark SD, Ark Lite and Ark Executive standing desks",
+    "leather-finish standing desk",
+    "L-shaped and executive desks with cabinets",
+    "gaming desks"
+   ],
+   "note": "Electric dual-motor standing desks; overall L×W×H and lift range on each page. Desks with built-in drawers are shown with the drawers simplified into the top. L-shaped, cabinet and glass gaming desks skipped (no archetype yet).",
+   "checked": "verified 2026-10-23",
+   "short": "Eureka Ergonomic",
+   "disclaimer": "Not affiliated with or endorsed by Eureka Ergonomic."
+  },
+  {
+   "id": "ecr4kids",
+   "name": "ECR4Kids",
+   "label": "ECR4Kids®",
+   "tier": "medium",
+   "site": "https://ecr4kids.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "\"Assembly Instructions\" PDF linked from each product page (hosted on Salsify)",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed (10 s between requests)",
+   "products": [
+    "Sleekline storage cabinets 24/30/36\" H",
+    "Sleekline cubby cabinets 2×5, 3×4, 3×5",
+    "coat lockers",
+    "book displays",
+    "student desks"
+   ],
+   "note": "Classroom and kids' storage in birch plywood; W×D×H on each page. Cubby cabinets queued (cubbies are not square, our cubes archetype needs square cells); BrightSpace desk skipped (page calls it a floor table but lists a 25\" height).",
+   "checked": "verified 2026-10-23",
+   "short": "ECR4Kids",
+   "disclaimer": "Not affiliated with or endorsed by ECR4Kids."
   }
  ]
 }

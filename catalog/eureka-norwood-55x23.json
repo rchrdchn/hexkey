@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-norwood-55x23",
+  "name": "NORWOOD",
+  "title": "Standing desk 55\"",
+  "brand": "eureka",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    140.0,
+    60.0,
+    75.0
+  ],
+  "worksWith": "Eureka Ergonomic® Norwood standing desk 55×23\", 55.12×23.62×29.53–48.03\" (W×D×H)",
+  "productUrl": "https://eurekaergonomic.com/products/norwood-standing-desk-55x23",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/ERK-SD14-DM55-WN-US-SD14.pdf?v=1789977578",
+  "color": "#7a5536",
+  "confidence": "medium",
+  "sources": [
+    "https://eurekaergonomic.com/products/norwood-standing-desk-55x23"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 10
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "walnut",
+    "eureka"
+  ],
+  "notes": "Brand page: 55.12\" W × 23.62\" D, height 29.53–48.03\", dual motors, 220 lb capacity, 1\" (25 mm) top. Ships in two boxes. Shown at sitting height.",
+  "people": 2,
+  "minutes": 45
+}

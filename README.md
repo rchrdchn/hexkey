@@ -3,9 +3,9 @@
 **Flat-pack, talked through.** Hexkey is an open-source, voice-guided 3D assembly guide for flat-pack furniture.
 Pick your piece, check off what's in the box, then build it step by step. A voice tells you what to do, the 3D model shows you, and you can keep your hands on the furniture.
 
-> Works with 120 pieces from 22 brands:
+> Works with 128 pieces from 24 brands:
 > - **35 IKEA® pieces:** LACK, KALLAX, BILLY, MALM, HEMNES, ALEX, BRIMNES, TARVA, RAST, GURSKEN, IVAR, BESTÅ, TROFAST, SNIGLAR, BEKVÄM, INGO, MICKE and LAGKAPTEN/ADILS.
-> - **85 pieces from 21 other brands:** Walker Edison®, Ameriwood Home® and Novogratz® (Dorel Home), Zinus®, Sauder®, South Shore®, Prepac®, ClosetMaid®, Tribesigns®, Nathan James®, VASAGLE® (SONGMICS), FlexiSpot®, UPLIFT Desk®, Bestar®, Linon®, Delta Children®, Seville Classics®, Branch®, VIVO®, Storkcraft®, Plank+Beam® and Max & Lily®.
+> - **93 pieces from 23 other brands:** Walker Edison®, Ameriwood Home® and Novogratz® (Dorel Home), Zinus®, Sauder®, South Shore®, Prepac®, ClosetMaid®, Tribesigns®, Nathan James®, VASAGLE® (SONGMICS), FlexiSpot®, UPLIFT Desk®, Bestar®, Linon®, Delta Children®, Seville Classics®, Branch®, VIVO®, Storkcraft®, Plank+Beam®, Max & Lily®, Eureka Ergonomic® and ECR4Kids®.
 >
 > **Hexkey is not affiliated with, sponsored by or endorsed by any of these brands** (Inter IKEA Systems B.V., Dorel Industries and the others listed in [data/sources/brands.json](data/sources/brands.json)).
 > The steps here are our own and are a demo. Always follow the official instructions that came in your box.
@@ -16,7 +16,7 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 
 ## What's in the catalog
 
-120 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 117 (32 IKEA, 85 from other brands) are generated from short specs by [archetypes](docs/ARCHETYPES.md).
+128 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 125 (32 IKEA, 93 from other brands) are generated from short specs by [archetypes](docs/ARCHETYPES.md).
 Confidence says how sure we are about the internals: **high** = dimensions and construction match the product page; **medium** = dimensions right, drawer/shelf layout or hardware counts are our best guess; **low** = simplified. Every guide is a demo: always follow the official instructions in your box. The app does not show confidence badges; instead every parts list says counts are our best estimate.
 
 | Piece | Category | Steps | Parts | Hardware | Built by | Confidence |
@@ -252,10 +252,10 @@ Units are **centimeters**, angles are **degrees**. Axes: **x** to the right, **y
 
 ## Trademarks and disclaimer
 
-IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. Walker Edison, Ameriwood Home, Novogratz, Zinus, Sauder, South Shore, Prepac, ClosetMaid, Tribesigns, Nathan James, VASAGLE, SONGMICS, FlexiSpot, UPLIFT Desk, Bestar, Linon, Delta Children, Seville Classics, Branch, VIVO, Storkcraft, Plank+Beam, Max & Lily and their product names are trademarks of their respective owners. They are used here only to say which products these guides are written for.
+IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. Walker Edison, Ameriwood Home, Novogratz, Zinus, Sauder, South Shore, Prepac, ClosetMaid, Tribesigns, Nathan James, VASAGLE, SONGMICS, FlexiSpot, UPLIFT Desk, Bestar, Linon, Delta Children, Seville Classics, Branch, VIVO, Storkcraft, Plank+Beam, Max & Lily, Eureka Ergonomic, ECR4Kids and their product names are trademarks of their respective owners. They are used here only to say which products these guides are written for.
 Hexkey is an independent project and is **not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V. or any other brand named here.** It contains no manufacturer instructions, drawings, images or 3D models; every model is built in code from public dimensions and every step is written from scratch. Each piece links to its brand's own product page and, where public, the brand's own instructions.
 
 ### Brand research
 
-`data/sources/brands.json` lists 48 furniture brands (big, medium and small/direct-to-consumer): where each one keeps its assembly instructions, whether they're public, robots.txt and terms notes, popular flat-pack products and a 1–5 fit score for Hexkey's archetypes. `status` is `included` (pieces in the catalog), `research-only` (queued) or `skipped` (the site blocked our polite fetcher, or its terms bar automated collection).
+`data/sources/brands.json` lists 50 furniture brands (big, medium and small/direct-to-consumer): where each one keeps its assembly instructions, whether they're public, robots.txt and terms notes, popular flat-pack products and a 1–5 fit score for Hexkey's archetypes. `status` is `included` (pieces in the catalog), `research-only` (queued) or `skipped` (the site blocked our polite fetcher, or its terms bar automated collection).
 The guides are provided as-is. Check your parts against the official instructions, anchor tall furniture to the wall, and get help for heavy lifts.

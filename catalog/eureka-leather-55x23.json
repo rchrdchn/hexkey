@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-leather-55x23",
+  "name": "CLASSIC LEATHER",
+  "title": "Standing desk 55\" with drawers",
+  "brand": "eureka",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    139.7,
+    59.9,
+    86.4
+  ],
+  "worksWith": "Eureka Ergonomic® faux saddle leather standing desk 55×23\", 55×23.6×34–52\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/ed-i55-lwn-standing-desk-leather-walnut-55",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/ERK-ED-I55-LWN-Assembly_Manual.pdf?v=1713170968",
+  "color": "#8a5a35",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/ed-i55-lwn-standing-desk-leather-walnut-55"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 10
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "leather",
+    "drawers",
+    "eureka"
+  ],
+  "notes": "Brand page: 55\" L × 23.6\" W, height 34–52\", faux saddle-leather finish, soft-close drawers, built-in outlet, USB and wireless charger, movable monitor shelf. Drawers and shelf are not modelled. Shown at its lowest height.",
+  "people": 2,
+  "minutes": 45
+}

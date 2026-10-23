@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-ark-lite-63x27",
+  "name": "ARK LITE",
+  "title": "Standing desk 63\"",
+  "brand": "eureka",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    160.0,
+    70.0,
+    75.3
+  ],
+  "worksWith": "Eureka Ergonomic® Ark Lite standing desk 63×27\", 62.99×27.56×29.65–48.07\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/ark-lite-63x29-standing-desk",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/ERK-OD08-C_-_Aftersale_Instruction.pdf?v=1734578913",
+  "color": "#5b4636",
+  "confidence": "medium",
+  "sources": [
+    "https://eurekaergonomic.com/products/ark-lite-63x29-standing-desk"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 12
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "large",
+    "eureka"
+  ],
+  "notes": "Brand page: 62.99\" L × 27.56\" W, height 29.65–48.07\", dual motors, 220 lb capacity, two programmable heights. Shown at sitting height.",
+  "people": 2,
+  "minutes": 45
+}

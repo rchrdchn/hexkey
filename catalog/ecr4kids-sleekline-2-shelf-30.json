@@ -1,0 +1,44 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ecr4kids-sleekline-2-shelf-30",
+  "name": "SLEEKLINE",
+  "title": "2-shelf storage cabinet 30\"",
+  "brand": "ecr4kids",
+  "archetype": "bookcase",
+  "category": "kids",
+  "size": [
+    91.4,
+    30.5,
+    76.2
+  ],
+  "worksWith": "ECR4Kids® Sleekline 2-shelf storage cabinet, 36×12×30\" (W×D×H)",
+  "productUrl": "https://ecr4kids.com/products/sleekline-2-shelf-storage-cabinet-30in-h",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--ROxn3aUE--/lod5j5gqvcrkizrmjbvu.pdf",
+  "color": "#e8d3b0",
+  "confidence": "medium",
+  "sources": [
+    "https://ecr4kids.com/products/sleekline-2-shelf-storage-cabinet-30in-h"
+  ],
+  "options": {
+    "t": 1.8,
+    "top": "overlay",
+    "tt": 1.8,
+    "shelves": 0,
+    "fixed": [
+      0.5
+    ],
+    "base": {
+      "type": "none"
+    },
+    "lying": false
+  },
+  "tags": [
+    "bookcase",
+    "toy storage",
+    "kids",
+    "classroom",
+    "ecr4kids"
+  ],
+  "notes": "Brand page: 36\" W × 12\" D × 30\" H, birch plywood with a back panel, adult assembly required. Shelves are fixed; even spacing is our reading of the photos.",
+  "people": 1
+}

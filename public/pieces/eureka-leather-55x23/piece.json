@@ -1,0 +1,477 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/eureka-leather-55x23.json by scripts/generate.mjs (archetype \"standing-desk\"). Edit the spec, not this file.",
+  "slug": "eureka-leather-55x23",
+  "name": "CLASSIC LEATHER",
+  "title": "Standing desk 55\" with drawers",
+  "brand": "Eureka Ergonomic",
+  "brandId": "eureka",
+  "disclaimer": "Not affiliated with or endorsed by Eureka Ergonomic.",
+  "worksWith": "Eureka Ergonomic® faux saddle leather standing desk 55×23\", 55×23.6×34–52\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/ed-i55-lwn-standing-desk-leather-walnut-55",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/ERK-ED-I55-LWN-Assembly_Manual.pdf?v=1713170968",
+  "size": [
+    140,
+    86,
+    60
+  ],
+  "minutes": 45,
+  "people": 2,
+  "level": 2,
+  "color": "#8a5a35",
+  "category": "desks",
+  "archetype": "standing-desk",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/ed-i55-lwn-standing-desk-leather-walnut-55"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top"
+    },
+    {
+      "id": "beam",
+      "label": "Crossbeam"
+    },
+    {
+      "id": "bracket",
+      "label": "Side bracket"
+    },
+    {
+      "id": "column",
+      "label": "Lifting column"
+    },
+    {
+      "id": "foot",
+      "label": "Foot"
+    },
+    {
+      "id": "ctrl",
+      "label": "Control box"
+    },
+    {
+      "id": "keypad",
+      "label": "Keypad"
+    },
+    {
+      "id": "tray",
+      "label": "Cable tray"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        139.7,
+        2.5,
+        59.9
+      ],
+      "pos": [
+        0,
+        85.15,
+        0
+      ]
+    },
+    {
+      "id": "brL",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        47.9
+      ],
+      "pos": [
+        -56.35,
+        82.65,
+        0
+      ]
+    },
+    {
+      "id": "brR",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        47.9
+      ],
+      "pos": [
+        56.35,
+        82.65,
+        0
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        105.7,
+        5,
+        5
+      ],
+      "pos": [
+        0,
+        79.9,
+        -2
+      ]
+    },
+    {
+      "id": "colL",
+      "part": "column",
+      "size": [
+        7,
+        77.4,
+        5
+      ],
+      "pos": [
+        -56.35,
+        42.7,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            42.57,
+            5
+          ],
+          "p": [
+            0,
+            17.42,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            38.7,
+            4
+          ],
+          "p": [
+            0,
+            -19.35,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colR",
+      "part": "column",
+      "size": [
+        7,
+        77.4,
+        5
+      ],
+      "pos": [
+        56.35,
+        42.7,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            42.57,
+            5
+          ],
+          "p": [
+            0,
+            17.42,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            38.7,
+            4
+          ],
+          "p": [
+            0,
+            -19.35,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footL",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        53.9
+      ],
+      "pos": [
+        -56.35,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "footR",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        53.9
+      ],
+      "pos": [
+        56.35,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "ctrl",
+      "part": "ctrl",
+      "size": [
+        20,
+        4,
+        9
+      ],
+      "pos": [
+        0,
+        81.9,
+        -15.95
+      ]
+    },
+    {
+      "id": "keypad",
+      "part": "keypad",
+      "size": [
+        14,
+        2.5,
+        6
+      ],
+      "pos": [
+        34.85,
+        82.65,
+        26.95
+      ]
+    },
+    {
+      "id": "tray",
+      "part": "tray",
+      "size": [
+        69.85,
+        6,
+        8
+      ],
+      "pos": [
+        0,
+        80.9,
+        -24.95
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Lay the desk top upside down on the flattened box or a rug, so the good side stays scratch-free.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Crossbeam + brackets",
+      "say": "Slide the side brackets onto the ends of the crossbeam, set it in the middle of the top, and stretch it out until the brackets sit near the ends. Screw both brackets into the top.",
+      "add": [
+        "beam",
+        "brL",
+        "brR"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -56.35,
+              83.9,
+              15.95
+            ],
+            [
+              -56.35,
+              83.9,
+              -15.95
+            ],
+            [
+              56.35,
+              83.9,
+              15.95
+            ],
+            [
+              56.35,
+              83.9,
+              -15.95
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "2 lifting columns",
+      "say": "Set each lifting column onto its bracket, motor end against the beam, and bolt it down. Cables face the back.",
+      "add": [
+        "colL",
+        "colR"
+      ],
+      "from": [
+        0,
+        -40,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      },
+      "safety": "Columns are heavy. Lift with your legs."
+    },
+    {
+      "caption": "2 feet",
+      "say": "Bolt a foot across the end of each column, longer side toward the front. Check both feet point the same way.",
+      "add": [
+        "footL",
+        "footR"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Control box + keypad",
+      "say": "Screw the control box under the top near the back, and the keypad under the front edge on the side you prefer.",
+      "add": [
+        "ctrl",
+        "keypad"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 6
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 60
+      }
+    },
+    {
+      "caption": "Plug in the cables",
+      "say": "Plug both motor cables and the keypad cable into the control box, then tuck everything into the cable tray and screw the tray on. Do not plug into the wall yet.",
+      "add": [
+        "tray"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 160,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, lift the desk and turn it onto its feet. Lift it clear, do not pivot it on one leg.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Power on + reset",
+      "say": "Plug it in, then run the first-time reset from your manual, usually holding the down button until the desk bottoms out. Test up and down with nothing on top.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    }
+  ],
+  "done": "Done. Your CLASSIC LEATHER standing desk 55\" with drawers is built. Give it a proud little pat.",
+  "notes": "Brand page: 55\" L × 23.6\" W, height 34–52\", faux saddle-leather finish, soft-close drawers, built-in outlet, USB and wireless charger, movable monitor shelf. Drawers and shelf are not modelled. Shown at its lowest height."
+}

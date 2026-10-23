@@ -1,0 +1,477 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/eureka-ark-executive-63x29.json by scripts/generate.mjs (archetype \"standing-desk\"). Edit the spec, not this file.",
+  "slug": "eureka-ark-executive-63x29",
+  "name": "ARK",
+  "title": "Executive standing desk 63\"",
+  "brand": "Eureka Ergonomic",
+  "brandId": "eureka",
+  "disclaimer": "Not affiliated with or endorsed by Eureka Ergonomic.",
+  "worksWith": "Eureka Ergonomic® Ark executive standing desk 63×29\", 63×29.125×28–49.19\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/modern-standing-desk-walnut-63",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/602-09-0849-ERK-ED-TX63-WN-TX63_-20241016_compressed.pdf?v=1740213048",
+  "size": [
+    160,
+    71,
+    74
+  ],
+  "minutes": 45,
+  "people": 2,
+  "level": 2,
+  "color": "#6e4a2e",
+  "category": "desks",
+  "archetype": "standing-desk",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/modern-standing-desk-walnut-63"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top"
+    },
+    {
+      "id": "beam",
+      "label": "Crossbeam"
+    },
+    {
+      "id": "bracket",
+      "label": "Side bracket"
+    },
+    {
+      "id": "column",
+      "label": "Lifting column"
+    },
+    {
+      "id": "foot",
+      "label": "Foot"
+    },
+    {
+      "id": "ctrl",
+      "label": "Control box"
+    },
+    {
+      "id": "keypad",
+      "label": "Keypad"
+    },
+    {
+      "id": "tray",
+      "label": "Cable tray"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        160,
+        2.5,
+        74
+      ],
+      "pos": [
+        0,
+        69.85,
+        0
+      ]
+    },
+    {
+      "id": "brL",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        62
+      ],
+      "pos": [
+        -64.5,
+        67.35,
+        0
+      ]
+    },
+    {
+      "id": "brR",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        62
+      ],
+      "pos": [
+        64.5,
+        67.35,
+        0
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        122,
+        5,
+        5
+      ],
+      "pos": [
+        0,
+        64.6,
+        -2
+      ]
+    },
+    {
+      "id": "colL",
+      "part": "column",
+      "size": [
+        7,
+        62.1,
+        5
+      ],
+      "pos": [
+        -64.5,
+        35.05,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            34.16,
+            5
+          ],
+          "p": [
+            0,
+            13.97,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            31.05,
+            4
+          ],
+          "p": [
+            0,
+            -15.52,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colR",
+      "part": "column",
+      "size": [
+        7,
+        62.1,
+        5
+      ],
+      "pos": [
+        64.5,
+        35.05,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            34.16,
+            5
+          ],
+          "p": [
+            0,
+            13.97,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            31.05,
+            4
+          ],
+          "p": [
+            0,
+            -15.52,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footL",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        68
+      ],
+      "pos": [
+        -64.5,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "footR",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        68
+      ],
+      "pos": [
+        64.5,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "ctrl",
+      "part": "ctrl",
+      "size": [
+        20,
+        4,
+        9
+      ],
+      "pos": [
+        0,
+        66.6,
+        -23
+      ]
+    },
+    {
+      "id": "keypad",
+      "part": "keypad",
+      "size": [
+        14,
+        2.5,
+        6
+      ],
+      "pos": [
+        43,
+        67.35,
+        34
+      ]
+    },
+    {
+      "id": "tray",
+      "part": "tray",
+      "size": [
+        80,
+        6,
+        8
+      ],
+      "pos": [
+        0,
+        65.6,
+        -32
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Flip the top onto something soft, underside up. This whole desk is built upside down.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Crossbeam + brackets",
+      "say": "Slide the side brackets onto the ends of the crossbeam, set it in the middle of the top, and stretch it out until the brackets sit near the ends. Screw both brackets into the top.",
+      "add": [
+        "beam",
+        "brL",
+        "brR"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -64.5,
+              68.6,
+              23
+            ],
+            [
+              -64.5,
+              68.6,
+              -23
+            ],
+            [
+              64.5,
+              68.6,
+              23
+            ],
+            [
+              64.5,
+              68.6,
+              -23
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "2 lifting columns",
+      "say": "Set each lifting column onto its bracket, motor end against the beam, and bolt it down. Cables face the back.",
+      "add": [
+        "colL",
+        "colR"
+      ],
+      "from": [
+        0,
+        -40,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      },
+      "safety": "Columns are heavy. Lift with your legs."
+    },
+    {
+      "caption": "2 feet",
+      "say": "Bolt a foot across the end of each column, longer side toward the front. Check both feet point the same way.",
+      "add": [
+        "footL",
+        "footR"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Control box + keypad",
+      "say": "Screw the control box under the top near the back, and the keypad under the front edge on the side you prefer.",
+      "add": [
+        "ctrl",
+        "keypad"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 6
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 60
+      }
+    },
+    {
+      "caption": "Plug in the cables",
+      "say": "Plug both motor cables and the keypad cable into the control box, then tuck everything into the cable tray and screw the tray on. Do not plug into the wall yet.",
+      "add": [
+        "tray"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 160,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, lift the desk and turn it onto its feet. Lift it clear, do not pivot it on one leg.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Power on + reset",
+      "say": "Plug it in, then run the first-time reset from your manual, usually holding the down button until the desk bottoms out. Test up and down with nothing on top.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    }
+  ],
+  "done": "Done. Your ARK executive standing desk 63\" is built. Give it a proud little pat.",
+  "notes": "Brand page: 63\" L × 29 1/8\" W, height 28–49 3/16\", two soft-close drawers, crossbar, walnut veneer. We show the drawers as part of the top. Shown at sitting height."
+}
