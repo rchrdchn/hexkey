@@ -66,7 +66,7 @@ export function Catalog({ entries, pick, onPick, onRequest }: { entries: Catalog
               <img src={`${base}thumbs/${e.slug}.webp`} alt="" loading="lazy" decoding="async" width={160} height={120} onError={(ev) => ((ev.target as HTMLImageElement).style.visibility = 'hidden')} />
             </span>
             <b>{e.name}</b>
-            <small>{e.brandId && e.brandId !== 'ikea' ? <em className="brand">{e.brand}</em> : null}{e.title}</small>
+            <small>{e.brandId && e.brandId !== 'ikea' ? <em className="by">{e.brand}</em> : null}{e.title}</small>
             <span className="chips">
               <i>{I.clock}{e.minutes}m</i><i>{I.people}{e.people}</i><i>{e.steps} steps</i>
             </span>
