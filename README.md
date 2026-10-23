@@ -72,14 +72,25 @@ Confidence says how sure we are about the internals: **high** = dimensions and c
 
 ## Tools and affiliate links
 
-The parts screen has a small **Tools for this build** card under the Start button (closed until you tap it), and the finish screen has a one-line **Need tools?** reminder. Dressers, kids' chests and tall shelving lead with the wall-anchor kit.
+A **Tools** button sits in the top bar next to the sound button, on the parts screen and on every build step. It shows how many tools the piece needs. On a phone's build bar it shrinks to a round wrench button with the count as a badge, so the progress bar keeps its room.
+
+Tapping it opens the **Tools for this build** window. It's a bottom sheet on phones and a centered dialog on desktop. It's a real dialog: `role="dialog"`, `aria-modal`, focus stays inside, Esc, the backdrop or the X close it, the page behind can't scroll, and focus goes back to the button.
+
+- The window shows the piece name under the title.
+- Pieces that can tip over start with "This one can tip over. Anchor it to the wall before you fill it."
+- **Must-have** comes first: hex key set and Phillips #2, plus the wall-anchor kit when the piece can tip.
+- **Makes it easier** lists the rest, most useful first (drill, mallet, flathead, stubby, level, tape, pads, glue, knife).
+- Each row has our own line icon, the tool name, one line on why this piece needs it, and a **Find on Amazon** link.
+- The Amazon disclosure sits at the bottom of the window.
+
+The finish screen keeps its one-line **Need tools?** reminder. Dressers, kids' chests and tall shelving lead with the wall-anchor kit.
 
 - **The tools catalog** is `data/tools.json`: 12 tools (hex key set, Phillips #2, flathead, stubby, rubber mallet, cordless drill/driver, tape measure, level, wood glue, felt pads, wall-anchor kit, utility knife) written in our own words.
-- **The rules** in the same file decide which tools a piece needs. Every piece gets a hex key and a Phillips #2. Tools are then added by category, archetype, category+archetype, hardware kind (cam locks add a flathead, nails and dowels add a mallet), and height (100 cm or taller adds anchors, a level and a drill). `slugs` adds or drops tools for one piece. `src/tools.ts` resolves them and `npm run validate` checks them (`node scripts/tools-check.mjs --list` prints every piece's list).
+- **The rules** in the same file decide which tools a piece needs. Every piece gets a hex key and a Phillips #2. Tools are then added by category, archetype, category+archetype, hardware kind (cam locks add a flathead, nails and dowels add a mallet), and height (100 cm or taller adds anchors, a level and a drill). `slugs` adds or drops tools for one piece. Each tool's `why` list holds the one-line reasons: the first entry whose `if` matches the piece wins (`category`, `archetype`, `hardware` = all of these kinds present, `anchors` = the piece gets the wall-anchor kit), and the last entry is the catch-all. So a MALM dresser's mallet says "Taps the dowels and back-panel nails in without dents" and a wall shelf's drill says "Drills the holes for the wall brackets". `must: true` marks the must-haves. `src/tools.ts` resolves them and `npm run validate` checks them (`node scripts/tools-check.mjs --list --why` prints every piece's list with its reasons).
 - **Links** are plain Amazon search links (`https://www.amazon.com/s?k=<query>&tag=…`). We don't use product pages, prices, star ratings or product images. Every link opens in a new tab with `rel="sponsored noopener nofollow"`.
 - **The Associates tag** lives in one place: `src/config/affiliates.ts`.
 - **Disclosure:** As an Amazon Associate, Hexkey earns from qualifying purchases. It's shown next to the links and in the app's footer line. Hexkey has no other sponsors, and no brand named here sponsors it.
-- `npm run shots:tools` checks the tag, rel and disclosure on the parts and finish screens. It also checks there's no sideways scroll at 320, 375 and 393 px, and saves screenshots.
+- `npm run shots:tools -- <baseUrl> <outDir> <pieces>` tests the button and window in WebKit (iPhone 15, 320 and 375 px) and Chromium desktop. It checks the button is 44 px or bigger, sits next to the sound button and overlaps nothing, and that the badge matches the rows. It checks the dialog roles and title, that must-haves come first with a reason on every row, and the tip-over line. Every link must carry `tag=hexkey-20`, `rel="sponsored noopener nofollow"` and `target="_blank"`. The disclosure must be word for word, with no images or prices. It also checks the focus trap, the scroll lock, closing with Esc, the backdrop and the X, that focus returns, that Esc on a build step doesn't skip a step, the finish line, that the parts grid doesn't move, and that there's no sideways scroll. It saves screenshots too.
 
 ## Help it grow
 
