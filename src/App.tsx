@@ -262,14 +262,14 @@ export default function App() {
 
       {/* ---------- parts ---------- */}
       {mode === 'parts' && piece && (
-        <div className="sheet parts">
+        <div className="sheet parts" onDragStart={(e) => e.preventDefault()}>
           <div className="row">
             <h2>What's in the box</h2>
             <Ring n={checked.size} of={total} />
           </div>
           <div className="grid">
             {piece.parts.map((pt, i) => (
-              <button key={pt.id} className={`tile ${checked.has(pt.id) ? 'ok' : ''} ${hl === pt.id ? 'hl' : ''}`} onClick={() => toggle(pt.id, true)}>
+              <button key={pt.id} draggable={false} className={`tile ${checked.has(pt.id) ? 'ok' : ''} ${hl === pt.id ? 'hl' : ''}`} onClick={() => toggle(pt.id, true)}>
                 <IsoPart size={piece.objects.find((o) => o.part === pt.id)!.size} color={partColor(i, piece.color)} px={54} />
                 <span className="x">×{piece.partCount[pt.id]}</span>
                 <small>{piece.partCount[pt.id] > 1 ? plural(pt) : pt.label}</small>
@@ -277,7 +277,7 @@ export default function App() {
               </button>
             ))}
             {piece.hardware.map((h) => (
-              <button key={h.id} className={`tile hw ${checked.has(h.id) ? 'ok' : ''}`} onClick={() => toggle(h.id, false)}>
+              <button key={h.id} draggable={false} className={`tile hw ${checked.has(h.id) ? 'ok' : ''}`} onClick={() => toggle(h.id, false)}>
                 <HwIcon kind={h.kind} px={46} />
                 <span className="x">×{piece.hwCount[h.id]}</span>
                 <small>{piece.hwCount[h.id] > 1 ? plural(h) : h.label}</small>
@@ -285,6 +285,7 @@ export default function App() {
               </button>
             ))}
           </div>
+          <p className="disclaim">Part counts are our best estimate and may differ from your box. Always check the official instructions.</p>
           <button className={`cta ${checked.size === total ? 'pop' : ''}`} onClick={next}>
             {checked.size === total ? 'All here. Build!' : 'Start building'} {I.next}
           </button>

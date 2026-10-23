@@ -44,7 +44,6 @@ export function Catalog({ entries, pick, onPick, onRequest }: { entries: Catalog
           <button key={e.slug} className={`card ${e.slug === pick ? 'on' : ''}`} onClick={() => onPick(e.slug)} aria-pressed={e.slug === pick} data-slug={e.slug}>
             <span className="thumb" style={{ background: e.color }}>
               <img src={`${base}thumbs/${e.slug}.webp`} alt="" loading="lazy" decoding="async" width={160} height={120} onError={(ev) => ((ev.target as HTMLImageElement).style.visibility = 'hidden')} />
-              {e.confidence !== 'high' && <em className={`conf ${e.confidence}`} title={e.confidence === 'low' ? 'Rough guide: big picture only' : 'Close match: details may differ'}>{e.confidence === 'low' ? 'Rough' : 'Approx'}</em>}
             </span>
             <b>{e.name}</b>
             <small>{e.title}</small>

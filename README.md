@@ -13,7 +13,7 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 ## What's in the catalog
 
 35 pieces. The three hand-made guides (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step; the other 32 are generated from short specs by [archetypes](docs/ARCHETYPES.md).
-Confidence says how sure we are about the internals: **high** = dimensions and construction match the product page; **medium** = dimensions right, drawer/shelf layout or hardware counts are our best guess; **low** = simplified. Every guide is a demo: always follow the official instructions in your box.
+Confidence says how sure we are about the internals: **high** = dimensions and construction match the product page; **medium** = dimensions right, drawer/shelf layout or hardware counts are our best guess; **low** = simplified. Every guide is a demo: always follow the official instructions in your box. The app does not show confidence badges; instead every parts list says counts are our best estimate.
 
 | Piece | Category | Steps | Parts | Hardware | Built by | Confidence |
 |---|---|---|---|---|---|---|

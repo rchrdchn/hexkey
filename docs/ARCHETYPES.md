@@ -23,7 +23,7 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 | `category` | `shelving`, `dressers`, `bedroom`, `storage`, `tables`, `desks`, `kids` (picker chips). |
 | `size` | Outer size in cm, in product-page order: **W×D×H** (beds: W×L×headboard H; cribs: L×W×H). |
 | `worksWith`, `productUrl` | The "Works with IKEA® …" line and the official product page (never a PDF). |
-| `confidence` | `high`: dimensions and construction match the product page and common knowledge. `medium`: dimensions are right, internal layout or hardware counts are our best guess. `low`: simplified. Shown as an "Approx"/"Rough" badge in the picker. |
+| `confidence` | `high`: dimensions and construction match the product page and common knowledge. `medium`: dimensions are right, internal layout or hardware counts are our best guess. `low`: simplified. Not shown as a badge: every parts list carries one disclaimer that counts are our best estimate. |
 | `sources` | https pages the facts came from (product pages, not files). |
 | `options` | Archetype knobs (below). |
 | `minutes`, `people`, `level` | Optional overrides. Otherwise estimated from parts, hardware, drawers and steps. |

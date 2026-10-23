@@ -70,15 +70,20 @@ h2 { margin: 0; font-size: 22px; letter-spacing: -0.02em; }
 .lvl u.f { background: var(--acc); }
 
 /* parts */
-.parts { max-height: 56dvh; display: flex; flex-direction: column; }
-.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 7px; overflow-y: auto; margin: 12px -4px 0; padding: 4px; -webkit-overflow-scrolling: touch; }
-.tile { position: relative; background: var(--bg); border-radius: 16px; padding: 8px 4px 6px; display: flex; flex-direction: column; align-items: center; gap: 2px; border: 2.5px solid transparent; transition: transform .15s, background .2s, border-color .2s; }
+/* The sheet is the only scroller (vertical only, and only when a piece has many parts). The grid itself never scrolls, pans or drags. */
+.parts { max-height: 72dvh; display: flex; flex-direction: column; overflow-x: hidden; overflow-x: clip; overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y; -webkit-overflow-scrolling: touch; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; margin: 12px 0 0; padding: 0; width: 100%; box-sizing: border-box; overflow-x: clip; flex: none; touch-action: pan-y; }
+@media (min-width: 430px) { .grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.parts .tile, .parts .tile * { -webkit-user-drag: none; -webkit-touch-callout: none; }
+.disclaim { font-size: 12px; line-height: 1.35; color: var(--mute); margin: 10px 2px 0; flex: none; }
+.parts .cta, .parts .legal { flex: none; }
+.tile { position: relative; min-width: 0; overflow: hidden; background: var(--bg); border-radius: 16px; padding: 6px 4px 5px; display: flex; flex-direction: column; align-items: center; gap: 2px; border: 2.5px solid transparent; transition: transform .15s, background .2s, border-color .2s; }
 .tile:active { transform: scale(0.94); }
-.tile svg { height: 40px; width: 44px; }
+.tile svg { height: 36px; width: 44px; }
 .tile .x { font-weight: 900; font-size: 16px; line-height: 1; }
 .tile small { font-size: 10.5px; color: var(--mute); text-align: center; line-height: 1.15; min-height: 2.3em; }
 .tile .tick { position: absolute; top: 5px; right: 5px; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: transparent; border: 2px solid var(--line); transition: all .2s; }
-.tile .tick svg { height: 16px; }
+.tile .tick svg { height: 16px; width: 16px; }
 .tile.ok { background: #e9f7ef; }
 .tile.ok .tick { background: var(--ok); border-color: var(--ok); color: #fff; animation: tick .35s cubic-bezier(.2,.9,.3,1.6); }
 .tile.hl { border-color: var(--acc); }
