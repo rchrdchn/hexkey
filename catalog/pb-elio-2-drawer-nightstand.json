@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-elio-2-drawer-nightstand",
+  "name": "ELIO",
+  "title": "Rattan 2-drawer nightstand",
+  "brand": "plank-beam",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    61.0,
+    48.3,
+    63.5
+  ],
+  "worksWith": "Plank+Beam® Elio rattan 2-drawer nightstand, 24×19×25\" (L×D×H)",
+  "productUrl": "https://www.plankandbeam.com/products/elio-2-drawer-nightstand",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#d2ad7c",
+  "confidence": "medium",
+  "sources": [
+    "https://www.plankandbeam.com/products/elio-2-drawer-nightstand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 8,
+      "leg": 4
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "2 drawer",
+    "rattan",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 24\" L × 19\" D × 25\" H, 2 drawers (each 20.5×13×4.5\" inside), woven rattan fronts, brass-toned knobs, knot-free solid pine frame. Leg height is our guess.",
+  "people": 1
+}

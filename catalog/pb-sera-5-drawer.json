@@ -1,0 +1,58 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-sera-5-drawer",
+  "name": "SERA",
+  "title": "5-drawer dresser",
+  "brand": "plank-beam",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    94.0,
+    40.0,
+    129.5
+  ],
+  "worksWith": "Plank+Beam® Sera 5-drawer dresser, 37×15.75×51\" (L×D×H)",
+  "productUrl": "https://www.plankandbeam.com/products/sera-5-drawer-dresser",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#c89f6e",
+  "confidence": "medium",
+  "sources": [
+    "https://www.plankandbeam.com/products/sera-5-drawer-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 10,
+      "leg": 4
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "chest",
+    "5 drawer",
+    "tall dresser",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 37\" L × 15.75\" D × 51\" H, 5 drawers (each 33.5×13×7\" inside), knot-free solid pine with engineered-wood drawer bottoms, fluted fronts, round column legs, brass-toned pulls. Leg height is our guess.",
+  "people": 2
+}

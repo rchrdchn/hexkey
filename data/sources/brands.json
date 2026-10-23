@@ -902,6 +902,51 @@
    "note": "Assembled W×D×H listed under \"Product Dimensions\" on each page; \"2 people recommended\" and pre-installed drawer tracks noted in copy. Graco®-licensed lines skipped (licensed brand name).",
    "checked": "verified 2026-10-23",
    "disclaimer": "Not affiliated with or endorsed by Storkcraft."
+  },
+  {
+   "id": "plank-beam",
+   "name": "Plank+Beam",
+   "label": "Plank+Beam®",
+   "tier": "small",
+   "site": "https://www.plankandbeam.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Help-center \"Assembly resources\" article (linked as \"Assembly Instructions\" on every product page)",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed (10 s between requests)",
+   "products": [
+    "Harbor desks 38/53\"",
+    "Sera, Marelle, Willow and Elio dressers",
+    "Marelle nightstands",
+    "bunk and loft beds"
+   ],
+   "note": "Solid pine furniture; overall L×D×H and drawer interiors printed on each product page. Bunk/loft beds queued (need a bunk-bed archetype).",
+   "checked": "verified 2026-10-23",
+   "short": "Plank+Beam",
+   "disclaimer": "Not affiliated with or endorsed by Plank+Beam."
+  },
+  {
+   "id": "max-lily",
+   "name": "Max & Lily",
+   "label": "Max & Lily®",
+   "tier": "small",
+   "site": "https://maxandlily.com",
+   "status": "included",
+   "fit": 4,
+   "instructions": "Assembly instructions page (/pages/assembly-instructions), linked from every product page",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed (10 s between requests)",
+   "products": [
+    "Charlotte bookcase",
+    "Hudson desks 38/53\"",
+    "Scandinavian dresser",
+    "Sutton secretary desk",
+    "kids beds with trundles"
+   ],
+   "note": "Kids' solid-wood furniture (sister brand of Plank+Beam). Overall L×W×H on each page. Scandinavian dresser and Sutton desk skipped this batch (drawer layout / fold-down desk not clear from the page).",
+   "checked": "verified 2026-10-23",
+   "short": "Max & Lily",
+   "disclaimer": "Not affiliated with or endorsed by Max & Lily."
   }
  ]
 }

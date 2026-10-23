@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-willow-nightstand",
+  "name": "WILLOW",
+  "title": "Nightstand with shelf",
+  "brand": "plank-beam",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    47.0,
+    45.7,
+    61.0
+  ],
+  "worksWith": "Plank+Beam® Willow nightstand, 18.5×18×24\" (L×D×H)",
+  "productUrl": "https://www.plankandbeam.com/products/willow-nightstand",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#efe9dc",
+  "confidence": "low",
+  "sources": [
+    "https://www.plankandbeam.com/products/willow-nightstand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "open"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 6,
+      "leg": 3.5
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "1 drawer",
+    "vintage",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 18.5\" L × 18\" D × 24\" H; one drawer (12.5×13×4.25\" inside) over an open shelf, turned legs, wooden knob, scalloped edges (not modelled). Ships in one box. Leg height is our guess.",
+  "people": 1
+}

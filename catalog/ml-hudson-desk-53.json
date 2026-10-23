@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ml-hudson-desk-53",
+  "name": "HUDSON",
+  "title": "Desk 53\"",
+  "brand": "max-lily",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    134.6,
+    45.7,
+    75.6
+  ],
+  "worksWith": "Max & Lily® Hudson desk 53\", 53×18×29.75\" (L×W×H)",
+  "productUrl": "https://maxandlily.com/products/hudson-desk-53",
+  "instructionsUrl": "https://maxandlily.com/pages/assembly-instructions",
+  "color": "#c6a274",
+  "confidence": "medium",
+  "sources": [
+    "https://maxandlily.com/products/hudson-desk-53"
+  ],
+  "options": {
+    "tt": 3,
+    "leg": {
+      "s": 4.5,
+      "inset": 1
+    },
+    "topLabel": "Desk top (drawer built in)"
+  },
+  "tags": [
+    "desk",
+    "writing desk",
+    "solid wood",
+    "max & lily"
+  ],
+  "notes": "Brand page: 53\" L × 18\" W × 29.75\" H, drawer 39.25×11.75×2.5\" inside, solid wood. We show the drawer as part of the top.",
+  "people": 1
+}

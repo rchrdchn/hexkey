@@ -1,0 +1,55 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-elio-6-drawer",
+  "name": "ELIO",
+  "title": "Rattan 6-drawer dresser",
+  "brand": "plank-beam",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    151.1,
+    40.0,
+    83.8
+  ],
+  "worksWith": "Plank+Beam® Elio rattan 6-drawer dresser, 59.5×15.75×33\" (L×D×H)",
+  "productUrl": "https://www.plankandbeam.com/products/elio-6-drawer-dresser",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#d2ad7c",
+  "confidence": "medium",
+  "sources": [
+    "https://www.plankandbeam.com/products/elio-6-drawer-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      },
+      {
+        "type": "drawer",
+        "cols": 2
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 8,
+      "leg": 4
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "6 drawer",
+    "rattan",
+    "long dresser",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 59.5\" L × 15.75\" D × 33\" H, 6 drawers (each 26.75×13×4.5\" inside, so 2 across × 3 high), woven rattan fronts, brass-toned knobs, knot-free solid pine frame. Leg height is our guess.",
+  "people": 2
+}

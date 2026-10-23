@@ -1,0 +1,55 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ml-charlotte-bookcase",
+  "name": "CHARLOTTE",
+  "title": "Bookcase with drawer",
+  "brand": "max-lily",
+  "archetype": "chest",
+  "category": "kids",
+  "size": [
+    95.2,
+    33.0,
+    127.6
+  ],
+  "worksWith": "Max & Lily® Charlotte bookcase, 37.5×13×50.25\" (L×W×H)",
+  "productUrl": "https://maxandlily.com/products/charlotte-bookcase",
+  "instructionsUrl": "https://maxandlily.com/pages/assembly-instructions",
+  "color": "#f1ede4",
+  "confidence": "low",
+  "sources": [
+    "https://maxandlily.com/products/charlotte-bookcase"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "open"
+      },
+      {
+        "type": "drawer",
+        "h": 0.8
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "kids",
+    "drawer",
+    "max & lily"
+  ],
+  "notes": "Brand page: 37.5\" L × 13\" W × 50.25\" H; open shelves 33.75×12.5×10\" inside over a bottom drawer 31.75×11.25×7.5\" inside. Three shelves is our reading of the height; base simplified.",
+  "people": 2
+}

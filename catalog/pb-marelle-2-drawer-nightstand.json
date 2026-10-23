@@ -1,0 +1,47 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-marelle-2-drawer-nightstand",
+  "name": "MARELLE",
+  "title": "2-drawer nightstand",
+  "brand": "plank-beam",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    59.1,
+    45.7,
+    61.0
+  ],
+  "worksWith": "Plank+Beam® Marelle 2-drawer nightstand, 23.25×18×24\" (L×D×H)",
+  "productUrl": "https://www.plankandbeam.com/products/marelle-2-drawer-nightstand",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#efe9dc",
+  "confidence": "medium",
+  "sources": [
+    "https://www.plankandbeam.com/products/marelle-2-drawer-nightstand"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "2 drawer",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 23.25\" L × 18\" D × 24\" H, 2 drawers (each 17.25×13×6.5\" inside), knot-free solid pine. Base simplified.",
+  "people": 1
+}

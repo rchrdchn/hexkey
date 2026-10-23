@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ml-hudson-desk-38",
+  "name": "HUDSON",
+  "title": "Kids desk 38\"",
+  "brand": "max-lily",
+  "archetype": "table",
+  "category": "kids",
+  "size": [
+    96.5,
+    45.7,
+    75.6
+  ],
+  "worksWith": "Max & Lily® Hudson desk 38\", 38×18×29.75\" (L×W×H)",
+  "productUrl": "https://maxandlily.com/products/hudson-desk-38",
+  "instructionsUrl": "https://maxandlily.com/pages/assembly-instructions",
+  "color": "#f1ede4",
+  "confidence": "medium",
+  "sources": [
+    "https://maxandlily.com/products/hudson-desk-38"
+  ],
+  "options": {
+    "tt": 3,
+    "leg": {
+      "s": 4.5,
+      "inset": 1
+    },
+    "topLabel": "Desk top (drawer built in)"
+  },
+  "tags": [
+    "desk",
+    "kids desk",
+    "solid wood",
+    "max & lily"
+  ],
+  "notes": "Brand page: 38\" L × 18\" W × 29.75\" H, drawer 22.5×11.75×2.5\" inside, solid wood. We show the drawer as part of the top.",
+  "people": 1
+}

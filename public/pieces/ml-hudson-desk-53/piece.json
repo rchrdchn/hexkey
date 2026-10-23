@@ -1,0 +1,231 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/ml-hudson-desk-53.json by scripts/generate.mjs (archetype \"table\"). Edit the spec, not this file.",
+  "slug": "ml-hudson-desk-53",
+  "name": "HUDSON",
+  "title": "Desk 53\"",
+  "brand": "Max & Lily",
+  "brandId": "max-lily",
+  "disclaimer": "Not affiliated with or endorsed by Max & Lily.",
+  "worksWith": "Max & Lily® Hudson desk 53\", 53×18×29.75\" (L×W×H)",
+  "productUrl": "https://maxandlily.com/products/hudson-desk-53",
+  "instructionsUrl": "https://maxandlily.com/pages/assembly-instructions",
+  "size": [
+    135,
+    76,
+    46
+  ],
+  "minutes": 15,
+  "people": 1,
+  "level": 1,
+  "color": "#c6a274",
+  "category": "desks",
+  "archetype": "table",
+  "confidence": "medium",
+  "sources": [
+    "https://maxandlily.com/products/hudson-desk-53"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top (drawer built in)"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "dbolt",
+      "label": "Double-ended screw",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        134.6,
+        3,
+        45.7
+      ],
+      "pos": [
+        0,
+        74.1,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        4.5,
+        72.6,
+        4.5
+      ],
+      "pos": [
+        -64.05,
+        36.3,
+        19.6
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        4.5,
+        72.6,
+        4.5
+      ],
+      "pos": [
+        64.05,
+        36.3,
+        19.6
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        4.5,
+        72.6,
+        4.5
+      ],
+      "pos": [
+        64.05,
+        36.3,
+        -19.6
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        4.5,
+        72.6,
+        4.5
+      ],
+      "pos": [
+        -64.05,
+        36.3,
+        -19.6
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Flip the top onto something soft, underside up. Pre-drilled holes should be facing you.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "4 double screws",
+      "say": "Twist a double-ended screw into each corner hole by hand, halfway in. The other half is for the leg.",
+      "hardware": [
+        {
+          "id": "dbolt",
+          "axis": "-y",
+          "at": [
+            [
+              -64.05,
+              72.6,
+              19.6
+            ],
+            [
+              64.05,
+              72.6,
+              19.6
+            ],
+            [
+              64.05,
+              72.6,
+              -19.6
+            ],
+            [
+              -64.05,
+              72.6,
+              -19.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55,
+        "tight": true,
+        "zoom": 0.9
+      }
+    },
+    {
+      "caption": "2 legs on",
+      "say": "Twist on the first two legs, clockwise, until they are snug and straight. Hand tight is right.",
+      "add": [
+        "leg1",
+        "leg2"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Last 2 legs",
+      "say": "And the last two. Check they all stand straight.",
+      "add": [
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "twist": true,
+      "view": {
+        "az": -30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, turn it right side up. Lift it, don't pivot on the legs, or they can snap off.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    }
+  ],
+  "done": "Done. Your HUDSON desk 53\" is built. Give it a proud little pat.",
+  "notes": "Brand page: 53\" L × 18\" W × 29.75\" H, drawer 39.25×11.75×2.5\" inside, solid wood. We show the drawer as part of the top."
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-harbor-desk-53",
+  "name": "HARBOR",
+  "title": "Solid wood desk 53\"",
+  "brand": "plank-beam",
+  "archetype": "table",
+  "category": "desks",
+  "size": [
+    134.6,
+    45.7,
+    75.6
+  ],
+  "worksWith": "Plank+Beam® Harbor desk 53\", 53×18×29.75\" (L×W×H)",
+  "productUrl": "https://www.plankandbeam.com/products/harbor-desk-53",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#d9b98c",
+  "confidence": "medium",
+  "sources": [
+    "https://www.plankandbeam.com/products/harbor-desk-53"
+  ],
+  "options": {
+    "tt": 3,
+    "leg": {
+      "s": 4.5,
+      "inset": 1
+    },
+    "topLabel": "Desk top (drawer built in)"
+  },
+  "tags": [
+    "desk",
+    "writing desk",
+    "solid wood",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 53\" L × 18\" W × 29.75\" H, full-width drawer (39.25×11.75×2.5\" inside), 25\" clear under the desk, solid pine. We show the drawer as part of the top.",
+  "people": 1
+}

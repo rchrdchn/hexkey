@@ -1,0 +1,51 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-marelle-4-drawer",
+  "name": "MARELLE",
+  "title": "4-drawer dresser",
+  "brand": "plank-beam",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    89.5,
+    45.7,
+    78.7
+  ],
+  "worksWith": "Plank+Beam® Marelle 4-drawer dresser, 35.25×18×31\" (L×D×H)",
+  "productUrl": "https://www.plankandbeam.com/products/marelle-4-drawer-dresser",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#efe9dc",
+  "confidence": "medium",
+  "sources": [
+    "https://www.plankandbeam.com/products/marelle-4-drawer-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2,
+        "h": 0.8
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "4 drawer",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 35.25\" L × 18\" D × 31\" H; two small top drawers (13×13×5.25\" inside) over two large ones (28.5×13×6.5\"), knot-free solid pine, engineered-wood back and drawer bottoms. Base simplified.",
+  "people": 2
+}

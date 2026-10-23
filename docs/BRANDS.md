@@ -2,7 +2,7 @@
 
 _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../data/sources/brands.json)._
 
-**What this is:** a survey of 46 furniture brands — big, medium and small/direct-to-consumer — covering where each keeps its assembly instructions, whether they're public, robots.txt/terms notes, popular flat-pack products, and how well they fit Hexkey's archetypes (1–5).
+**What this is:** a survey of 48 furniture brands — big, medium and small/direct-to-consumer — covering where each keeps its assembly instructions, whether they're public, robots.txt/terms notes, popular flat-pack products, and how well they fit Hexkey's archetypes (1–5).
 
 **How it was gathered (ground rules):**
 - Polite fetcher only: user agent `HexkeyResearch/0.1`, 2–10 s between requests (more where `Crawl-delay` asked), robots.txt checked first, no logins, no captchas, no bot-protection bypass. 94 logged requests in total.
@@ -15,8 +15,8 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 |---|---|---|---|---|
 | big | 16 | 8 | 5 | 3 |
 | medium | 20 | 10 | 5 | 5 |
-| small | 10 | 2 | 8 | 0 |
-| **total** | **46** | **20** | **18** | **8** |
+| small | 12 | 4 | 8 | 0 |
+| **total** | **48** | **22** | **18** | **8** |
 
 ## Pieces in the catalog by brand
 
@@ -42,7 +42,9 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | Branch | 3 |
 | VIVO | 2 |
 | Storkcraft | 11 |
-| **total** | **109** |
+| Plank+Beam | 8 |
+| Max & Lily | 3 |
+| **total** | **120** |
 
 ## Big brands and big-box retailers
 
@@ -104,6 +106,8 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | [Autonomous](https://www.autonomous.ai) | research-only | 4 | Assembly guide per desk | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | SmartDesk Core | Standing desk archetype ready; queued. _(unverified: from general knowledge)_ |
 | [VIVO](https://www.vivo-us.com) | included | 4 | Product page "Assembly Instructions": frame and table-top manual PDFs on the Shopify CDN | public, no login | Shopify default; products allowed | PRO 60×24" dual motor desk, E2 series desks, desk frames | Specs (top size, thickness, height range) listed on the product page. |
 | [Fully (Herman Miller)](https://www.fully.com) | research-only | 3 | Jarvis desk assembly guide | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | Jarvis desk | Jarvis now sold via Herman Miller; queued. _(unverified: from general knowledge)_ |
+| [Plank+Beam](https://www.plankandbeam.com) | included | 4 | Help-center "Assembly resources" article (linked as "Assembly Instructions" on every product page) | public, no login | Shopify default; products allowed (10 s between requests) | Harbor desks 38/53", Sera, Marelle, Willow and Elio dressers, Marelle nightstands, bunk and loft beds | Solid pine furniture; overall L×D×H and drawer interiors printed on each product page. Bunk/loft beds queued (need a bunk-bed archetype). |
+| [Max & Lily](https://maxandlily.com) | included | 4 | Assembly instructions page (/pages/assembly-instructions), linked from every product page | public, no login | Shopify default; products allowed (10 s between requests) | Charlotte bookcase, Hudson desks 38/53", Scandinavian dresser, Sutton secretary desk, kids beds with trundles | Kids' solid-wood furniture (sister brand of Plank+Beam). Overall L×W×H on each page. Scandinavian dresser and Sutton desk skipped this batch (drawer layout / fold-down desk not clear from the page). |
 
 ## Skipped and why
 

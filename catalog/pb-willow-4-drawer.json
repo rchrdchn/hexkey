@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-willow-4-drawer",
+  "name": "WILLOW",
+  "title": "4-drawer dresser",
+  "brand": "plank-beam",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    89.5,
+    45.7,
+    84.5
+  ],
+  "worksWith": "Plank+Beam® Willow 4-drawer dresser, 35.25×18×33.25\" (L×D×H)",
+  "productUrl": "https://www.plankandbeam.com/products/willow-4-drawer-dresser",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#efe9dc",
+  "confidence": "medium",
+  "sources": [
+    "https://www.plankandbeam.com/products/willow-4-drawer-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2,
+        "h": 0.9
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 9,
+      "leg": 4
+    },
+    "knobs": 1
+  },
+  "tags": [
+    "dresser",
+    "4 drawer",
+    "vintage",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 35.25\" L × 18\" D × 33.25\" H; two smaller top drawers (12.75×13×5\" inside) over two larger ones (29.25×13×5\"), turned legs, wooden knobs, scalloped edges (not modelled). Leg height is our guess.",
+  "people": 2
+}
