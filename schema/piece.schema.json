@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/rchrdchn/hexkey/schema/piece.schema.json",
+  "title": "Hexkey piece",
+  "description": "One flat-pack furniture build. Units are centimeters, angles are degrees. Axes: x = right, y = up, z = toward the viewer (front).",
+  "type": "object",
+  "required": ["slug", "name", "title", "worksWith", "productUrl", "size", "parts", "hardware", "objects", "steps", "done"],
+  "$defs": {
+    "v3": { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+    "axis": { "enum": ["+x", "-x", "+y", "-y", "+z", "-z"] }
+  },
+  "properties": {
+    "slug": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Folder name under public/pieces/" },
+    "name": { "type": "string", "description": "Product name as printed on the box, e.g. BILLY" },
+    "title": { "type": "string", "description": "Short kind of furniture, e.g. Bookcase" },
+    "worksWith": { "type": "string", "description": "Descriptive line, e.g. 'IKEA® BILLY bookcase, 80×28×202 cm'" },
+    "productUrl": { "type": "string", "description": "Official product page (never a PDF or asset URL)" },
+    "size": { "$ref": "#/$defs/v3", "description": "Assembled width, height, depth (cm)" },
+    "minutes": { "type": "number" }, "people": { "type": "integer" }, "level": { "type": "integer", "minimum": 1, "maximum": 3 },
+    "color": { "type": "string", "description": "Base panel color (hex)" },
+    "parts": { "type": "array", "items": { "type": "object", "required": ["id", "label"], "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "plural": { "type": "string" } } } },
+    "hardware": { "type": "array", "items": { "type": "object", "required": ["id", "label", "kind"], "properties": { "id": { "type": "string" }, "label": { "type": "string" }, "plural": { "type": "string" }, "kind": { "enum": ["dowel", "campin", "cam", "screw", "nail", "bolt", "shelfpin", "bracket"] } } } },
+    "objects": { "type": "array", "description": "Every physical panel, placed where it ends up in the finished piece", "items": { "type": "object", "required": ["id", "part", "size", "pos"], "properties": { "id": { "type": "string" }, "part": { "type": "string" }, "size": { "$ref": "#/$defs/v3" }, "pos": { "$ref": "#/$defs/v3", "description": "Center (cm)" }, "rot": { "$ref": "#/$defs/v3" } } } },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["caption", "say"],
+        "properties": {
+          "caption": { "type": "string", "description": "2-5 words shown big on screen" },
+          "say": { "type": "string", "description": "What the voice says. Our own words, never copied from a manual." },
+          "add": { "type": "array", "items": { "type": "string" }, "description": "Object ids that fly in this step" },
+          "from": { "$ref": "#/$defs/v3", "description": "Direction (cm) the new parts slide in from, in furniture space" },
+          "twist": { "type": "boolean", "description": "Spin the new parts as they arrive (screw-on legs)" },
+          "pose": { "$ref": "#/$defs/v3", "description": "Whole-piece rotation (deg, XYZ) from this step on, e.g. [-90,0,0] = lying on its back" },
+          "hardware": { "type": "array", "items": { "type": "object", "required": ["id", "axis"], "properties": { "id": { "type": "string" }, "axis": { "$ref": "#/$defs/axis", "description": "Side the hardware goes in from" }, "at": { "type": "array", "items": { "$ref": "#/$defs/v3" } }, "line": { "type": "array", "items": { "$ref": "#/$defs/v3" }, "minItems": 2, "maxItems": 2 }, "n": { "type": "integer" }, "count": { "type": "integer" }, "spin": { "type": "boolean" } } } },
+          "view": { "type": "object", "required": ["az", "el"], "properties": { "az": { "type": "number" }, "el": { "type": "number" }, "zoom": { "type": "number" }, "tight": { "type": "boolean" } } },
+          "safety": { "type": "string" }
+        }
+      }
+    },
+    "done": { "type": "string", "description": "Line spoken at the end" }
+  }
+}

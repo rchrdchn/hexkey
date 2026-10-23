@@ -1,0 +1,526 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "slug": "kallax",
+  "name": "KALLAX",
+  "title": "Shelf unit 2×2",
+  "worksWith": "IKEA® KALLAX shelf unit, 77×77 cm (30⅛×30⅛\")",
+  "productUrl": "https://www.ikea.com/us/en/p/kallax-shelf-unit-white-20631639/",
+  "size": [
+    77,
+    77,
+    39
+  ],
+  "minutes": 30,
+  "people": 2,
+  "level": 2,
+  "color": "#f4f2ee",
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "end",
+      "label": "End panel"
+    },
+    {
+      "id": "shelf",
+      "label": "Middle shelf",
+      "plural": "Middle shelves"
+    },
+    {
+      "id": "divider",
+      "label": "Divider"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        3.9,
+        77,
+        39
+      ],
+      "pos": [
+        -36.55,
+        38.5,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "end",
+      "size": [
+        69.2,
+        3.9,
+        39
+      ],
+      "pos": [
+        0,
+        1.95,
+        0
+      ]
+    },
+    {
+      "id": "divLow",
+      "part": "divider",
+      "size": [
+        1.5,
+        33.85,
+        39
+      ],
+      "pos": [
+        0,
+        20.825,
+        0
+      ]
+    },
+    {
+      "id": "shelf",
+      "part": "shelf",
+      "size": [
+        69.2,
+        1.5,
+        39
+      ],
+      "pos": [
+        0,
+        38.5,
+        0
+      ]
+    },
+    {
+      "id": "divUp",
+      "part": "divider",
+      "size": [
+        1.5,
+        33.85,
+        39
+      ],
+      "pos": [
+        0,
+        56.175,
+        0
+      ]
+    },
+    {
+      "id": "top",
+      "part": "end",
+      "size": [
+        69.2,
+        3.9,
+        39
+      ],
+      "pos": [
+        0,
+        75.05,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        3.9,
+        77,
+        39
+      ],
+      "pos": [
+        36.55,
+        38.5,
+        0
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side + 4 pins",
+      "say": "Stand one side panel up, holes facing in. Screw a cam pin into each of the four holes near the top and bottom.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -20,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -34.6,
+              1.95,
+              12
+            ],
+            [
+              -34.6,
+              1.95,
+              -12
+            ],
+            [
+              -34.6,
+              75.05,
+              12
+            ],
+            [
+              -34.6,
+              75.05,
+              -12
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Bottom on. Lock it.",
+      "say": "Slide the bottom panel onto the pins. Drop two cam locks into the round holes, arrows pointing at the pins, and turn them clockwise until they bite.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        40,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "spin": true,
+          "at": [
+            [
+              -30.5,
+              3.9,
+              12
+            ],
+            [
+              -30.5,
+              3.9,
+              -12
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Lower divider",
+      "say": "Tap two dowels into the middle of the bottom panel. Press the short divider down onto them, then tap two more dowels into its top.",
+      "add": [
+        "divLow"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              0,
+              3.9,
+              12
+            ],
+            [
+              0,
+              3.9,
+              -12
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              0,
+              37.75,
+              12
+            ],
+            [
+              0,
+              37.75,
+              -12
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Middle shelf",
+      "say": "Tap two dowels into the side panel at middle height. Lower the long shelf onto the dowels and the divider.",
+      "add": [
+        "shelf"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -34.6,
+              38.5,
+              12
+            ],
+            [
+              -34.6,
+              38.5,
+              -12
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Upper divider",
+      "say": "Same trick again. Two dowels into the shelf, press on the second divider, two dowels into its top.",
+      "add": [
+        "divUp"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              0,
+              39.25,
+              12
+            ],
+            [
+              0,
+              39.25,
+              -12
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              0,
+              73.1,
+              12
+            ],
+            [
+              0,
+              73.1,
+              -12
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Top on. Lock it.",
+      "say": "Set the top panel on the pins and dowels. Two more cam locks, arrows toward the pins, a firm clockwise turn.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        35,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "-y",
+          "spin": true,
+          "at": [
+            [
+              -30.5,
+              73.1,
+              12
+            ],
+            [
+              -30.5,
+              73.1,
+              -12
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 15
+      }
+    },
+    {
+      "caption": "Other side. Lock 4.",
+      "say": "Screw four cam pins and two dowels into the second side. With a helper, press it onto the open ends, then lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        40,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              34.6,
+              1.95,
+              12
+            ],
+            [
+              34.6,
+              1.95,
+              -12
+            ],
+            [
+              34.6,
+              75.05,
+              12
+            ],
+            [
+              34.6,
+              75.05,
+              -12
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              34.6,
+              38.5,
+              12
+            ],
+            [
+              34.6,
+              38.5,
+              -12
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "spin": true,
+          "at": [
+            [
+              30.5,
+              3.9,
+              12
+            ],
+            [
+              30.5,
+              3.9,
+              -12
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "-y",
+          "spin": true,
+          "at": [
+            [
+              30.5,
+              73.1,
+              12
+            ],
+            [
+              30.5,
+              73.1,
+              -12
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Screw the wall bracket to the top at the back, then fix it to the wall with screws that suit your wall. Furniture can tip over. Always anchor it.",
+      "safety": "Tip-over risk. Always anchor to the wall.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              75,
+              -19.5
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true
+      }
+    }
+  ],
+  "done": "Four cubes, zero wobble. Nice work. Time to fill it."
+}

@@ -1,0 +1,38 @@
+{
+  "name": "hexkey",
+  "version": "0.1.0",
+  "description": "Voice-guided 3D assembly for flat-pack furniture. Open source.",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/validate.mjs && tsc --noEmit -p . && vite build",
+    "preview": "vite preview --port 4173",
+    "validate": "node scripts/validate.mjs",
+    "typecheck": "tsc --noEmit -p .",
+    "voice": "${PYTHON:-python3} scripts/voice.py",
+    "shots": "node scripts/shots.mjs"
+  },
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "canvas-confetti": "^1.9.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@types/canvas-confetti": "^1.9.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@types/three": "^0.186.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "playwright": "^1.64.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

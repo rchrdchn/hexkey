@@ -1,0 +1,972 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "slug": "billy",
+  "name": "BILLY",
+  "title": "Bookcase",
+  "worksWith": "IKEA® BILLY bookcase, 80×28×202 cm (31½×11×79½\")",
+  "productUrl": "https://www.ikea.com/us/en/p/billy-bookcase-white-20522046/",
+  "size": [
+    80,
+    202,
+    28
+  ],
+  "minutes": 60,
+  "people": 2,
+  "level": 3,
+  "color": "#f5f3ef",
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "fixed",
+      "label": "Fixed panel"
+    },
+    {
+      "id": "plinth",
+      "label": "Plinth"
+    },
+    {
+      "id": "back",
+      "label": "Back panel"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "plural": "Shelves"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "nail",
+      "label": "Nail",
+      "kind": "nail"
+    },
+    {
+      "id": "spin",
+      "label": "Shelf pin",
+      "kind": "shelfpin"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.5,
+        202,
+        28
+      ],
+      "pos": [
+        -39.25,
+        101,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "fixed",
+      "size": [
+        77,
+        1.5,
+        27.6
+      ],
+      "pos": [
+        0,
+        7.25,
+        0.2
+      ]
+    },
+    {
+      "id": "middle",
+      "part": "fixed",
+      "size": [
+        77,
+        1.5,
+        27.6
+      ],
+      "pos": [
+        0,
+        100,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "fixed",
+      "size": [
+        77,
+        1.5,
+        27.6
+      ],
+      "pos": [
+        0,
+        201.25,
+        0.2
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.5,
+        202,
+        28
+      ],
+      "pos": [
+        39.25,
+        101,
+        0
+      ]
+    },
+    {
+      "id": "plinth",
+      "part": "plinth",
+      "size": [
+        77,
+        6.5,
+        1.5
+      ],
+      "pos": [
+        0,
+        3.25,
+        12.5
+      ]
+    },
+    {
+      "id": "backLow",
+      "part": "back",
+      "size": [
+        79.4,
+        100.25,
+        0.3
+      ],
+      "pos": [
+        0,
+        50.375,
+        -14.15
+      ]
+    },
+    {
+      "id": "backUp",
+      "part": "back",
+      "size": [
+        79.4,
+        101.25,
+        0.3
+      ],
+      "pos": [
+        0,
+        151.375,
+        -14.15
+      ]
+    },
+    {
+      "id": "shelf1",
+      "part": "shelf",
+      "size": [
+        76.4,
+        1.6,
+        26
+      ],
+      "pos": [
+        0,
+        38,
+        0.5
+      ]
+    },
+    {
+      "id": "shelf2",
+      "part": "shelf",
+      "size": [
+        76.4,
+        1.6,
+        26
+      ],
+      "pos": [
+        0,
+        69,
+        0.5
+      ]
+    },
+    {
+      "id": "shelf3",
+      "part": "shelf",
+      "size": [
+        76.4,
+        1.6,
+        26
+      ],
+      "pos": [
+        0,
+        134,
+        0.5
+      ]
+    },
+    {
+      "id": "shelf4",
+      "part": "shelf",
+      "size": [
+        76.4,
+        1.6,
+        26
+      ],
+      "pos": [
+        0,
+        167,
+        0.5
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side down. Pins in.",
+      "say": "Lay one side panel flat on the floor, holes up. Screw in four cam pins at the top and middle, and press six dowels into the rest of the holes.",
+      "pose": [
+        -90,
+        0,
+        0
+      ],
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -38.5,
+              201.25,
+              8
+            ],
+            [
+              -38.5,
+              201.25,
+              -8
+            ],
+            [
+              -38.5,
+              100,
+              8
+            ],
+            [
+              -38.5,
+              100,
+              -8
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -38.5,
+              201.25,
+              3
+            ],
+            [
+              -38.5,
+              201.25,
+              -3
+            ],
+            [
+              -38.5,
+              100,
+              3
+            ],
+            [
+              -38.5,
+              100,
+              -3
+            ],
+            [
+              -38.5,
+              7.25,
+              8
+            ],
+            [
+              -38.5,
+              7.25,
+              -8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Bottom panel",
+      "say": "Push the bottom panel onto the low dowels. Then drive two screws through the outside of the side panel into it.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        40,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-x",
+          "spin": true,
+          "at": [
+            [
+              -40,
+              7.25,
+              8
+            ],
+            [
+              -40,
+              7.25,
+              -8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Middle panel. Lock 2.",
+      "say": "Slide the fixed middle panel onto its pins. Drop in two cam locks, arrows toward the pins, and turn them clockwise.",
+      "add": [
+        "middle"
+      ],
+      "from": [
+        40,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "spin": true,
+          "at": [
+            [
+              -33.5,
+              100.75,
+              8
+            ],
+            [
+              -33.5,
+              100.75,
+              -8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 60,
+        "tight": true
+      }
+    },
+    {
+      "caption": "Top panel. Lock 2.",
+      "say": "Same move for the top panel. Push it onto the pins, two cam locks, clockwise.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        40,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "spin": true,
+          "at": [
+            [
+              -33.5,
+              202,
+              8
+            ],
+            [
+              -33.5,
+              202,
+              -8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 60,
+        "tight": true
+      }
+    },
+    {
+      "caption": "Pins for side two",
+      "say": "Now the other ends. Pins and dowels go in the same pattern, so the second side can drop straight on.",
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              38.5,
+              201.25,
+              8
+            ],
+            [
+              38.5,
+              201.25,
+              -8
+            ],
+            [
+              38.5,
+              100,
+              8
+            ],
+            [
+              38.5,
+              100,
+              -8
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              38.5,
+              201.25,
+              3
+            ],
+            [
+              38.5,
+              201.25,
+              -3
+            ],
+            [
+              38.5,
+              100,
+              3
+            ],
+            [
+              38.5,
+              100,
+              -3
+            ],
+            [
+              38.5,
+              7.25,
+              8
+            ],
+            [
+              38.5,
+              7.25,
+              -8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Side two. Lock 4.",
+      "say": "With a helper, lower the second side onto all the pins at once. Two screws at the bottom, then lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        40,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "spin": true,
+          "at": [
+            [
+              40,
+              7.25,
+              8
+            ],
+            [
+              40,
+              7.25,
+              -8
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "spin": true,
+          "at": [
+            [
+              33.5,
+              100.75,
+              8
+            ],
+            [
+              33.5,
+              100.75,
+              -8
+            ],
+            [
+              33.5,
+              202,
+              8
+            ],
+            [
+              33.5,
+              202,
+              -8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": -35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Plinth",
+      "say": "Tap four dowels into the ends of the plinth board, and press it in under the bottom panel at the front.",
+      "add": [
+        "plinth"
+      ],
+      "from": [
+        0,
+        0,
+        30
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+z",
+          "at": [
+            [
+              -38.5,
+              2,
+              12.5
+            ],
+            [
+              -38.5,
+              4.5,
+              12.5
+            ],
+            [
+              38.5,
+              2,
+              12.5
+            ],
+            [
+              38.5,
+              4.5,
+              12.5
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 45,
+        "zoom": 0.9,
+        "tight": true
+      }
+    },
+    {
+      "caption": "Flip it",
+      "say": "Roll the frame over so it lies face down. Ask your helper. It's long.",
+      "pose": [
+        -90,
+        180,
+        0
+      ],
+      "safety": "Two people for this one.",
+      "view": {
+        "az": 60,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Back, lower half",
+      "say": "Lay the first back half on, shiny side in. Line it up with the bottom corners, then nail it along the edges every fifteen centimeters or so.",
+      "add": [
+        "backLow"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "hardware": [
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              -39,
+              1,
+              -14.3
+            ],
+            [
+              -39,
+              99.5,
+              -14.3
+            ]
+          ],
+          "n": 5
+        },
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              39,
+              1,
+              -14.3
+            ],
+            [
+              39,
+              99.5,
+              -14.3
+            ]
+          ],
+          "n": 5
+        },
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              -28,
+              7.25,
+              -14.3
+            ],
+            [
+              28,
+              7.25,
+              -14.3
+            ]
+          ],
+          "n": 3
+        },
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              -28,
+              100,
+              -14.3
+            ],
+            [
+              28,
+              100,
+              -14.3
+            ]
+          ],
+          "n": 3
+        }
+      ],
+      "view": {
+        "az": 45,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Back, upper half",
+      "say": "Second back half, butted tight to the first. Same nailing pattern. Keep the frame square while you go.",
+      "add": [
+        "backUp"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "hardware": [
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              -39,
+              102,
+              -14.3
+            ],
+            [
+              -39,
+              201,
+              -14.3
+            ]
+          ],
+          "n": 5
+        },
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              39,
+              102,
+              -14.3
+            ],
+            [
+              39,
+              201,
+              -14.3
+            ]
+          ],
+          "n": 5
+        },
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              -28,
+              201.25,
+              -14.3
+            ],
+            [
+              28,
+              201.25,
+              -14.3
+            ]
+          ],
+          "n": 3
+        },
+        {
+          "id": "nail",
+          "axis": "-z",
+          "line": [
+            [
+              -28,
+              101.5,
+              -14.3
+            ],
+            [
+              28,
+              101.5,
+              -14.3
+            ]
+          ],
+          "n": 3
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Stand it up",
+      "say": "Stand the bookcase up together. Lift with your legs, not your back.",
+      "pose": [
+        0,
+        360,
+        0
+      ],
+      "safety": "Two-person lift.",
+      "view": {
+        "az": 30,
+        "el": 15
+      }
+    },
+    {
+      "caption": "16 shelf pins",
+      "say": "Pick your shelf heights. Push four shelf pins in at each height, two on each side, all at the same level.",
+      "hardware": [
+        {
+          "id": "spin",
+          "axis": "+x",
+          "at": [
+            [
+              -38.5,
+              37,
+              9
+            ],
+            [
+              -38.5,
+              37,
+              -9
+            ],
+            [
+              -38.5,
+              68,
+              9
+            ],
+            [
+              -38.5,
+              68,
+              -9
+            ],
+            [
+              -38.5,
+              133,
+              9
+            ],
+            [
+              -38.5,
+              133,
+              -9
+            ],
+            [
+              -38.5,
+              166,
+              9
+            ],
+            [
+              -38.5,
+              166,
+              -9
+            ]
+          ]
+        },
+        {
+          "id": "spin",
+          "axis": "-x",
+          "at": [
+            [
+              38.5,
+              37,
+              9
+            ],
+            [
+              38.5,
+              37,
+              -9
+            ],
+            [
+              38.5,
+              68,
+              9
+            ],
+            [
+              38.5,
+              68,
+              -9
+            ],
+            [
+              38.5,
+              133,
+              9
+            ],
+            [
+              38.5,
+              133,
+              -9
+            ],
+            [
+              38.5,
+              166,
+              9
+            ],
+            [
+              38.5,
+              166,
+              -9
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Shelves in",
+      "say": "Tilt each shelf in and lay it flat on its pins. Four shelves, no tools.",
+      "add": [
+        "shelf1",
+        "shelf2",
+        "shelf3",
+        "shelf4"
+      ],
+      "from": [
+        0,
+        0,
+        45
+      ],
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Last one, and the most important. Screw the two wall brackets to the top, and fix them to the wall with screws that suit your wall.",
+      "safety": "Tip-over risk. Always anchor to the wall.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              -28,
+              199,
+              -14.3
+            ],
+            [
+              28,
+              199,
+              -14.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "zoom": 0.8,
+        "tight": true
+      }
+    }
+  ],
+  "done": "Bookcase built. Fourteen steps, all yours. Now the hard part: picking which books go up top."
+}
