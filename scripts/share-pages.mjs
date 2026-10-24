@@ -11,6 +11,8 @@ import { root, SITE, catalog, pieceText, siteText, esc } from './share/lib.mjs';
 
 const dist = `${root}dist`;
 const tpl = fs.readFileSync(`${dist}/index.html`, 'utf8');
+// link-preview video (og:video on every page): recorded from the live app, committed like og.jpg
+if (!fs.existsSync(`${dist}/og-video.mp4`) || fs.statSync(`${dist}/og-video.mp4`).size > 5e6) throw new Error('public/og-video.mp4 missing or over 5 MB');
 if (!tpl.includes('<!-- share:start') || !tpl.includes('<!-- prejs:start -->')) throw new Error('index.html lost its share:/prejs: markers');
 const cat = catalog();
 const site = siteText(cat);
@@ -32,6 +34,11 @@ function head({ title, description, url, image, alt }) {
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="${a}" />
+    <meta property="og:video" content="${SITE}/og-video.mp4" />
+    <meta property="og:video:secure_url" content="${SITE}/og-video.mp4" />
+    <meta property="og:video:type" content="video/mp4" />
+    <meta property="og:video:width" content="1280" />
+    <meta property="og:video:height" content="720" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="${t}" />
     <meta name="twitter:description" content="${d}" />
