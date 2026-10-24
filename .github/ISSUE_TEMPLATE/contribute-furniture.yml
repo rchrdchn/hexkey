@@ -7,17 +7,21 @@ body:
     attributes:
       value: |
         Thanks for helping Hexkey grow! Read [CONTRIBUTING.md](https://github.com/rchrdchn/hexkey/blob/main/CONTRIBUTING.md) and the [data format](https://github.com/rchrdchn/hexkey/blob/main/README.md#data-format) first.
-        **Write every step in your own words. Never upload IKEA manuals, PDFs, drawings, photos or 3D models.**
+        **Write every step in your own words. Never upload any brand's manuals, PDFs, drawings, photos or 3D models.**
+        Hexkey is not affiliated with, sponsored by or endorsed by any furniture brand or store. Brand and product names belong to their owners.
   - type: input
     id: product
-    attributes: { label: Product name (as printed on the box), placeholder: HEMNES }
+    attributes: { label: Product name (as printed on the box or product page), placeholder: "HEMNES / Holmes bookcase" }
     validations: { required: true }
+  - type: input
+    id: brand
+    attributes: { label: Brand, description: Who makes it. The app fills this in for brands it knows., placeholder: "IKEA / Walker Edison / Sauder" }
   - type: input
     id: url
     attributes:
-      label: IKEA product page
-      description: An ikea.com product page (…/p/…). Not a PDF or image link.
-      placeholder: https://www.ikea.com/us/en/p/hemnes-8-drawer-dresser-white-stain-80318604/
+      label: Product or instructions page
+      description: An https link to the official product page or assembly-instructions page, on the brand's own site or a store that sells it. A web page, not a PDF or image link.
+      placeholder: https://www.walkeredison.com/products/…
     validations: { required: true }
   - type: input
     id: category
@@ -50,7 +54,7 @@ body:
     attributes:
       label: Rules
       options:
-        - label: I will write the steps in my own words and will not upload IKEA manuals, PDFs, images or 3D models.
+        - label: I will write the steps in my own words and will not upload any brand's manuals, PDFs, images or 3D models.
           required: true
         - label: I agree my contribution is licensed MIT (code) and CC BY-SA 4.0 (furniture data and audio).
           required: true

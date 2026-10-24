@@ -28,7 +28,7 @@ Hexkey grows one piece of furniture at a time, and every piece comes from someon
 | The piece and no time to write JSON | **Measure or test.** Comment on a request with dimensions and hardware counts, or step through a guide and report what's off. |
 | Code skills | **Improve the app:** a new archetype, a better camera angle, accessibility, performance. See [Code changes](#code-changes). |
 
-The **Contribute** button in the app runs a quick fit check and fills in the issue for you. Its link check currently accepts ikea.com product pages. For other brands, open the issue on GitHub and paste the brand's product page link.
+The **Contribute** button in the app runs a quick fit check and fills in the issue for you. Its link box takes any https link to an official product or assembly-instructions page, for any brand, on the brand's own site or a store that sells the piece. It rejects plain http, home pages and direct PDF or image links, and fills in the brand when the site is one of the brands in `data/sources/brands.json`. **Request** works the same way.
 
 ### Is my piece a good fit?
 

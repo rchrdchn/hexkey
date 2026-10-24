@@ -15,4 +15,4 @@ body:
     attributes: { label: Device and browser, placeholder: "iPhone 15, Safari 18" }
   - type: textarea
     id: extra
-    attributes: { label: Anything else, description: Screenshots of Hexkey are welcome. Please don't attach pages from IKEA manuals. }
+    attributes: { label: Anything else, description: Screenshots of Hexkey are welcome. Please don't attach pages from any brand's manuals. }

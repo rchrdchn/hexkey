@@ -292,7 +292,8 @@ export default function App() {
                 <button className="cta" disabled={!pickEntry && !piece} onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>
                   Build <span className="cta-name">{pickEntry?.name ?? piece?.name ?? '…'}</span> {I.next}
                 </button>
-                {shownPiece && <Legal p={shownPiece} />}
+                {/* while the next piece loads, the old legal line keeps its space but is hidden, so its brand text never shows under the new name */}
+                {shownPiece && <Legal p={shownPiece} stale={shownPiece !== piece} />}
                 <p className="legal">{AMAZON_DISCLOSURE}</p>
               </div>
             </>
@@ -418,9 +419,9 @@ function Ring({ n, of }: { n: number; of: number }) {
   );
 }
 
-function Legal({ p }: { p: Piece }) {
+function Legal({ p, stale }: { p: Piece; stale?: boolean }) {
   return (
-    <p className="legal">
+    <p className={`legal ${stale ? 'stale' : ''}`} aria-hidden={stale || undefined}>
       Works with {p.worksWith}. {p.disclaimer ?? 'Not affiliated with or endorsed by Inter IKEA Systems B.V.'} Demo steps: always follow the{' '}
       <a href={p.instructionsUrl ?? p.productUrl} target="_blank" rel="noopener noreferrer">official instructions ↗</a>
       {p.instructionsUrl && <>{' · '}<a href={p.productUrl} target="_blank" rel="noopener noreferrer">product page ↗</a></>}

@@ -7,16 +7,20 @@ body:
     attributes:
       value: |
         **Is it already requested?** [See open requests](https://github.com/rchrdchn/hexkey/issues?q=is%3Aissue+is%3Aopen+label%3Afurniture-request+sort%3Areactions-%2B1-desc) and add a 👍. The most-wanted pieces get built first.
+        Hexkey is not affiliated with, sponsored by or endorsed by any furniture brand or store.
   - type: input
     id: product
-    attributes: { label: Product name (as printed on the box), placeholder: MALM }
+    attributes: { label: Product name (as printed on the box or product page), placeholder: "MALM / Rebecca 6-drawer dresser" }
     validations: { required: true }
+  - type: input
+    id: brand
+    attributes: { label: Brand, description: Who makes it. The app fills this in for brands it knows., placeholder: "IKEA / Walker Edison / Sauder" }
   - type: input
     id: url
     attributes:
-      label: IKEA product page
-      description: An ikea.com product page (…/p/…). No PDFs or images please.
-      placeholder: https://www.ikea.com/us/en/p/malm-6-drawer-dresser-white-30403571/
+      label: Product or instructions page
+      description: An https link to the official product or assembly-instructions page, on the brand's site or a store that sells it. No PDFs or images please.
+      placeholder: https://www.sauder.com/…
     validations: { required: true }
   - type: textarea
     id: why

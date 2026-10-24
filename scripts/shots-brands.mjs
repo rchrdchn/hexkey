@@ -37,7 +37,7 @@ for (const [eng, name, bt, opts] of runs) {
   const brandOpts = await sel.locator('option').evaluateAll((els) => els.map((e) => ({ v: e.value, t: e.textContent })));
   const nBrands = new Set(cat.map((e) => e.brandId)).size;
   ok(brandOpts.length === nBrands + 1, `${tag} ${brandOpts.length} brand options (All + ${nBrands} brands)`);
-  ok(brandOpts[0].v === "all" && brandOpts[0].t === `All brands (${cat.length})`, `${tag} first option "${brandOpts[0].t}"`);
+  ok(brandOpts[0].v === "all" && brandOpts[0].t === "All brands", `${tag} first option "${brandOpts[0].t}"`);
   const ns = brandOpts.slice(1).map((o) => +o.t.match(/\((\d+)\)$/)[1]);
   ok(ns.every((n, i) => i === 0 || n <= ns[i - 1]), `${tag} brands sorted by count: ${brandOpts.slice(1, 4).map((o) => o.t).join(', ')}…`);
   ok(await page.getByLabel('Brand').count() >= 1, `${tag} dropdown is labelled "Brand"`);

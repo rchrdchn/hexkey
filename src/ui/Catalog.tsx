@@ -58,7 +58,9 @@ export function Catalog({ entries, pick, onPick, onRequest }: { entries: Catalog
           <label className={`brand-pick ${br !== 'all' ? 'on' : ''}`}>
             <span className="bp-l">Brand</span>
             <select value={br} onChange={(e) => setBrand(e.target.value)} aria-label="Brand">
-              {[{ id: 'all', label: 'All brands', n: entries.length }, ...brands].map((b) => <option key={b.id} value={b.id}>{b.label} ({b.n})</option>)}
+              {/* "All brands" carries no count: it has to fit the 320px iPhone SE (the total is on the All chip and the start button) */}
+              <option value="all">All brands</option>
+              {brands.map((b) => <option key={b.id} value={b.id}>{b.label} ({b.n})</option>)}
             </select>
             <svg className="bp-chev" viewBox="0 0 24 24" width="16" height="16" aria-hidden><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" /></svg>
           </label>

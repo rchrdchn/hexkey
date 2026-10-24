@@ -11,7 +11,9 @@ export const LINKS = {
   requests: `${REPO}/issues?q=${encodeURIComponent('is:issue is:open label:furniture-request sort:reactions-+1-desc')}`,
   bug: `${REPO}/issues/new?template=bug-report.yml`,
 };
+/** fallback when the catalog list isn't passed in */
 const SHIPPED = ['lack', 'kallax', 'billy'];
+const isShipped = (name: string, have?: string[]) => (have ?? SHIPPED).includes(name.trim().toLowerCase());
 
 export function issueUrl(template: string, title: string, fields: Record<string, string>) {
   const q = new URLSearchParams({ template, title });
@@ -19,20 +21,69 @@ export function issueUrl(template: string, title: string, fields: Record<string,
   return `${REPO}/issues/new?${q.toString()}`;
 }
 
-/** https://www.ikea.com/us/en/p/billy-bookcase-white-00263850/ -> { ok, name: "BILLY", nice: "BILLY bookcase" } */
-export function parseIkea(raw: string) {
+/** Official brand sites (data/sources/brands.json), loaded only when a form opens so the home bundle stays small. */
+export type BrandSite = { id: string; label: string; host: string };
+let brandSites: Promise<BrandSite[]> | null = null;
+export function loadBrandSites(): Promise<BrandSite[]> {
+  brandSites ??= import('../../data/sources/brands.json').then((m) => (m.default.brands as { id: string; label?: string; name: string; site?: string; status?: string }[])
+    .filter((b) => b.site && b.status !== 'skipped')
+    .map((b) => ({ id: b.id, label: b.status === 'included' && b.label ? b.label : b.name.replace(/\s*\(.*\)$/, ''), host: bare(new URL(b.site!).hostname) })))
+    .catch(() => []);
+  return brandSites;
+}
+function useBrandSites() {
+  const [list, setList] = useState<BrandSite[]>([]);
+  useEffect(() => { let live = true; loadBrandSites().then((l) => live && setList(l)); return () => { live = false; }; }, []);
+  return list;
+}
+const bare = (h: string) => h.toLowerCase().replace(/^www\./, '');
+const FILE = /\.(pdf|jpe?g|png|gif|webp|avif|svg|zip|dwg|stl|obj|glb|gltf|mp4|mov)$/i;
+const TRACK = /^(utm_\w+|gclid|fbclid|msclkid|mc_[ce]id|ref|ref_|tag|irclickid|clickid|aff\w*)$/i;
+const GENERIC = new Set(['p', 'dp', 'gp', 'product', 'products', 'item', 'items', 'ip', 'shop', 'store', 'en', 'us', 'pdp', 'instructions', 'instruction', 'assembly', 'support', 'manual', 'manuals', 'guide', 'guides', 'help', 'docs', 'documents', 'furniture', 'collections', 'catalog', 'detail', 'details', 'page']);
+const titleCase = (w: string) => (w.length <= 2 && w !== w.toUpperCase() ? w : w[0].toUpperCase() + w.slice(1));
+
+export type Parsed =
+  | { state: 'empty' }
+  | { state: 'bad'; why: string }
+  | { state: 'ok'; url: string; host: string; brand?: string; name: string; nice: string; id?: string };
+
+/**
+ * Any official brand or retailer product / instructions page over https.
+ * https://www.ikea.com/us/en/p/billy-bookcase-white-00263850/ -> { name: "BILLY", nice: "BILLY bookcase", brand: "IKEA®" }
+ * https://www.walkeredison.com/products/holmes-bookcase      -> { name: "Holmes Bookcase", brand: "Walker Edison®" }
+ */
+export function parseProductUrl(raw: string, sites: BrandSite[] = []): Parsed {
   const s = raw.trim();
-  if (!s) return { state: 'empty' as const };
+  if (!s) return { state: 'empty' };
+  if (/^http:\/\//i.test(s)) return { state: 'bad', why: 'Use the secure https:// link' };
+  if (/^[a-z][a-z0-9+.-]*:/i.test(s) && !/^https:\/\//i.test(s)) return { state: 'bad', why: 'Needs a web link (https://…)' };
+  if (s.length > 600 || /\s/.test(s)) return { state: 'bad', why: 'That doesn’t look like a web link' };
   let u: URL;
-  try { u = new URL(/^https?:\/\//i.test(s) ? s : `https://${s}`); } catch { return { state: 'bad' as const }; }
+  try { u = new URL(/^https:\/\//i.test(s) ? s : `https://${s}`); } catch { return { state: 'bad', why: 'That doesn’t look like a web link' }; }
   const host = u.hostname.toLowerCase();
-  if (host !== 'ikea.com' && host !== 'www.ikea.com') return { state: 'bad' as const };
-  const m = u.pathname.match(/^\/[a-z]{2}\/[a-z]{2}(?:-[a-z]{2})?\/p\/([a-z0-9-]+?)-(s?\d{8})\/?$/i);
-  if (!m) return { state: 'bad' as const };
-  const words = m[1].split('-');
-  const name = words[0].toUpperCase();
-  const clean = `https://www.ikea.com${u.pathname.endsWith('/') ? u.pathname : u.pathname + '/'}`;
-  return { state: 'ok' as const, url: clean, name, nice: [name, ...words.slice(1, 3)].join(' '), id: m[2] };
+  if (u.username || u.password || u.port || !/^([a-z0-9-]+\.)+[a-z]{2,}$/.test(host) || host.split('.').some((l) => !l || l.startsWith('-') || l.endsWith('-')))
+    return { state: 'bad', why: 'Needs a real site address, like brand.com/…' };
+  const path = decodeURIComponent(u.pathname).replace(/\/+$/, '');
+  if (!path) return { state: 'bad', why: 'Link the product or instructions page, not the home page' };
+  if (FILE.test(path)) return { state: 'bad', why: 'Link the web page, not a PDF or image file' };
+  const keep = [...u.searchParams].filter(([k]) => !TRACK.test(k));
+  const q = keep.length ? `?${new URLSearchParams(keep).toString()}` : '';
+  const url = `https://${host}${u.pathname}${q}`;
+  const h = bare(host);
+  const brand = sites.find((b) => h === b.host || h.endsWith(`.${b.host}`))?.label;
+  // IKEA product pages carry the name and article number: …/p/billy-bookcase-white-00263850/
+  const ik = /(^|\.)ikea\.com$/.test(h) && u.pathname.match(/\/p\/([a-z0-9-]+?)-(s?\d{8})\/?$/i);
+  if (ik) {
+    const words = ik[1].split('-'), name = words[0].toUpperCase();
+    return { state: 'ok', url, host: h, brand: brand ?? 'IKEA®', name, nice: [name, ...words.slice(1, 3)].join(' '), id: ik[2] };
+  }
+  // anything else: a best guess at the name from the last readable path segment (people can edit it)
+  const code = (w: string) => /^\d{4,}$/.test(w) || (/\d/.test(w) && w.length >= 5);
+  const words = path.split('/').filter(Boolean).reverse()
+    .map((x) => x.replace(/\.(html?|php|aspx?)$/i, '').split(/[-_+\s]+/).filter((w) => w && !code(w)))
+    .find((ws) => ws.some((w) => /[a-z]{3,}/i.test(w) && !GENERIC.has(w.toLowerCase())))?.slice(0, 4) ?? [];
+  const name = words.map(titleCase).join(' ');
+  return { state: 'ok', url, host: h, brand, name, nice: name || h };
 }
 
 /* ---------------- modal shell: focus trap, Esc, backdrop close, body scroll lock, restore focus ---------------- */
@@ -87,19 +138,23 @@ function Seg<T extends string>({ label, value, set, opts }: { label: string; val
   );
 }
 
-function UrlField({ value, set, parsed, id }: { value: string; set: (v: string) => void; parsed: ReturnType<typeof parseIkea>; id: string }) {
+function UrlField({ value, set, parsed, id }: { value: string; set: (v: string) => void; parsed: Parsed; id: string }) {
   return (
     <label className="fld">
-      <span>IKEA product page</span>
+      <span>Product or instructions page</span>
       <input id={id} data-autofocus type="url" inputMode="url" autoComplete="off" autoCapitalize="off" spellCheck={false}
-        placeholder="ikea.com/us/en/p/…" value={value} onChange={(e) => set(e.target.value)}
+        placeholder="https://brand.com/products/…" value={value} onChange={(e) => set(e.target.value)}
         aria-invalid={parsed.state === 'bad'} aria-describedby={`${id}-h`} />
       <small id={`${id}-h`} className={`hint-${parsed.state}`} aria-live="polite">
-        {parsed.state === 'bad' ? 'Needs an ikea.com product link (…/p/…)' : parsed.state === 'ok' ? <>✓ {parsed.nice} · {parsed.id}</> : 'Product page only. No PDFs.'}
+        {parsed.state === 'bad' ? parsed.why
+          : parsed.state === 'ok' ? <>✓ {parsed.brand ? `${parsed.brand} · ` : ''}{parsed.host}{parsed.id ? ` · ${parsed.id}` : ''}</>
+          : 'Any brand or store’s official page, https only. No PDFs.'}
       </small>
     </label>
   );
 }
+
+const NOT_AFFILIATED = 'Hexkey isn’t affiliated with, sponsored or endorsed by any brand or store.';
 
 /* ---------------- Contribute ---------------- */
 type Has = 'built' | 'box' | 'no';
@@ -109,8 +164,8 @@ const CATS = ['Shelves & bookcases', 'Tables', 'Storage & dressers', 'Desks', 'C
 const BIG = new Set(['Wardrobes', 'Kitchen', 'Beds']);
 
 export type Verdict = { k: 'good' | 'maybe' | 'request' | 'have'; why: string[] };
-export function fit(a: { name: string; steps: number; has: Has | ''; gives: Gives | ''; cat: string; level: Level | '' }): Verdict {
-  if (SHIPPED.includes(a.name.trim().toLowerCase())) return { k: 'have', why: ['Already in Hexkey. Improvements welcome!'] };
+export function fit(a: { name: string; steps: number; has: Has | ''; gives: Gives | ''; cat: string; level: Level | '' }, have?: string[]): Verdict {
+  if (isShipped(a.name, have)) return { k: 'have', why: ['Already in Hexkey. Improvements welcome!'] };
   const why: string[] = [];
   if (a.has === 'no' && a.gives !== 'json') return { k: 'request', why: ['You need the piece in hand to measure and test it.'] };
   if (a.gives === 'review' && a.has !== 'built') return { k: 'request', why: ['Reviewing needs a written guide to check.'] };
@@ -130,12 +185,13 @@ const V = {
   have: { t: 'We have this one', c: 'h', ico: '✅' },
 };
 
-export function ContributeModal({ onClose, toRequest }: { onClose: () => void; toRequest: (url: string, name: string) => void }) {
+export function ContributeModal({ onClose, toRequest, have }: { onClose: () => void; toRequest: (url: string, name: string) => void; have?: string[] }) {
   const [url, setUrl] = useState('');
-  const p = parseIkea(url);
+  const sites = useBrandSites();
+  const p = parseProductUrl(url, sites);
   const [name, setName] = useState('');
   const [touched, setTouched] = useState(false);
-  useEffect(() => { if (p.state === 'ok' && !touched) setName(p.name); }, [url]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (!touched) setName(p.state === 'ok' ? p.name : ''); }, [url]); // eslint-disable-line react-hooks/exhaustive-deps
   const [cat, setCat] = useState('');
   const [steps, setSteps] = useState(10);
   const [has, setHas] = useState<Has | ''>('');
@@ -143,11 +199,12 @@ export function ContributeModal({ onClose, toRequest }: { onClose: () => void; t
   const [level, setLevel] = useState<Level | ''>('');
   const [ownWords, setOwnWords] = useState(false);
   const ready = p.state === 'ok' && name.trim() && cat && has && gives && level;
-  const v = useMemo(() => (ready ? fit({ name, steps, has, gives, cat, level }) : null), [ready, name, steps, has, gives, cat, level]);
+  const v = useMemo(() => (ready ? fit({ name, steps, has, gives, cat, level }, have) : null), [ready, name, steps, has, gives, cat, level, have]);
   const lab = { built: 'Built it', box: 'Still in the box', no: "Don't have it" }, glab = { json: 'Step data (piece.json)', measure: 'Measurements', review: 'Review / test only' };
   const llab = { '1': 'New to this', '2': 'Some JSON', '3': 'Comfortable with 3D/code' };
-  const href = ready && p.state === 'ok' ? issueUrl('contribute-furniture.yml', `[Contribute] ${name.trim().toUpperCase()} ${cat.toLowerCase()}`, {
-    product: name.trim().toUpperCase(),
+  const href = ready && p.state === 'ok' ? issueUrl('contribute-furniture.yml', `[Contribute] ${p.brand ? `${p.brand.replace(/[®™]/g, '')} ` : ''}${name.trim()} (${cat.toLowerCase()})`, {
+    product: name.trim(),
+    brand: p.brand?.replace(/[®™]/g, '') ?? p.host,
     url: p.url,
     category: cat,
     steps: String(steps),
@@ -165,7 +222,7 @@ export function ContributeModal({ onClose, toRequest }: { onClose: () => void; t
       <div className="two">
         <label className="fld">
           <span>Name on the box</span>
-          <input value={name} onChange={(e) => { setTouched(true); setName(e.target.value); }} placeholder="HEMNES" autoCapitalize="characters" />
+          <input value={name} onChange={(e) => { setTouched(true); setName(e.target.value); }} placeholder="HEMNES, Holmes bookcase…" autoCapitalize="words" />
         </label>
         <label className="fld">
           <span>Type</span>
@@ -198,6 +255,7 @@ export function ContributeModal({ onClose, toRequest }: { onClose: () => void; t
         <input type="checkbox" checked={ownWords} onChange={(e) => setOwnWords(e.target.checked)} />
         <span>I'll write steps in my own words and never upload any brand's manuals, PDFs or images.</span>
       </label>
+      <p className="cm-note">{NOT_AFFILIATED}</p>
 
       {v?.k === 'request' && p.state === 'ok'
         ? <button className="cta" onClick={() => toRequest(p.url, name)}>💡 Request it instead {I.next}</button>
@@ -215,16 +273,17 @@ export function ContributeModal({ onClose, toRequest }: { onClose: () => void; t
 }
 
 /* ---------------- Request ---------------- */
-export function RequestModal({ onClose, init }: { onClose: () => void; init?: { url: string; name: string } }) {
+export function RequestModal({ onClose, init, have: catalogNames }: { onClose: () => void; init?: { url: string; name: string }; have?: string[] }) {
   const [url, setUrl] = useState(init?.url ?? '');
-  const p = parseIkea(url);
+  const sites = useBrandSites();
+  const p = parseProductUrl(url, sites);
   const [name, setName] = useState(init?.name ?? '');
   const [touched, setTouched] = useState(!!init?.name);
-  useEffect(() => { if (p.state === 'ok' && !touched) setName(p.name); }, [url]); // eslint-disable-line react-hooks/exhaustive-deps
+  useEffect(() => { if (!touched) setName(p.state === 'ok' ? p.name : ''); }, [url]); // eslint-disable-line react-hooks/exhaustive-deps
   const [why, setWhy] = useState('');
-  const have = SHIPPED.includes(name.trim().toLowerCase());
+  const have = isShipped(name, catalogNames);
   const ok = p.state === 'ok' && name.trim() && !have;
-  const href = ok && p.state === 'ok' ? issueUrl('furniture-request.yml', `[Request] ${name.trim().toUpperCase()}`, { product: name.trim().toUpperCase(), url: p.url, why: why.trim() }) : '';
+  const href = ok && p.state === 'ok' ? issueUrl('furniture-request.yml', `[Request] ${p.brand ? `${p.brand.replace(/[®™]/g, '')} ` : ''}${name.trim()}`, { product: name.trim(), brand: p.brand?.replace(/[®™]/g, '') ?? p.host, url: p.url, why: why.trim() }) : '';
   return (
     <Modal title="Request furniture" kind="req" onClose={onClose}>
       <a className="vote" href={LINKS.requests} target="_blank" rel="noopener noreferrer">
@@ -233,7 +292,7 @@ export function RequestModal({ onClose, init }: { onClose: () => void; init?: { 
       <UrlField id="r-url" value={url} set={setUrl} parsed={p} />
       <label className="fld">
         <span>Name on the box</span>
-        <input value={name} onChange={(e) => { setTouched(true); setName(e.target.value); }} placeholder="MALM" autoCapitalize="characters" />
+        <input value={name} onChange={(e) => { setTouched(true); setName(e.target.value); }} placeholder="MALM, Rebecca dresser…" autoCapitalize="words" />
         {have && <small className="hint-ok">Already in Hexkey. Go build it!</small>}
       </label>
       <label className="fld">
@@ -242,6 +301,7 @@ export function RequestModal({ onClose, init }: { onClose: () => void; init?: { 
       </label>
       <a className={`cta ${href ? '' : 'off'}`} aria-disabled={!href} href={href || undefined} target="_blank" rel="noopener noreferrer"
         onClick={(e) => { if (!href) e.preventDefault(); }}>{I.gh} Request on GitHub</a>
+      <p className="cm-note">{NOT_AFFILIATED}</p>
       <p className="cm-links">
         <a href={LINKS.bug} target="_blank" rel="noopener noreferrer">🐞 Feedback / report a bug</a>
       </p>

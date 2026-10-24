@@ -47,6 +47,14 @@ const noFlash = async (page, tag, nth) => {
 };
 const brandAndSearch = async (page, tag) => {
   const sel = page.locator('.brand-pick select');
+  // the selected label must fit the dropdown (it used to cut off at "All brands (1…" on the 320px iPhone SE)
+  const fitTxt = await sel.evaluate((s) => {
+    const cs = getComputedStyle(s), c = document.createElement('canvas').getContext('2d');
+    c.font = `${cs.fontWeight} ${cs.fontSize} ${cs.fontFamily}`;
+    const txt = s.options[s.selectedIndex].text, need = c.measureText(txt).width, room = s.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    return { txt, need: Math.round(need), room: Math.round(room) };
+  });
+  ok(fitTxt.need <= fitTxt.room, `${tag} Brand dropdown label fits (“${fitTxt.txt}” ${fitTxt.need}px in ${fitTxt.room}px)`);
   await sel.selectOption('zinus'); await sleep(300);
   const z = await page.locator('.card').evaluateAll((els) => els.map((e) => e.querySelector('.by')?.textContent));
   ok(z.length > 0 && z.every((b) => b === 'Zinus'), `${tag} Brand dropdown filters to Zinus (${z.length} cards)`);
@@ -60,6 +68,19 @@ const brandAndSearch = async (page, tag) => {
   ok(n3.every((b) => b === 'Zinus'), `${tag} search stays inside the brand (${n3.length} cards)`);
   await page.locator('.search input').fill(''); await sel.selectOption('all'); await page.locator('.cats button').first().click(); await sleep(300);
   ok(await page.locator('.card').count() > 100, `${tag} All brands restores the full list`);
+};
+// while a newly picked piece loads, the previous piece's legal line (its brand + links) must not be visible
+const legalNotStale = async (page, tag) => {
+  // a card further down that no earlier check has loaded (loaded pieces are cached, so they'd skip the delay)
+  const card = page.locator('.card:not(.on)').nth(14);
+  const slug = await card.getAttribute('data-slug');
+  await page.route(`**/pieces/${slug}/piece.json`, async (r) => { await sleep(1200); await r.continue(); });
+  await card.click(); await sleep(250);
+  const during = await page.evaluate(() => [...document.querySelectorAll('.sheet.pick .legal')].filter((l) => /Works with/.test(l.textContent) && getComputedStyle(l).visibility !== 'hidden').map((l) => l.textContent));
+  await sleep(1800);
+  const after = await page.evaluate(() => [...document.querySelectorAll('.sheet.pick .legal')].filter((l) => /Works with/.test(l.textContent) && getComputedStyle(l).visibility !== 'hidden').map((l) => l.textContent));
+  await page.unroute(`**/pieces/${slug}/piece.json`);
+  ok(during.length === 0 && after.length === 1, `${tag} legal line hidden while ${slug} loads, shown after (during: ${during.length}, after: ${JSON.stringify(after[0]?.slice(0, 60))})`);
 };
 const runs = [
   ['webkit', 'iphone15', { ...devices['iPhone 15'] }],
@@ -112,6 +133,7 @@ for (const [eng, name, opts] of runs) {
     ok(pv2.ok && pv2.slug === pv.slug, `${tag} picked card scrolled into view after clearing search: ${JSON.stringify(pv2)}`);
     await brandAndSearch(page, tag);
     await noFlash(page, tag, 2);
+    await legalNotStale(page, tag);
     ok(await overflow() <= 0, `${tag} no sideways overflow after brand filter`);
     ok(await overflow() <= 0, `${tag} no sideways overflow with picker open`);
     // close button
@@ -146,6 +168,7 @@ for (const [eng, name, opts] of runs) {
     await brandAndSearch(page, tag);
     await noFlash(page, tag, 3);
     await noFlash(page, tag, 7);
+    await legalNotStale(page, tag);
     await page.goto(base + '/#pieces'); await sleep(800);
     ok(await page.locator('.catalog').isVisible(), `${tag} #pieces on desktop shows picker`);
   }

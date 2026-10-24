@@ -290,7 +290,7 @@ Hexkey is meant to grow through its community, one piece of furniture at a time.
 - **Request furniture** (button in the app): 👍 an [existing request](https://github.com/rchrdchn/hexkey/issues?q=is%3Aissue+is%3Aopen+label%3Afurniture-request+sort%3Areactions-%2B1-desc) or open a [new one](https://github.com/rchrdchn/hexkey/issues/new?template=furniture-request.yml). The most-wanted pieces get built first.
 - **Feedback / bug report:** [open an issue](https://github.com/rchrdchn/hexkey/issues/new?template=bug-report.yml).
 
-Issue forms live in `.github/ISSUE_TEMPLATE/` and use the labels `furniture-request`, `contribution` and `bug`. The in-app forms live in `src/ui/Community.tsx` and fill GitHub's issue forms through URL parameters, so there is no backend. For now the in-app link check accepts ikea.com product pages; for other brands, open the issue on GitHub and paste the brand's product page link.
+Issue forms live in `.github/ISSUE_TEMPLATE/` and use the labels `furniture-request`, `contribution` and `bug`. The in-app forms live in `src/ui/Community.tsx` and fill GitHub's issue forms through URL parameters, so there is no backend. The in-app link box accepts any https link to an official product or assembly-instructions page, for any brand, on the brand's own site or a store that sells the piece. It rejects plain http, home pages and direct PDF or image links, guesses the product name from the link, and fills in the brand when the site is in `data/sources/brands.json` (that list loads only when a form opens).
 
 ## How it works
 
