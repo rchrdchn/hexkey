@@ -11,10 +11,11 @@ import { Build, r } from './gen/lib.mjs';
 import { chest, bookcase, cubes } from './gen/storage.mjs';
 import { table, apronTable, desk, wallShelf, bed, crib, ladder, stool } from './gen/frames.mjs';
 import { platformBed, standingDesk, frameShelf, wireShelf } from './gen/more.mjs';
+import { bunkBed, cubby, lDesk, panelBed, clampTable } from './gen/b3.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CHECK = process.argv.includes('--check');
-export const ARCHETYPES = { chest, bookcase, cubes, table, 'apron-table': apronTable, desk, 'wall-shelf': wallShelf, bed, crib, ladder, stool, 'platform-bed': platformBed, 'standing-desk': standingDesk, 'frame-shelf': frameShelf, 'wire-shelf': wireShelf };
+export const ARCHETYPES = { chest, bookcase, cubes, table, 'apron-table': apronTable, desk, 'wall-shelf': wallShelf, bed, crib, ladder, stool, 'platform-bed': platformBed, 'standing-desk': standingDesk, 'frame-shelf': frameShelf, 'wire-shelf': wireShelf, 'bunk-bed': bunkBed, cubby, 'l-desk': lDesk, 'panel-bed': panelBed, 'clamp-table': clampTable };
 /** Hand-authored pieces keep their order at the front. */
 const HAND = ['lack', 'kallax', 'billy'];
 /** Brands (id -> label + not-affiliated line) come from the research file data/sources/brands.json. */

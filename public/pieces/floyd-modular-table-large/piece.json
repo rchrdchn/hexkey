@@ -1,0 +1,380 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/floyd-modular-table-large.json by scripts/generate.mjs (archetype \"clamp-table\"). Edit the spec, not this file.",
+  "slug": "floyd-modular-table-large",
+  "name": "MODULAR TABLE",
+  "title": "Modular table, large",
+  "brand": "Floyd",
+  "brandId": "floyd",
+  "disclaimer": "Not affiliated with or endorsed by Floyd.",
+  "worksWith": "Floyd® Modular Table, Large, 36.5×36.5×12\" (W×D×H)",
+  "productUrl": "https://floydhome.com/products/the-modular-table",
+  "instructionsUrl": "https://floydhome.com/pages/assembly",
+  "size": [
+    93,
+    31,
+    93
+  ],
+  "minutes": 15,
+  "people": 1,
+  "level": 1,
+  "color": "#e3cfa9",
+  "category": "tables",
+  "archetype": "clamp-table",
+  "confidence": "low",
+  "sources": [
+    "https://floydhome.com/products/the-modular-table",
+    "https://floydhome.com/products/the-floyd-leg-16"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Table top"
+    },
+    {
+      "id": "leg",
+      "label": "Clamp leg"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Clamp screw",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        92.7,
+        3.8,
+        92.7
+      ],
+      "pos": [
+        0,
+        28.6,
+        0
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        5,
+        30.5,
+        5
+      ],
+      "pos": [
+        -42.35,
+        15.25,
+        42.35
+      ],
+      "boxes": [
+        {
+          "s": [
+            5,
+            25.7,
+            1.2
+          ],
+          "p": [
+            0,
+            -2.4,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            0.6,
+            8
+          ],
+          "p": [
+            0,
+            14.95,
+            -3
+          ]
+        },
+        {
+          "s": [
+            5,
+            1,
+            8
+          ],
+          "p": [
+            0,
+            10.95,
+            -3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        5,
+        30.5,
+        5
+      ],
+      "pos": [
+        42.35,
+        15.25,
+        42.35
+      ],
+      "boxes": [
+        {
+          "s": [
+            5,
+            25.7,
+            1.2
+          ],
+          "p": [
+            0,
+            -2.4,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            0.6,
+            8
+          ],
+          "p": [
+            0,
+            14.95,
+            -3
+          ]
+        },
+        {
+          "s": [
+            5,
+            1,
+            8
+          ],
+          "p": [
+            0,
+            10.95,
+            -3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        5,
+        30.5,
+        5
+      ],
+      "pos": [
+        42.35,
+        15.25,
+        -42.35
+      ],
+      "boxes": [
+        {
+          "s": [
+            5,
+            25.7,
+            1.2
+          ],
+          "p": [
+            0,
+            -2.4,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            0.6,
+            8
+          ],
+          "p": [
+            0,
+            14.95,
+            3
+          ]
+        },
+        {
+          "s": [
+            5,
+            1,
+            8
+          ],
+          "p": [
+            0,
+            10.95,
+            3
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        5,
+        30.5,
+        5
+      ],
+      "pos": [
+        -42.35,
+        15.25,
+        -42.35
+      ],
+      "boxes": [
+        {
+          "s": [
+            5,
+            25.7,
+            1.2
+          ],
+          "p": [
+            0,
+            -2.4,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            0.6,
+            8
+          ],
+          "p": [
+            0,
+            14.95,
+            3
+          ]
+        },
+        {
+          "s": [
+            5,
+            1,
+            8
+          ],
+          "p": [
+            0,
+            10.95,
+            3
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Flip the top onto something soft, underside up.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Clamp 2 legs",
+      "say": "Slide the clamp of a leg over one corner until it sits square against both edges, then tighten its screw from underneath. Same on the next corner.",
+      "add": [
+        "leg1",
+        "leg2"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-y",
+          "at": [
+            [
+              -42.35,
+              25.7,
+              39.35
+            ],
+            [
+              42.35,
+              25.7,
+              39.35
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Last 2 legs",
+      "say": "Clamp the last two legs on the other corners. Snug every screw, but stop before it marks the wood.",
+      "add": [
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-y",
+          "at": [
+            [
+              42.35,
+              25.7,
+              -39.35
+            ],
+            [
+              -42.35,
+              25.7,
+              -39.35
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "Turn it right side up. Lift it clear, do not lever it on two legs. If it rocks, loosen one clamp, push the leg square and tighten again.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      }
+    }
+  ],
+  "done": "Done. Your MODULAR TABLE modular table, large is built. Give it a proud little pat.",
+  "notes": "Brand page: 36.5\" W × 36.5\" D × 12\" H. Floyd's tables use its clamp-on legs (a clamp at the top of each leg, secured with screws); that the Modular Table uses the same clamp style, and the leg positions, are our best guess."
+}

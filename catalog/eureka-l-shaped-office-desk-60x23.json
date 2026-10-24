@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-l-shaped-office-desk-60x23",
+  "name": "L01",
+  "title": "L-shaped office desk 60\"",
+  "brand": "eureka",
+  "archetype": "l-desk",
+  "category": "desks",
+  "size": [
+    155.3,
+    109.9,
+    76.2
+  ],
+  "worksWith": "Eureka Ergonomic® L-Shaped Office Desk 60×23\", 61⅛×43¼×30\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/gaming-desk-l01-60-black-l-shaped",
+  "instructionsUrl": "https://cdn.shopifycdn.net/s/files/1/0705/9849/2464/files/ERK-CD-L01L-60B-V1_L01_Computer_Desk_60-Inch_Left_Side_Black_Assemble_Instruction_Manual.pdf?v=1685702738",
+  "color": "#2f2f33",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/gaming-desk-l01-60-black-l-shaped"
+  ],
+  "options": {
+    "dw": 58.4,
+    "side": "left"
+  },
+  "tags": [
+    "l-shaped desk",
+    "corner desk",
+    "computer desk",
+    "eureka"
+  ],
+  "notes": "Brand page: 61⅛\" L × 43¼\" W × 30\" H, open metal legs, left or right return, assembles in about 30 minutes with the included tools. Leg and beam layout is our best guess.",
+  "people": 2,
+  "minutes": 30
+}

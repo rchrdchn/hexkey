@@ -49,25 +49,26 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 
 ## What's in the catalog
 
-**128 pieces from 24 brands**, in 7 categories: bedroom (30), shelving (29), desks (21), kids (18), dressers (15), storage (9) and tables (6).
+**146 pieces from 25 brands**, in 7 categories: bedroom (39), shelving (29), desks (24), kids (22), dressers (15), storage (9) and tables (8).
 
 | Brand | Pieces | Brand | Pieces |
 |---|---|---|---|
-| IKEA® | 35 | Seville Classics® | 6 |
+| IKEA® | 35 | Floyd® | 6 |
+| Plank+Beam® | 13 | Seville Classics® | 6 |
 | Zinus® | 13 | Bestar® | 4 |
 | Storkcraft® | 11 | Branch® | 3 |
-| Walker Edison® | 10 | ECR4Kids® | 3 |
-| Plank+Beam® | 8 | Max & Lily® | 3 |
-| Dorel Home (Ameriwood Home®, Novogratz®) | 5 | Tribesigns® | 3 |
-| Eureka Ergonomic® | 5 | Delta Children® | 2 |
-| Nathan James® | 5 | Linon® | 2 |
-| VASAGLE® (SONGMICS) | 2 | VIVO® | 2 |
+| Walker Edison® | 10 | Max & Lily® | 3 |
+| Eureka Ergonomic® | 8 | Tribesigns® | 3 |
+| ECR4Kids® | 7 | Delta Children® | 2 |
+| Dorel Home (Ameriwood Home®, Novogratz®) | 5 | Linon® | 2 |
+| Nathan James® | 5 | VIVO® | 2 |
+| VASAGLE® (SONGMICS) | 2 | | |
 | ClosetMaid®, FlexiSpot®, Prepac®, Sauder®, South Shore®, UPLIFT Desk® | 1 each | | |
 
 - **3 hand-made guides** (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step.
-- **125 generated guides** come from short JSON specs in `catalog/`, built by [archetypes](docs/ARCHETYPES.md) (bookcase, chest, cubes, table, platform bed, standing desk, wire shelf and more).
+- **143 generated guides** come from short JSON specs in `catalog/`, built by [archetypes](docs/ARCHETYPES.md) (bookcase, chest, cubes, table, platform bed, standing desk, bunk bed, L-desk, wire shelf and more).
 - **The full list** with steps, part and hardware counts is in [`public/pieces/catalog.json`](public/pieces/catalog.json), which is also what the picker loads.
-- **Brand research** for 50 brands (24 included, 18 queued, 8 skipped) is in [docs/BRANDS.md](docs/BRANDS.md) and [`data/sources/brands.json`](data/sources/brands.json).
+- **Brand research** for 50 brands (25 included, 17 queued, 8 skipped) is in [docs/BRANDS.md](docs/BRANDS.md) and [`data/sources/brands.json`](data/sources/brands.json).
 
 Every piece has a **confidence** level for how sure we are about its internals:
 
@@ -336,7 +337,7 @@ Contributions are very welcome: new furniture, fixes to steps, bug reports, requ
 
 ## Trademarks and disclaimer
 
-IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. Walker Edison, Ameriwood Home, Novogratz, Zinus, Sauder, South Shore, Prepac, ClosetMaid, Tribesigns, Nathan James, VASAGLE, SONGMICS, FlexiSpot, UPLIFT Desk, Bestar, Linon, Delta Children, Seville Classics, Branch, VIVO, Storkcraft, Plank+Beam, Max & Lily, Eureka Ergonomic, ECR4Kids and their product names are trademarks of their respective owners. They are used here only to say which products these guides are written for.
+IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. Walker Edison, Ameriwood Home, Novogratz, Zinus, Sauder, South Shore, Prepac, ClosetMaid, Tribesigns, Nathan James, VASAGLE, SONGMICS, FlexiSpot, UPLIFT Desk, Bestar, Linon, Delta Children, Seville Classics, Branch, VIVO, Storkcraft, Plank+Beam, Max & Lily, Eureka Ergonomic, ECR4Kids, Floyd and their product names are trademarks of their respective owners. They are used here only to say which products these guides are written for.
 
 Hexkey is an independent project and is **not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V. or any other brand named here** (the full list is in [data/sources/brands.json](data/sources/brands.json)). No brand named here sponsors Hexkey.
 

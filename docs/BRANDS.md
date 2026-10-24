@@ -14,9 +14,9 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | Tier | Brands | Included (pieces) | Research-only (queued) | Skipped (blocked/terms) |
 |---|---|---|---|---|
 | big | 16 | 8 | 5 | 3 |
-| medium | 22 | 12 | 5 | 5 |
+| medium | 22 | 13 | 4 | 5 |
 | small | 12 | 4 | 8 | 0 |
-| **total** | **50** | **24** | **18** | **8** |
+| **total** | **50** | **25** | **17** | **8** |
 
 ## Pieces in the catalog by brand
 
@@ -42,11 +42,12 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | Branch | 3 |
 | VIVO | 2 |
 | Storkcraft | 11 |
-| Plank+Beam | 8 |
+| Plank+Beam | 13 |
 | Max & Lily | 3 |
-| Eureka Ergonomic | 5 |
-| ECR4Kids | 3 |
-| **total** | **128** |
+| Eureka Ergonomic | 8 |
+| ECR4Kids | 7 |
+| Floyd | 6 |
+| **total** | **146** |
 
 ## Big brands and big-box retailers
 
@@ -79,7 +80,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | [Crate & Barrel](https://www.crateandbarrel.com) | skipped | 2 | Assembly PDFs on product pages | HTTP 403 even on robots.txt | n/a (blocked) |  | Blocked → skipped. |
 | [Room & Board](https://www.roomandboard.com) | skipped | 2 | Assembly instructions on product pages | HTTP 403 | Crawl-delay 10 |  | Blocked → skipped; mostly delivered assembled. |
 | [Article](https://www.article.com) | research-only | 3 | Assembly guides per product (help centre) | public | Crawl-delay 1 | Sofas (bolt-on legs), beds | Mostly upholstered; low archetype fit. Queued. |
-| [Floyd](https://floydhome.com) | research-only | 4 | Assembly page (/pages/assembly) plus per-product PDF guides and videos linked from product pages | public, no login | Shopify default; products allowed (10 s between requests) | Floyd Bed, Modular Table, Lift Off coffee table, Short and Tall Shelf | Checked in batch 2 and left queued: tables use clamp-on legs and lift-off end supports, the shelves are post-and-panel kits. None match an archetype yet, so our steps would be wrong. |
+| [Floyd](https://floydhome.com) | included | 4 | Assembly page (/pages/assembly) plus per-product PDF guides and videos linked from product pages | public, no login | Shopify default; products allowed (10 s between requests) | Floyd Bed, Modular Table, Lift Off coffee table, Short and Tall Shelf | Batch 3: Floyd Bed (twin, full/queen, king, full/queen with headboard) and Modular Table (small, large), sizes from the product pages. Tool-free bed (steel supports, honeycomb panels, ratchet straps) uses the panel-bed archetype; the table uses clamp-table with Floyd clamp legs. Panel layout is our best guess → low confidence. Lift Off coffee table skipped (how the top fixes to the end supports is not clear from the page); shelves skipped (their pages print no dimensions). |
 | [Burrow](https://burrow.com) | research-only | 3 | Assembly guides per product | public | Crawl-delay 10 | Range shelving, Serif | Queued. |
 | [Tribesigns](https://www.tribesigns.com) | included | 5 | Product page installation manual PDF on Shopify CDN | public | Crawl-delay 10 | 5-tier ladder bookshelf, computer desks, L-desks | One page returned 503 → skipped that item. |
 | [Nathan James](https://nathanjameshome.com) | included | 4 | Instructions in box; product pages list assembly minutes (no PDF seen) | public | Crawl-delay 10; .json 404 so HTML specs used | Theo ladder shelf, Parker desk, Haven bookcase, Andrew nightstand |  |
@@ -93,8 +94,8 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | [Furinno](https://www.furinno.com) | research-only | 4 | Instructions on product pages | sitemap 502 | unverified (general knowledge, site not checked) | Pasir 3-tier shelf, Turn-N-Tube | Server error → queued. |
 | [Seville Classics](https://www.sevilleclassics.com) | included | 4 | Product page "View assembly instructions" PDF (files.elfsightcdn.com) | public | Shopify; Crawl-delay 10; /products.json allowed | UltraDurable 4/5/6-tier wire shelving, HOME 4-tier shelving, airLIFT desks | Specs from product JSON body (assembled W×D×H, height on levelling feet). Tool-free wire shelving uses the wire-shelf archetype; airLIFT desks queued. |
 | [Storkcraft](https://www.storkcraft.com) | included | 5 | Product page "Assembly Instructions" link → Salsify-hosted PDF (one per model; some per model-number suffix) | public, no login | Shopify default; products allowed (10 s between requests) | Rio 4/6-cube organizer bookcases, Casablanca and California cube bookcases, Santorini, California and Casablanca 2-drawer nightstands, Rio, Kyoto and Sorrento 6-drawer dressers, Alpine 4-drawer chest | Assembled W×D×H listed under "Product Dimensions" on each page; "2 people recommended" and pre-installed drawer tracks noted in copy. Graco®-licensed lines skipped (licensed brand name). |
-| [Eureka Ergonomic](https://eurekaergonomic.com) | included | 4 | Per-product assembly PDF linked from each product page (hosted on the brand's Shopify CDN) | public, no login | Shopify default; products allowed (10 s between requests) | Norwood, Ark SD, Ark Lite and Ark Executive standing desks, leather-finish standing desk, L-shaped and executive desks with cabinets, gaming desks | Electric dual-motor standing desks; overall L×W×H and lift range on each page. Desks with built-in drawers are shown with the drawers simplified into the top. L-shaped, cabinet and glass gaming desks skipped (no archetype yet). |
-| [ECR4Kids](https://ecr4kids.com) | included | 4 | "Assembly Instructions" PDF linked from each product page (hosted on Salsify) | public, no login | Shopify default; products allowed (10 s between requests) | Sleekline storage cabinets 24/30/36" H, Sleekline cubby cabinets 2×5, 3×4, 3×5, coat lockers, book displays, student desks | Classroom and kids' storage in birch plywood; W×D×H on each page. Cubby cabinets queued (cubbies are not square, our cubes archetype needs square cells); BrightSpace desk skipped (page calls it a floor table but lists a 25" height). |
+| [Eureka Ergonomic](https://eurekaergonomic.com) | included | 4 | Per-product assembly PDF linked from each product page (hosted on the brand's Shopify CDN) | public, no login | Shopify default; products allowed (10 s between requests) | Norwood, Ark SD, Ark Lite and Ark Executive standing desks, leather-finish standing desk, L-shaped and executive desks with cabinets, gaming desks | Electric dual-motor standing desks; overall L×W×H and lift range on each page. Desks with built-in drawers are shown with the drawers simplified into the top. Batch 3 added the Ark Pro L standing desk, L60 L-shaped standing desk and L01 L-shaped office desk (l-desk archetype). Ark EX (built-in cabinet and drawers) and glass LED gaming desks skipped. |
+| [ECR4Kids](https://ecr4kids.com) | included | 4 | "Assembly Instructions" PDF linked from each product page (hosted on Salsify) | public, no login | Shopify default; products allowed (10 s between requests) | Sleekline storage cabinets 24/30/36" H, Sleekline cubby cabinets 2×5, 3×4, 3×5, coat lockers, book displays, student desks | Classroom and kids' storage in birch plywood; W×D×H on each page. Batch 3 added Sleekline cubby cabinets 2×5, 3×4, 3×5 and 5×3 (cubby archetype; the 5×3 ships with an anti-tip kit); BrightSpace desk skipped (page calls it a floor table but lists a 25" height). |
 
 ## Small / direct-to-consumer
 
@@ -110,7 +111,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 | [Autonomous](https://www.autonomous.ai) | research-only | 4 | Assembly guide per desk | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | SmartDesk Core | Standing desk archetype ready; queued. _(unverified: from general knowledge)_ |
 | [VIVO](https://www.vivo-us.com) | included | 4 | Product page "Assembly Instructions": frame and table-top manual PDFs on the Shopify CDN | public, no login | Shopify default; products allowed | PRO 60×24" dual motor desk, E2 series desks, desk frames | Specs (top size, thickness, height range) listed on the product page. |
 | [Fully (Herman Miller)](https://www.fully.com) | research-only | 3 | Jarvis desk assembly guide | unverified (general knowledge, site not checked) | unverified (general knowledge, site not checked) | Jarvis desk | Jarvis now sold via Herman Miller; queued. _(unverified: from general knowledge)_ |
-| [Plank+Beam](https://www.plankandbeam.com) | included | 4 | Help-center "Assembly resources" article (linked as "Assembly Instructions" on every product page) | public, no login | Shopify default; products allowed (10 s between requests) | Harbor desks 38/53", Sera, Marelle, Willow and Elio dressers, Marelle nightstands, bunk and loft beds | Solid pine furniture; overall L×D×H and drawer interiors printed on each product page. Bunk/loft beds queued (need a bunk-bed archetype). |
+| [Plank+Beam](https://www.plankandbeam.com) | included | 4 | Help-center "Assembly resources" article (linked as "Assembly Instructions" on every product page) | public, no login | Shopify default; products allowed (10 s between requests) | Harbor desks 38/53", Sera, Marelle, Willow and Elio dressers, Marelle nightstands, bunk and loft beds | Solid pine furniture; overall L×D×H and drawer interiors printed on each product page. Batch 3 added Classic twin/twin, full/full and queen/queen bunk beds, Rustic twin/twin bunk bed and Rustic twin loft bed (bunk-bed archetype, low confidence). |
 | [Max & Lily](https://maxandlily.com) | included | 4 | Assembly instructions page (/pages/assembly-instructions), linked from every product page | public, no login | Shopify default; products allowed (10 s between requests) | Charlotte bookcase, Hudson desks 38/53", Scandinavian dresser, Sutton secretary desk, kids beds with trundles | Kids' solid-wood furniture (sister brand of Plank+Beam). Overall L×W×H on each page. Scandinavian dresser and Sutton desk skipped this batch (drawer layout / fold-down desk not clear from the page). |
 
 ## Skipped and why
@@ -151,7 +152,7 @@ _Updated 2026-10-23 (PT). Machine-readable copy: [data/sources/brands.json](../d
 4. **Delta Children**: Sutton 3-drawer, Epic bookcase hutch, 6-shelf storage with 2 drawers.
 5. **Tribesigns**: L-shaped desks (needs an `l-desk` archetype), 6-tier bookcase.
 6. **Standing desks**: Autonomous SmartDesk Core, VIVO frames, Branch Duo, Fully Jarvis (archetype ready).
-7. **Floyd** (bed, table, shelving system) and **Thuma** (tool-free joinery bed) — good fits, need a check of their pages and possibly a `joinery-bed` archetype.
+7. **Thuma** (tool-free joinery bed) — good fit, needs a check of its pages and possibly a `joinery-bed` archetype. (Floyd bed and table were added in batch 3; Floyd shelves still need dimensions.)
 8. **Bush, South Shore, Prepac, VASAGLE, Furinno** — retry their own sites later; if still blocked, use public retailer listings at `medium` confidence.
 9. **Target / Walmart house brands** — only via public data that their terms allow (e.g. manufacturer pages for the same item); no scraping.
 

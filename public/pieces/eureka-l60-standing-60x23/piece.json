@@ -1,0 +1,503 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/eureka-l60-standing-60x23.json by scripts/generate.mjs (archetype \"l-desk\"). Edit the spec, not this file.",
+  "slug": "eureka-l60-standing-60x23",
+  "name": "L60",
+  "title": "L-shaped standing desk 60\"",
+  "brand": "Eureka Ergonomic",
+  "brandId": "eureka",
+  "disclaimer": "Not affiliated with or endorsed by Eureka Ergonomic.",
+  "worksWith": "Eureka Ergonomic® L-Shaped Standing Desk with Accessories Set 60×23\", 61×43×30\" (W×D×H)",
+  "productUrl": "https://eurekaergonomic.com/products/office-desk-61-l-shaped-electric-standing-desk-rustic-brown-left-erk-l60l-rb",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/ERK-EHD-L60L-MW_L60-standing-desk_Instruction-Manual_Version-1_1.pdf?v=1727155354",
+  "size": [
+    155,
+    76,
+    109
+  ],
+  "minutes": 60,
+  "people": 2,
+  "level": 2,
+  "color": "#8a6a4f",
+  "category": "desks",
+  "archetype": "l-desk",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/office-desk-61-l-shaped-electric-standing-desk-rustic-brown-left-erk-l60l-rb"
+  ],
+  "parts": [
+    {
+      "id": "main",
+      "label": "Main desk top"
+    },
+    {
+      "id": "ret",
+      "label": "Return top"
+    },
+    {
+      "id": "plate",
+      "label": "Joining plate"
+    },
+    {
+      "id": "beam",
+      "label": "Frame beam"
+    },
+    {
+      "id": "column",
+      "label": "Lifting column"
+    },
+    {
+      "id": "foot",
+      "label": "Foot"
+    },
+    {
+      "id": "ctrl",
+      "label": "Control box"
+    },
+    {
+      "id": "keypad",
+      "label": "Keypad"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "main",
+      "part": "main",
+      "size": [
+        154.9,
+        2.5,
+        58.4
+      ],
+      "pos": [
+        0,
+        74.95,
+        -25.4
+      ]
+    },
+    {
+      "id": "ret",
+      "part": "ret",
+      "size": [
+        58.4,
+        2.5,
+        50.8
+      ],
+      "pos": [
+        -48.25,
+        74.95,
+        29.2
+      ]
+    },
+    {
+      "id": "plates",
+      "part": "plate",
+      "size": [
+        48.4,
+        0.4,
+        16
+      ],
+      "pos": [
+        -48.25,
+        73.5,
+        3.8
+      ],
+      "boxes": [
+        {
+          "s": [
+            10,
+            0.4,
+            16
+          ],
+          "p": [
+            -18.2,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            10,
+            0.4,
+            16
+          ],
+          "p": [
+            18.2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beamM",
+      "part": "beam",
+      "size": [
+        138.9,
+        5,
+        5
+      ],
+      "pos": [
+        0,
+        71.2,
+        -25.4
+      ]
+    },
+    {
+      "id": "beamR",
+      "part": "beam",
+      "size": [
+        5,
+        5,
+        42.8
+      ],
+      "pos": [
+        -48.25,
+        71.2,
+        25.2
+      ]
+    },
+    {
+      "id": "colM",
+      "part": "column",
+      "size": [
+        7,
+        64.7,
+        5
+      ],
+      "pos": [
+        65.95,
+        36.35,
+        -25.4
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            35.59,
+            5
+          ],
+          "p": [
+            0,
+            14.56,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            32.35,
+            4
+          ],
+          "p": [
+            0,
+            -16.17,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colR",
+      "part": "column",
+      "size": [
+        7,
+        64.7,
+        5
+      ],
+      "pos": [
+        -48.25,
+        36.35,
+        43.6
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            35.59,
+            5
+          ],
+          "p": [
+            0,
+            14.56,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            32.35,
+            4
+          ],
+          "p": [
+            0,
+            -16.17,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footM",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        52.4
+      ],
+      "pos": [
+        65.95,
+        2,
+        -25.4
+      ]
+    },
+    {
+      "id": "footR",
+      "part": "foot",
+      "size": [
+        52.4,
+        4,
+        7
+      ],
+      "pos": [
+        -48.25,
+        2,
+        43.6
+      ]
+    },
+    {
+      "id": "ctrl",
+      "part": "ctrl",
+      "size": [
+        20,
+        4,
+        9
+      ],
+      "pos": [
+        0,
+        71.7,
+        -42.6
+      ]
+    },
+    {
+      "id": "keypad",
+      "part": "keypad",
+      "size": [
+        14,
+        2.5,
+        6
+      ],
+      "pos": [
+        38.73,
+        72.45,
+        0.8
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Tops face down",
+      "say": "Lay both desk tops upside down on the flattened box or a rug, pushed together into an L. This desk is built upside down.",
+      "add": [
+        "main",
+        "ret"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Join the tops",
+      "say": "Screw the joining plates across the seam where the two tops meet. Check the edges are flush before you drive the last screw. The return goes on the left here, but it can go either way.",
+      "add": [
+        "plates"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -69.45,
+              73.7,
+              -1.2
+            ],
+            [
+              -69.45,
+              73.7,
+              8.8
+            ],
+            [
+              -27.05,
+              73.7,
+              -1.2
+            ],
+            [
+              -27.05,
+              73.7,
+              8.8
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 65
+      }
+    },
+    {
+      "caption": "Frame beams",
+      "say": "Lay the L-shaped frame along both tops and screw it down through the pre-drilled holes. The frame is what ties the L together, so use every screw.",
+      "add": [
+        "beamM",
+        "beamR"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 12
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "2 lifting columns",
+      "say": "Set one lifting column on the far end of the main top and one at the end of the return, cables toward the back, and bolt each one down.",
+      "add": [
+        "colM",
+        "colR"
+      ],
+      "from": [
+        0,
+        -40,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      },
+      "safety": "Columns are heavy. Lift with your legs."
+    },
+    {
+      "caption": "2 feet",
+      "say": "Bolt a foot across the end of each column. On the return the foot runs across it, so the desk stands steady both ways.",
+      "add": [
+        "footM",
+        "footR"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Control box + keypad",
+      "say": "Screw the control box under the back of the main top and the keypad under the front edge. Plug both motor cables and the keypad into the box, then clip the cables up out of the way.",
+      "add": [
+        "ctrl",
+        "keypad"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 6
+        }
+      ],
+      "view": {
+        "az": 160,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, lift the whole desk and turn it onto its feet. Lift it clear of the floor, do not pivot it on one leg.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 22
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Power on + reset",
+      "say": "Plug it in and run the first-time reset from your manual, usually holding the down button until the desk bottoms out. Then try up and down with nothing on top, and watch both columns move together.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    }
+  ],
+  "done": "Done. Your L60 l-shaped standing desk 60\" is built. Give it a proud little pat.",
+  "notes": "Brand page: 61\" W × 43\" D × 30\" H (lowest), dual motor, left or right return, MDF or solid wood tops. Accessories are not shown. Column placement and the frame layout are our best guess."
+}

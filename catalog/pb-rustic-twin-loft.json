@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-rustic-twin-loft",
+  "name": "RUSTIC",
+  "title": "Twin loft bed",
+  "brand": "plank-beam",
+  "archetype": "bunk-bed",
+  "category": "bedroom",
+  "size": [
+    202.6,
+    110.5,
+    177.8
+  ],
+  "worksWith": "Plank+Beam® Rustic Loft Bed - Twin, 79.75×43.5×70\" (L×W×H)",
+  "productUrl": "https://www.plankandbeam.com/products/rustic-twin-high-loft-bed",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#c9a477",
+  "confidence": "low",
+  "sources": [
+    "https://www.plankandbeam.com/products/rustic-twin-high-loft-bed"
+  ],
+  "options": {
+    "loft": true,
+    "upperY": 142.8
+  },
+  "tags": [
+    "loft bed",
+    "twin",
+    "kids",
+    "rustic",
+    "plank+beam"
+  ],
+  "notes": "Brand page: assembled 79.75\" L × 43.5\" W × 70\" H, built-in ladder, mattress no thicker than 7\". Brand Q&A: rails and ladder can be set up for either orientation. Deck height is our best guess.",
+  "people": 2,
+  "minutes": 90
+}

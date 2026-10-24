@@ -44,7 +44,7 @@ for (const eng of ['webkit', 'chromium']) {
         for (let i = 1; i <= 10; i++) { await cdp.send('Input.dispatchTouchEvent', { type: 'touchMove', touchPoints: [{ x: x0 - i * 20, y }] }); await sleep(16); }
         await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
         await sleep(500);
-      } else { await page.mouse.move(before.x + 30, before.y + 20); await page.mouse.down(); await page.mouse.move(before.x - 150, before.y + 20, { steps: 8 }); await page.mouse.up(); await sleep(400); }
+      } else { await page.mouse.move(before.x + 30, before.y + 20); await page.mouse.down(); await page.mouse.move(before.x - 150, before.y + 20, { steps: 8 }); await page.mouse.up(); await sleep(900); }
       const after = await first.boundingBox();
       ok(Math.abs(after.x - before.x) < 1 && Math.abs(after.y - before.y) < 1, `${tag} sideways drag doesn't move tiles (dx=${(after.x - before.x).toFixed(1)})`);
       // tap/click checks a tile

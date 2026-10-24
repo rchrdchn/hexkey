@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-l60-standing-60x23",
+  "name": "L60",
+  "title": "L-shaped standing desk 60\"",
+  "brand": "eureka",
+  "archetype": "l-desk",
+  "category": "desks",
+  "size": [
+    154.9,
+    109.2,
+    76.2
+  ],
+  "worksWith": "Eureka Ergonomic® L-Shaped Standing Desk with Accessories Set 60×23\", 61×43×30\" (W×D×H)",
+  "productUrl": "https://eurekaergonomic.com/products/office-desk-61-l-shaped-electric-standing-desk-rustic-brown-left-erk-l60l-rb",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/ERK-EHD-L60L-MW_L60-standing-desk_Instruction-Manual_Version-1_1.pdf?v=1727155354",
+  "color": "#8a6a4f",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/office-desk-61-l-shaped-electric-standing-desk-rustic-brown-left-erk-l60l-rb"
+  ],
+  "options": {
+    "electric": true,
+    "dw": 58.4,
+    "side": "left"
+  },
+  "tags": [
+    "l-shaped desk",
+    "corner desk",
+    "standing desk",
+    "electric",
+    "eureka"
+  ],
+  "notes": "Brand page: 61\" W × 43\" D × 30\" H (lowest), dual motor, left or right return, MDF or solid wood tops. Accessories are not shown. Column placement and the frame layout are our best guess.",
+  "people": 2,
+  "minutes": 60
+}

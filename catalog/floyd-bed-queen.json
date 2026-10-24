@@ -1,0 +1,38 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "floyd-bed-queen",
+  "name": "FLOYD BED",
+  "title": "Platform bed, full/queen",
+  "brand": "floyd",
+  "archetype": "panel-bed",
+  "category": "bedroom",
+  "size": [
+    170.2,
+    218.4,
+    19.1
+  ],
+  "worksWith": "Floyd® Bed Frame (Original), Full/Queen, 67×86×7.5\" (W×L×H)",
+  "productUrl": "https://floydhome.com/products/the-bed-frame",
+  "instructionsUrl": "https://floydhome.com/pages/assembly",
+  "color": "#e3cfa9",
+  "confidence": "low",
+  "sources": [
+    "https://floydhome.com/products/the-bed-frame",
+    "https://floydhome.com/products/the-floyd-bed-framework"
+  ],
+  "options": {
+    "cols": 3,
+    "rows": 2,
+    "frame": 19.05
+  },
+  "tags": [
+    "bed",
+    "platform bed",
+    "tool-free",
+    "modular",
+    "floyd"
+  ],
+  "notes": "Brand pages: 67×86×7.5\" (W×L×H); powder-coated steel supports, 1.5\" wood panels with a honeycomb core, nylon ratchet straps, no tools or screws. Panels can be added or removed to change size. The number and layout of panels and supports is our best guess from the photos.",
+  "people": 2,
+  "minutes": 20
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "floyd-modular-table-small",
+  "name": "MODULAR TABLE",
+  "title": "Modular table, small",
+  "brand": "floyd",
+  "archetype": "clamp-table",
+  "category": "tables",
+  "size": [
+    92.7,
+    55.9,
+    30.5
+  ],
+  "worksWith": "Floyd® Modular Table, Small, 36.5×22×12\" (W×D×H)",
+  "productUrl": "https://floydhome.com/products/the-modular-table",
+  "instructionsUrl": "https://floydhome.com/pages/assembly",
+  "color": "#e3cfa9",
+  "confidence": "low",
+  "sources": [
+    "https://floydhome.com/products/the-modular-table",
+    "https://floydhome.com/products/the-floyd-leg-16"
+  ],
+  "options": {
+    "tt": 3.8
+  },
+  "tags": [
+    "coffee table",
+    "low table",
+    "clamp legs",
+    "floyd"
+  ],
+  "notes": "Brand page: 36.5\" W × 22\" D × 12\" H. Floyd's tables use its clamp-on legs (a clamp at the top of each leg, secured with screws); that the Modular Table uses the same clamp style, and the leg positions, are our best guess.",
+  "people": 1,
+  "minutes": 15
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-rustic-twin-over-twin-bunk",
+  "name": "RUSTIC",
+  "title": "Twin over twin bunk bed",
+  "brand": "plank-beam",
+  "archetype": "bunk-bed",
+  "category": "bedroom",
+  "size": [
+    199.4,
+    110.5,
+    160.7
+  ],
+  "worksWith": "Plank+Beam® Rustic Twin over Twin Bunk Bed, 78.5×43.5×63.25\" (L×W×H)",
+  "productUrl": "https://www.plankandbeam.com/products/rustic-twin-over-twin-bunk-bed",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#c9a477",
+  "confidence": "low",
+  "sources": [
+    "https://www.plankandbeam.com/products/rustic-twin-over-twin-bunk-bed"
+  ],
+  "options": {
+    "upperY": 125.1,
+    "lowerY": 25.4
+  },
+  "tags": [
+    "bunk bed",
+    "twin",
+    "kids",
+    "rustic",
+    "plank+beam"
+  ],
+  "notes": "Brand page: assembled 78.5\" L × 43.5\" W × 63.25\" H, solid wood slats and a metal support bar, mattresses up to 8\". Brand Q&A: lower bunk about 10\" off the floor, about 14\" of top-bunk depth. Rail and ladder layout are our best guess from the photos.",
+  "people": 2,
+  "minutes": 120
+}

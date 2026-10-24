@@ -1,0 +1,467 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/floyd-bed-queen.json by scripts/generate.mjs (archetype \"panel-bed\"). Edit the spec, not this file.",
+  "slug": "floyd-bed-queen",
+  "name": "FLOYD BED",
+  "title": "Platform bed, full/queen",
+  "brand": "Floyd",
+  "brandId": "floyd",
+  "disclaimer": "Not affiliated with or endorsed by Floyd.",
+  "worksWith": "Floyd® Bed Frame (Original), Full/Queen, 67×86×7.5\" (W×L×H)",
+  "productUrl": "https://floydhome.com/products/the-bed-frame",
+  "instructionsUrl": "https://floydhome.com/pages/assembly",
+  "size": [
+    171,
+    19,
+    219
+  ],
+  "minutes": 20,
+  "people": 2,
+  "level": 1,
+  "color": "#e3cfa9",
+  "category": "bedroom",
+  "archetype": "panel-bed",
+  "confidence": "low",
+  "sources": [
+    "https://floydhome.com/products/the-bed-frame",
+    "https://floydhome.com/products/the-floyd-bed-framework"
+  ],
+  "parts": [
+    {
+      "id": "support",
+      "label": "Steel support"
+    },
+    {
+      "id": "panel",
+      "label": "Wood panel"
+    },
+    {
+      "id": "strap",
+      "label": "Ratchet strap"
+    }
+  ],
+  "hardware": [],
+  "objects": [
+    {
+      "id": "supports",
+      "part": "support",
+      "size": [
+        168.2,
+        15.25,
+        216.4
+      ],
+      "pos": [
+        0,
+        7.63,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            -77.1,
+            0,
+            -101.2
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            -77.1,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            -77.1,
+            0,
+            101.2
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            -25.7,
+            0,
+            -101.2
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            -25.7,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            -25.7,
+            0,
+            101.2
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            25.7,
+            0,
+            -101.2
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            25.7,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            25.7,
+            0,
+            101.2
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            77.1,
+            0,
+            -101.2
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            77.1,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            16,
+            15.25,
+            16
+          ],
+          "p": [
+            77.1,
+            0,
+            101.2
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p1_1",
+      "part": "panel",
+      "size": [
+        56.33,
+        3.8,
+        108.8
+      ],
+      "pos": [
+        -56.73,
+        17.15,
+        -54.6
+      ]
+    },
+    {
+      "id": "p1_2",
+      "part": "panel",
+      "size": [
+        56.33,
+        3.8,
+        108.8
+      ],
+      "pos": [
+        0,
+        17.15,
+        -54.6
+      ]
+    },
+    {
+      "id": "p1_3",
+      "part": "panel",
+      "size": [
+        56.33,
+        3.8,
+        108.8
+      ],
+      "pos": [
+        56.73,
+        17.15,
+        -54.6
+      ]
+    },
+    {
+      "id": "p2_1",
+      "part": "panel",
+      "size": [
+        56.33,
+        3.8,
+        108.8
+      ],
+      "pos": [
+        -56.73,
+        17.15,
+        54.6
+      ]
+    },
+    {
+      "id": "p2_2",
+      "part": "panel",
+      "size": [
+        56.33,
+        3.8,
+        108.8
+      ],
+      "pos": [
+        0,
+        17.15,
+        54.6
+      ]
+    },
+    {
+      "id": "p2_3",
+      "part": "panel",
+      "size": [
+        56.33,
+        3.8,
+        108.8
+      ],
+      "pos": [
+        56.73,
+        17.15,
+        54.6
+      ]
+    },
+    {
+      "id": "straps",
+      "part": "strap",
+      "size": [
+        171.2,
+        19.05,
+        219.4
+      ],
+      "pos": [
+        0,
+        9.53,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            171.2,
+            0.4,
+            3
+          ],
+          "p": [
+            0,
+            9.33,
+            -101.2
+          ]
+        },
+        {
+          "s": [
+            171.2,
+            0.4,
+            3
+          ],
+          "p": [
+            0,
+            9.33,
+            0
+          ]
+        },
+        {
+          "s": [
+            171.2,
+            0.4,
+            3
+          ],
+          "p": [
+            0,
+            9.33,
+            101.2
+          ]
+        },
+        {
+          "s": [
+            171.2,
+            0.4,
+            3
+          ],
+          "p": [
+            0,
+            -9.33,
+            -101.2
+          ]
+        },
+        {
+          "s": [
+            171.2,
+            0.4,
+            3
+          ],
+          "p": [
+            0,
+            -9.33,
+            0
+          ]
+        },
+        {
+          "s": [
+            171.2,
+            0.4,
+            3
+          ],
+          "p": [
+            0,
+            -9.33,
+            101.2
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "No tools needed",
+      "say": "Pick the spot and clear it. There are no screws in this bed, so put the screwdriver away.",
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Set out 12 supports",
+      "say": "Stand the steel supports on the floor in a grid, four across and three from head to foot. Use a panel as a spacer so the gaps come out right.",
+      "add": [
+        "supports"
+      ],
+      "from": [
+        0,
+        25,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Head-end panels",
+      "say": "Lay the first three panels across the head-end supports, good side up, edges tight together.",
+      "add": [
+        "p1_1",
+        "p1_2",
+        "p1_3"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      },
+      "safety": "Two people make this easier."
+    },
+    {
+      "caption": "Foot-end panels",
+      "say": "Next row of panels, butted tight against the first. Nudge the supports under the joints if they have drifted.",
+      "add": [
+        "p2_1",
+        "p2_2",
+        "p2_3"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Ratchet the straps",
+      "say": "Run each ratchet strap round the supports and panels, three in all, and crank them until the panels pull tight with no gaps. Snug is enough, the straps only stop things shifting.",
+      "add": [
+        "straps"
+      ],
+      "from": [
+        0,
+        20,
+        0
+      ],
+      "view": {
+        "az": 25,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Mattress on",
+      "say": "Push the bed into place, press on each corner to check nothing rocks, and lay the mattress on. No box spring needed.",
+      "view": {
+        "az": 25,
+        "el": 25
+      }
+    }
+  ],
+  "done": "Done. Your FLOYD BED platform bed, full/queen is built. Give it a proud little pat.",
+  "notes": "Brand pages: 67×86×7.5\" (W×L×H); powder-coated steel supports, 1.5\" wood panels with a honeycomb core, nylon ratchet straps, no tools or screws. Panels can be added or removed to change size. The number and layout of panels and supports is our best guess from the photos."
+}

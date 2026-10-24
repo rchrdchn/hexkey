@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "ecr4kids-sleekline-cubby-3x5",
+  "name": "SLEEKLINE",
+  "title": "15-cubby storage 3×5",
+  "brand": "ecr4kids",
+  "archetype": "cubby",
+  "category": "kids",
+  "size": [
+    117.5,
+    33.0,
+    51.1
+  ],
+  "worksWith": "ECR4Kids® Sleekline 15-Compartment Cubby Storage Cabinet 3x5, 46.25×13×20.1\" (W×D×H)",
+  "productUrl": "https://ecr4kids.com/products/sleekline-15-compartment-cubby-storage-cabinet-3x5",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--pVYBxP9H--/uxl4pzrmhfks6agpcxeh.pdf",
+  "color": "#e8d3b0",
+  "confidence": "low",
+  "sources": [
+    "https://ecr4kids.com/products/sleekline-15-compartment-cubby-storage-cabinet-3x5"
+  ],
+  "options": {
+    "rows": 3,
+    "cols": 5,
+    "t": 1.6
+  },
+  "tags": [
+    "cubby",
+    "cubbies",
+    "shoe storage",
+    "classroom",
+    "kids",
+    "ecr4kids"
+  ],
+  "notes": "Brand page: 46.25\" W × 13\" D × 20.1\" H, 15 cubbies each 8.5\" W × 11.5\" D × 6\" H, adult assembly. Board thickness (5/8\") is worked out from those numbers; screw-and-dowel joinery is our best guess.",
+  "people": 1
+}

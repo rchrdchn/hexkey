@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-classic-full-over-full-bunk",
+  "name": "CLASSIC",
+  "title": "Full over full bunk bed",
+  "brand": "plank-beam",
+  "archetype": "bunk-bed",
+  "category": "bedroom",
+  "size": [
+    207.0,
+    146.1,
+    165.1
+  ],
+  "worksWith": "Plank+Beam® Classic Full over Full Bunk Bed, 81.5×57.5×65\" (L×W×H)",
+  "productUrl": "https://www.plankandbeam.com/products/classic-full-over-full-bunk-bed",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#d9b98c",
+  "confidence": "low",
+  "sources": [
+    "https://www.plankandbeam.com/products/classic-full-over-full-bunk-bed"
+  ],
+  "options": {
+    "upperY": 129.5,
+    "lowerY": 33
+  },
+  "tags": [
+    "bunk bed",
+    "full",
+    "kids",
+    "solid wood",
+    "plank+beam"
+  ],
+  "notes": "Brand page: assembled 81.5\" L × 57.5\" W × 65\" H, solid pine, slat rolls and a metal support bar per bed, ships in two boxes. Brand Q&A: 36.25\" under the top bunk; ladder can go on either side. Rail and ladder layout are our best guess from the photos.",
+  "people": 2,
+  "minutes": 120
+}

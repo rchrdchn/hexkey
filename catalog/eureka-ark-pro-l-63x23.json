@@ -1,0 +1,37 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "eureka-ark-pro-l-63x23",
+  "name": "ARK PRO L",
+  "title": "L-shaped standing desk 63\"",
+  "brand": "eureka",
+  "archetype": "l-desk",
+  "category": "desks",
+  "size": [
+    160.0,
+    100.0,
+    82.5
+  ],
+  "worksWith": "Eureka Ergonomic® Ark Pro L-Shaped Standing Desk 63×23\", 63×39.38×32.5–53.75\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/tx60r-wn-standing-desk",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0705/9849/2464/files/ERK-ED-TX60R--L60_Two-Drawer_Electric_Standing_Desk-Assembly_Instruction_Manual_4b62487f-474e-4047-91c5-5a99142a64ba.pdf?v=1734318956",
+  "color": "#a77b52",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/tx60r-wn-standing-desk"
+  ],
+  "options": {
+    "electric": true,
+    "dw": 58.4,
+    "side": "left"
+  },
+  "tags": [
+    "l-shaped desk",
+    "corner desk",
+    "standing desk",
+    "electric",
+    "eureka"
+  ],
+  "notes": "Brand page: 63\" L × 39.38\" W, height 32.5–53.75\" (desk height 28–49.19\"), dual motor, 3-stage legs, left or right return, walnut veneer. Built-in drawers are simplified into the top. Column placement and the frame layout are our best guess. Shown at sitting height with the return on the left.",
+  "people": 2,
+  "minutes": 60
+}

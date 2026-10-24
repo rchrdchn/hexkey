@@ -50,6 +50,11 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 | `standing-desk` | FlexiSpot E7, UPLIFT V2 | `tt` top thickness, `inset` (column distance from the ends). Built upside down: brackets + crossbeam, columns, feet, control box, cables, flip, reset |
 | `frame-shelf` | Nathan James Theo/Haven, Tribesigns ladder | `shelves` (fixed, screwed), `lean` (top shelf depth in cm for ladder shelves that taper), `post`, `st`, `bottom` |
 | `wire-shelf` | Seville Classics UltraDurable | `shelves`, `pole` (diameter, cm), `wheels` (caster height in cm; 0 = levelling feet), `sections` (pole pieces per corner), `bottom` (lowest shelf height). Tool-free: poles, split sleeves, shelves tapped down. Size is W×D×H including wheels |
+| `bunk-bed` | Plank+Beam Classic and Rustic bunk and loft beds | `loft` (no lower bunk), `post`, `railH`, `lowerY`, `upperY` (deck heights, cm), `slats`, `ladder` (`left`\|`right`). Size is L×W×H. Ends, rails, support bars, slat rolls, guard rails, ladder, wall anchor |
+| `cubby` | ECR4Kids Sleekline cubby cabinets | `cols`, `rows`, `t` board thickness, `back` (nailed back panel), `anchor` (anti-tip kit). Cell size comes from the overall size |
+| `l-desk` | Eureka Ark Pro L, L60, L01 | `dw` desk depth, `rw` return width, `side` (`left`\|`right` return), `tt`, `electric` (two lifting columns, control box, keypad and reset; otherwise four fixed legs). Size is main length×overall depth×H. Built upside down |
+| `panel-bed` | Floyd Bed | `cols`, `rows` (panel grid), `frame` (frame height, cm), `headboard`. Tool-free: steel supports, panels dropped in, ratchet straps |
+| `clamp-table` | Floyd Modular Table | `tt` top thickness, `legW`. Four clamp-on legs tightened onto the top |
 
 `table` also takes `bars` (height in cm of two side support bars between the front and back legs, for metal-frame desks).
 

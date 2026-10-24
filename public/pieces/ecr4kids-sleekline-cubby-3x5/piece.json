@@ -1,0 +1,603 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/ecr4kids-sleekline-cubby-3x5.json by scripts/generate.mjs (archetype \"cubby\"). Edit the spec, not this file.",
+  "slug": "ecr4kids-sleekline-cubby-3x5",
+  "name": "SLEEKLINE",
+  "title": "15-cubby storage 3×5",
+  "brand": "ECR4Kids",
+  "brandId": "ecr4kids",
+  "disclaimer": "Not affiliated with or endorsed by ECR4Kids.",
+  "worksWith": "ECR4Kids® Sleekline 15-Compartment Cubby Storage Cabinet 3x5, 46.25×13×20.1\" (W×D×H)",
+  "productUrl": "https://ecr4kids.com/products/sleekline-15-compartment-cubby-storage-cabinet-3x5",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--pVYBxP9H--/uxl4pzrmhfks6agpcxeh.pdf",
+  "size": [
+    118,
+    51,
+    33
+  ],
+  "minutes": 40,
+  "people": 1,
+  "level": 2,
+  "color": "#e8d3b0",
+  "category": "kids",
+  "archetype": "cubby",
+  "confidence": "low",
+  "sources": [
+    "https://ecr4kids.com/products/sleekline-15-compartment-cubby-storage-cabinet-3x5"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "end",
+      "label": "Top and bottom"
+    },
+    {
+      "id": "long",
+      "label": "Long shelf",
+      "plural": "Long shelves"
+    },
+    {
+      "id": "div",
+      "label": "Divider"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        51.1,
+        33
+      ],
+      "pos": [
+        -57.95,
+        25.55,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        51.1,
+        33
+      ],
+      "pos": [
+        57.95,
+        25.55,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "end",
+      "size": [
+        114.3,
+        1.6,
+        33
+      ],
+      "pos": [
+        0,
+        0.8,
+        0
+      ]
+    },
+    {
+      "id": "top",
+      "part": "end",
+      "size": [
+        114.3,
+        1.6,
+        33
+      ],
+      "pos": [
+        0,
+        50.3,
+        0
+      ]
+    },
+    {
+      "id": "long1",
+      "part": "long",
+      "size": [
+        114.3,
+        1.6,
+        33
+      ],
+      "pos": [
+        0,
+        17.3,
+        0
+      ]
+    },
+    {
+      "id": "long2",
+      "part": "long",
+      "size": [
+        114.3,
+        1.6,
+        33
+      ],
+      "pos": [
+        0,
+        33.8,
+        0
+      ]
+    },
+    {
+      "id": "div1_1",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        -34.77,
+        9.05,
+        0.25
+      ]
+    },
+    {
+      "id": "div1_2",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        -11.59,
+        9.05,
+        0.25
+      ]
+    },
+    {
+      "id": "div1_3",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        11.59,
+        9.05,
+        0.25
+      ]
+    },
+    {
+      "id": "div1_4",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        34.77,
+        9.05,
+        0.25
+      ]
+    },
+    {
+      "id": "div2_1",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        -34.77,
+        25.55,
+        0.25
+      ]
+    },
+    {
+      "id": "div2_2",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        -11.59,
+        25.55,
+        0.25
+      ]
+    },
+    {
+      "id": "div2_3",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        11.59,
+        25.55,
+        0.25
+      ]
+    },
+    {
+      "id": "div2_4",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        34.77,
+        25.55,
+        0.25
+      ]
+    },
+    {
+      "id": "div3_1",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        -34.77,
+        42.05,
+        0.25
+      ]
+    },
+    {
+      "id": "div3_2",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        -11.59,
+        42.05,
+        0.25
+      ]
+    },
+    {
+      "id": "div3_3",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        11.59,
+        42.05,
+        0.25
+      ]
+    },
+    {
+      "id": "div3_4",
+      "part": "div",
+      "size": [
+        1.6,
+        14.9,
+        32.5
+      ],
+      "pos": [
+        34.77,
+        42.05,
+        0.25
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side + bottom",
+      "say": "Stand one side panel on its edge, holes facing in. Butt the bottom board against it and drive two screws through the side into the board. Snug, not stripped.",
+      "add": [
+        "sideL",
+        "bottom"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -57.15,
+              0.8,
+              13.5
+            ],
+            [
+              -57.15,
+              0.8,
+              -13.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 45,
+        "el": 25
+      }
+    },
+    {
+      "caption": "2 long shelves",
+      "say": "Screw the two long shelves to the same side, two screws each. The holes set the cubby height, so just follow them.",
+      "add": [
+        "long1",
+        "long2"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -57.15,
+              17.3,
+              13.5
+            ],
+            [
+              -57.15,
+              17.3,
+              -13.5
+            ],
+            [
+              -57.15,
+              33.8,
+              13.5
+            ],
+            [
+              -57.15,
+              33.8,
+              -13.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Dividers (12)",
+      "say": "Tap a dowel into each divider hole, then press the twelve short dividers in between the boards, four per row. Push each one fully home so the cubbies stay square.",
+      "add": [
+        "div1_1",
+        "div1_2",
+        "div1_3",
+        "div1_4",
+        "div2_1",
+        "div2_2",
+        "div2_3",
+        "div2_4",
+        "div3_1",
+        "div3_2",
+        "div3_3",
+        "div3_4"
+      ],
+      "from": [
+        0,
+        0,
+        30
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -34.77,
+              1.6,
+              0
+            ],
+            [
+              -11.59,
+              1.6,
+              0
+            ],
+            [
+              11.59,
+              1.6,
+              0
+            ],
+            [
+              34.77,
+              1.6,
+              0
+            ],
+            [
+              -34.77,
+              18.1,
+              0
+            ],
+            [
+              -11.59,
+              18.1,
+              0
+            ],
+            [
+              11.59,
+              18.1,
+              0
+            ],
+            [
+              34.77,
+              18.1,
+              0
+            ],
+            [
+              -34.77,
+              34.6,
+              0
+            ],
+            [
+              -11.59,
+              34.6,
+              0
+            ],
+            [
+              11.59,
+              34.6,
+              0
+            ],
+            [
+              34.77,
+              34.6,
+              0
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Top on",
+      "say": "Set the top board over the last row of dividers and screw it to the side panel.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+x",
+          "at": [
+            [
+              -57.15,
+              50.3,
+              13.5
+            ],
+            [
+              -57.15,
+              50.3,
+              -13.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Second side",
+      "say": "With a helper steadying it, line the second side up with every board end and screw it on, top to bottom. Then check each cubby is square before the screws bite.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-x",
+          "at": [
+            [
+              57.15,
+              0.8,
+              13.5
+            ],
+            [
+              57.15,
+              0.8,
+              -13.5
+            ],
+            [
+              57.15,
+              17.3,
+              13.5
+            ],
+            [
+              57.15,
+              17.3,
+              -13.5
+            ],
+            [
+              57.15,
+              33.8,
+              13.5
+            ],
+            [
+              57.15,
+              33.8,
+              -13.5
+            ],
+            [
+              57.15,
+              50.3,
+              13.5
+            ],
+            [
+              57.15,
+              50.3,
+              -13.5
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 25
+      },
+      "safety": "Two people make this easier."
+    },
+    {
+      "caption": "Wobble test",
+      "say": "Set it on a flat floor and press on each top corner. If it rocks, check the screws again. Fill the low cubbies with the heavy things.",
+      "view": {
+        "az": 25,
+        "el": 20
+      }
+    }
+  ],
+  "done": "Done. Your SLEEKLINE 15-cubby storage 3×5 is built. Give it a proud little pat.",
+  "notes": "Brand page: 46.25\" W × 13\" D × 20.1\" H, 15 cubbies each 8.5\" W × 11.5\" D × 6\" H, adult assembly. Board thickness (5/8\") is worked out from those numbers; screw-and-dowel joinery is our best guess."
+}

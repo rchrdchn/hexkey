@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-classic-twin-over-twin-bunk",
+  "name": "CLASSIC",
+  "title": "Twin over twin bunk bed",
+  "brand": "plank-beam",
+  "archetype": "bunk-bed",
+  "category": "bedroom",
+  "size": [
+    207.0,
+    108.0,
+    165.1
+  ],
+  "worksWith": "Plank+Beam® Classic Twin over Twin Bunk Bed, 81.5×42.5×65\" (L×W×H)",
+  "productUrl": "https://www.plankandbeam.com/products/classic-twin-over-twin-bunk-bed",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#d9b98c",
+  "confidence": "low",
+  "sources": [
+    "https://www.plankandbeam.com/products/classic-twin-over-twin-bunk-bed"
+  ],
+  "options": {
+    "upperY": 129.5,
+    "lowerY": 33
+  },
+  "tags": [
+    "bunk bed",
+    "twin",
+    "kids",
+    "solid wood",
+    "plank+beam"
+  ],
+  "notes": "Brand page: assembled 81.5\" L × 42.5\" W × 65\" H, solid pine, slat rolls and a metal support bar per bed, ships in one box with tools. Brand Q&A: 14\" from the top-bunk slats to the top of the guard rail. Lower deck height, rail and ladder layout are our best guess from the photos.",
+  "people": 2,
+  "minutes": 120
+}

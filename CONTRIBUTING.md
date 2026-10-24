@@ -33,7 +33,7 @@ The **Contribute** button in the app runs a quick fit check and fills in the iss
 ### Is my piece a good fit?
 
 - ✅ **Great fit:** you have the piece (built or in the box), you can write step data or measurements, and it's around 25 steps or fewer.
-- 🤔 **Could work:** very long builds, or big systems (wardrobes, kitchens, bunk beds). Start with one module or one section.
+- 🤔 **Could work:** very long builds, or big systems (wardrobes, kitchens). Start with one module or one section.
 - 💡 **Better as a request:** you don't have the piece in hand. Requests with lots of 👍 get built first.
 
 ## Content rules (please read)
@@ -87,7 +87,7 @@ Optional, depending on what you're doing:
 
 ## Add a piece with a catalog spec (easiest)
 
-Most pieces fit an archetype: bookcase, chest of drawers, cube shelf, table, desk, standing desk, bed, platform bed, crib, wall shelf, ladder shelf, frame shelf, wire shelf, stool. All options are in [docs/ARCHETYPES.md](docs/ARCHETYPES.md).
+Most pieces fit an archetype: bookcase, chest of drawers, cube shelf, table, desk, standing desk, bed, platform bed, panel bed, bunk bed, crib, cubby, L-desk, clamp table, wall shelf, ladder shelf, frame shelf, wire shelf, stool. All options are in [docs/ARCHETYPES.md](docs/ARCHETYPES.md).
 
 **Worked example:** a desk from a brand that's already in the catalog, saved as `catalog/ameriwood-parsons-desk.json`.
 

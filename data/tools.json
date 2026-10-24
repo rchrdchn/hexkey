@@ -480,6 +480,32 @@
           "pads",
           "mallet"
         ]
+      },
+      "floyd-bed-twin": {
+        "drop": [
+          "drill"
+        ]
+      },
+      "floyd-bed-queen": {
+        "drop": [
+          "drill"
+        ]
+      },
+      "floyd-bed-king": {
+        "drop": [
+          "drill"
+        ]
+      },
+      "floyd-bed-queen-headboard": {
+        "drop": [
+          "drill"
+        ]
+      },
+      "ecr4kids-sleekline-cubby-5x3": {
+        "add": [
+          "anchors",
+          "drill"
+        ]
       }
     }
   }

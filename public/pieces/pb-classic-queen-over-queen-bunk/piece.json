@@ -1,0 +1,1236 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/pb-classic-queen-over-queen-bunk.json by scripts/generate.mjs (archetype \"bunk-bed\"). Edit the spec, not this file.",
+  "slug": "pb-classic-queen-over-queen-bunk",
+  "name": "CLASSIC",
+  "title": "Queen over queen bunk bed",
+  "brand": "Plank+Beam",
+  "brandId": "plank-beam",
+  "disclaimer": "Not affiliated with or endorsed by Plank+Beam.",
+  "worksWith": "Plank+Beam® Classic Queen over Queen Bunk Bed, 83.75×64.75×63.25\" (L×W×H)",
+  "productUrl": "https://www.plankandbeam.com/products/classic-queen-over-queen-bunk-bed",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "size": [
+    213,
+    161,
+    168
+  ],
+  "minutes": 120,
+  "people": 2,
+  "level": 2,
+  "color": "#d9b98c",
+  "category": "bedroom",
+  "archetype": "bunk-bed",
+  "confidence": "low",
+  "sources": [
+    "https://www.plankandbeam.com/products/classic-queen-over-queen-bunk-bed"
+  ],
+  "parts": [
+    {
+      "id": "end",
+      "label": "End frame"
+    },
+    {
+      "id": "rail",
+      "label": "Side rail"
+    },
+    {
+      "id": "bar",
+      "label": "Metal support bar"
+    },
+    {
+      "id": "slats",
+      "label": "Slat roll"
+    },
+    {
+      "id": "guard",
+      "label": "Guard rail"
+    },
+    {
+      "id": "ladder",
+      "label": "Ladder"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "endH",
+      "part": "end",
+      "size": [
+        8.5,
+        160.7,
+        164.5
+      ],
+      "pos": [
+        -102.1,
+        80.35,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            8.5,
+            160.7,
+            8.5
+          ],
+          "p": [
+            0,
+            0,
+            -78
+          ]
+        },
+        {
+          "s": [
+            8.5,
+            160.7,
+            8.5
+          ],
+          "p": [
+            0,
+            0,
+            78
+          ]
+        },
+        {
+          "s": [
+            3.5,
+            10,
+            147.5
+          ],
+          "p": [
+            0,
+            74.35,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.5,
+            18,
+            147.5
+          ],
+          "p": [
+            0,
+            41.35,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.5,
+            18,
+            147.5
+          ],
+          "p": [
+            0,
+            -54.35,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endF",
+      "part": "end",
+      "size": [
+        8.5,
+        160.7,
+        164.5
+      ],
+      "pos": [
+        102.1,
+        80.35,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            8.5,
+            160.7,
+            8.5
+          ],
+          "p": [
+            0,
+            0,
+            -78
+          ]
+        },
+        {
+          "s": [
+            8.5,
+            160.7,
+            8.5
+          ],
+          "p": [
+            0,
+            0,
+            78
+          ]
+        },
+        {
+          "s": [
+            3.5,
+            10,
+            147.5
+          ],
+          "p": [
+            0,
+            74.35,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.5,
+            18,
+            147.5
+          ],
+          "p": [
+            0,
+            41.35,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.5,
+            18,
+            147.5
+          ],
+          "p": [
+            0,
+            -54.35,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railUB",
+      "part": "rail",
+      "size": [
+        195.7,
+        14,
+        3.5
+      ],
+      "pos": [
+        0,
+        120.7,
+        -78
+      ]
+    },
+    {
+      "id": "railUF",
+      "part": "rail",
+      "size": [
+        195.7,
+        14,
+        3.5
+      ],
+      "pos": [
+        0,
+        120.7,
+        78
+      ]
+    },
+    {
+      "id": "barU",
+      "part": "bar",
+      "size": [
+        195.7,
+        3,
+        3
+      ],
+      "pos": [
+        0,
+        122.2,
+        0
+      ]
+    },
+    {
+      "id": "slatsU",
+      "part": "slats",
+      "size": [
+        193.7,
+        1.8,
+        146.5
+      ],
+      "pos": [
+        0,
+        124.8,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -92.85,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -79.59,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -66.32,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -53.06,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -39.79,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -26.53,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -13.26,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            13.26,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            26.53,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            39.79,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            53.06,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            66.32,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            79.59,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            92.85,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railLB",
+      "part": "rail",
+      "size": [
+        195.7,
+        14,
+        3.5
+      ],
+      "pos": [
+        0,
+        25,
+        -78
+      ]
+    },
+    {
+      "id": "railLF",
+      "part": "rail",
+      "size": [
+        195.7,
+        14,
+        3.5
+      ],
+      "pos": [
+        0,
+        25,
+        78
+      ]
+    },
+    {
+      "id": "barL",
+      "part": "bar",
+      "size": [
+        195.7,
+        3,
+        3
+      ],
+      "pos": [
+        0,
+        26.5,
+        0
+      ]
+    },
+    {
+      "id": "slatsL",
+      "part": "slats",
+      "size": [
+        193.7,
+        1.8,
+        146.5
+      ],
+      "pos": [
+        0,
+        29.1,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -92.85,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -79.59,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -66.32,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -53.06,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -39.79,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -26.53,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            -13.26,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            13.26,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            26.53,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            39.79,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            53.06,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            66.32,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            79.59,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            7,
+            1.8,
+            146.5
+          ],
+          "p": [
+            92.85,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guardB",
+      "part": "guard",
+      "size": [
+        195.7,
+        31,
+        2.5
+      ],
+      "pos": [
+        0,
+        141.2,
+        -81
+      ],
+      "boxes": [
+        {
+          "s": [
+            195.7,
+            4,
+            2.5
+          ],
+          "p": [
+            0,
+            13.5,
+            0
+          ]
+        },
+        {
+          "s": [
+            195.7,
+            4,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            4,
+            31,
+            2.5
+          ],
+          "p": [
+            -95.85,
+            -2,
+            0
+          ]
+        },
+        {
+          "s": [
+            4,
+            31,
+            2.5
+          ],
+          "p": [
+            95.85,
+            -2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "guardF",
+      "part": "guard",
+      "size": [
+        107.64,
+        31,
+        2.5
+      ],
+      "pos": [
+        -44.03,
+        141.2,
+        81
+      ],
+      "boxes": [
+        {
+          "s": [
+            107.64,
+            4,
+            2.5
+          ],
+          "p": [
+            0,
+            13.5,
+            0
+          ]
+        },
+        {
+          "s": [
+            107.64,
+            4,
+            2.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            4,
+            31,
+            2.5
+          ],
+          "p": [
+            -51.82,
+            -2,
+            0
+          ]
+        },
+        {
+          "s": [
+            4,
+            31,
+            2.5
+          ],
+          "p": [
+            51.82,
+            -2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ladder",
+      "part": "ladder",
+      "size": [
+        40,
+        145.7,
+        4
+      ],
+      "pos": [
+        72.85,
+        72.85,
+        84
+      ],
+      "boxes": [
+        {
+          "s": [
+            4,
+            145.7,
+            4
+          ],
+          "p": [
+            -18,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            4,
+            145.7,
+            4
+          ],
+          "p": [
+            18,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            32,
+            3,
+            4
+          ],
+          "p": [
+            0,
+            -47.85,
+            0
+          ]
+        },
+        {
+          "s": [
+            32,
+            3,
+            4
+          ],
+          "p": [
+            0,
+            -14.28,
+            0
+          ]
+        },
+        {
+          "s": [
+            32,
+            3,
+            4
+          ],
+          "p": [
+            0,
+            19.28,
+            0
+          ]
+        },
+        {
+          "s": [
+            32,
+            3,
+            4
+          ],
+          "p": [
+            0,
+            52.85,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Unbox + count",
+      "say": "Build it in the room it will live in. Spread the parts out on the empty boxes and check the hardware bags against the parts list first.",
+      "view": {
+        "az": 30,
+        "el": 30
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Head end + low rails",
+      "say": "Stand the head end frame up and bolt the two lower side rails to it, one at the back and one at the front. Slat ledges face in. Hand tight for now.",
+      "add": [
+        "endH",
+        "railLB",
+        "railLF"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+x",
+          "at": [
+            [
+              -97.85,
+              21.5,
+              -78
+            ],
+            [
+              -97.85,
+              21.5,
+              78
+            ],
+            [
+              -97.85,
+              28.5,
+              -78
+            ],
+            [
+              -97.85,
+              28.5,
+              78
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 25
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Foot end. 4 bolts.",
+      "say": "Bring in the foot end frame and bolt the free ends of the rails to it. A helper holds the frame upright while you start each bolt.",
+      "add": [
+        "endF"
+      ],
+      "from": [
+        40,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-x",
+          "at": [
+            [
+              97.85,
+              21.5,
+              -78
+            ],
+            [
+              97.85,
+              21.5,
+              78
+            ],
+            [
+              97.85,
+              28.5,
+              -78
+            ],
+            [
+              97.85,
+              28.5,
+              78
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -35,
+        "el": 25
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Upper rails. 8 bolts.",
+      "say": "Now the top bunk. Lift each upper side rail into place between the end frames and bolt both ends. Use a step stool, not the bed, to reach.",
+      "add": [
+        "railUB",
+        "railUF"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+x",
+          "at": [
+            [
+              -97.85,
+              120.7,
+              -78
+            ],
+            [
+              -97.85,
+              120.7,
+              78
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "bolt",
+          "axis": "-x",
+          "at": [
+            [
+              97.85,
+              120.7,
+              -78
+            ],
+            [
+              97.85,
+              120.7,
+              78
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Square, then tighten",
+      "say": "Measure corner to corner across the frame both ways. When the diagonals match it is square. Now tighten every bolt, firmly.",
+      "view": {
+        "az": 0,
+        "el": 75
+      }
+    },
+    {
+      "caption": "2 support bars",
+      "say": "Drop the metal support bars in down the middle, end frame to end frame, and screw each one in. They keep the slats from sagging.",
+      "add": [
+        "barL",
+        "barU"
+      ],
+      "from": [
+        0,
+        25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Lower slats (15)",
+      "say": "Unroll the lower slat roll across the ledges and screw or clip the ends down. Fifteen slats, evenly spaced.",
+      "add": [
+        "slatsL"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 45
+      }
+    },
+    {
+      "caption": "Upper slats (15)",
+      "say": "Same up top: unroll the slats across the upper ledges and fix both ends. Fifteen slats. Check none of them can slide out.",
+      "add": [
+        "slatsU"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Guard rails on",
+      "say": "Bolt the long guard rail along the back of the top bunk, and the short one along the front, leaving the gap for the ladder. Both sides of the top get a rail, even against a wall.",
+      "add": [
+        "guardB",
+        "guardF"
+      ],
+      "from": [
+        0,
+        25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 30
+      },
+      "safety": "Never leave off a guard rail."
+    },
+    {
+      "caption": "Ladder on",
+      "say": "Hook the ladder over the front rail in the gap and bolt it on at the top. Its feet sit flat on the floor.",
+      "add": [
+        "ladder"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-z",
+          "at": [
+            [
+              54.85,
+              120.7,
+              82
+            ],
+            [
+              90.85,
+              120.7,
+              82
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -20,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Push the bed against a wall and give it a firm shake: nothing should rock or creak. A tall bed is top-heavy, so anchor it to the wall with fixings for your wall. The top bunk is not for children under six.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              -53.17,
+              157.7,
+              -82.55
+            ],
+            [
+              53.18,
+              157.7,
+              -82.55
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your CLASSIC queen over queen bunk bed is built. Give it a proud little pat.",
+  "notes": "Brand page: 83.75\" L × 64.75\" W × 63.25\" H, fits 60×80\" queen mattresses (5-8\" thick), ships in two boxes with tools, can be split into two beds (not shown). Deck heights, rail and ladder layout are our best guess from the photos."
+}

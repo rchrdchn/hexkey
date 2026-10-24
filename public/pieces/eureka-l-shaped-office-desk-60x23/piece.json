@@ -1,0 +1,391 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/eureka-l-shaped-office-desk-60x23.json by scripts/generate.mjs (archetype \"l-desk\"). Edit the spec, not this file.",
+  "slug": "eureka-l-shaped-office-desk-60x23",
+  "name": "L01",
+  "title": "L-shaped office desk 60\"",
+  "brand": "Eureka Ergonomic",
+  "brandId": "eureka",
+  "disclaimer": "Not affiliated with or endorsed by Eureka Ergonomic.",
+  "worksWith": "Eureka Ergonomic® L-Shaped Office Desk 60×23\", 61⅛×43¼×30\" (L×W×H)",
+  "productUrl": "https://eurekaergonomic.com/products/gaming-desk-l01-60-black-l-shaped",
+  "instructionsUrl": "https://cdn.shopifycdn.net/s/files/1/0705/9849/2464/files/ERK-CD-L01L-60B-V1_L01_Computer_Desk_60-Inch_Left_Side_Black_Assemble_Instruction_Manual.pdf?v=1685702738",
+  "size": [
+    155,
+    76,
+    110
+  ],
+  "minutes": 30,
+  "people": 2,
+  "level": 2,
+  "color": "#2f2f33",
+  "category": "desks",
+  "archetype": "l-desk",
+  "confidence": "low",
+  "sources": [
+    "https://eurekaergonomic.com/products/gaming-desk-l01-60-black-l-shaped"
+  ],
+  "parts": [
+    {
+      "id": "main",
+      "label": "Main desk top"
+    },
+    {
+      "id": "ret",
+      "label": "Return top"
+    },
+    {
+      "id": "plate",
+      "label": "Joining plate"
+    },
+    {
+      "id": "beam",
+      "label": "Frame beam"
+    },
+    {
+      "id": "leg",
+      "label": "Leg"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "main",
+      "part": "main",
+      "size": [
+        155.3,
+        2.5,
+        58.4
+      ],
+      "pos": [
+        0,
+        74.95,
+        -25.75
+      ]
+    },
+    {
+      "id": "ret",
+      "part": "ret",
+      "size": [
+        58.4,
+        2.5,
+        51.5
+      ],
+      "pos": [
+        -48.45,
+        74.95,
+        29.2
+      ]
+    },
+    {
+      "id": "plates",
+      "part": "plate",
+      "size": [
+        48.4,
+        0.4,
+        16
+      ],
+      "pos": [
+        -48.45,
+        73.5,
+        3.45
+      ],
+      "boxes": [
+        {
+          "s": [
+            10,
+            0.4,
+            16
+          ],
+          "p": [
+            -18.2,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            10,
+            0.4,
+            16
+          ],
+          "p": [
+            18.2,
+            0,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beamM",
+      "part": "beam",
+      "size": [
+        139.3,
+        5,
+        5
+      ],
+      "pos": [
+        0,
+        71.2,
+        -25.75
+      ]
+    },
+    {
+      "id": "beamR",
+      "part": "beam",
+      "size": [
+        5,
+        5,
+        43.5
+      ],
+      "pos": [
+        -48.45,
+        71.2,
+        25.2
+      ]
+    },
+    {
+      "id": "leg1",
+      "part": "leg",
+      "size": [
+        5,
+        68.7,
+        5
+      ],
+      "pos": [
+        66.15,
+        34.35,
+        -46.95
+      ]
+    },
+    {
+      "id": "leg2",
+      "part": "leg",
+      "size": [
+        5,
+        68.7,
+        5
+      ],
+      "pos": [
+        66.15,
+        34.35,
+        -4.55
+      ]
+    },
+    {
+      "id": "leg3",
+      "part": "leg",
+      "size": [
+        5,
+        68.7,
+        5
+      ],
+      "pos": [
+        -69.65,
+        34.35,
+        46.95
+      ]
+    },
+    {
+      "id": "leg4",
+      "part": "leg",
+      "size": [
+        5,
+        68.7,
+        5
+      ],
+      "pos": [
+        -27.25,
+        34.35,
+        46.95
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Tops face down",
+      "say": "Lay both desk tops upside down on the flattened box or a rug, pushed together into an L. This desk is built upside down.",
+      "add": [
+        "main",
+        "ret"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Join the tops",
+      "say": "Screw the joining plates across the seam where the two tops meet. Check the edges are flush before you drive the last screw. The return goes on the left here, but it can go either way.",
+      "add": [
+        "plates"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -69.65,
+              73.7,
+              -1.55
+            ],
+            [
+              -69.65,
+              73.7,
+              8.45
+            ],
+            [
+              -27.25,
+              73.7,
+              -1.55
+            ],
+            [
+              -27.25,
+              73.7,
+              8.45
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 65
+      }
+    },
+    {
+      "caption": "Frame beams",
+      "say": "Lay the frame beams along both tops and screw them down through the pre-drilled holes. The frame is what ties the L together, so use every screw.",
+      "add": [
+        "beamM",
+        "beamR"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "4 legs on",
+      "say": "Bolt a leg into each corner bracket: two at the far end of the main top and two at the end of the return. Snug them, then go round once more and tighten.",
+      "add": [
+        "leg1",
+        "leg2",
+        "leg3",
+        "leg4"
+      ],
+      "from": [
+        0,
+        -35,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "-y",
+          "at": [
+            [
+              66.15,
+              68.7,
+              -46.95
+            ],
+            [
+              66.15,
+              68.7,
+              -4.55
+            ],
+            [
+              -69.65,
+              68.7,
+              46.95
+            ],
+            [
+              -27.25,
+              68.7,
+              46.95
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, lift the whole desk and turn it onto its feet. Lift it clear of the floor, do not pivot it on one leg.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 22
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Level it",
+      "say": "Push it into the corner and press on each end. If it rocks, twist the adjustable feet until all of them touch the floor.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    }
+  ],
+  "done": "Done. Your L01 l-shaped office desk 60\" is built. Give it a proud little pat.",
+  "notes": "Brand page: 61⅛\" L × 43¼\" W × 30\" H, open metal legs, left or right return, assembles in about 30 minutes with the included tools. Leg and beam layout is our best guess."
+}

@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "pb-classic-queen-over-queen-bunk",
+  "name": "CLASSIC",
+  "title": "Queen over queen bunk bed",
+  "brand": "plank-beam",
+  "archetype": "bunk-bed",
+  "category": "bedroom",
+  "size": [
+    212.7,
+    164.5,
+    160.7
+  ],
+  "worksWith": "Plank+Beam® Classic Queen over Queen Bunk Bed, 83.75×64.75×63.25\" (L×W×H)",
+  "productUrl": "https://www.plankandbeam.com/products/classic-queen-over-queen-bunk-bed",
+  "instructionsUrl": "https://plankandbeam.com/pages/help-center?hcUrl=%2Fen-US%2Farticles%2Fassembly-resources-169786",
+  "color": "#d9b98c",
+  "confidence": "low",
+  "sources": [
+    "https://www.plankandbeam.com/products/classic-queen-over-queen-bunk-bed"
+  ],
+  "options": {
+    "upperY": 125.7,
+    "lowerY": 30
+  },
+  "tags": [
+    "bunk bed",
+    "queen",
+    "adult bunk bed",
+    "solid wood",
+    "plank+beam"
+  ],
+  "notes": "Brand page: 83.75\" L × 64.75\" W × 63.25\" H, fits 60×80\" queen mattresses (5-8\" thick), ships in two boxes with tools, can be split into two beds (not shown). Deck heights, rail and ladder layout are our best guess from the photos.",
+  "people": 2,
+  "minutes": 120
+}
