@@ -4,13 +4,16 @@
 // Window: role=dialog + aria-modal, title + piece name, must-haves first (hex key, Phillips #2), a reason on every row,
 // tip-over line when it can tip, every link Amazon search + tag=hexkey-20 + rel="sponsored noopener nofollow" + target=_blank,
 // disclosure verbatim, no images/prices/ratings, focus trapped, body scroll locked, Esc / backdrop / X close, focus returns.
+// Tool-free pieces (toolFree in data/tools.json): the pill reads "No tools" with a check (no count), the window says no tools
+// are needed and has no Must-have list (never hex key / Phillips), only helpers (and the wall-anchor kit under For safety).
 // Also: the old parts-panel card is gone, the parts grid doesn't move, no sideways scroll at 320/375/393 (WebKit) or desktop (Chromium).
 // Usage: node scripts/shots-tools.mjs [baseUrl] [outDir] [pieces]
 import { chromium, webkit, devices } from 'playwright';
 import fs from 'node:fs';
 const base = process.argv[2] || 'http://localhost:4173';
 const out = process.argv[3] || 'shots/tools';
-const slugs = (process.argv[4] || 'lack,malm-6,nj-theo-5-shelf').split(',');
+const slugs = (process.argv[4] || 'lack,malm-6,nj-theo-5-shelf,floyd-bed-queen,seville-home-4-tier').split(',');
+const FREE = new Set(Object.entries(JSON.parse(fs.readFileSync(new URL('../data/tools.json', import.meta.url), 'utf8')).rules.slugs).filter(([, o]) => o.toolFree).map(([s]) => s));
 const DISC = 'As an Amazon Associate, Hexkey earns from qualifying purchases.';
 fs.mkdirSync(out, { recursive: true });
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -34,7 +37,7 @@ const barCheck = () => {
   const hit = (a, o) => !!a && a.left < o.right - 0.5 && a.right > o.left + 0.5 && a.top < o.bottom - 0.5 && a.bottom > o.top + 0.5;
   const ttl = document.querySelector('.top .ttl');
   return { has: !!btn, w: b?.width, h: b?.height, overlap: others.filter((o) => hit(b, o.r)).map((o) => o.c), nextToSound: b && sound ? r(sound).left - b.right : -1,
-    onScreen: b && b.left >= 0 && b.right <= innerWidth, n: +btn?.querySelector('.tb-n')?.textContent, label: btn?.getAttribute('aria-label'),
+    onScreen: b && b.left >= 0 && b.right <= innerWidth, n: +btn?.querySelector('.tb-n')?.textContent, badge: btn?.querySelector('.tb-n')?.textContent, ok: !!btn?.querySelector('.tb-n.tb-ok'), text: btn?.querySelector('.tb-l')?.textContent, label: btn?.getAttribute('aria-label'),
     ttlClipped: ttl ? ttl.scrollWidth > ttl.clientWidth : false, dOver: document.documentElement.scrollWidth - innerWidth,
     progress: r(document.querySelector('.top .progress'))?.width ?? null };
 };
@@ -47,12 +50,14 @@ for (const [eng, name, o, shots] of runs) {
   page.on('pageerror', (e) => errors.push(`[${eng}/${name}] pageerror: ${e.message}`));
   const tap = (sel) => (o.hasTouch ? page.locator(sel).first().tap() : page.locator(sel).first().click());
   for (const slug of slugs) {
-    const tag = `${eng}/${name}/${slug}`;
+    const tag = `${eng}/${name}/${slug}`, free = FREE.has(slug);
     await page.goto(`${base}/#/${slug}`); await page.waitForSelector('.tile'); await sleep(1500);
     const tiles0 = await page.locator('.tile').first().boundingBox();
     const bar = await page.evaluate(barCheck);
     ok(bar.has && bar.w >= 44 && bar.h >= 44 && bar.onScreen && !bar.overlap.length && bar.nextToSound >= 0 && bar.nextToSound <= 14 && bar.dOver <= 0,
       `${tag} parts: Tools button ${Math.round(bar.w)}x${Math.round(bar.h)}, next to sound (${Math.round(bar.nextToSound)}px), no overlap${bar.overlap.length ? ` [${bar.overlap}]` : ''}, no sideways scroll`);
+    ok(free ? bar.ok && bar.badge === '' && bar.text === 'No tools' && bar.label === 'No tools needed for this build' : !bar.ok && bar.n > 0 && bar.text === 'Tools' && bar.label === `Tools for this build (${bar.n})`,
+      `${tag} parts: pill reads "${bar.text}", ${free ? 'check badge, no count' : `count ${bar.n}`}, label "${bar.label}"`);
     ok(await page.locator('.sheet.parts .tools, .sheet.parts .t-list').count() === 0, `${tag} parts: old Tools card is gone from the panel`);
     if (shots) await page.screenshot({ path: `${out}/${eng}-${name}-${slug}-topbar.png` });
 
@@ -65,7 +70,7 @@ for (const [eng, name, o, shots] of runs) {
         labelled: document.getElementById(d.getAttribute('aria-labelledby'))?.textContent, ids: rows.map((li) => li.querySelector('b').textContent),
         reasons: rows.every((li) => (li.querySelector('small')?.textContent || '').length >= 8), buy: rows.every((li) => /Find on Amazon/.test(li.querySelector('a')?.textContent || '')),
         n: rows.length, disc: d.querySelector('.aff-note')?.textContent, img: d.querySelectorAll('img').length, price: /\$\s?\d|★|stars?\b|rating/i.test(d.textContent),
-        warn: d.querySelector('.td-warn')?.textContent || '', warnFirst: d.querySelector('.cm-body')?.firstElementChild?.classList.contains('td-warn'),
+        warn: d.querySelector('.td-warn')?.textContent || '', freeNote: d.querySelector('.td-free')?.textContent || '', heads: [...d.querySelectorAll('.td-h')].map((h) => h.textContent), warnFirst: d.querySelector('.cm-body')?.firstElementChild?.classList.contains('td-warn'),
         focusIn: d.contains(document.activeElement), locked: getComputedStyle(document.body).overflow === 'hidden',
         inView: r.left >= -0.5 && r.right <= innerWidth + 0.5 && r.bottom <= innerHeight + 0.5 && r.top >= 0, sheet: r.bottom >= innerHeight - 1 && r.width >= innerWidth - 1,
         dOver: document.documentElement.scrollWidth - innerWidth, bOver: d.querySelector('.cm-body').scrollWidth - d.querySelector('.cm-body').clientWidth };
@@ -73,9 +78,11 @@ for (const [eng, name, o, shots] of runs) {
     const links = await page.evaluate(linkCheck, '.tools-d a');
     const anchored = m.ids.includes('Wall-anchor kit') && slug !== 'lack-wall-shelf';
     ok(m.modal === 'true' && m.title === 'Tools for this build' && m.labelled === m.title && m.subOk, `${tag} window: role=dialog aria-modal, titled "${m.title}" / "${m.sub}"`);
-    ok(m.ids[0] === 'Hex key set' && m.ids[1] === 'Phillips #2 screwdriver' && m.reasons && m.buy && m.n === bar.n, `${tag} window: ${m.n} rows (badge ${bar.n}), must-haves first, a reason + Find on Amazon on each`);
+    if (free) ok(/^No tools needed\./.test(m.freeNote) && !m.heads.includes('Must-have') && !m.ids.some((t) => /Hex key|Phillips|screwdriver/i.test(t)) && m.reasons && m.buy
+      && (!m.ids.includes('Wall-anchor kit') || m.heads[0] === 'For safety'), `${tag} window: "No tools needed", no Must-have / hex key / Phillips, ${m.n} helper rows [${m.heads}], a reason + Find on Amazon on each`);
+    else ok(m.ids[0] === 'Hex key set' && m.ids[1] === 'Phillips #2 screwdriver' && m.reasons && m.buy && m.n === bar.n && !m.freeNote, `${tag} window: ${m.n} rows (badge ${bar.n}), must-haves first, a reason + Find on Amazon on each`);
     ok(links.length === m.n && goodLinks(links), `${tag} window: ${links.length} links amazon search, tag=hexkey-20, rel sponsored noopener nofollow, new tab`);
-    ok(m.disc === DISC && !m.img && !m.price, `${tag} window: disclosure verbatim, no images/prices/ratings`);
+    ok((m.n ? m.disc === DISC : !m.disc) && !m.img && !m.price, `${tag} window: disclosure verbatim, no images/prices/ratings`);
     ok(anchored ? /tip over/.test(m.warn) && m.warnFirst : !m.warn, `${tag} window: tip-over line ${anchored ? 'at the top' : 'not shown (no anchor)'}`);
     ok(m.focusIn && m.locked && m.inView && m.dOver <= 0 && m.bOver <= 0 && (eng === 'webkit' ? m.sheet : !m.sheet), `${tag} window: focus inside, body locked, on screen, ${eng === 'webkit' ? 'bottom sheet' : 'centered dialog'}, no sideways scroll`);
     if (shots) await page.screenshot({ path: `${out}/${eng}-${name}-${slug}-tools-open.png` });
@@ -107,7 +114,7 @@ for (const [eng, name, o, shots] of runs) {
     ok(bb.has && bb.w >= 44 && bb.h >= 44 && bb.onScreen && !bb.overlap.length && bb.nextToSound >= 0 && bb.dOver <= 0 && bb.progress >= 60,
       `${tag} build: Tools button ${Math.round(bb.w)}x${Math.round(bb.h)}, no overlap${bb.overlap.length ? ` [${bb.overlap}]` : ''}, progress ${Math.round(bb.progress)}px wide`);
     await tap('.top .tools-btn'); await page.waitForSelector('.tools-d'); await sleep(450);
-    ok(await page.locator('.tools-d .td-list li').count() === bb.n, `${tag} build: window opens from a step`);
+    ok(await page.locator('.tools-d .td-list li').count() === (free ? m.n : bb.n) && (free ? bb.ok && bb.badge === '' : bb.n === bar.n), `${tag} build: window opens from a step, ${free ? 'check badge' : `badge ${bb.n}`}`);
     if (shots) await page.screenshot({ path: `${out}/${eng}-${name}-${slug}-build-tools-open.png` });
     await page.keyboard.press('Escape'); await sleep(300);
     ok(await page.locator('.tools-d').count() === 0 && (await page.evaluate(() => location.hash)) === `#/${slug}/1`, `${tag} build: Esc closes and stays on step 1 (no step skip)`);

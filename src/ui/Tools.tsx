@@ -1,7 +1,7 @@
 import { useMemo, useState, type ReactElement } from 'react';
 import { createPortal } from 'react-dom';
 import type { Piece } from '../types';
-import { toolsFor, toolRows, needsAnchor, type Tool, type ToolRow } from '../tools';
+import { toolsFor, toolRows, needsAnchor, isToolFree, TOOLS, type Tool, type ToolRow } from '../tools';
 import { Modal } from './Community';
 import { AFF_REL, AMAZON_DISCLOSURE } from '../config/affiliates';
 import './tools.css';
@@ -26,17 +26,22 @@ const ICONS: Record<string, ReactElement> = {
 const ToolIcon = ({ t }: { t: Tool }) => <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden>{ICONS[t.icon] ?? ICONS.hex}</svg>;
 const Disclosure = () => <p className="aff-note">{AMAZON_DISCLOSURE}</p>;
 
-/** Top bar: a "Tools" pill next to the sound button (parts screen and every build step). Opens the Tools window. */
+/** Top bar: a "Tools" pill next to the sound button (parts screen and every build step). Opens the Tools window.
+ *  Tool-free pieces read "No tools" with a check instead of a count (the window still lists any helpers). */
 export function ToolsButton({ piece, onOpen }: { piece: Piece; onOpen?: () => void }) {
   const [open, setOpen] = useState(false);
   const n = useMemo(() => toolsFor(piece).length, [piece]);
+  const free = isToolFree(piece);
   return (
     <>
-      <button className="pill tools-btn" aria-haspopup="dialog" aria-expanded={open} aria-label={`Tools for this build (${n})`}
+      <button className={`pill tools-btn${free ? ' tb-free' : ''}`} aria-haspopup="dialog" aria-expanded={open}
+        aria-label={free ? 'No tools needed for this build' : `Tools for this build (${n})`}
         onClick={() => { onOpen?.(); setOpen(true); }}>
         <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden>{ICONS.wrench}</svg>
-        <span className="tb-l">Tools</span>
-        <span className="tb-n" aria-hidden>{n}</span>
+        <span className="tb-l">{free ? 'No tools' : 'Tools'}</span>
+        {free
+          ? <span className="tb-n tb-ok" aria-hidden><svg viewBox="0 0 24 24" width="13" height="13"><path {...P} strokeWidth={3.2} d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+          : <span className="tb-n" aria-hidden>{n}</span>}
       </button>
       {open && createPortal(<ToolsDialog piece={piece} onClose={() => setOpen(false)} />, document.body)}
     </>
@@ -55,13 +60,21 @@ function ToolsDialog({ piece, onClose }: { piece: Piece; onClose: () => void }) 
       <a className="td-buy" href={r.tool.url} target="_blank" rel={AFF_REL} aria-label={`Find ${r.tool.name} on Amazon (opens a new tab)`}>Find on Amazon <span aria-hidden>↗</span></a>
     </li>
   );
+  const free = isToolFree(piece);
+  const safe = free ? must : [];
   return (
     <Modal kind="tools-d" title="Tools for this build" sub={piece.name} onClose={onClose}>
       {tips && <p className="td-warn" role="note"><span aria-hidden>⚠</span><span><b>This one can tip over.</b> Anchor it to the wall before you fill it.</span></p>}
-      <h3 className="td-h">Must-have</h3>
-      <ul className="td-list">{must.map((r) => <Row key={r.tool.id} r={r} />)}</ul>
+      {free ? <>
+        <p className="td-free" role="note"><span className="td-ok" aria-hidden><svg viewBox="0 0 24 24" width="18" height="18"><path {...P} strokeWidth={3} d="M5 12.5l4.5 4.5L19 7.5" /></svg></span>
+          <span><b>No tools needed.</b> This one goes together by hand.{!safe.length && rest.length ? ' These just make it easier.' : ''}</span></p>
+        {safe.length > 0 && <><h3 className="td-h">For safety</h3><ul className="td-list">{safe.map((r) => <Row key={r.tool.id} r={r} />)}</ul></>}
+      </> : <>
+        <h3 className="td-h">Must-have</h3>
+        <ul className="td-list">{must.map((r) => <Row key={r.tool.id} r={r} />)}</ul>
+      </>}
       {rest.length > 0 && <><h3 className="td-h">Makes it easier</h3><ul className="td-list">{rest.map((r) => <Row key={r.tool.id} r={r} />)}</ul></>}
-      <p className="aff-note td-note">{AMAZON_DISCLOSURE}</p>
+      {rows.length > 0 && <p className="aff-note td-note">{AMAZON_DISCLOSURE}</p>}
     </Modal>
   );
 }
@@ -70,11 +83,14 @@ const PRIORITY = ['anchors', 'drill', 'hex-key', 'phillips', 'mallet', 'pads'];
 /** Finish screen: one quiet line. Leads with the wall anchor when the piece can tip. */
 export function NeedTools({ piece }: { piece: Piece }) {
   const tools = useMemo(() => toolsFor(piece), [piece]);
-  const pick = PRIORITY.map((id) => tools.find((t) => t.id === id)).filter((t): t is Tool => !!t).slice(0, 3);
+  const free = isToolFree(piece);
+  // tool-free pieces: still offer the basics for the next build
+  const pool = free ? [...tools, ...TOOLS.filter((t) => t.must)] : tools;
+  const pick = PRIORITY.map((id) => pool.find((t) => t.id === id)).filter((t): t is Tool => !!t).slice(0, 3);
   return (
     <div className="need-tools">
       <p className="nt-head">
-        {needsAnchor(tools) ? <><b>Anchor it to the wall</b> before you fill it.</> : <><b>Need tools?</b> For the next build:</>}
+        {needsAnchor(tools) ? <><b>Anchor it to the wall</b> before you fill it.</> : free ? <><b>No tools this time.</b> For the next build:</> : <><b>Need tools?</b> For the next build:</>}
       </p>
       <p className="nt-links">
         {pick.map((t) => (

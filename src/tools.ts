@@ -8,13 +8,16 @@ export interface Tool { id: string; name: string; short: string; note: string; q
 export interface ToolRow { tool: Tool; why: string; must: boolean }
 interface Rules {
   default: string[]; category: Record<string, string[]>; archetype: Record<string, string[]>; combo: Record<string, string[]>; hardware: Record<string, string[]>;
-  tall: { minHeightCm: number; tools: string[] }; slugs: Record<string, { add?: string[]; drop?: string[] }>;
+  tall: { minHeightCm: number; tools: string[] }; slugs: Record<string, { add?: string[]; drop?: string[]; toolFree?: boolean }>;
 }
-const rules = data.rules as Rules;
+const rules = data.rules as unknown as Rules;
 export const TOOLS: Tool[] = (data.tools as Omit<Tool, 'url'>[]).map((t) => ({ ...t, url: amazonSearch(t.query) }));
 const ORDER = new Map(TOOLS.map((t, i) => [t.id, i]));
 
-/** Tools a build needs, in catalog order. Same rules as scripts/tools-check.mjs. */
+/** True when the piece goes together by hand (`toolFree` in data/tools.json): no must-have hex key or Phillips #2. */
+export const isToolFree = (p: Pick<Piece, 'slug'>) => rules.slugs[p.slug]?.toolFree === true;
+
+/** Tools a build needs (or, for a tool-free piece, the helpers that make it easier), in catalog order. Same rules as scripts/tools-check.mjs. */
 export function toolsFor(p: Pick<Piece, 'slug' | 'category' | 'archetype' | 'size' | 'hardware'>): Tool[] {
   const ids = new Set(rules.default);
   const add = (l?: string[]) => l?.forEach((id) => ids.add(id));
@@ -25,6 +28,7 @@ export function toolsFor(p: Pick<Piece, 'slug' | 'category' | 'archetype' | 'siz
   if (p.size[1] >= rules.tall.minHeightCm && p.archetype !== 'platform-bed' && p.archetype !== 'bed' && p.category !== 'desks') add(rules.tall.tools);
   const o = rules.slugs[p.slug];
   add(o?.add); o?.drop?.forEach((id) => ids.delete(id));
+  if (o?.toolFree) TOOLS.forEach((t) => t.must && ids.delete(t.id));
   return [...ids].filter((id) => ORDER.has(id)).sort((a, b) => ORDER.get(a)! - ORDER.get(b)!).map((id) => TOOLS[ORDER.get(id)!]);
 }
 

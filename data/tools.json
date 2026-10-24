@@ -1,5 +1,5 @@
 {
-  "$comment": "Tools for each build. Our own words; Amazon links are plain search links built from `query` (no ASINs, prices, ratings or images). Rules add up: default, then category, archetype, category+archetype combos, hardware kinds, then tall pieces. `slugs` can add or drop tools for one piece. Checked by scripts/tools-check.mjs. Each tool's `why` list gives the one-line reason shown in the Tools window: the first entry whose `if` matches the piece wins (`if` keys: category, archetype, hardware = all of these kinds, anchors = the piece gets the wall-anchor kit); the last entry has no `if`. `must` tools are listed first; the wall-anchor kit joins them when a piece can tip.",
+  "$comment": "Tools for each build. Our own words; Amazon links are plain search links built from `query` (no ASINs, prices, ratings or images). Rules add up: default, then category, archetype, category+archetype combos, hardware kinds, then tall pieces. `slugs` can add or drop tools for one piece. Checked by scripts/tools-check.mjs. Each tool's `why` list gives the one-line reason shown in the Tools window: the first entry whose `if` matches the piece wins (`if` keys: category, archetype, hardware = all of these kinds, anchors = the piece gets the wall-anchor kit); the last entry has no `if`. `must` tools are listed first; the wall-anchor kit joins them when a piece can tip. `slugs.<slug>.toolFree: true` marks a piece that goes together by hand (the brand says no tools, and our guide uses none): the must-have hex key and Phillips #2 are left off, the Tools pill reads \"No tools\" with no count, and the window says no tools are needed; only genuine helpers (and the wall-anchor kit when it can tip) stay.",
   "tools": [
     {
       "id": "hex-key",
@@ -457,7 +457,8 @@
         "add": [
           "knife",
           "pads"
-        ]
+        ],
+        "toolFree": true
       },
       "kallax": {
         "add": [
@@ -484,28 +485,50 @@
       "floyd-bed-twin": {
         "drop": [
           "drill"
-        ]
+        ],
+        "toolFree": true
       },
       "floyd-bed-queen": {
         "drop": [
           "drill"
-        ]
+        ],
+        "toolFree": true
       },
       "floyd-bed-king": {
         "drop": [
           "drill"
-        ]
+        ],
+        "toolFree": true
       },
       "floyd-bed-queen-headboard": {
         "drop": [
           "drill"
-        ]
+        ],
+        "toolFree": true
       },
       "ecr4kids-sleekline-cubby-5x3": {
         "add": [
           "anchors",
           "drill"
         ]
+      },
+      "seville-home-4-tier": {
+        "toolFree": true
+      },
+      "seville-ultradurable-4-tier-60": {
+        "toolFree": true
+      },
+      "seville-ultradurable-4-tier-tote": {
+        "toolFree": true
+      },
+      "seville-ultradurable-5-tier-48": {
+        "toolFree": true
+      },
+      "seville-ultradurable-5-tier-tote": {
+        "toolFree": true
+      },
+      "seville-ultradurable-6-tier-48": {
+        "toolFree": true
       }
     }
   }

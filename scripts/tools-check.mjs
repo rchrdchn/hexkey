@@ -1,5 +1,7 @@
 // Checks data/tools.json: ids, rules, search queries, and that every piece gets a sane tool list
-// (hex key + Phillips always; dressers and tall shelving always get the wall-anchor kit).
+// (hex key + Phillips on every piece except the tool-free ones; dressers and tall shelving always get the wall-anchor kit).
+// Tool-free pieces (`slugs.<slug>.toolFree: true`) must not get a must-have tool or say they need one, and a guide that says
+// "no tools needed" must be marked tool-free.
 // The resolver mirrors toolsFor() in src/tools.ts; keep them in sync.
 // Usage: node scripts/tools-check.mjs [--list]   (exit 1 on errors)
 import fs from 'node:fs';
@@ -34,6 +36,12 @@ for (const [where, l] of lists) {
   for (const id of l) if (!ids.has(id)) err(`${where}: unknown tool "${id}"`);
 }
 for (const s of Object.keys(rules.slugs || {})) if (!slugs.includes(s)) err(`slugs.${s}: no such piece`);
+const MUST = tools.filter((t) => t.must).map((t) => t.id);
+for (const [s, o] of Object.entries(rules.slugs || {})) {
+  for (const k of Object.keys(o)) if (!['add', 'drop', 'toolFree'].includes(k)) err(`slugs.${s}: unknown key "${k}"`);
+  if (o.toolFree !== undefined && o.toolFree !== true) err(`slugs.${s}: toolFree is true or absent`);
+  if (o.toolFree) for (const id of o.add || []) if (MUST.includes(id)) err(`slugs.${s}: tool-free piece can't add must-have "${id}"`);
+}
 const order = tools.map((t) => t.id);
 function toolsFor(p) {
   const set = new Set(rules.default);
@@ -45,6 +53,7 @@ function toolsFor(p) {
   if (p.size[1] >= rules.tall.minHeightCm && p.archetype !== 'platform-bed' && p.archetype !== 'bed' && p.category !== 'desks') add(rules.tall.tools);
   const o = rules.slugs[p.slug];
   add(o?.add); o?.drop?.forEach((id) => set.delete(id));
+  if (o?.toolFree) MUST.forEach((id) => set.delete(id));
   return order.filter((id) => set.has(id));
 }
 // Same matching as whyFor() in src/tools.ts.
@@ -57,13 +66,25 @@ const list = process.argv.includes('--list');
 for (const slug of slugs) {
   const p = JSON.parse(fs.readFileSync(`${root}public/pieces/${slug}/piece.json`, 'utf8'));
   const got = toolsFor(p);
-  if (!got.includes('hex-key') || !got.includes('phillips')) err(`${slug}: must include hex-key and phillips`);
+  const free = rules.slugs[slug]?.toolFree === true;
+  const said = [...(p.steps || []).map((s) => s.say || ''), p.notes || ''].join(' ');
+  if (free) {
+    const musts = got.filter((id) => MUST.includes(id));
+    if (musts.length) err(`${slug}: tool-free piece lists must-have ${musts.join(', ')}`);
+    // a sentence that names a tool, unless it says you don't need it ("put the screwdriver away")
+    const uses = (p.steps || []).flatMap((s) => (s.say || '').split(/(?<=[.!?])\s+/))
+      .filter((x) => /hex key|allen|screwdriver|\bdrill\b|spanner|wrench/i.test(x) && !/\b(no|away|without|don't need)\b/i.test(x));
+    if (uses.length) err(`${slug}: tool-free piece, but a step uses a tool: "${uses[0]}"`);
+  } else {
+    if (!got.includes('hex-key') || !got.includes('phillips')) err(`${slug}: must include hex-key and phillips`);
+    if (/no tools (needed|required|or screws)|tool-free|without tools/i.test(said)) err(`${slug}: guide says no tools are needed; mark it toolFree in data/tools.json`);
+  }
   const tallShelf = p.size[1] >= rules.tall.minHeightCm && ['shelving', 'storage', 'kids'].includes(p.category);
   if ((p.category === 'dressers' || tallShelf || (p.category === 'kids' && p.archetype === 'chest')) && !got.includes('anchors')) err(`${slug}: dressers, kids' chests and tall shelving need the wall-anchor kit`);
   const why = got.map((id) => [id, whyFor(tools.find((t) => t.id === id), p, got.includes('anchors'))]);
   for (const [id, w] of why) if (!w) err(`${slug}: no reason for ${id}`);
   if (got.includes('anchors') && p.archetype !== 'wall-shelf' && !/tip/.test(why.find(([id]) => id === 'anchors')[1])) err(`${slug}: the wall-anchor reason must say it stops tipping`);
-  if (list) console.log(`${slug.padEnd(34)} ${got.join(', ')}`);
+  if (list) console.log(`${slug.padEnd(34)} ${free ? '(tool-free) ' : ''}${got.join(', ')}`);
   if (process.argv.includes('--why')) for (const [id, w] of why) console.log(`  ${id.padEnd(9)} ${w}`);
 }
 console.log(errors ? `tools: ${errors} error(s)` : `tools: ${tools.length} tools, ${slugs.length} pieces OK`);
