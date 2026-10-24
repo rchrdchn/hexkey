@@ -84,7 +84,7 @@ export function Catalog({ entries, pick, onPick, onRequest }: { entries: Catalog
               <span className="c-txt">
                 <b>{e.name}</b>
                 <small><em className="by">{e.brand ?? 'IKEA'}</em>{e.title}</small>
-                <span className="dims"><span>{d.in}</span><span className="cm"> · {d.cm}</span></span>
+                <span className="dims"><span>{d.in}</span><span className="d-cm"> · {d.cm}</span></span>
                 <span className="meta">
                   <span className="chips">
                     <i>{I.clock}{e.minutes}m</i><i>{I.people}{e.people}</i><i>{e.steps} steps</i>

@@ -20,6 +20,31 @@ const pickedVisible = (page) => page.evaluate(() => {
   const txt = (s) => c.querySelector(s)?.textContent?.trim() || '';
   return { ok: inside && !!c.querySelector('.sel-badge') && !!txt('b') && !!txt('.by') && /\d+×\d+×\d+/.test(txt('.dims')), slug: c.dataset.slug, name: txt('b'), brand: txt('.by'), dims: txt('.dims'), inside };
 });
+// Richard: "a quick flash for the build button" when picking another card. Watch the Build button across a pick:
+// it must be the same element (no remount), never disabled/Loading…, keep its size, and the legal line + 3D canvas must stay mounted.
+const noFlash = async (page, tag, nth) => {
+  await page.evaluate(() => {
+    const b = document.querySelector('.sheet.pick .cta');
+    window.__ctaEl = b; window.__flash = [];
+    const r0 = b.getBoundingClientRect(); window.__r0 = [r0.width, r0.height];
+    const mo = new MutationObserver(() => {
+      const c = document.querySelector('.sheet.pick .cta');
+      if (c !== window.__ctaEl) window.__flash.push('remounted');
+      if (c?.disabled) window.__flash.push('disabled');
+      if (/Loading/.test(c?.textContent || '')) window.__flash.push('loading text');
+      if (!document.querySelector('.sheet.pick .legal')) window.__flash.push('legal line gone');
+      if (!document.querySelector('canvas')) window.__flash.push('3D canvas gone');
+      const r = c?.getBoundingClientRect(); if (r && (Math.abs(r.width - window.__r0[0]) > 0.5 || Math.abs(r.height - window.__r0[1]) > 0.5)) window.__flash.push(`size ${r.width}x${r.height}`);
+    });
+    mo.observe(document.querySelector('.sheet.pick'), { subtree: true, childList: true, attributes: true, characterData: true });
+    window.__mo = mo;
+  });
+  const card = page.locator('.card:not(.on)').nth(nth);
+  const want = await card.locator('b').innerText();
+  await card.click(); await sleep(1500);
+  const res = await page.evaluate(() => { window.__mo.disconnect(); return { flash: [...new Set(window.__flash)], label: document.querySelector('.sheet.pick .cta').textContent.trim() }; });
+  ok(res.flash.length === 0 && res.label.includes(want), `${tag} Build button stable across a pick (→ “${res.label}”), issues: ${JSON.stringify(res.flash)}`);
+};
 const brandAndSearch = async (page, tag) => {
   const sel = page.locator('.brand-pick select');
   await sel.selectOption('zinus'); await sleep(300);
@@ -86,6 +111,7 @@ for (const [eng, name, opts] of runs) {
     const pv2 = await pickedVisible(page);
     ok(pv2.ok && pv2.slug === pv.slug, `${tag} picked card scrolled into view after clearing search: ${JSON.stringify(pv2)}`);
     await brandAndSearch(page, tag);
+    await noFlash(page, tag, 2);
     ok(await overflow() <= 0, `${tag} no sideways overflow after brand filter`);
     ok(await overflow() <= 0, `${tag} no sideways overflow with picker open`);
     // close button
@@ -99,8 +125,9 @@ for (const [eng, name, opts] of runs) {
     await page.locator('.start-cta').tap(); await page.waitForSelector('.sheet.pick.open .card b'); await sleep(400);
     const btn = page.locator('.sheet.pick .cta');
     const label = await btn.innerText();
+    const picked = await page.locator('.card.on').getAttribute('data-slug');
     await btn.tap(); await page.waitForSelector('.tile');
-    ok(/#\/malm/.test(page.url()), `${tag} Build (“${label.trim()}”) opens ${page.url().split('#')[1]}`);
+    ok(page.url().endsWith(`#/${picked}`), `${tag} Build (“${label.trim()}”) opens ${page.url().split('#')[1]}`);
     await page.goBack(); await sleep(500);
     ok(await page.locator('.sheet.pick.open').count() === 1, `${tag} back from parts returns to open picker`);
     // deep links
@@ -117,6 +144,8 @@ for (const [eng, name, opts] of runs) {
     const pv2 = await pickedVisible(page);
     ok(pv2.ok, `${tag} clicked card becomes the visible pick: ${JSON.stringify(pv2)}`);
     await brandAndSearch(page, tag);
+    await noFlash(page, tag, 3);
+    await noFlash(page, tag, 7);
     await page.goto(base + '/#pieces'); await sleep(800);
     ok(await page.locator('.catalog').isVisible(), `${tag} #pieces on desktop shows picker`);
   }

@@ -74,6 +74,11 @@ export default function App() {
     return () => { live = false; };
   }, [slug]); // eslint-disable-line react-hooks/exhaustive-deps
   const step = piece ? Math.min(route.step, piece.steps.length - 1) : 0;
+  // home picker: while a newly picked piece loads, keep showing the last one (3D + legal line) so nothing blinks or jumps
+  const lastPiece = useRef<Piece | undefined>(undefined);
+  if (piece) lastPiece.current = piece;
+  const shownPiece = piece ?? (route.mode === 'pick' ? lastPiece.current : undefined);
+  const pickEntry = entries.find((e) => e.slug === pick);
 
   // ---- voice state ----
   const [muted, setMuted] = useState(voice.muted);
@@ -230,7 +235,7 @@ export default function App() {
           gl={{ preserveDrawingBuffer: true, antialias: true }}
         >
           <Suspense fallback={null}>
-            {piece && <Scene piece={piece} mode={mode} step={step} highlight={hl} reduced={reduced} inset={inset} onSnap={(f) => (snap.current = f)} />}
+            {shownPiece && <Scene piece={shownPiece} mode={mode} step={step} highlight={hl} reduced={reduced} inset={inset} onSnap={(f) => (snap.current = f)} />}
           </Suspense>
         </Canvas>
       </div>
@@ -283,10 +288,11 @@ export default function App() {
                 )}
                 <Catalog entries={entries} pick={pick} onRequest={(name) => setComm({ req: { url: '', name } })}
                   onPick={(sl) => { gesture(); setPick(sl); localStorage.setItem('hk-last', sl); voice.prefetch(sl); sfx.tick(); }} />
-                {piece && piece.slug === pick
-                  ? <button className="cta" onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>Build {piece.name} {I.next}</button>
-                  : <button className="cta" disabled aria-busy>Loading…</button>}
-                {piece && <Legal p={piece} />}
+                {/* one stable button: the label comes from the catalog list, so picking another card only swaps the name (no Loading… state, no remount) */}
+                <button className="cta" disabled={!pickEntry && !piece} onClick={() => { gesture(); localStorage.setItem('hk-last', pick); go(`#/${pick}`); }}>
+                  Build <span className="cta-name">{pickEntry?.name ?? piece?.name ?? '…'}</span> {I.next}
+                </button>
+                {shownPiece && <Legal p={shownPiece} />}
                 <p className="legal">{AMAZON_DISCLOSURE}</p>
               </div>
             </>

@@ -34,12 +34,12 @@ for (const [eng, name, bt, opts] of runs) {
   const sel = page.locator('.brand-pick select');
   await sel.waitFor();
   await sleep(1200);
-  const opts = await sel.locator('option').evaluateAll((els) => els.map((e) => ({ v: e.value, t: e.textContent })));
+  const brandOpts = await sel.locator('option').evaluateAll((els) => els.map((e) => ({ v: e.value, t: e.textContent })));
   const nBrands = new Set(cat.map((e) => e.brandId)).size;
-  ok(opts.length === nBrands + 1, `${tag} ${opts.length} brand options (All + ${nBrands} brands)`);
-  ok(opts[0].v === 'all' && opts[0].t === `All brands (${cat.length})`, `${tag} first option "${opts[0].t}"`);
-  const ns = opts.slice(1).map((o) => +o.t.match(/\((\d+)\)$/)[1]);
-  ok(ns.every((n, i) => i === 0 || n <= ns[i - 1]), `${tag} brands sorted by count: ${opts.slice(1, 4).map((o) => o.t).join(', ')}…`);
+  ok(brandOpts.length === nBrands + 1, `${tag} ${brandOpts.length} brand options (All + ${nBrands} brands)`);
+  ok(brandOpts[0].v === "all" && brandOpts[0].t === `All brands (${cat.length})`, `${tag} first option "${brandOpts[0].t}"`);
+  const ns = brandOpts.slice(1).map((o) => +o.t.match(/\((\d+)\)$/)[1]);
+  ok(ns.every((n, i) => i === 0 || n <= ns[i - 1]), `${tag} brands sorted by count: ${brandOpts.slice(1, 4).map((o) => o.t).join(', ')}…`);
   ok(await page.getByLabel('Brand').count() >= 1, `${tag} dropdown is labelled "Brand"`);
   ok(await overflow() <= 0, `${tag} no sideways overflow with brand dropdown`);
   await shot('01-picker');
