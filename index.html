@@ -3,23 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1" />
-    <title>Hexkey · Flat-pack, talked through</title>
-    <meta name="description" content="Voice-guided 3D assembly for flat-pack furniture. Check off the parts, then build step by step, hands-free. Open source." />
+    <!-- Search indexing: the site is indexable. To hide it from search, put a robots meta tag on this line;
+         scripts/share-pages.mjs copies this head into every /p/<slug>/ page, so one line decides it for the whole site. -->
+    <!-- share:start (scripts/share-pages.mjs swaps this block for each /p/<slug>/ page; keep URLs absolute) -->
+    <title>Hexkey · Flat-pack, without the headache</title>
+    <meta name="description" content="Free step-by-step 3D assembly guides that talk you through every screw. 146 pieces from 25 brands, from IKEA® to Zinus®. No account, no install. Open source. Not affiliated with any brand." />
+    <link rel="canonical" href="https://hexkey.pages.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hexkey" />
+    <meta property="og:url" content="https://hexkey.pages.dev/" />
+    <meta property="og:title" content="Hexkey · Flat-pack, without the headache" />
+    <meta property="og:description" content="Free step-by-step 3D assembly guides that talk you through every screw. 146 pieces from 25 brands, from IKEA® to Zinus®. No account, no install. Open source. Not affiliated with any brand." />
+    <meta property="og:image" content="https://hexkey.pages.dev/og.jpg" />
+    <meta property="og:image:secure_url" content="https://hexkey.pages.dev/og.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hexkey: flat-pack furniture without the headache. Free 3D assembly guides with voice, 146 pieces, 25 brands." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Hexkey · Flat-pack, without the headache" />
+    <meta name="twitter:description" content="Free step-by-step 3D assembly guides that talk you through every screw. 146 pieces from 25 brands, from IKEA® to Zinus®. No account, no install. Open source. Not affiliated with any brand." />
+    <meta name="twitter:image" content="https://hexkey.pages.dev/og.jpg" />
+    <meta name="twitter:image:alt" content="Hexkey: flat-pack furniture without the headache. Free 3D assembly guides with voice, 146 pieces, 25 brands." />
+    <!-- share:end -->
     <meta name="theme-color" content="#f6f1ea" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <meta name="apple-mobile-web-app-title" content="Hexkey" />
-    <meta property="og:title" content="Hexkey · Flat-pack, talked through" />
-    <meta property="og:description" content="Pick it. Check the box. Build it with a voice in your ear." />
-    <meta property="og:image" content="/og.png" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="robots" content="noindex" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192" />
     <link rel="apple-touch-icon" href="/icon-180.png" />
     <link rel="manifest" href="/manifest.webmanifest" />
+    <style>.prejs { max-width: 34rem; margin: 0 auto; padding: 22vh 24px 0; font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif; color: #1f1b18; } .prejs h1 { font-size: 2.2rem; line-height: 1.05; margin: 0 0 .6rem; } .prejs p { color: #7a6f64; font-size: 1.05rem; line-height: 1.45; margin: 0 0 .8rem; } .prejs a { color: #e0441f; font-weight: 800; }</style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <!-- shown before the app starts (and to crawlers); React replaces it -->
+      <main class="prejs">
+        <!-- prejs:start -->
+        <h1>Flat-pack, without the headache</h1>
+        <p>Free step-by-step 3D assembly guides that talk you through every screw. 146 pieces from 25 brands. No account, no install. Open source. Not affiliated with any brand.</p>
+        <!-- prejs:end -->
+      </main>
+    </div>
     <noscript>Hexkey needs JavaScript and WebGL.</noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>

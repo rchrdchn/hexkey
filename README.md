@@ -28,6 +28,7 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 - [How it works](#how-it-works)
 - [Browser support](#browser-support)
 - [Roadmap](#roadmap)
+- [Link previews and share pages](#link-previews-and-share-pages)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
@@ -103,12 +104,13 @@ Routes are hash-based, so you can open a piece directly: `/#/billy` (check the b
 | Command | What it does |
 |---|---|
 | `npm run dev` | Vite dev server on port 5173. |
-| `npm run build` | `validate` + `tsc --noEmit` + `vite build` to `dist/`. |
+| `npm run build` | `validate` + `tsc --noEmit` + `vite build` to `dist/`, then `scripts/share-pages.mjs` writes the `/p/<slug>/` share pages, `sitemap.xml`, `llms.txt` and `404.html` (see [Link previews](#link-previews-and-share-pages)). |
 | `npm run preview` | Serves `dist/` on port 4173. The browser scripts below default to this URL. |
-| `npm run validate` | `scripts/validate.mjs` (ids, references, counts, product links, brands; audio drift is a warning) and `scripts/tools-check.mjs` (tool rules). |
+| `npm run validate` | `scripts/validate.mjs` (ids, references, counts, product links, brands; audio drift is a warning) and `scripts/tools-check.mjs` (tool rules) and `scripts/share-check.mjs` (every piece has a fresh 1200×630 link-preview card under 300 KB). |
 | `npm run typecheck` | TypeScript only. |
 | `npm run gen` | Regenerates every catalog piece from `catalog/*.json`, plus `public/pieces/index.json` and `catalog.json`. |
 | `npm run thumbs` | Renders picker thumbnails to `public/thumbs/<slug>.webp` (needs `npm run preview` running and `ffmpeg`). |
+| `npm run share-cards -- <previewUrl> [stale\|all\|slugs]` | Renders the link-preview cards, `public/og.jpg` and `public/share/<slug>.jpg`, with our own 3D scene (needs a preview of a fresh build). Only stale cards by default. |
 | `npm run voice -- <slug>` | Generates narration clips (see [Voice narration](#voice-narration)). |
 | `npm run shots` | Walks the whole flow in Chromium and WebKit (iPhone and desktop) and saves screenshots. |
 | `npm run shots:home` | Phone home screen and picker checks. |
@@ -117,6 +119,7 @@ Routes are hash-based, so you can open a piece directly: `/#/billy` (check the b
 | `npm run shots:tools` | Tools button and window checks (details below). |
 | `node scripts/parts-check.mjs` | Parts checklist checks: no sideways scroll, tiles check off, disclaimer shows. |
 | `node scripts/shots-brands.mjs` | Brand filter, search and per-brand legal line checks. |
+| `node scripts/shots-share.mjs` | Share pages: `/p/<slug>/` opens `/#/<slug>` in WebKit (iPhone 15, iPhone SE) and Chromium, and the header Share button shares `/p/<slug>/`. |
 | `node scripts/shots-brand-audio.mjs` | Non-IKEA narration: audio indexes match the piece text, every clip returns 200, and clips load while stepping through. |
 
 The browser scripts use Playwright. Install its browsers once with `npx playwright install chromium webkit`. Most take `[baseUrl] [outDir] [pieces]` arguments; the first lines of each script explain them.
@@ -134,6 +137,9 @@ public/pieces/<slug>/        piece.json for each piece (generated or hand-made)
 public/pieces/catalog.json   picker list; index.json lists every slug
 public/audio/<slug>/         narration MP3s + index.json
 public/thumbs/<slug>.webp    picker thumbnails, rendered by our own 3D scene
+public/share/<slug>.jpg      1200×630 link-preview card per piece; public/og.jpg is the site card; cards.json says what each was made from
+scripts/share/               card design (card.mjs), shared words for cards and pages (lib.mjs), Nunito font (OFL)
+scripts/share-*.mjs          share-cards renders the cards, share-pages writes /p/ pages + sitemap, share-check checks the cards
 scripts/generate.mjs         catalog generator; archetypes live in scripts/gen/*.mjs
 scripts/validate.mjs         data checks; tools-check.mjs checks tool rules
 scripts/voice.py             narration generator (Kokoro-82M)
@@ -326,11 +332,32 @@ Issue forms live in `.github/ISSUE_TEMPLATE/` and use the labels `furniture-requ
 3. More pieces from the community, more languages.
 4. AR mode (WebXR / iOS Quick Look).
 
+## Link previews and share pages
+
+When someone pastes a Hexkey link into iMessage, X, Slack, WhatsApp or Facebook, the preview shows a big 1200×630 card.
+
+- **Site card** (`public/og.jpg`): "Flat-pack, without the headache", the live piece and brand counts, and three of our own exploded 3D renders.
+- **Piece cards** (`public/share/<slug>.jpg`): the piece name, "Works with BRAND®", time, people, difficulty and steps, an exploded render of that piece from our own scene, and the brand's not-affiliated line. No brand logos, product photos or brand assets, ever.
+- **Share pages.** The app's routes are hash routes (`#/malm-6`) and crawlers never see the part after `#`. So the build writes a real page per piece at `/p/<slug>/`. It is the app's own `index.html` with that piece's title, description and card, plus a one-line script that swaps the address to `/#/<slug>` before the app starts. People land straight in the guide (no redirect hop), and crawlers read the piece's meta. Without JavaScript the page shows the guide's name, stats and a link.
+- **Share button.** On the parts screen the header Share button opens the share sheet with `/p/<slug>/` (or copies it). The "Built!" share card's text includes the same link.
+- **Search indexing.** The site is indexable: no page has a `noindex` meta and no `X-Robots-Tag` header is sent. The spot for a `<meta name="robots">` line is marked in `index.html`; the share pages copy that head, so one line there would change every page.
+- `sitemap.xml` lists the home page and every `/p/<slug>/` page. `llms.txt` describes the site and lists every guide. `robots.txt` welcomes all crawlers, AI bots included, and points to the sitemap. Unknown paths get `404.html` (a real 404). The IndexNow key file is `public/<key>.txt` (IndexNow keys are public by design); after a deploy that adds or renames pieces, ping `https://api.indexnow.org/indexnow` with the sitemap URLs and that key.
+
+**Making the cards.** Cloudflare's build has no browser, so cards are rendered on your machine and committed, like thumbnails:
+
+```bash
+npm run build                                   # share-check fails here if a card is stale; build with `npx vite build` first in that case
+npx vite preview --port 4191 &
+npm run share-cards -- http://localhost:4191    # only stale cards (about 1.3 s each); add `all` to redo everything
+```
+
+A card is stale when its piece's name, title, brand, stats or geometry changes, or when `DESIGN` in `scripts/share/lib.mjs` is bumped after a design change. All 146 cards take about 3 minutes and weigh about 11.5 MB (65 to 110 KB each). The renders come from `/?thumb=<slug>&explode=0.32&zoom=0.9&bg=none&dpr=2`.
+
 ## Deployment
 
 - The site is fully static. `npm run build` writes `dist/`.
 - It's deployed on **Cloudflare Pages** from the `main` branch: build command `npm run build`, output directory `dist`, `NODE_VERSION=20`. Every push to `main` goes live at [hexkey.pages.dev](https://hexkey.pages.dev).
-- `public/_headers` and `public/robots.txt` ship with the site. Crawlers, including AI bots, are welcome.
+- `public/_headers` and `public/robots.txt` ship with the site. Crawlers, including AI bots, are welcome. The build adds `sitemap.xml`, `llms.txt`, `404.html` and the `/p/<slug>/` share pages. Because `404.html` exists, Cloudflare Pages returns a real 404 for unknown paths instead of the app; the app only uses `/` plus hash routes, so nothing else changes.
 - **GitHub Actions is turned off** for this repo. `.github/workflows/ci.yml` is kept for reference only, so run `npm run validate && npm run build` yourself before every pull request.
 - No secrets live in the repo, and the build needs none.
 

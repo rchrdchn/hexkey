@@ -13,7 +13,7 @@ const HWS = 1.8; // hardware is drawn 1.8x so it reads on a phone
 const POSE_T = 1.5;
 const FLY_T = 1.15;
 
-interface Props { piece: Piece; mode: Mode; step: number; highlight?: string | null; onSnap?: (fn: () => string) => void; reduced?: boolean; still?: boolean; inset: { top: number; bottom: number; left: number } }
+interface Props { piece: Piece; mode: Mode; step: number; highlight?: string | null; onSnap?: (fn: () => string) => void; reduced?: boolean; still?: boolean; /** Share cards only: push finished parts apart from the center by this fraction (exploded view), and frame looser (zoomMul). */ explode?: number; zoomMul?: number; /** no background or floor (alpha PNG for share cards) */ clear?: boolean; inset: { top: number; bottom: number; left: number } }
 
 const FINAL: V3 = [0, 0, 0];
 // in the finished piece only show hardware you'd actually see (screw shafts and dowels would poke through the 1.8x models)
@@ -36,7 +36,7 @@ function Body({ o, mat, edges }: { o: ObjectDef; mat: THREE.Material; edges: str
   </>);
 }
 
-export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, inset }: Props) {
+export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, explode = 0, zoomMul = 1, clear, inset }: Props) {
   const { camera, size, invalidate, gl, scene, clock } = useThree();
   const controls = useRef<CameraControls>(null);
   const meshes = useRef<Record<string, THREE.Group | null>>({});
@@ -49,6 +49,15 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, in
   const flat = useMemo(() => flatLayout(piece), [piece]);
   const locals = useMemo(() => Object.fromEntries(piece.objects.map((o) => [o.id, objectLocal(o)])), [piece]);
   const finalPose = piece.poses[piece.poses.length - 1] ?? FINAL;
+  // exploded view (share cards): each object's offset from the piece's center, in world units, for the finished pose
+  const spread = useMemo(() => {
+    if (!explode) return null;
+    const M = poseMatrix(piece, finalPose, bounds);
+    const cs = Object.fromEntries(piece.objects.map((o) => [o.id, new THREE.Box3().setFromPoints(objectCorners(o, M.clone().multiply(locals[o.id]))).getCenter(new THREE.Vector3())]));
+    const all = new THREE.Box3(); Object.values(cs).forEach((c) => all.expandByPoint(c));
+    const mid = all.getCenter(new THREE.Vector3());
+    return Object.fromEntries(Object.entries(cs).map(([id, c]) => [id, new THREE.Matrix4().makeTranslation(c.clone().sub(mid).multiplyScalar(explode))]));
+  }, [piece, explode, bounds, locals, finalPose]);
   const mats = useMemo(() => {
     const ids = piece.parts.map((p) => p.id);
     return Object.fromEntries(piece.objects.map((o) => [o.id, new THREE.MeshStandardMaterial({ color: partColor(ids.indexOf(o.part), piece.color), roughness: 0.75, emissive: '#ff5a36', emissiveIntensity: 0 })]));
@@ -89,8 +98,8 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, in
       if (pts.length < 3 || !s.view?.tight) piece.objects.filter((o) => (piece.addedAt[o.id] ?? 99) <= step).forEach((o) => pts.push(...objectCorners(o, M.clone().multiply(locals[o.id]))));
       if (s.view) { az = s.view.az; el = s.view.el; zoom = s.view.zoom ?? 1; }
     } else {
-      piece.objects.forEach((o) => pts.push(...objectCorners(o, M.clone().multiply(locals[o.id]))));
-      zoom = still ? (piece.size[1] > 1.6 * Math.max(piece.size[0], piece.size[2]) ? 0.95 : 1.3) : mode === 'done' ? 0.95 : 1.12;
+      piece.objects.forEach((o) => pts.push(...objectCorners(o, (spread ? spread[o.id].clone() : new THREE.Matrix4()).multiply(M).multiply(locals[o.id]))));
+      zoom = zoomMul * (still ? (piece.size[1] > 1.6 * Math.max(piece.size[0], piece.size[2]) ? 0.95 : 1.3) : mode === 'done' ? 0.95 : 1.12);
       el = 18;
     }
     const box = new THREE.Box3().setFromPoints(pts);
@@ -139,7 +148,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, in
       const at = piece.addedAt[o.id] ?? 99;
       const mat = mats[o.id];
       let em = 0;
-      if (mode === 'pick' || mode === 'done') m.matrix.copy(M).multiply(locals[o.id]);
+      if (mode === 'pick' || mode === 'done') { if (spread) m.matrix.copy(spread[o.id]).multiply(M).multiply(locals[o.id]); else m.matrix.copy(M).multiply(locals[o.id]); }
       else if (mode === 'parts') {
         m.matrix.copy(flat[o.id]);
         if (highlight && o.part === highlight) { em = 0.25 + 0.35 * pulse; busy = true; }
@@ -185,7 +194,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, in
       m.matrixWorldNeedsUpdate = true;
     });
 
-    if (envRef.current) { envRef.current.visible = mode !== 'parts'; envRef.current.matrix.copy(M); envRef.current.matrixWorldNeedsUpdate = true; }
+    if (envRef.current) { envRef.current.visible = mode !== 'parts' && !spread; envRef.current.matrix.copy(M); envRef.current.matrixWorldNeedsUpdate = true; }
 
     // hardware
     const nowCount = mode === 'build' ? piece.hw.filter((x) => x.step === step).length : 0;
@@ -195,7 +204,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, in
       const r = ringRefs.current[h.key];
       if (!g) return;
       const internal = h.kind === 'dowel' || h.kind === 'campin' || h.kind === 'bolt' || h.kind === 'hinge';
-      const show = mode === 'pick' || mode === 'done' ? SHOWN_DONE.has(h.kind) : mode === 'build' && (h.step === step || (h.step < step && (!internal || h.step === step - 1)));
+      const show = mode === 'pick' || mode === 'done' ? SHOWN_DONE.has(h.kind) && !spread : mode === 'build' && (h.step === step || (h.step < step && (!internal || h.step === step - 1)));
       g.visible = show;
       if (r) r.visible = false;
       if (!show) return;
@@ -229,7 +238,7 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, in
 
   return (
     <>
-      <color attach="background" args={['#f6f1ea']} />
+      {!clear && <color attach="background" args={['#f6f1ea']} />}
       <hemisphereLight args={['#ffffff', '#d9cbb8', 1.1]} />
       <directionalLight position={[3, 6, 4]} intensity={1.6} />
       <directionalLight position={[-4, 3, -2]} intensity={0.5} />
@@ -238,10 +247,12 @@ export function Scene({ piece, mode, step, highlight, onSnap, reduced, still, in
         <Lightformer intensity={1} position={[5, 1, 3]} scale={[4, 3, 1]} />
         <Lightformer intensity={0.6} color="#ffd9c7" position={[-5, 1, -2]} scale={[4, 3, 1]} />
       </Environment>
-      <mesh rotation-x={-Math.PI / 2} position={[0, -0.001, 0]}>
-        <circleGeometry args={[30, 64]} />
-        <meshBasicMaterial color="#efe8de" />
-      </mesh>
+      {!clear && (
+        <mesh rotation-x={-Math.PI / 2} position={[0, -0.001, 0]}>
+          <circleGeometry args={[30, 64]} />
+          <meshBasicMaterial color="#efe8de" />
+        </mesh>
+      )}
       <ContactShadows position={[0, 0, 0]} opacity={0.42} scale={14} blur={2.4} far={2.5} resolution={512} color="#5a4636" />
       {piece.env && (
         <group ref={envRef} matrixAutoUpdate={false}>

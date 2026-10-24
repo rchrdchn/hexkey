@@ -8,7 +8,7 @@ import { voice, Ears, canListen, mediaSession, keepAwake, type Command } from '.
 import { sfx } from './sfx';
 import { partColor } from './palette';
 import { IsoPart, HwIcon, Logo, I } from './ui/icons';
-import { makeCard, shareCard, fmtTime } from './share';
+import { makeCard, shareCard, shareLink, fmtTime } from './share';
 import { ContributeModal, RequestModal } from './ui/Community';
 import { Catalog } from './ui/Catalog';
 import { ToolsButton, NeedTools, AMAZON_DISCLOSURE } from './ui/Tools';
@@ -213,6 +213,12 @@ export default function App() {
   const snap = useRef<() => string>(() => '');
   const [card, setCard] = useState<{ url: string; blob: Blob } | null>(null);
   const elapsed = piece ? (() => { const a = +(localStorage.getItem(`hk-start-${piece.slug}`) || 0), b = +(localStorage.getItem(`hk-end-${piece.slug}`) || 0); return a && b > a ? b - a : null; })() : null;
+  const [toast, setToast] = useState<{ n: number; text: string } | null>(null);
+  const onShareLink = async () => {
+    if (!piece) return;
+    const r = await shareLink(piece);
+    if (r === 'copied' || r === 'failed') setToast({ n: Date.now(), text: r === 'copied' ? 'Link copied' : 'Couldn’t copy the link' });
+  };
   const openCard = async () => {
     if (!piece) return;
     const blob = await makeCard(snap.current(), piece, elapsed);
@@ -260,12 +266,14 @@ export default function App() {
             <button className="pill alt" onClick={() => { gesture(); sfx.tick(); setComm({ req: undefined }); }} aria-haspopup="dialog" aria-label="Request furniture">{I.bulb}<span className="lg">Request furniture</span><span className="sm">Request</span></button>
           </nav>
         )}
+        {mode === 'parts' && piece && <button className="icon" aria-label={`Share the ${piece.name} guide`} onClick={() => { gesture(); sfx.tick(); onShareLink(); }}>{I.share}</button>}
         {(mode === 'parts' || mode === 'build') && piece && <ToolsButton piece={piece} onOpen={() => { gesture(); sfx.tick(); }} />}
         {mode === 'build' && canListen() && (
           <button className={`icon ${ears === 'listening' ? 'live' : ''}`} aria-label="Hands-free voice commands" aria-pressed={ears === 'listening'} onClick={toggleEars}>{I.mic}</button>
         )}
         <button className={`icon ${speaking && !muted ? 'talk' : ''}`} aria-label={muted ? 'Unmute voice' : 'Mute voice'} onClick={() => { gesture(); const m = !muted; setMuted(m); voice.setMuted(m); if (!m && mode === 'build' && piece) say(piece, step); }}>{muted ? I.mute : I.sound}</button>
       </header>
+      {toast && <div className="heard" key={toast.n} role="status" onAnimationEnd={() => setToast(null)}>{toast.text}</div>}
       {heard && <div className="heard" key={heard.n}>“{heard.word}”</div>}
       {ears === 'listening' && mode === 'build' && <div className="hint">Say “next”, “back”, “repeat” or “how many”</div>}
 

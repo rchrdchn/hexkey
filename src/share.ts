@@ -42,11 +42,24 @@ function round(x: CanvasRenderingContext2D, X: number, Y: number, w: number, h: 
   x.beginPath(); x.moveTo(X + r, Y); x.arcTo(X + w, Y, X + w, Y + h, r); x.arcTo(X + w, Y + h, X, Y + h, r); x.arcTo(X, Y + h, X, Y, r); x.arcTo(X, Y, X + w, Y, r); x.closePath();
 }
 
+/** Link for sharing a piece: a static page with its own preview card (scripts/share-pages.mjs) that opens /#/<slug>. */
+export const shareUrl = (p: Piece) => `${location.origin}/p/${p.slug}/`;
+
+/** Share the guide link (system share sheet, or copy). Returns what happened so the UI can say "Link copied". */
+export async function shareLink(p: Piece): Promise<'shared' | 'copied' | 'cancel' | 'failed'> {
+  const url = shareUrl(p);
+  const nav = navigator as any;
+  if (nav.share) {
+    try { await nav.share({ title: `Build the ${p.name} with Hexkey`, text: `Free 3D step-by-step guide for the ${p.name} ${p.title.toLowerCase()}, read out loud:`, url }); return 'shared'; } catch (e: any) { if (e?.name === 'AbortError') return 'cancel'; }
+  }
+  try { await navigator.clipboard.writeText(url); return 'copied'; } catch { return 'failed'; }
+}
+
 export async function shareCard(blob: Blob, p: Piece) {
   const file = new File([blob], `hexkey-${p.slug}.png`, { type: 'image/png' });
   const nav = navigator as any;
   if (nav.canShare?.({ files: [file] })) {
-    try { await nav.share({ files: [file], title: `I built ${p.name}`, text: `Built my ${p.name} with Hexkey, step by step, out loud.` }); return 'shared'; } catch { return 'cancel'; }
+    try { await nav.share({ files: [file], title: `I built ${p.name}`, text: `Built my ${p.name} with Hexkey, step by step, out loud. ${shareUrl(p)}` }); return 'shared'; } catch { return 'cancel'; }
   }
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob); a.download = file.name; a.click();
