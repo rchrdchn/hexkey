@@ -1,0 +1,41 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "thuma-classic-bed-full",
+  "name": "CLASSIC BED",
+  "title": "Bed frame, full",
+  "brand": "thuma",
+  "archetype": "joinery-bed",
+  "category": "bedroom",
+  "size": [
+    149.9,
+    203.2,
+    33.0
+  ],
+  "worksWith": "Thuma® Classic Bed, Full, 59×80×13\" (W×L×H)",
+  "productUrl": "https://www.thuma.co/products/classic-bed",
+  "instructionsUrl": "https://www.thuma.co/pages/assembly",
+  "color": "#cfae84",
+  "confidence": "low",
+  "sources": [
+    "https://www.thuma.co/products/classic-bed",
+    "https://www.thuma.co/pages/assembly"
+  ],
+  "options": {
+    "frame": 33,
+    "clear": 22.9,
+    "leg": 7.5,
+    "headboard": false,
+    "centerLegs": 2,
+    "screws": 2
+  },
+  "tags": [
+    "bed",
+    "platform bed",
+    "tool-free",
+    "joinery",
+    "thuma"
+  ],
+  "notes": "Brand page: Classic Bed frame 13\" H with 9\" of under-bed space; solid upcycled wood with exposed Japanese joinery, tool-free assembly, pieces slide into place; felt-lined slats that lock in place; materials list mentions two hand-tightened screws. Leg size, rail tongues, the center rail's legs and where the two screws go are our best guess.",
+  "people": 2,
+  "minutes": 20
+}

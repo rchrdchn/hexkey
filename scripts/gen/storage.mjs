@@ -33,7 +33,7 @@ function layoutRows(g, rows) {
 }
 
 /** Drawers: runners, the first drawer in three steps, then "the rest", then knobs. */
-function drawers(b, g, slots, opt) {
+export function drawers(b, g, slots, opt) {
   const slug = b.spec.slug;
   const { D } = g;
   const gap = 0.3, ft = 1.6, st = 1.2, dd = Math.min(D - 6, opt.depth ?? D - 6);

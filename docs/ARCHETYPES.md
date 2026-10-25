@@ -55,6 +55,8 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 | `l-desk` | Eureka Ark Pro L, L60, L01 | `dw` desk depth, `rw` return width, `side` (`left`\|`right` return), `tt`, `electric` (two lifting columns, control box, keypad and reset; otherwise four fixed legs). Size is main length×overall depth×H. Built upside down |
 | `panel-bed` | Floyd Bed | `cols`, `rows` (panel grid), `frame` (frame height, cm), `headboard`. Tool-free: steel supports, panels dropped in, ratchet straps |
 | `clamp-table` | Floyd Modular Table | `tt` top thickness, `legW`. Four clamp-on legs tightened onto the top |
+| `joinery-bed` | Thuma Classic Bed (twin, full, queen, king, queen with headboard) | `frame` (rail top height, cm), `clear` (under-bed height), `leg` (corner leg size), `headboard` (true to add one; size H is then the headboard height), `slats` (default about one per 11 cm of length), `centerLegs`, `screws` (hand-tightened screws on the center rail). Tool-free: corner legs and rails slot together by joinery, one center rail with feet, a rolled slat kit, optional headboard. Size is W×L×H |
+| `wardrobe` | IKEA KLEPPSTAD and RAKKESTAD 2-door, BRIMNES 3-door, Hodedah HI882 armoire | `cols`: one entry per section, left to right: `{ "w": 2, "rod": true, "hat": true, "shelves": 4, "doors": 2, "mirror": true, "mirrorDoor": 1, "hinge": "right" }` (`w` is a relative width). `drawers` `{ "rows": 2, "cols": 1, "h": 36 }` puts a drawer bank across the whole bottom (under a fixed shelf). `knobs`/`knobWord`, `drawerKnobs`/`drawerKnobWord`, `runners`, `drawerDepth`, plus the carcass options (`t`, `tt`, `top`, `base`, `lying`). Steps: carcass, drawers, hat and adjustable shelves, clothes rails in rail holders, doors on hinges (3 per door over 100 cm, 4 over 150 cm), line up the gaps, handles, wall anchor |
 
 `table` also takes `bars` (height in cm of two side support bars between the front and back legs, for metal-frame desks).
 
@@ -69,6 +71,8 @@ Hand-made pieces (LACK, KALLAX 2×2, BILLY) are not generated and stay as they a
 5. Top (inset with cams, or overlay on dowels + cams), plinth.
 6. Face down, back panel nailed (split in two when taller than 150 cm), legs or casters.
 7. Stand it up. Then drawers, doors or adjustable shelves, then wall anchoring (tip-over safety on anything tall or with drawers).
+
+`wardrobe` reuses the same carcass build (dividers between sections, a fixed shelf over the drawer bank) and the same drawer steps, then adds rails, shelves and hinged doors.
 
 Drawers: runners first, then the first drawer step by step (front + sides on dowels, bottom slid in, back screwed), left pulled half open so you can see inside; the rest are "build N more" with counts, then knobs.
 

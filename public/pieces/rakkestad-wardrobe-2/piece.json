@@ -1,0 +1,848 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/rakkestad-wardrobe-2.json by scripts/generate.mjs (archetype \"wardrobe\"). Edit the spec, not this file.",
+  "slug": "rakkestad-wardrobe-2",
+  "name": "RAKKESTAD",
+  "title": "Wardrobe with 2 doors",
+  "brand": "IKEA",
+  "brandId": "ikea",
+  "disclaimer": "Not affiliated with or endorsed by Inter IKEA Systems B.V.",
+  "worksWith": "IKEA® RAKKESTAD wardrobe with 2 doors, 79×55×176 cm (31⅛×21⅝×69¼\")",
+  "productUrl": "https://www.ikea.com/us/en/p/rakkestad-wardrobe-with-2-doors-black-brown-40586805/",
+  "size": [
+    79,
+    176,
+    57
+  ],
+  "minutes": 50,
+  "people": 2,
+  "level": 2,
+  "color": "#3b322c",
+  "category": "storage",
+  "archetype": "wardrobe",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/rakkestad-wardrobe-with-2-doors-black-brown-40586805/"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom panel"
+    },
+    {
+      "id": "top",
+      "label": "Top panel"
+    },
+    {
+      "id": "plinth",
+      "label": "Plinth"
+    },
+    {
+      "id": "back",
+      "label": "Back panel"
+    },
+    {
+      "id": "shelf",
+      "label": "Shelf",
+      "plural": "Shelves"
+    },
+    {
+      "id": "rail",
+      "label": "Clothes rail"
+    },
+    {
+      "id": "door",
+      "label": "Door"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "nail",
+      "label": "Nail",
+      "kind": "nail"
+    },
+    {
+      "id": "spin",
+      "label": "Shelf pin",
+      "kind": "shelfpin"
+    },
+    {
+      "id": "railcup",
+      "label": "Rail holder",
+      "kind": "bracket"
+    },
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "hinge",
+      "label": "Hinge",
+      "kind": "hinge"
+    },
+    {
+      "id": "knob",
+      "label": "Knob",
+      "kind": "knob"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.6,
+        176,
+        55
+      ],
+      "pos": [
+        -38.7,
+        88,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.6,
+        176,
+        55
+      ],
+      "pos": [
+        38.7,
+        88,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "bottom",
+      "size": [
+        75.8,
+        1.6,
+        54.6
+      ],
+      "pos": [
+        0,
+        5.8,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        75.8,
+        1.6,
+        54.6
+      ],
+      "pos": [
+        0,
+        175.2,
+        0.2
+      ]
+    },
+    {
+      "id": "plinth",
+      "part": "plinth",
+      "size": [
+        75.8,
+        5,
+        1.6
+      ],
+      "pos": [
+        0,
+        2.5,
+        25.2
+      ]
+    },
+    {
+      "id": "backLow",
+      "part": "back",
+      "size": [
+        78.6,
+        87.65,
+        0.3
+      ],
+      "pos": [
+        0,
+        44.33,
+        -27.65
+      ]
+    },
+    {
+      "id": "backUp",
+      "part": "back",
+      "size": [
+        78.6,
+        87.65,
+        0.3
+      ],
+      "pos": [
+        0,
+        131.98,
+        -27.65
+      ]
+    },
+    {
+      "id": "shelf1",
+      "part": "shelf",
+      "size": [
+        75.4,
+        1.6,
+        52.6
+      ],
+      "pos": [
+        0,
+        148.4,
+        -0.6
+      ]
+    },
+    {
+      "id": "rail1",
+      "part": "rail",
+      "size": [
+        75.2,
+        2.2,
+        2.2
+      ],
+      "pos": [
+        0,
+        142.4,
+        0
+      ]
+    },
+    {
+      "id": "door1",
+      "part": "door",
+      "size": [
+        39.04,
+        170.4,
+        1.8
+      ],
+      "pos": [
+        -19.67,
+        90.5,
+        28.4
+      ]
+    },
+    {
+      "id": "door2",
+      "part": "door",
+      "size": [
+        39.04,
+        170.4,
+        1.8
+      ],
+      "pos": [
+        19.67,
+        90.5,
+        28.4
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Lay one side panel flat, holes facing up. Screw in four cam pins and tap in four wood dowels.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "pose": [
+        -90,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -37.9,
+              5.8,
+              17.6
+            ],
+            [
+              -37.9,
+              5.8,
+              -17.6
+            ],
+            [
+              -37.9,
+              175.2,
+              17.6
+            ],
+            [
+              -37.9,
+              175.2,
+              -17.6
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -37.9,
+              5.8,
+              7.04
+            ],
+            [
+              -37.9,
+              5.8,
+              -7.04
+            ],
+            [
+              -37.9,
+              175.2,
+              7.04
+            ],
+            [
+              -37.9,
+              175.2,
+              -7.04
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Slide the bottom panel onto the pins at the low end. Two cam locks go in, arrow toward the pin, then a firm clockwise turn.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -34.5,
+              6.6,
+              17.6
+            ],
+            [
+              -34.5,
+              6.6,
+              -17.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Top on. Lock 2.",
+      "say": "Same move at the other end. Push the top panel onto its pins, add two cam locks, and turn them clockwise.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -34.5,
+              176,
+              17.6
+            ],
+            [
+              -34.5,
+              176,
+              -17.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Side two. Lock 4.",
+      "say": "Pins and dowels go into the ends of the panels on this side too. With a helper, lower the second side onto all of them at once, then lock the last four cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              37.9,
+              5.8,
+              17.6
+            ],
+            [
+              37.9,
+              5.8,
+              -17.6
+            ],
+            [
+              37.9,
+              175.2,
+              17.6
+            ],
+            [
+              37.9,
+              175.2,
+              -17.6
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              37.9,
+              5.8,
+              7.04
+            ],
+            [
+              37.9,
+              5.8,
+              -7.04
+            ],
+            [
+              37.9,
+              175.2,
+              7.04
+            ],
+            [
+              37.9,
+              175.2,
+              -7.04
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              34.5,
+              6.6,
+              17.6
+            ],
+            [
+              34.5,
+              6.6,
+              -17.6
+            ],
+            [
+              34.5,
+              176,
+              17.6
+            ],
+            [
+              34.5,
+              176,
+              -17.6
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 50
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Plinth",
+      "say": "Tap four dowels into the ends of the plinth board and press it in under the bottom panel, at the front.",
+      "add": [
+        "plinth"
+      ],
+      "from": [
+        0,
+        0,
+        30
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+z",
+          "at": [
+            [
+              -37.9,
+              1.5,
+              25.2
+            ],
+            [
+              -37.9,
+              3.5,
+              25.2
+            ],
+            [
+              37.9,
+              1.5,
+              25.2
+            ],
+            [
+              37.9,
+              3.5,
+              25.2
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 25,
+        "el": 50,
+        "tight": true,
+        "zoom": 0.85
+      }
+    },
+    {
+      "caption": "Flip it face down",
+      "say": "Roll the wardrobe over so it lies on its front. Ask your helper, and put the flattened box underneath to save the finish.",
+      "pose": [
+        -90,
+        180,
+        0
+      ],
+      "view": {
+        "az": 60,
+        "el": 50
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Back, lower half",
+      "say": "Lay the back panel on, smooth side facing in. Line it up with the bottom corners and nail it along the edges, about every twenty centimeters. If the corners line up, the wardrobe is square.",
+      "add": [
+        "backLow"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Back, upper half",
+      "say": "Second back piece, butted tight against the first. Same nailing pattern along every edge.",
+      "add": [
+        "backUp"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Stand it up",
+      "say": "Stand it up together. Lift with your legs, not your back.",
+      "pose": [
+        0,
+        360,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 18
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Shelf in",
+      "say": "The shelf above the rail goes in first, high up. Push four shelf pins into the holes at the height you want for each shelf, four pins in all, then rest the shelves on them, front edge flush.",
+      "add": [
+        "shelf1"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "spin",
+          "axis": "+x",
+          "at": [
+            [
+              -37.9,
+              147.3,
+              14.08
+            ],
+            [
+              -37.9,
+              147.3,
+              -14.08
+            ]
+          ]
+        },
+        {
+          "id": "spin",
+          "axis": "-x",
+          "at": [
+            [
+              37.9,
+              147.3,
+              14.08
+            ],
+            [
+              37.9,
+              147.3,
+              -14.08
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 20
+      }
+    },
+    {
+      "caption": "Clothes rail",
+      "say": "Screw a rail holder to each side of the hanging space, level with each other, then drop the clothes rail into the holders. Hang one coat and check it slides freely.",
+      "add": [
+        "rail1"
+      ],
+      "from": [
+        0,
+        0,
+        35
+      ],
+      "hardware": [
+        {
+          "id": "railcup",
+          "axis": "+x",
+          "at": [
+            [
+              -37.9,
+              142.4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": "railcup",
+          "axis": "-x",
+          "at": [
+            [
+              37.9,
+              142.4,
+              0
+            ]
+          ]
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 15
+      }
+    },
+    {
+      "caption": "Hang 2 doors",
+      "say": "Press four hinges into the round cups on the back of each door, eight in all, then clip each door onto its mounting plates inside the frame. Doors this tall need a second pair of hands.",
+      "add": [
+        "door1",
+        "door2"
+      ],
+      "from": [
+        0,
+        0,
+        40
+      ],
+      "hardware": [
+        {
+          "id": "hinge",
+          "axis": "-z",
+          "at": [
+            [
+              -36.69,
+              15.3,
+              27.5
+            ],
+            [
+              -36.69,
+              65.43,
+              27.5
+            ],
+            [
+              -36.69,
+              115.57,
+              27.5
+            ],
+            [
+              -36.69,
+              165.7,
+              27.5
+            ],
+            [
+              36.69,
+              15.3,
+              27.5
+            ],
+            [
+              36.69,
+              65.43,
+              27.5
+            ],
+            [
+              36.69,
+              115.57,
+              27.5
+            ],
+            [
+              36.69,
+              165.7,
+              27.5
+            ]
+          ]
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 16
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 12
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Line up the gaps",
+      "say": "Shut the doors and check the lines. Tall doors drift, so nudge the hinge screws a quarter turn at a time until every gap matches.",
+      "view": {
+        "az": 10,
+        "el": 10,
+        "tight": true
+      }
+    },
+    {
+      "caption": "Handles on",
+      "say": "A handle for each door, on the side away from the hinges, about chest height. One screw from the inside.",
+      "hardware": [
+        {
+          "id": "knob",
+          "axis": "+z",
+          "at": [
+            [
+              -4.15,
+              99.02,
+              29.3
+            ],
+            [
+              4.15,
+              99.02,
+              29.3
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 15,
+        "el": 10
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Before anything goes inside, anchor it. Screw the wall bracket to the back edge of the top and into the wall with the right fixings for your wall. Tall, deep and heavy means it must be anchored.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              173,
+              -27.8
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your RAKKESTAD wardrobe with 2 doors is built. Give it a proud little pat.",
+  "notes": "Brand page: 79×55×176 cm, clothes rail (about 20 shirts) and a shelf (about 20 pairs of folded pants), wall anchoring required, 2 packages. Hinge counts and handle style are our best guess."
+}

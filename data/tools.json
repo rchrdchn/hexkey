@@ -529,6 +529,36 @@
       },
       "seville-ultradurable-6-tier-48": {
         "toolFree": true
+      },
+      "thuma-classic-bed-twin": {
+        "drop": [
+          "drill"
+        ],
+        "toolFree": true
+      },
+      "thuma-classic-bed-full": {
+        "drop": [
+          "drill"
+        ],
+        "toolFree": true
+      },
+      "thuma-classic-bed-queen": {
+        "drop": [
+          "drill"
+        ],
+        "toolFree": true
+      },
+      "thuma-classic-bed-king": {
+        "drop": [
+          "drill"
+        ],
+        "toolFree": true
+      },
+      "thuma-classic-bed-queen-headboard": {
+        "drop": [
+          "drill"
+        ],
+        "toolFree": true
       }
     }
   }

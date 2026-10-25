@@ -1,0 +1,958 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/thuma-classic-bed-queen-headboard.json by scripts/generate.mjs (archetype \"joinery-bed\"). Edit the spec, not this file.",
+  "slug": "thuma-classic-bed-queen-headboard",
+  "name": "CLASSIC BED",
+  "title": "Bed frame, queen + headboard",
+  "brand": "Thuma",
+  "brandId": "thuma",
+  "disclaimer": "Not affiliated with or endorsed by Thuma.",
+  "worksWith": "Thuma® Classic Bed + Headboard, Queen, 65×85×39\" (W×L×H)",
+  "productUrl": "https://www.thuma.co/products/classic-bed",
+  "instructionsUrl": "https://www.thuma.co/pages/assembly",
+  "size": [
+    165,
+    99,
+    220
+  ],
+  "minutes": 25,
+  "people": 2,
+  "level": 2,
+  "color": "#cfae84",
+  "category": "bedroom",
+  "archetype": "joinery-bed",
+  "confidence": "low",
+  "sources": [
+    "https://www.thuma.co/products/classic-bed",
+    "https://www.thuma.co/pages/assembly"
+  ],
+  "parts": [
+    {
+      "id": "leg",
+      "label": "Corner leg"
+    },
+    {
+      "id": "end",
+      "label": "Head and foot rail"
+    },
+    {
+      "id": "rail",
+      "label": "Side rail"
+    },
+    {
+      "id": "center",
+      "label": "Center rail"
+    },
+    {
+      "id": "slats",
+      "label": "Slat roll"
+    },
+    {
+      "id": "head",
+      "label": "Headboard"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "hand",
+      "label": "Hand-tightened screw",
+      "kind": "screw"
+    }
+  ],
+  "objects": [
+    {
+      "id": "legHL",
+      "part": "leg",
+      "size": [
+        7.5,
+        33,
+        7.5
+      ],
+      "pos": [
+        -78.8,
+        16.5,
+        -104.2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7.5,
+            33,
+            7.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            0.6,
+            4.5
+          ],
+          "p": [
+            1.88,
+            16.2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legHR",
+      "part": "leg",
+      "size": [
+        7.5,
+        33,
+        7.5
+      ],
+      "pos": [
+        78.8,
+        16.5,
+        -104.2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7.5,
+            33,
+            7.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            0.6,
+            4.5
+          ],
+          "p": [
+            -1.87,
+            16.2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legFL",
+      "part": "leg",
+      "size": [
+        7.5,
+        33,
+        7.5
+      ],
+      "pos": [
+        -78.8,
+        16.5,
+        104.2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7.5,
+            33,
+            7.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            0.6,
+            4.5
+          ],
+          "p": [
+            1.88,
+            16.2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "legFR",
+      "part": "leg",
+      "size": [
+        7.5,
+        33,
+        7.5
+      ],
+      "pos": [
+        78.8,
+        16.5,
+        104.2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7.5,
+            33,
+            7.5
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            0.6,
+            4.5
+          ],
+          "p": [
+            -1.87,
+            16.2,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endH",
+      "part": "end",
+      "size": [
+        157.6,
+        10.1,
+        3.8
+      ],
+      "pos": [
+        0,
+        27.95,
+        -104.2
+      ],
+      "boxes": [
+        {
+          "s": [
+            150.1,
+            10.1,
+            3.8
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            8.1,
+            2.8
+          ],
+          "p": [
+            -76.92,
+            -1,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            8.1,
+            2.8
+          ],
+          "p": [
+            76.93,
+            -1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "endF",
+      "part": "end",
+      "size": [
+        157.6,
+        10.1,
+        3.8
+      ],
+      "pos": [
+        0,
+        27.95,
+        104.2
+      ],
+      "boxes": [
+        {
+          "s": [
+            150.1,
+            10.1,
+            3.8
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            8.1,
+            2.8
+          ],
+          "p": [
+            -76.92,
+            -1,
+            0
+          ]
+        },
+        {
+          "s": [
+            3.75,
+            8.1,
+            2.8
+          ],
+          "p": [
+            76.93,
+            -1,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railL",
+      "part": "rail",
+      "size": [
+        3.8,
+        10.1,
+        208.4
+      ],
+      "pos": [
+        -78.8,
+        27.95,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            3.8,
+            10.1,
+            200.9
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.8,
+            8.1,
+            3.75
+          ],
+          "p": [
+            0,
+            -1,
+            -102.32
+          ]
+        },
+        {
+          "s": [
+            2.8,
+            8.1,
+            3.75
+          ],
+          "p": [
+            0,
+            -1,
+            102.33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railR",
+      "part": "rail",
+      "size": [
+        3.8,
+        10.1,
+        208.4
+      ],
+      "pos": [
+        78.8,
+        27.95,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            3.8,
+            10.1,
+            200.9
+          ],
+          "p": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            2.8,
+            8.1,
+            3.75
+          ],
+          "p": [
+            0,
+            -1,
+            -102.32
+          ]
+        },
+        {
+          "s": [
+            2.8,
+            8.1,
+            3.75
+          ],
+          "p": [
+            0,
+            -1,
+            102.33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "center",
+      "part": "center",
+      "size": [
+        5,
+        31.2,
+        200.9
+      ],
+      "pos": [
+        0,
+        15.6,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            5,
+            6.06,
+            200.9
+          ],
+          "p": [
+            0,
+            12.57,
+            0
+          ]
+        },
+        {
+          "s": [
+            5,
+            25.14,
+            5
+          ],
+          "p": [
+            0,
+            -3.03,
+            -53.97
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            5,
+            25.14,
+            5
+          ],
+          "p": [
+            0,
+            -3.03,
+            0
+          ],
+          "shape": "cyl"
+        },
+        {
+          "s": [
+            5,
+            25.14,
+            5
+          ],
+          "p": [
+            0,
+            -3.03,
+            53.98
+          ],
+          "shape": "cyl"
+        }
+      ]
+    },
+    {
+      "id": "slats",
+      "part": "slats",
+      "size": [
+        149.1,
+        1.8,
+        198.9
+      ],
+      "pos": [
+        0,
+        32.1,
+        0
+      ],
+      "boxes": [
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -96.45
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -86.3
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -76.14
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -65.99
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -55.84
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -45.69
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -35.53
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -25.38
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -15.23
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            -5.08
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            5.08
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            15.23
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            25.38
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            35.53
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            45.69
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            55.84
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            65.99
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            76.14
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            86.3
+          ]
+        },
+        {
+          "s": [
+            149.1,
+            1.8,
+            6.5
+          ],
+          "p": [
+            0,
+            0,
+            96.45
+          ]
+        }
+      ]
+    },
+    {
+      "id": "head",
+      "part": "head",
+      "size": [
+        165.1,
+        99.1,
+        4
+      ],
+      "pos": [
+        0,
+        49.55,
+        -109.95
+      ],
+      "boxes": [
+        {
+          "s": [
+            165.1,
+            66.1,
+            3
+          ],
+          "p": [
+            0,
+            16.5,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            99.1,
+            4
+          ],
+          "p": [
+            -79.55,
+            0,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            99.1,
+            4
+          ],
+          "p": [
+            79.55,
+            0,
+            0
+          ]
+        }
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "No tools needed",
+      "say": "Clear the floor where the bed will live and lay the parts out on the empty box. This frame is held together by its joints, so put the screwdriver away.",
+      "view": {
+        "az": 30,
+        "el": 35
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Head end",
+      "say": "Stand two corner legs up, slots facing each other. Lower the head rail so its tongues slide down into the slots, both ends together, until the top is flush with the legs.",
+      "add": [
+        "legHL",
+        "legHR",
+        "endH"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": 35,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Foot end",
+      "say": "Same again at the foot end: two legs, then the foot rail slides down into their slots.",
+      "add": [
+        "legFL",
+        "legFR",
+        "endF"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": -35,
+        "el": 30
+      }
+    },
+    {
+      "caption": "2 side rails in",
+      "say": "Set the two ends a bed length apart. Lift a side rail and lower its tongues into the open slots at the head and the foot at the same time, then press down until it sits flush. One person at each end makes this easy. If a joint is tight, press with your palm, never hammer.",
+      "add": [
+        "railL",
+        "railR"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": 40,
+        "el": 40
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Center rail",
+      "say": "Drop the center rail into the notches in the middle of the head and foot rails, and stand its three legs straight so they touch the floor. Then turn the two hand-tightened screws in with your fingers until snug.",
+      "add": [
+        "center"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "hand",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              29.97,
+              -100.45
+            ],
+            [
+              0,
+              29.97,
+              100.45
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Check the joints",
+      "say": "Press down on each corner. Every rail should sit flush with the top of its legs, with no gap in any slot. Measure corner to corner both ways: when the diagonals match, the frame is square.",
+      "view": {
+        "az": 0,
+        "el": 75
+      }
+    },
+    {
+      "caption": "Unroll 20 slats",
+      "say": "Unroll the slats from the head to the foot. Seat the ends on the ledges inside the side rails so they lock in place and cannot slide. Twenty slats, evenly spaced.",
+      "add": [
+        "slats"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Headboard on",
+      "say": "Stand the headboard behind the head end and seat it on its fittings at the head legs, the way your brand guide shows. Lean on it gently: it should not wobble.",
+      "add": [
+        "head"
+      ],
+      "from": [
+        0,
+        0,
+        -40
+      ],
+      "view": {
+        "az": 150,
+        "el": 25
+      },
+      "safety": "Two people for this one."
+    },
+    {
+      "caption": "Mattress on",
+      "say": "Push the bed into place, check that nothing rocks, and lay the mattress on. No box spring needed.",
+      "view": {
+        "az": 25,
+        "el": 25
+      }
+    }
+  ],
+  "done": "Done. Your CLASSIC BED bed frame, queen + headboard is built. Give it a proud little pat.",
+  "notes": "Brand page: Classic Bed frame 13\" H with 9\" of under-bed space; solid upcycled wood with exposed Japanese joinery, tool-free assembly, pieces slide into place; felt-lined slats that lock in place; materials list mentions two hand-tightened screws. Leg size, rail tongues, the center rail's legs and where the two screws go are our best guess. Classic Bed + Headboard is 39\" tall from the floor to the top of the headboard."
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "rakkestad-wardrobe-2",
+  "name": "RAKKESTAD",
+  "title": "Wardrobe with 2 doors",
+  "brand": "ikea",
+  "archetype": "wardrobe",
+  "category": "storage",
+  "size": [
+    79,
+    55,
+    176
+  ],
+  "worksWith": "IKEA® RAKKESTAD wardrobe with 2 doors, 79×55×176 cm (31⅛×21⅝×69¼\")",
+  "productUrl": "https://www.ikea.com/us/en/p/rakkestad-wardrobe-with-2-doors-black-brown-40586805/",
+  "color": "#3b322c",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/rakkestad-wardrobe-with-2-doors-black-brown-40586805/"
+  ],
+  "options": {
+    "t": 1.6,
+    "top": "inset",
+    "base": {
+      "type": "plinth",
+      "h": 5
+    },
+    "cols": [
+      {
+        "rod": true,
+        "hat": true,
+        "doors": 2
+      }
+    ],
+    "knobs": 1,
+    "knobWord": "handles"
+  },
+  "tags": [
+    "wardrobe",
+    "armoire",
+    "closet",
+    "clothes rail",
+    "ikea"
+  ],
+  "notes": "Brand page: 79×55×176 cm, clothes rail (about 20 shirts) and a shelf (about 20 pairs of folded pants), wall anchoring required, 2 packages. Hinge counts and handle style are our best guess."
+}

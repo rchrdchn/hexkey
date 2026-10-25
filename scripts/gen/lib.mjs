@@ -20,6 +20,8 @@ export const HW = {
   sleeve: { label: 'Plastic sleeve', kind: 'shelfpin' },
   foot: { label: 'Levelling foot', kind: 'bolt' },
   caster: { label: 'Caster wheel', kind: 'bolt' },
+  railcup: { label: 'Rail holder', kind: 'bracket' },
+  hand: { label: 'Hand-tightened screw', kind: 'screw' },
 };
 
 export class Build {

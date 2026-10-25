@@ -50,27 +50,28 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 
 ## What's in the catalog
 
-**157 pieces from 29 brands**, in 7 categories: bedroom (40), shelving (32), desks (26), kids (23), dressers (19), storage (9) and tables (8).
+**166 pieces from 30 brands**, in 7 categories: bedroom (45), shelving (32), desks (26), kids (23), dressers (19), storage (13) and tables (8).
 
 | Brand | Pieces | Brand | Pieces |
 |---|---|---|---|
-| IKEA® | 35 | Hodedah® | 6 |
-| Plank+Beam® | 13 | Seville Classics® | 6 |
-| Zinus® | 13 | Bestar® | 4 |
-| Storkcraft® | 11 | Branch® | 3 |
-| Walker Edison® | 10 | Max & Lily® | 3 |
-| Eureka Ergonomic® | 8 | Tribesigns® | 3 |
-| ECR4Kids® | 7 | Autonomous® | 2 |
-| Floyd® | 6 | Burrow® | 2 |
-| Dorel Home (Ameriwood Home®, Novogratz®) | 5 | Delta Children® | 2 |
-| Nathan James® | 5 | Linon® | 2 |
-| VASAGLE® (SONGMICS) | 2 | VIVO® | 2 |
+| IKEA® | 38 | Thuma® | 5 |
+| Plank+Beam® | 13 | Bestar® | 4 |
+| Zinus® | 13 | Branch® | 3 |
+| Storkcraft® | 11 | Max & Lily® | 3 |
+| Walker Edison® | 10 | Tribesigns® | 3 |
+| Eureka Ergonomic® | 8 | Autonomous® | 2 |
+| ECR4Kids® | 7 | Burrow® | 2 |
+| Hodedah® | 7 | Delta Children® | 2 |
+| Floyd® | 6 | Linon® | 2 |
+| Seville Classics® | 6 | VASAGLE® (SONGMICS) | 2 |
+| Dorel Home (Ameriwood Home®, Novogratz®) | 5 | VIVO® | 2 |
+| Nathan James® | 5 |  |  |
 | ClosetMaid®, FlexiSpot®, KidKraft®, Prepac®, Sauder®, South Shore®, UPLIFT Desk® | 1 each | | |
 
 - **3 hand-made guides** (LACK side table, KALLAX 2×2, BILLY 80×202) are tuned step by step.
-- **154 generated guides** come from short JSON specs in `catalog/`, built by [archetypes](docs/ARCHETYPES.md) (bookcase, chest, cubes, table, platform bed, standing desk, bunk bed, L-desk, wire shelf and more).
+- **163 generated guides** come from short JSON specs in `catalog/`, built by [archetypes](docs/ARCHETYPES.md) (bookcase, chest, cubes, table, platform bed, joinery bed, wardrobe, standing desk, bunk bed, L-desk, wire shelf and more).
 - **The full list** with steps, part and hardware counts is in [`public/pieces/catalog.json`](public/pieces/catalog.json), which is also what the picker loads.
-- **Brand research** for 50 brands (29 included, 13 queued, 8 skipped) is in [docs/BRANDS.md](docs/BRANDS.md) and [`data/sources/brands.json`](data/sources/brands.json).
+- **Brand research** for 50 brands (30 included, 12 queued, 8 skipped) is in [docs/BRANDS.md](docs/BRANDS.md) and [`data/sources/brands.json`](data/sources/brands.json).
 
 Every piece has a **confidence** level for how sure we are about its internals:
 
@@ -344,7 +345,7 @@ When someone pastes a Hexkey link into iMessage, X, Slack, WhatsApp or Facebook,
 - **Search indexing.** The site is indexable: no page has a `noindex` meta and no `X-Robots-Tag` header is sent. The spot for a `<meta name="robots">` line is marked in `index.html`; the share pages copy that head, so one line there would change every page.
 - `sitemap.xml` lists the home page and every `/p/<slug>/` page. `llms.txt` describes the site and lists every guide. `robots.txt` welcomes all crawlers, AI bots included, and points to the sitemap. Unknown paths get `404.html` (a real 404). The IndexNow key file is `public/<key>.txt` (IndexNow keys are public by design); after a deploy that adds or renames pieces, ping `https://api.indexnow.org/indexnow` with the sitemap URLs and that key.
 
-- **Preview video** (`public/og-video.mp4`): a 7-second silent loop of the real configurator, LACK turning one full 360° turn in the 3D view. 1280x720 H.264 Main, yuv420p, faststart, no audio, about 1 MB. The home page and every `/p/<slug>/` page send `og:video`, `og:video:secure_url`, `og:video:type` (video/mp4), `og:video:width` and `og:video:height` with the absolute URL. iMessage, Discord and Facebook play it in the preview; X, LinkedIn and Slack ignore it and keep the card above (`twitter:card` stays `summary_large_image`, no `twitter:player`). It is only referenced from meta tags, so the app never loads it, and it is not in the sitemap. `public/_headers` serves it as `video/mp4`, and `scripts/share-pages.mjs` fails the build if it is missing or over 5 MB. It was recorded from hexkey.pages.dev with Playwright: the mouse drags the app's own camera controls 720 px (exactly one turn, since drag-rotate is 2π per canvas height) in 240 steps, waiting for the damping to settle before each screenshot, so frame 240 matches frame 0 and the loop is seamless. Encoded with `ffmpeg -c:v libx264 -profile:v main -pix_fmt yuv420p -crf 24 -movflags +faststart -an`. There are no per-piece videos: in headless Chromium the 3D view renders in software at about 4 s a frame, so one 8-second clip takes about 20 minutes and all 157 pieces would take days.
+- **Preview video** (`public/og-video.mp4`): a 7-second silent loop of the real configurator, LACK turning one full 360° turn in the 3D view. 1280x720 H.264 Main, yuv420p, faststart, no audio, about 1 MB. The home page and every `/p/<slug>/` page send `og:video`, `og:video:secure_url`, `og:video:type` (video/mp4), `og:video:width` and `og:video:height` with the absolute URL. iMessage, Discord and Facebook play it in the preview; X, LinkedIn and Slack ignore it and keep the card above (`twitter:card` stays `summary_large_image`, no `twitter:player`). It is only referenced from meta tags, so the app never loads it, and it is not in the sitemap. `public/_headers` serves it as `video/mp4`, and `scripts/share-pages.mjs` fails the build if it is missing or over 5 MB. It was recorded from hexkey.pages.dev with Playwright: the mouse drags the app's own camera controls 720 px (exactly one turn, since drag-rotate is 2π per canvas height) in 240 steps, waiting for the damping to settle before each screenshot, so frame 240 matches frame 0 and the loop is seamless. Encoded with `ffmpeg -c:v libx264 -profile:v main -pix_fmt yuv420p -crf 24 -movflags +faststart -an`. There are no per-piece videos: in headless Chromium the 3D view renders in software at about 4 s a frame, so one 8-second clip takes about 20 minutes and all 166 pieces would take days.
 
 **Preview video range requests.** `*.pages.dev` answers a `Range` request for a static file with a full `200`, but Safari and iMessage want `206 Partial Content` before they play an MP4. `functions/og-video.mp4.js` is a one-path Pages Function: it reads `dist/og-video.mp4` through `env.ASSETS` and answers `GET`, `HEAD` and `Range` (`206` with `Content-Range`, `416` when out of bounds) with `video/mp4`, `Accept-Ranges: bytes` and a 1-day cache. Pages builds `_routes.json` from `functions/`, so only `/og-video.mp4` hits the function. Check: `curl -sI -r 0-1023 https://hexkey.pages.dev/og-video.mp4` prints `206`.
 
@@ -356,7 +357,7 @@ npx vite preview --port 4191 &
 npm run share-cards -- http://localhost:4191    # only stale cards (about 1.3 s each); add `all` to redo everything
 ```
 
-A card is stale when its piece's name, title, brand, stats or geometry changes, or when `DESIGN` in `scripts/share/lib.mjs` is bumped after a design change. All 157 cards take about 3 minutes and weigh about 12.5 MB (65 to 110 KB each). The renders come from `/?thumb=<slug>&explode=0.32&zoom=0.9&bg=none&dpr=2`.
+A card is stale when its piece's name, title, brand, stats or geometry changes, or when `DESIGN` in `scripts/share/lib.mjs` is bumped after a design change. All 166 cards take about 3 minutes and weigh about 13 MB (65 to 110 KB each). The renders come from `/?thumb=<slug>&explode=0.32&zoom=0.9&bg=none&dpr=2`.
 
 ## Deployment
 
@@ -378,7 +379,7 @@ Contributions are very welcome: new furniture, fixes to steps, bug reports, requ
 
 ## Trademarks and disclaimer
 
-IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. Walker Edison, Ameriwood Home, Novogratz, Zinus, Sauder, South Shore, Prepac, ClosetMaid, Tribesigns, Nathan James, VASAGLE, SONGMICS, FlexiSpot, UPLIFT Desk, Bestar, Linon, Delta Children, Seville Classics, Branch, VIVO, Storkcraft, Plank+Beam, Max & Lily, Eureka Ergonomic, ECR4Kids, Floyd, Hodedah, Burrow, Autonomous, KidKraft and their product names are trademarks of their respective owners. They are used here only to say which products these guides are written for.
+IKEA and the product names used here (LACK, KALLAX, BILLY, MALM, HEMNES and the others) are trademarks of Inter IKEA Systems B.V. Walker Edison, Ameriwood Home, Novogratz, Zinus, Sauder, South Shore, Prepac, ClosetMaid, Tribesigns, Nathan James, VASAGLE, SONGMICS, FlexiSpot, UPLIFT Desk, Bestar, Linon, Delta Children, Seville Classics, Branch, VIVO, Storkcraft, Plank+Beam, Max & Lily, Eureka Ergonomic, ECR4Kids, Floyd, Hodedah, Burrow, Autonomous, KidKraft, Thuma and their product names are trademarks of their respective owners. They are used here only to say which products these guides are written for.
 
 Hexkey is an independent project and is **not affiliated with, sponsored by or endorsed by Inter IKEA Systems B.V. or any other brand named here** (the full list is in [data/sources/brands.json](data/sources/brands.json)). No brand named here sponsors Hexkey.
 

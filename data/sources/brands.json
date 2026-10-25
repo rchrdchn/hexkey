@@ -1,6 +1,6 @@
 {
  "$comment": "Brand research for Hexkey. Facts only; no brand PDFs, images or text are copied. status: included = pieces in catalog, research-only = queued, skipped = site blocked us or terms bar scraping. fit: 1-5 Hexkey archetype fit.",
- "updated": "2026-10-23",
+ "updated": "2026-10-25",
  "brands": [
   {
    "id": "ikea",
@@ -725,7 +725,7 @@
    "label": "Thuma®",
    "tier": "small",
    "site": "https://www.thuma.co",
-   "status": "research-only",
+   "status": "included",
    "fit": 4,
    "instructions": "Tool-free assembly guide/video (\"The Bed\")",
    "access": "public",
@@ -734,9 +734,9 @@
     "The Bed",
     "Nightstand"
    ],
-   "note": "Re-checked Oct 24: pages reachable (Crawl-delay 10), but The Bed is a tool-free joinery frame that needs its own archetype → still queued.",
+   "note": "Batch 5: Classic Bed in twin, full, queen and king, plus queen + headboard, on the new joinery-bed archetype. Sizes from the product page (13\" frame, 9\" under-bed space; 39\" with the headboard); the assembly page is public. Crawl-delay 10 respected. Low confidence: joint layout and where the two hand-tightened screws go are our guess.",
    "disclaimer": "Not affiliated with or endorsed by Thuma.",
-   "checked": "verified 2026-10-24"
+   "checked": "verified 2026-10-25"
   },
   {
    "id": "sabai",
@@ -811,7 +811,7 @@
     "armoires",
     "kitchen carts"
    ],
-   "note": "Batch 4: 3, 4 and 5-shelf bookcases, 5-drawer chest, 7-drawer chest with locks, 2-drawer nightstand. \"Assembled Dimensions\" (H, W, D) on each page; drawer counts and glides from the feature list. Armoires, door bookcases and kitchen pieces skipped (no archetype for hanging rods or so many doors yet).",
+   "note": "Batch 4: 3, 4 and 5-shelf bookcases, 5-drawer chest, 7-drawer chest with locks, 2-drawer nightstand. \"Assembled Dimensions\" (H, W, D) on each page; drawer counts and glides from the feature list. Batch 5: 2-door armoire with mirror (HI882) on the new wardrobe archetype. Still skipped: the 2-door armoire without mirror (its page lists a 46.8\" depth, likely a typo), the 3-door armoire (drawers sit under one section only, which the archetype does not model yet), door bookcases and kitchen pieces.",
    "disclaimer": "Not affiliated with or endorsed by Hodedah.",
    "checked": "verified 2026-10-24",
    "short": "Hodedah"

@@ -1,0 +1,55 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "brimnes-wardrobe-3",
+  "name": "BRIMNES",
+  "title": "Wardrobe with 3 doors",
+  "brand": "ikea",
+  "archetype": "wardrobe",
+  "category": "storage",
+  "size": [
+    117,
+    50,
+    190
+  ],
+  "worksWith": "IKEA® BRIMNES wardrobe with 3 doors, 117×50×190 cm (46×19¾×74¾\")",
+  "productUrl": "https://www.ikea.com/us/en/p/brimnes-wardrobe-with-3-doors-white-90574800/",
+  "color": "#f3f1ec",
+  "confidence": "medium",
+  "sources": [
+    "https://www.ikea.com/us/en/p/brimnes-wardrobe-with-3-doors-white-90574800/",
+    "https://www.ikea.com/ca/en/p/brimnes-wardrobe-with-3-doors-white-90574800/"
+  ],
+  "options": {
+    "t": 1.6,
+    "top": "overlay",
+    "tt": 1.8,
+    "base": {
+      "type": "plinth",
+      "h": 6
+    },
+    "cols": [
+      {
+        "w": 2,
+        "rod": true,
+        "hat": true,
+        "doors": 2
+      },
+      {
+        "w": 1,
+        "shelves": 4,
+        "doors": 1,
+        "hinge": "right",
+        "mirror": true
+      }
+    ]
+  },
+  "tags": [
+    "wardrobe",
+    "armoire",
+    "closet",
+    "mirror",
+    "clothes rail",
+    "ikea"
+  ],
+  "notes": "Brand page: 117×50×190 cm, partition, clothes rail, adjustable shelves, one mirror door that can go left, right or in the middle (we put it on the right), wall safety fitting, 3 packages. Shelf count and hinge counts are our best guess."
+}

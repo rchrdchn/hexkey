@@ -1,0 +1,57 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hodedah-2-door-armoire-mirror",
+  "name": "HODEDAH",
+  "title": "2-door armoire with mirror",
+  "brand": "hodedah",
+  "archetype": "wardrobe",
+  "category": "storage",
+  "size": [
+    80,
+    42.7,
+    182.1
+  ],
+  "worksWith": "Hodedah® 2-door armoire with 2 drawers, clothing rod and mirror (HI882), 31.5×16.8×71.7\" (W×D×H)",
+  "productUrl": "https://hodedah.com/shop/hodedah-2-door-armoire-with-2-drawers-and-clothing-rod-plus-mirror/",
+  "instructionsUrl": "https://hodedah.com/wp-content/uploads/2023/12/HI882-A-UPDATED-4-30-2021.pdf",
+  "color": "#d9bf95",
+  "confidence": "low",
+  "sources": [
+    "https://hodedah.com/shop/hodedah-2-door-armoire-with-2-drawers-and-clothing-rod-plus-mirror/"
+  ],
+  "options": {
+    "t": 1.5,
+    "top": "overlay",
+    "tt": 1.5,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    },
+    "cols": [
+      {
+        "rod": true,
+        "doors": 2,
+        "mirror": true
+      }
+    ],
+    "drawers": {
+      "rows": 2,
+      "cols": 1,
+      "h": 36
+    },
+    "knobs": 1,
+    "knobWord": "knobs",
+    "drawerKnobs": 2,
+    "drawerKnobWord": "ring pulls"
+  },
+  "tags": [
+    "wardrobe",
+    "armoire",
+    "closet",
+    "mirror",
+    "drawers",
+    "hodedah"
+  ],
+  "notes": "Brand page: assembled 31.5\" W × 16.8\" D × 71.7\" H; two doors open onto a clothing rod, the base of the upper space works as a shelf, two drawers below on metal runners with safety stops; engineered wood. Which door carries the mirror, the drawer layout and the handle styles are our best guess.",
+  "people": 2
+}
