@@ -190,9 +190,9 @@
     "Somerset",
     "Studio C desks"
    ],
-   "note": "Site unreachable → queued.",
+   "note": "Re-checked Oct 24: TLS connection still fails for our fetcher → still queued.",
    "disclaimer": "Not affiliated with or endorsed by Bush Furniture.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-24"
   },
   {
    "id": "hon",
@@ -227,9 +227,9 @@
    "products": [
     "Signature Design RTA dressers/bookcases"
    ],
-   "note": "Mostly delivered assembled; queued.",
+   "note": "Re-checked Oct 24: robots.txt answers 406 and product data 403 for our fetcher → still queued (no bypass).",
    "disclaimer": "Not affiliated with or endorsed by Ashley (Signature Design RTA).",
-   "checked": "unverified (general knowledge, site not checked)",
+   "checked": "verified 2026-10-24",
    "short": "Ashley"
   },
   {
@@ -456,18 +456,21 @@
    "label": "Burrow®",
    "tier": "medium",
    "site": "https://burrow.com",
-   "status": "research-only",
+   "status": "included",
    "fit": 3,
-   "instructions": "Assembly guides per product",
-   "access": "public",
-   "robots": "Crawl-delay 10",
+   "instructions": "Product page \"Download Assembly Instructions\" PDF on the Shopify CDN",
+   "access": "public, no login",
+   "robots": "Shopify (headless); products allowed, Crawl-delay 10",
    "products": [
-    "Range shelving",
-    "Serif"
+    "Prospect 3/6/9-drawer low and 5/10/15-drawer tall dressers",
+    "Index bookcases",
+    "Heist dresser and nightstand",
+    "Range sofas"
    ],
-   "note": "Queued.",
+   "note": "Batch 4: Prospect 3-drawer low and 5-drawer tall dressers (\"General Dimensions\" and drawer interiors on each page). Wider Prospect dressers skipped (they are side-by-side modules, not one case); Index bookcases skipped (tool-free knurled-screw frame needs its own archetype); Heist pages print no outer size. Range sofas are upholstered.",
    "disclaimer": "Not affiliated with or endorsed by Burrow.",
-   "checked": "verified 2026-10-23"
+   "checked": "verified 2026-10-24",
+   "short": "Burrow"
   },
   {
    "id": "tribesigns",
@@ -639,18 +642,21 @@
    "label": "KidKraft®",
    "tier": "medium",
    "site": "https://www.kidkraft.com",
-   "status": "research-only",
+   "status": "included",
    "fit": 3,
-   "instructions": "Instructions lookup by item number",
-   "access": "public",
-   "robots": "Crawl-delay 10",
+   "instructions": "Product page \"Assembly Instructions\" link (Salsify-hosted or Shopify CDN PDF)",
+   "access": "public, no login",
+   "robots": "Shopify default; products allowed (10 s between requests)",
    "products": [
-    "play kitchens",
-    "bookcases"
+    "Puzzle Bookshelf",
+    "Bookcase with Reading Nook",
+    "Study Desk with Chair",
+    "play kitchens and dollhouses"
    ],
-   "note": "Toys dominate; queued.",
+   "note": "Batch 4: Puzzle Bookshelf (product dimensions in inches and cm on the page). Reading Nook bookcase and Study Desk skipped (nook seat and hutch need new archetypes); most of the catalog is toys.",
    "disclaimer": "Not affiliated with or endorsed by KidKraft.",
-   "checked": "verified 2026-10-23"
+   "checked": "verified 2026-10-24",
+   "short": "KidKraft"
   },
   {
    "id": "furinno",
@@ -667,9 +673,9 @@
     "Pasir 3-tier shelf",
     "Turn-N-Tube"
    ],
-   "note": "Server error → queued.",
+   "note": "Re-checked Oct 24: home page loads but product pages, sitemap and store API return 502 → still queued.",
    "disclaimer": "Not affiliated with or endorsed by Furinno.",
-   "checked": "verified 2026-10-23"
+   "checked": "verified 2026-10-24"
   },
   {
    "id": "seville",
@@ -728,9 +734,9 @@
     "The Bed",
     "Nightstand"
    ],
-   "note": "Joinery bed needs a new archetype; queued.",
+   "note": "Re-checked Oct 24: pages reachable (Crawl-delay 10), but The Bed is a tool-free joinery frame that needs its own archetype → still queued.",
    "disclaimer": "Not affiliated with or endorsed by Thuma.",
-   "checked": "verified 2026-10-23"
+   "checked": "verified 2026-10-24"
   },
   {
    "id": "sabai",
@@ -792,19 +798,23 @@
    "name": "Hodedah",
    "label": "Hodedah®",
    "tier": "small",
-   "site": "https://www.hodedah.com",
-   "status": "research-only",
+   "site": "https://hodedah.com",
+   "status": "included",
    "fit": 4,
-   "instructions": "Instructions PDFs per item",
-   "access": "unverified (general knowledge, site not checked)",
-   "robots": "unverified (general knowledge, site not checked)",
+   "instructions": "Product page buttons: \"Assembly Instructions\" PDF and \"Diagrams & Dimensions\" PDF (wp-content/uploads)",
+   "access": "public, no login",
+   "robots": "WordPress/WooCommerce; shop pages allowed (8 s between requests)",
    "products": [
-    "dressers",
-    "bookcases"
+    "3/4/5-shelf bookcases",
+    "5-drawer and 7-drawer chests",
+    "2-drawer nightstand",
+    "armoires",
+    "kitchen carts"
    ],
-   "note": "Queued.",
+   "note": "Batch 4: 3, 4 and 5-shelf bookcases, 5-drawer chest, 7-drawer chest with locks, 2-drawer nightstand. \"Assembled Dimensions\" (H, W, D) on each page; drawer counts and glides from the feature list. Armoires, door bookcases and kitchen pieces skipped (no archetype for hanging rods or so many doors yet).",
    "disclaimer": "Not affiliated with or endorsed by Hodedah.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-24",
+   "short": "Hodedah"
   },
   {
    "id": "yaheetech",
@@ -815,15 +825,15 @@
    "status": "research-only",
    "fit": 3,
    "instructions": "Manuals on Amazon/product pages",
-   "access": "unverified (general knowledge, site not checked)",
+   "access": "no product pages (redirect to /lander)",
    "robots": "unverified (general knowledge, site not checked)",
    "products": [
     "bookcases",
     "desks"
    ],
-   "note": "Queued.",
+   "note": "Re-checked Oct 24: yaheetech.com only redirects to a /lander page with no products → still queued.",
    "disclaimer": "Not affiliated with or endorsed by Yaheetech.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-24"
   },
   {
    "id": "autonomous",
@@ -831,17 +841,18 @@
    "label": "Autonomous®",
    "tier": "small",
    "site": "https://www.autonomous.ai",
-   "status": "research-only",
+   "status": "included",
    "fit": 4,
-   "instructions": "Assembly guide per desk",
-   "access": "unverified (general knowledge, site not checked)",
-   "robots": "unverified (general knowledge, site not checked)",
+   "instructions": "Desk page \"Assembly guide\" PDF on cdn.autonomous.ai, plus a video guide",
+   "access": "public, no login",
+   "robots": "robots.txt allows product pages for all crawlers (blocks only a few named bots)",
    "products": [
-    "SmartDesk Core"
+    "Desk 2 (formerly SmartDesk Core) 53×29\" and XL 70.5×30\""
    ],
-   "note": "Standing desk archetype ready; queued.",
+   "note": "Batch 4: Desk 2 and Desk 2 XL (old SmartDesk Core URL redirects to the Desk 2 page). Spec table gives top sizes, height with top 28.3–47.5\", dual motor, about 30 minutes to assemble.",
    "disclaimer": "Not affiliated with or endorsed by Autonomous.",
-   "checked": "unverified (general knowledge, site not checked)"
+   "checked": "verified 2026-10-24",
+   "short": "Autonomous"
   },
   {
    "id": "vivo",
@@ -877,9 +888,9 @@
    "products": [
     "Jarvis desk"
    ],
-   "note": "Jarvis now sold via Herman Miller; queued.",
+   "note": "Re-checked Oct 24: Jarvis now lives on hermanmiller.com, whose desk page renders its specs with scripts → still queued.",
    "disclaimer": "Not affiliated with or endorsed by Fully (Herman Miller).",
-   "checked": "unverified (general knowledge, site not checked)",
+   "checked": "verified 2026-10-24",
    "short": "Fully"
   },
   {

@@ -1,0 +1,53 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "burrow-prospect-3-drawer-low",
+  "name": "PROSPECT",
+  "title": "3-drawer low dresser",
+  "brand": "burrow",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    82.5,
+    50.8,
+    83.8
+  ],
+  "worksWith": "Burrow® Prospect 3-drawer low dresser, 32.5×20×33\" (L×D×H)",
+  "productUrl": "https://burrow.com/products/prospect-3-drawer-low-dresser",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0932/3220/2030/files/Prospect_3-Drawer_Low_Dresser.pdf",
+  "color": "#b98a5e",
+  "confidence": "low",
+  "sources": [
+    "https://burrow.com/products/prospect-3-drawer-low-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 8,
+      "leg": 4
+    },
+    "knobs": 1,
+    "knobWord": "handles",
+    "runners": "preinstalled"
+  },
+  "tags": [
+    "dresser",
+    "3 drawer",
+    "solid wood",
+    "burrow"
+  ],
+  "notes": "Brand page: 32.5\" L × 20\" D × 33\" H, 3 drawers (31×17×5\" inside each), soft-close glides, anti-tip hardware built into the frame. Glides shown as fitted to the side walls; leg height is our guess.",
+  "people": 2
+}

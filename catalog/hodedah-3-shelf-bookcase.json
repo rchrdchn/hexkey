@@ -1,0 +1,44 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hodedah-3-shelf-bookcase",
+  "name": "HODEDAH",
+  "title": "3-shelf bookcase",
+  "brand": "hodedah",
+  "archetype": "bookcase",
+  "category": "shelving",
+  "size": [
+    40.4,
+    30.0,
+    90.7
+  ],
+  "worksWith": "Hodedah® 3-shelf bookcase, 15.9×11.8×35.7\" (W×D×H)",
+  "productUrl": "https://hodedah.com/shop/hodedah-3-shelf-bookcase/",
+  "instructionsUrl": "https://hodedah.com/wp-content/uploads/2023/12/HID23.pdf",
+  "color": "#e9e4da",
+  "confidence": "medium",
+  "sources": [
+    "https://hodedah.com/shop/hodedah-3-shelf-bookcase/"
+  ],
+  "options": {
+    "t": 1.5,
+    "top": "overlay",
+    "tt": 1.5,
+    "shelves": 0,
+    "fixed": [
+      0.333,
+      0.667
+    ],
+    "base": {
+      "type": "none"
+    }
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "narrow",
+    "small space",
+    "hodedah"
+  ],
+  "notes": "Brand page: assembled 15.9\" W × 11.8\" D × 35.7\" H, 3 open compartments, engineered wood. Fixed shelves at even spacing are our reading of the photos; the series stacks side by side.",
+  "people": 1
+}

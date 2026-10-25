@@ -1,0 +1,49 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hodedah-2-drawer-nightstand",
+  "name": "HODEDAH",
+  "title": "2-drawer nightstand",
+  "brand": "hodedah",
+  "archetype": "chest",
+  "category": "bedroom",
+  "size": [
+    43.2,
+    39.4,
+    48.5
+  ],
+  "worksWith": "Hodedah® 2-drawer nightstand, 17×15.5×19.1\" (W×D×H)",
+  "productUrl": "https://hodedah.com/shop/hodedah-2-drawer-nightstand/",
+  "instructionsUrl": "https://hodedah.com/wp-content/uploads/2023/12/HI917N-G-UPDATED-2-10-2020.pdf",
+  "color": "#e9e4da",
+  "confidence": "medium",
+  "sources": [
+    "https://hodedah.com/shop/hodedah-2-drawer-nightstand/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.5,
+    "base": {
+      "type": "plinth",
+      "h": 4
+    },
+    "knobs": 1,
+    "knobWord": "ring pulls"
+  },
+  "tags": [
+    "nightstand",
+    "bedside table",
+    "2 drawer",
+    "small",
+    "hodedah"
+  ],
+  "notes": "Brand page: assembled 17\" W × 15.5\" D × 19.1\" H, 2 deep drawers with ring pulls, metal roller glides with a safety stop. Plinth height is our guess.",
+  "people": 1
+}

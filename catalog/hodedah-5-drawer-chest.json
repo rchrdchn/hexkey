@@ -1,0 +1,58 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hodedah-5-drawer-chest",
+  "name": "HODEDAH",
+  "title": "5-drawer chest",
+  "brand": "hodedah",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    80.0,
+    40.1,
+    121.4
+  ],
+  "worksWith": "Hodedah® 5-drawer chest, 31.5×15.8×47.8\" (W×D×H)",
+  "productUrl": "https://hodedah.com/shop/hodedah-5-drawer-chest-in-beech/",
+  "instructionsUrl": "https://hodedah.com/wp-content/uploads/2023/12/HI5DR-A-UPDATED-4-30-2021.pdf",
+  "color": "#d9bf95",
+  "confidence": "medium",
+  "sources": [
+    "https://hodedah.com/shop/hodedah-5-drawer-chest-in-beech/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.5,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    },
+    "knobs": 2,
+    "knobWord": "ring pulls"
+  },
+  "tags": [
+    "dresser",
+    "chest",
+    "5 drawer",
+    "tall dresser",
+    "hodedah"
+  ],
+  "notes": "Brand page: assembled 31.5\" W × 15.8\" D × 47.8\" H, 5 drawers with double ring pulls, metal roller glides with a safety stop, engineered wood. Plinth height is our guess.",
+  "people": 2
+}

@@ -1,0 +1,477 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/autonomous-desk-2-xl-70x30.json by scripts/generate.mjs (archetype \"standing-desk\"). Edit the spec, not this file.",
+  "slug": "autonomous-desk-2-xl-70x30",
+  "name": "DESK 2 XL",
+  "title": "Standing desk 70\"",
+  "brand": "Autonomous",
+  "brandId": "autonomous",
+  "disclaimer": "Not affiliated with or endorsed by Autonomous.",
+  "worksWith": "Autonomous® Desk 2 XL standing desk 70.5×30\", 70.5×30×28.3–47.5\" (L×W×H)",
+  "productUrl": "https://www.autonomous.ai/standing-desks/autonomous-desk-eureka",
+  "instructionsUrl": "https://cdn.autonomous.ai/production/ecm/260930/autonomous-desk-2-assembly.pdf",
+  "size": [
+    179,
+    72,
+    76
+  ],
+  "minutes": 35,
+  "people": 2,
+  "level": 2,
+  "color": "#2f2d2b",
+  "category": "desks",
+  "archetype": "standing-desk",
+  "confidence": "medium",
+  "sources": [
+    "https://www.autonomous.ai/standing-desks/autonomous-desk-eureka"
+  ],
+  "parts": [
+    {
+      "id": "top",
+      "label": "Desk top"
+    },
+    {
+      "id": "beam",
+      "label": "Crossbeam"
+    },
+    {
+      "id": "bracket",
+      "label": "Side bracket"
+    },
+    {
+      "id": "column",
+      "label": "Lifting column"
+    },
+    {
+      "id": "foot",
+      "label": "Foot"
+    },
+    {
+      "id": "ctrl",
+      "label": "Control box"
+    },
+    {
+      "id": "keypad",
+      "label": "Keypad"
+    },
+    {
+      "id": "tray",
+      "label": "Cable tray"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "screw",
+      "label": "Screw",
+      "kind": "screw"
+    },
+    {
+      "id": "bolt",
+      "label": "Bolt",
+      "kind": "bolt"
+    }
+  ],
+  "objects": [
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        179.1,
+        2.5,
+        76.2
+      ],
+      "pos": [
+        0,
+        70.65,
+        0
+      ]
+    },
+    {
+      "id": "brL",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        64.2
+      ],
+      "pos": [
+        -74.05,
+        68.15,
+        0
+      ]
+    },
+    {
+      "id": "brR",
+      "part": "bracket",
+      "size": [
+        7,
+        2.5,
+        64.2
+      ],
+      "pos": [
+        74.05,
+        68.15,
+        0
+      ]
+    },
+    {
+      "id": "beam",
+      "part": "beam",
+      "size": [
+        141.1,
+        5,
+        5
+      ],
+      "pos": [
+        0,
+        65.4,
+        -2
+      ]
+    },
+    {
+      "id": "colL",
+      "part": "column",
+      "size": [
+        7,
+        62.9,
+        5
+      ],
+      "pos": [
+        -74.05,
+        35.45,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            34.6,
+            5
+          ],
+          "p": [
+            0,
+            14.15,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            31.45,
+            4
+          ],
+          "p": [
+            0,
+            -15.73,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colR",
+      "part": "column",
+      "size": [
+        7,
+        62.9,
+        5
+      ],
+      "pos": [
+        74.05,
+        35.45,
+        -2
+      ],
+      "boxes": [
+        {
+          "s": [
+            7,
+            34.6,
+            5
+          ],
+          "p": [
+            0,
+            14.15,
+            0
+          ]
+        },
+        {
+          "s": [
+            6,
+            31.45,
+            4
+          ],
+          "p": [
+            0,
+            -15.73,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "id": "footL",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        70.2
+      ],
+      "pos": [
+        -74.05,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "footR",
+      "part": "foot",
+      "size": [
+        7,
+        4,
+        70.2
+      ],
+      "pos": [
+        74.05,
+        2,
+        0
+      ]
+    },
+    {
+      "id": "ctrl",
+      "part": "ctrl",
+      "size": [
+        20,
+        4,
+        9
+      ],
+      "pos": [
+        0,
+        67.4,
+        -24.1
+      ]
+    },
+    {
+      "id": "keypad",
+      "part": "keypad",
+      "size": [
+        14,
+        2.5,
+        6
+      ],
+      "pos": [
+        52.55,
+        68.15,
+        35.1
+      ]
+    },
+    {
+      "id": "tray",
+      "part": "tray",
+      "size": [
+        89.55,
+        6,
+        8
+      ],
+      "pos": [
+        0,
+        66.4,
+        -33.1
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Top face down",
+      "say": "Lay the desk top upside down on the flattened box or a rug, so the good side stays scratch-free.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "pose": [
+        180,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Crossbeam + brackets",
+      "say": "Slide the side brackets onto the ends of the crossbeam, set it in the middle of the top, and stretch it out until the brackets sit near the ends. Screw both brackets into the top.",
+      "add": [
+        "beam",
+        "brL",
+        "brR"
+      ],
+      "from": [
+        0,
+        -25,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "-y",
+          "at": [
+            [
+              -74.05,
+              69.4,
+              24.1
+            ],
+            [
+              -74.05,
+              69.4,
+              -24.1
+            ],
+            [
+              74.05,
+              69.4,
+              24.1
+            ],
+            [
+              74.05,
+              69.4,
+              -24.1
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 55
+      }
+    },
+    {
+      "caption": "2 lifting columns",
+      "say": "Set each lifting column onto its bracket, motor end against the beam, and bolt it down. Cables face the back.",
+      "add": [
+        "colL",
+        "colR"
+      ],
+      "from": [
+        0,
+        -40,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      },
+      "safety": "Columns are heavy. Lift with your legs."
+    },
+    {
+      "caption": "2 feet",
+      "say": "Bolt a foot across the end of each column, longer side toward the front. Check both feet point the same way.",
+      "add": [
+        "footL",
+        "footR"
+      ],
+      "from": [
+        0,
+        -30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "bolt",
+          "axis": "+y",
+          "count": 8
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Control box + keypad",
+      "say": "Screw the control box under the top near the back, and the keypad under the front edge on the side you prefer.",
+      "add": [
+        "ctrl",
+        "keypad"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 6
+        }
+      ],
+      "view": {
+        "az": 20,
+        "el": 60
+      }
+    },
+    {
+      "caption": "Plug in the cables",
+      "say": "Plug both motor cables and the keypad cable into the control box, then tuck everything into the cable tray and screw the tray on. Do not plug into the wall yet.",
+      "add": [
+        "tray"
+      ],
+      "from": [
+        0,
+        -20,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "screw",
+          "axis": "+y",
+          "count": 4
+        }
+      ],
+      "view": {
+        "az": 160,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Flip it over",
+      "say": "With a helper, lift the desk and turn it onto its feet. Lift it clear, do not pivot it on one leg.",
+      "pose": [
+        360,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 20
+      },
+      "safety": "Two-person lift."
+    },
+    {
+      "caption": "Power on + reset",
+      "say": "Plug it in, then run the first-time reset from your manual, usually holding the down button until the desk bottoms out. Test up and down with nothing on top.",
+      "view": {
+        "az": 25,
+        "el": 15
+      }
+    }
+  ],
+  "done": "Done. Your DESK 2 XL standing desk 70\" is built. Give it a proud little pat.",
+  "notes": "Brand page: XL top 70.5\" L × 30\" W, height 28.3–47.5\" with the top, dual motor, 250 lb capacity, frame 39.8–59\" long and 23.6\" deep. Shown at sitting height."
+}

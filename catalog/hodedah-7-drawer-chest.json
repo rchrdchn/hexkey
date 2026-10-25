@@ -1,0 +1,64 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "hodedah-7-drawer-chest",
+  "name": "HODEDAH",
+  "title": "7-drawer chest",
+  "brand": "hodedah",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    80.0,
+    45.2,
+    121.9
+  ],
+  "worksWith": "Hodedah® 7-drawer chest with locks, 31.5×17.8×48\" (W×D×H)",
+  "productUrl": "https://hodedah.com/shop/hodedah-7-drawer-chest-with-locks-on-2-top-drawers/",
+  "instructionsUrl": "https://hodedah.com/wp-content/uploads/2023/12/HI70DR-A-UPDATED-4-30-2021.pdf",
+  "color": "#e9e4da",
+  "confidence": "low",
+  "sources": [
+    "https://hodedah.com/shop/hodedah-7-drawer-chest-with-locks-on-2-top-drawers/"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer",
+        "cols": 2,
+        "h": 0.8
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 1.5,
+    "base": {
+      "type": "plinth",
+      "h": 5
+    },
+    "knobs": 2,
+    "knobWord": "ring pulls"
+  },
+  "tags": [
+    "dresser",
+    "chest",
+    "7 drawer",
+    "tall dresser",
+    "lock",
+    "hodedah"
+  ],
+  "notes": "Brand page: assembled 31.5\" W × 17.8\" D × 48\" H; 2 small top drawers with lock and keys over 5 large drawers with double ring pulls, metal roller glides with a safety stop. Locks not modelled; plinth height is our guess.",
+  "people": 2
+}

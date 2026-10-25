@@ -1,0 +1,45 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "kidkraft-puzzle-bookshelf",
+  "name": "PUZZLE",
+  "title": "Kids bookshelf",
+  "brand": "kidkraft",
+  "archetype": "bookcase",
+  "category": "kids",
+  "size": [
+    62.9,
+    29.5,
+    97.3
+  ],
+  "worksWith": "KidKraft® Puzzle bookshelf, 24.76×11.61×38.31\" (W×D×H)",
+  "productUrl": "https://www.kidkraft.com/products/puzzle-bookshelf-pastel",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--gskx7S1G--/r7our1eotpd1xntuchqb",
+  "color": "#f2d7d9",
+  "confidence": "low",
+  "sources": [
+    "https://www.kidkraft.com/products/puzzle-bookshelf-pastel"
+  ],
+  "options": {
+    "t": 1.5,
+    "top": "overlay",
+    "tt": 1.5,
+    "shelves": 0,
+    "fixed": [
+      0.333,
+      0.667
+    ],
+    "base": {
+      "type": "none"
+    },
+    "lying": false
+  },
+  "tags": [
+    "bookcase",
+    "bookshelf",
+    "kids",
+    "toy storage",
+    "kidkraft"
+  ],
+  "notes": "Brand page: 24.76 × 11.61 × 38.31\" (62.89 × 29.49 × 97.31 cm), three deep shelves, puzzle-shaped side panels (shown as plain sides). Even shelf spacing is our reading of the photos.",
+  "people": 1
+}

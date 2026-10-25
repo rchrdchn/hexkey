@@ -1,0 +1,61 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "burrow-prospect-5-drawer-tall",
+  "name": "PROSPECT",
+  "title": "5-drawer tall dresser",
+  "brand": "burrow",
+  "archetype": "chest",
+  "category": "dressers",
+  "size": [
+    82.5,
+    50.8,
+    129.5
+  ],
+  "worksWith": "Burrow® Prospect 5-drawer tall dresser, 32.5×20×51\" (L×D×H)",
+  "productUrl": "https://burrow.com/products/prospect-5-drawer-tall-dresser",
+  "instructionsUrl": "https://cdn.shopify.com/s/files/1/0932/3220/2030/files/Prospect_5-Drawer_Tall_Dresser.pdf",
+  "color": "#b98a5e",
+  "confidence": "low",
+  "sources": [
+    "https://burrow.com/products/prospect-5-drawer-tall-dresser"
+  ],
+  "options": {
+    "rows": [
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      },
+      {
+        "type": "drawer"
+      }
+    ],
+    "top": "overlay",
+    "tt": 2,
+    "base": {
+      "type": "legs",
+      "h": 8,
+      "leg": 4
+    },
+    "knobs": 1,
+    "knobWord": "handles",
+    "runners": "preinstalled"
+  },
+  "tags": [
+    "dresser",
+    "chest",
+    "5 drawer",
+    "tall dresser",
+    "solid wood",
+    "burrow"
+  ],
+  "notes": "Brand page: 32.5\" L × 20\" D × 51\" H, 5 drawers (31×17×5\" inside each), soft-close glides, anti-tip hardware built into the frame. Glides shown as fitted to the side walls; leg height is our guess.",
+  "people": 2
+}

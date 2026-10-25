@@ -1,0 +1,624 @@
+{
+  "$schema": "../../../schema/piece.schema.json",
+  "$generated": "from catalog/kidkraft-puzzle-bookshelf.json by scripts/generate.mjs (archetype \"bookcase\"). Edit the spec, not this file.",
+  "slug": "kidkraft-puzzle-bookshelf",
+  "name": "PUZZLE",
+  "title": "Kids bookshelf",
+  "brand": "KidKraft",
+  "brandId": "kidkraft",
+  "disclaimer": "Not affiliated with or endorsed by KidKraft.",
+  "worksWith": "KidKraft® Puzzle bookshelf, 24.76×11.61×38.31\" (W×D×H)",
+  "productUrl": "https://www.kidkraft.com/products/puzzle-bookshelf-pastel",
+  "instructionsUrl": "https://images.salsify.com/image/upload/s--gskx7S1G--/r7our1eotpd1xntuchqb",
+  "size": [
+    63,
+    97,
+    30
+  ],
+  "minutes": 35,
+  "people": 1,
+  "level": 2,
+  "color": "#f2d7d9",
+  "category": "kids",
+  "archetype": "bookcase",
+  "confidence": "low",
+  "sources": [
+    "https://www.kidkraft.com/products/puzzle-bookshelf-pastel"
+  ],
+  "parts": [
+    {
+      "id": "side",
+      "label": "Side panel"
+    },
+    {
+      "id": "bottom",
+      "label": "Bottom panel"
+    },
+    {
+      "id": "top",
+      "label": "Top panel"
+    },
+    {
+      "id": "fixed",
+      "label": "Fixed shelf",
+      "plural": "Fixed shelves"
+    },
+    {
+      "id": "back",
+      "label": "Back panel"
+    }
+  ],
+  "hardware": [
+    {
+      "id": "pin",
+      "label": "Cam pin",
+      "kind": "campin"
+    },
+    {
+      "id": "dowel",
+      "label": "Wood dowel",
+      "kind": "dowel"
+    },
+    {
+      "id": "cam",
+      "label": "Cam lock",
+      "kind": "cam"
+    },
+    {
+      "id": "nail",
+      "label": "Nail",
+      "kind": "nail"
+    },
+    {
+      "id": "anchor",
+      "label": "Wall bracket",
+      "kind": "bracket"
+    }
+  ],
+  "objects": [
+    {
+      "id": "sideL",
+      "part": "side",
+      "size": [
+        1.5,
+        95.8,
+        29.5
+      ],
+      "pos": [
+        -30.7,
+        47.9,
+        0
+      ]
+    },
+    {
+      "id": "sideR",
+      "part": "side",
+      "size": [
+        1.5,
+        95.8,
+        29.5
+      ],
+      "pos": [
+        30.7,
+        47.9,
+        0
+      ]
+    },
+    {
+      "id": "bottom",
+      "part": "bottom",
+      "size": [
+        59.9,
+        1.5,
+        29.1
+      ],
+      "pos": [
+        0,
+        0.75,
+        0.2
+      ]
+    },
+    {
+      "id": "top",
+      "part": "top",
+      "size": [
+        62.9,
+        1.5,
+        29.5
+      ],
+      "pos": [
+        0,
+        96.55,
+        0
+      ]
+    },
+    {
+      "id": "fixed1",
+      "part": "fixed",
+      "size": [
+        59.9,
+        1.5,
+        29.1
+      ],
+      "pos": [
+        0,
+        32.9,
+        0.2
+      ]
+    },
+    {
+      "id": "fixed2",
+      "part": "fixed",
+      "size": [
+        59.9,
+        1.5,
+        29.1
+      ],
+      "pos": [
+        0,
+        64.4,
+        0.2
+      ]
+    },
+    {
+      "id": "back",
+      "part": "back",
+      "size": [
+        62.5,
+        95.1,
+        0.3
+      ],
+      "pos": [
+        0,
+        48.05,
+        -14.9
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "caption": "Side panel + pins",
+      "say": "Stand one side panel on its edge, holes facing in. Screw in six cam pins by hand, then tap in six dowels.",
+      "add": [
+        "sideL"
+      ],
+      "from": [
+        -30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "+x",
+          "at": [
+            [
+              -29.95,
+              0.75,
+              9.44
+            ],
+            [
+              -29.95,
+              0.75,
+              -9.44
+            ],
+            [
+              -29.95,
+              32.9,
+              9.44
+            ],
+            [
+              -29.95,
+              32.9,
+              -9.44
+            ],
+            [
+              -29.95,
+              64.4,
+              9.44
+            ],
+            [
+              -29.95,
+              64.4,
+              -9.44
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "+x",
+          "at": [
+            [
+              -29.95,
+              0.75,
+              3.78
+            ],
+            [
+              -29.95,
+              0.75,
+              -3.78
+            ],
+            [
+              -29.95,
+              32.9,
+              3.78
+            ],
+            [
+              -29.95,
+              32.9,
+              -3.78
+            ],
+            [
+              -29.95,
+              64.4,
+              3.78
+            ],
+            [
+              -29.95,
+              64.4,
+              -3.78
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 50,
+        "el": 25
+      }
+    },
+    {
+      "caption": "Bottom on. Lock 2.",
+      "say": "Push the bottom panel onto the low pins and dowels. Drop two cam locks into the round holes, arrows facing the pins, and turn them clockwise until they grab.",
+      "add": [
+        "bottom"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -26.55,
+              1.5,
+              9.44
+            ],
+            [
+              -26.55,
+              1.5,
+              -9.44
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 35,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Fixed shelves. Lock 4.",
+      "say": "The fixed shelves hold the bookcase square, so they go in now. Slide onto the pins and lock with cam locks, clockwise.",
+      "add": [
+        "fixed1",
+        "fixed2"
+      ],
+      "from": [
+        35,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              -26.55,
+              33.65,
+              9.44
+            ],
+            [
+              -26.55,
+              33.65,
+              -9.44
+            ],
+            [
+              -26.55,
+              65.15,
+              9.44
+            ],
+            [
+              -26.55,
+              65.15,
+              -9.44
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 40
+      }
+    },
+    {
+      "caption": "Side two. Lock 6.",
+      "say": "Pins and dowels go into the ends of the panels on this side too. Lower the second side onto all of them at once, then lock the last six cam locks.",
+      "add": [
+        "sideR"
+      ],
+      "from": [
+        30,
+        0,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "pin",
+          "axis": "-x",
+          "at": [
+            [
+              29.95,
+              0.75,
+              9.44
+            ],
+            [
+              29.95,
+              0.75,
+              -9.44
+            ],
+            [
+              29.95,
+              32.9,
+              9.44
+            ],
+            [
+              29.95,
+              32.9,
+              -9.44
+            ],
+            [
+              29.95,
+              64.4,
+              9.44
+            ],
+            [
+              29.95,
+              64.4,
+              -9.44
+            ]
+          ]
+        },
+        {
+          "id": "dowel",
+          "axis": "-x",
+          "at": [
+            [
+              29.95,
+              0.75,
+              3.78
+            ],
+            [
+              29.95,
+              0.75,
+              -3.78
+            ],
+            [
+              29.95,
+              32.9,
+              3.78
+            ],
+            [
+              29.95,
+              32.9,
+              -3.78
+            ],
+            [
+              29.95,
+              64.4,
+              3.78
+            ],
+            [
+              29.95,
+              64.4,
+              -3.78
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+y",
+          "at": [
+            [
+              26.55,
+              1.5,
+              9.44
+            ],
+            [
+              26.55,
+              1.5,
+              -9.44
+            ],
+            [
+              26.55,
+              33.65,
+              9.44
+            ],
+            [
+              26.55,
+              33.65,
+              -9.44
+            ],
+            [
+              26.55,
+              65.15,
+              9.44
+            ],
+            [
+              26.55,
+              65.15,
+              -9.44
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": -40,
+        "el": 30
+      }
+    },
+    {
+      "caption": "Top on. Lock 4.",
+      "say": "Tap four dowels into the top edges of the sides. Set the top panel on, good side up, then lock it from inside with four cam locks.",
+      "add": [
+        "top"
+      ],
+      "from": [
+        0,
+        30,
+        0
+      ],
+      "hardware": [
+        {
+          "id": "dowel",
+          "axis": "+y",
+          "at": [
+            [
+              -30.7,
+              95.8,
+              4.72
+            ],
+            [
+              -30.7,
+              95.8,
+              -4.72
+            ],
+            [
+              30.7,
+              95.8,
+              4.72
+            ],
+            [
+              30.7,
+              95.8,
+              -4.72
+            ]
+          ]
+        },
+        {
+          "id": "cam",
+          "axis": "+x",
+          "at": [
+            [
+              -29.95,
+              92.3,
+              9.44
+            ],
+            [
+              -29.95,
+              92.3,
+              -9.44
+            ]
+          ],
+          "spin": true
+        },
+        {
+          "id": "cam",
+          "axis": "-x",
+          "at": [
+            [
+              29.95,
+              92.3,
+              9.44
+            ],
+            [
+              29.95,
+              92.3,
+              -9.44
+            ]
+          ],
+          "spin": true
+        }
+      ],
+      "view": {
+        "az": 30,
+        "el": 35
+      }
+    },
+    {
+      "caption": "Flip it face down",
+      "say": "Tip the bookcase onto its front, on a rug or the flattened box so nothing gets scratched.",
+      "pose": [
+        90,
+        0,
+        0
+      ],
+      "view": {
+        "az": 60,
+        "el": 50
+      }
+    },
+    {
+      "caption": "Nail on the back",
+      "say": "Lay the back panel on, smooth side facing in. Line it up with one corner and nail it along the edges, about every twenty centimeters. If the corners line up, the bookcase is square.",
+      "add": [
+        "back"
+      ],
+      "from": [
+        0,
+        0,
+        -30
+      ],
+      "view": {
+        "az": 35,
+        "el": 55
+      }
+    },
+    {
+      "caption": "Stand it up",
+      "say": "Stand it back up on its feet. Nice, the box is done.",
+      "pose": [
+        0,
+        0,
+        0
+      ],
+      "view": {
+        "az": 30,
+        "el": 18
+      }
+    },
+    {
+      "caption": "Anchor it",
+      "say": "Last step, and the most important. Screw the wall bracket to the top at the back, then fix it to the wall with screws that suit your wall. Furniture can tip over. Always anchor it.",
+      "hardware": [
+        {
+          "id": "anchor",
+          "axis": "-z",
+          "at": [
+            [
+              0,
+              92.8,
+              -15.05
+            ]
+          ]
+        }
+      ],
+      "view": {
+        "az": 150,
+        "el": 25,
+        "tight": true,
+        "zoom": 0.8
+      },
+      "safety": "Tip-over risk. Always anchor to the wall."
+    }
+  ],
+  "done": "Done. Your PUZZLE kids bookshelf is built. Give it a proud little pat.",
+  "notes": "Brand page: 24.76 × 11.61 × 38.31\" (62.89 × 29.49 × 97.31 cm), three deep shelves, puzzle-shaped side panels (shown as plain sides). Even shelf spacing is our reading of the photos."
+}

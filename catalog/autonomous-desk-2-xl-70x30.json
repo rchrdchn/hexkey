@@ -1,0 +1,36 @@
+{
+  "$schema": "../schema/catalog-spec.schema.json",
+  "slug": "autonomous-desk-2-xl-70x30",
+  "name": "DESK 2 XL",
+  "title": "Standing desk 70\"",
+  "brand": "autonomous",
+  "archetype": "standing-desk",
+  "category": "desks",
+  "size": [
+    179.1,
+    76.2,
+    71.9
+  ],
+  "worksWith": "Autonomous® Desk 2 XL standing desk 70.5×30\", 70.5×30×28.3–47.5\" (L×W×H)",
+  "productUrl": "https://www.autonomous.ai/standing-desks/autonomous-desk-eureka",
+  "instructionsUrl": "https://cdn.autonomous.ai/production/ecm/260930/autonomous-desk-2-assembly.pdf",
+  "color": "#2f2d2b",
+  "confidence": "medium",
+  "sources": [
+    "https://www.autonomous.ai/standing-desks/autonomous-desk-eureka"
+  ],
+  "options": {
+    "tt": 2.5,
+    "inset": 12
+  },
+  "tags": [
+    "standing desk",
+    "sit stand",
+    "electric",
+    "large",
+    "autonomous"
+  ],
+  "notes": "Brand page: XL top 70.5\" L × 30\" W, height 28.3–47.5\" with the top, dual motor, 250 lb capacity, frame 39.8–59\" long and 23.6\" deep. Shown at sitting height.",
+  "people": 2,
+  "minutes": 35
+}
