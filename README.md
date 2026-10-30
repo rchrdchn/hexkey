@@ -359,6 +359,16 @@ npm run share-cards -- http://localhost:4191    # only stale cards (about 1.3 s 
 
 A card is stale when its piece's name, title, brand, stats or geometry changes, or when `DESIGN` in `scripts/share/lib.mjs` is bumped after a design change. All 166 cards take about 3 minutes and weigh about 13 MB (65 to 110 KB each). The renders come from `/?thumb=<slug>&explode=0.32&zoom=0.9&bg=none&dpr=2`.
 
+## Outbound link tags
+
+Standing rule (Oct 29, 2026): every link from this site to another site carries `utm_source=hexkey.pages.dev&utm_medium=referral`, so the sites we send readers to see us in their analytics (and may come back to advertise). Links to our other sites get it too.
+
+- **How:** Two parts, because the app draws most links at runtime. (1) In the app, `src/App.tsx` passes the per-piece "official instructions" and "product page" links (brand sites such as IKEA) through `tagUrl` from `scripts/outbound-utm.mjs` (typed by `scripts/outbound-utm.d.mts`). (2) The last build step, `node scripts/tag-outbound.mjs dist hexkey.pages.dev` (end of `npm run build`), rewrites any outside link in the built HTML (the home page, `/p/<slug>/` share pages, `404.html`; today they have none). Amazon tool links are affiliate links and stay as they are. The GitHub links in the Community panel point to our own repo and are left alone. The unit test runs in `npm run validate`. Nobody tags links by hand; new pages are covered automatically.
+- **Format:** `?utm_source=hexkey.pages.dev&utm_medium=referral` is added before any `#fragment`, with `&` when the URL already has a `?`. Existing parameters, `rel` (`sponsored`, `nofollow`, `noopener`), `target` and every other attribute stay as they were.
+- **Left alone:** internal links (relative paths and this site's own hosts), `mailto:`, `tel:` and `javascript:` links, links that already have any `utm_` parameter, affiliate and payment links (Amazon and amzn.to, any `tag=` parameter, RunSignup `aflt_token=` links, Awin, Impact, ShareASale, CJ, Rakuten, Skimlinks, `buy.stripe.com`, beehiiv subscribe pages and embeds), and share, compose and add-to-calendar links (X intent, Facebook sharer, WhatsApp, Gmail and Outlook compose, Google Calendar). To exclude one link, add `data-no-utm` to the `<a>`.
+- **Files:** `scripts/outbound-utm.mjs` holds the rules (the same file in every site's repo; change it in all of them together), `scripts/tag-outbound.mjs` walks `dist/` and fails the build if a second pass still finds an untagged link, and `scripts/outbound-utm.test.mjs` is the unit test (`node --test scripts/outbound-utm.test.mjs`).
+- **Check live:** open a piece on https://hexkey.pages.dev and check the "official instructions ↗" link ends in `utm_source=hexkey.pages.dev&utm_medium=referral`.
+
 ## Deployment
 
 - The site is fully static. `npm run build` writes `dist/`.

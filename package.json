@@ -4,9 +4,9 @@
   "description": "Voice-guided 3D assembly for flat-pack furniture. Open source.",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/validate.mjs && node scripts/tools-check.mjs && node scripts/share-check.mjs && tsc --noEmit -p . && vite build && node scripts/share-pages.mjs",
+    "build": "node scripts/validate.mjs && node scripts/tools-check.mjs && node scripts/share-check.mjs && tsc --noEmit -p . && vite build && node scripts/share-pages.mjs && node scripts/tag-outbound.mjs dist hexkey.pages.dev",
     "preview": "vite preview --port 4173",
-    "validate": "node scripts/validate.mjs && node scripts/tools-check.mjs && node scripts/share-check.mjs",
+    "validate": "node scripts/validate.mjs && node scripts/tools-check.mjs && node scripts/share-check.mjs && node --test scripts/outbound-utm.test.mjs",
     "gen": "node scripts/generate.mjs",
     "thumbs": "node scripts/thumbs.mjs",
     "typecheck": "tsc --noEmit -p .",
@@ -17,7 +17,8 @@
     "shots:home": "node scripts/shots-home.mjs",
     "shots:tools": "node scripts/shots-tools.mjs",
     "share-cards": "node scripts/share-cards.mjs",
-    "shots-share": "node scripts/shots-share.mjs"
+    "shots-share": "node scripts/shots-share.mjs",
+    "test": "node --test scripts/outbound-utm.test.mjs"
   },
   "license": "MIT",
   "type": "module",

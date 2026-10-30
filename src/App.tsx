@@ -12,6 +12,9 @@ import { makeCard, shareCard, shareLink, fmtTime } from './share';
 import { ContributeModal, RequestModal } from './ui/Community';
 import { Catalog } from './ui/Catalog';
 import { ToolsButton, NeedTools, AMAZON_DISCLOSURE } from './ui/Tools';
+import { tagUrl } from '../scripts/outbound-utm.mjs';
+// Outbound link tag (README: Outbound link tags). The app draws these links at runtime, so tag them here.
+const out = (u: string) => tagUrl(u, { site: 'hexkey.pages.dev' }) ?? u;
 
 type Route = { mode: Mode; slug: string; step: number; open?: boolean };
 const PICKER = 'pieces'; // #pieces opens the full picker on phones (deep-linkable, closes on browser back)
@@ -431,8 +434,8 @@ function Legal({ p, stale }: { p: Piece; stale?: boolean }) {
   return (
     <p className={`legal ${stale ? 'stale' : ''}`} aria-hidden={stale || undefined}>
       Works with {p.worksWith}. {p.disclaimer ?? 'Not affiliated with or endorsed by Inter IKEA Systems B.V.'} Demo steps: always follow the{' '}
-      <a href={p.instructionsUrl ?? p.productUrl} target="_blank" rel="noopener noreferrer">official instructions ↗</a>
-      {p.instructionsUrl && <>{' · '}<a href={p.productUrl} target="_blank" rel="noopener noreferrer">product page ↗</a></>}
+      <a href={out(p.instructionsUrl ?? p.productUrl)} target="_blank" rel="noopener noreferrer">official instructions ↗</a>
+      {p.instructionsUrl && <>{' · '}<a href={out(p.productUrl)} target="_blank" rel="noopener noreferrer">product page ↗</a></>}
     </p>
   );
 }
