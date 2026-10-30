@@ -4,10 +4,10 @@
 //                             It IS the app (same scripts), so there is no redirect hop: a tiny inline script swaps the address to /#/<slug>
 //                             before the app starts. Crawlers don't run it, and the page stays readable without JS.
 //   dist/index.html           site meta + pre-JS text refreshed with the live piece/brand counts.
-//   dist/sitemap.xml, dist/llms.txt, dist/404.html
+//   dist/sitemap.xml, dist/llms.txt, dist/llms-full.txt (every guide's parts, hardware and steps as text), dist/404.html
 // Any robots meta in index.html is copied as-is (today there is none: the site is indexable), so the /p/ pages always follow the home page's indexing choice.
 import fs from 'node:fs';
-import { root, SITE, catalog, pieceText, siteText, esc } from './share/lib.mjs';
+import { root, SITE, catalog, piece, pieceText, siteText, esc } from './share/lib.mjs';
 
 const dist = `${root}dist`;
 const tpl = fs.readFileSync(`${dist}/index.html`, 'utf8');
@@ -81,14 +81,29 @@ fs.writeFileSync(`${dist}/llms.txt`, `# Hexkey
 - Site: ${SITE}/
 - Source code (MIT) and data (CC BY-SA 4.0): https://github.com/rchrdchn/hexkey
 - Every guide has a page at ${SITE}/p/<slug>/ that opens the 3D guide at ${SITE}/#/<slug>.
+- Full text of every guide (parts, hardware and each spoken step) in one file: ${SITE}/llms-full.txt
 
 ## Guides
 ${[...byBrand].sort((a, b) => a[0].localeCompare(b[0])).map(([b, ts]) => `\n### Works with ${b}\n` + ts.map((t) => `- [${t.name} ${t.title}](${SITE}/p/${t.slug}/): ${t.stats.join(', ')}, ${t.parts} parts`).join('\n')).join('\n')}
 `);
+// llms-full.txt: the guides are a 3D app behind hash routes, so crawlers can't read the steps; this file has them as text.
+const full = [`# Hexkey: every guide in full`, '', `> ${site.pieces} voice-guided 3D assembly guides from ${site.brands} brands, as text: parts, hardware and each step as the voice reads it. Hexkey is not affiliated with or endorsed by any furniture brand; steps are demos in its own words, so always follow the official instructions in the box. Index: ${SITE}/llms.txt`, ''];
+for (const e of [...cat].sort((a, b) => a.slug.localeCompare(b.slug))) {
+  const t = pieceText(e.slug, cat), p = piece(e.slug);
+  full.push('---', '', `## ${t.name} ${t.title} (works with ${t.worksWith})`, '', `Guide: ${SITE}/p/${e.slug}/ (opens ${SITE}/#/${e.slug})`, `- ${t.stats.join(' · ')} · ${t.parts} parts`);
+  if (Array.isArray(p.size)) full.push(`- Size: ${p.size.join(' × ')} cm`);
+  if (p.productUrl) full.push(`- Official product page: ${p.productUrl}`);
+  full.push(`- ${t.disclaimer}`, '');
+  if (p.parts?.length) full.push(`Parts: ${p.parts.map((x) => x.label).join(', ')}.`, '');
+  if (p.hardware?.length) full.push(`Hardware: ${p.hardware.map((x) => x.label).join(', ')}.`, '');
+  full.push('Steps:', '', ...p.steps.map((st, i) => `${i + 1}. **${st.caption.replace(/[.!?]+$/, "")}.** ${st.say}`), '');
+  if (p.done) full.push(p.done, '');
+}
+fs.writeFileSync(`${dist}/llms-full.txt`, full.join('\n'));
 fs.writeFileSync(`${dist}/404.html`, `<!doctype html>
 <html lang="en"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Not found · Hexkey</title><link rel="icon" href="/icon.svg" type="image/svg+xml" />
 <style>body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f6f1ea; color: #1f1b18; font-family: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, sans-serif; text-align: center; padding: 24px; } h1 { font-size: 2rem; margin: 0 0 .4rem; } p { color: #7a6f64; } a { display: inline-block; margin-top: .6rem; background: #ff5a36; color: #fff; font-weight: 800; padding: 12px 22px; border-radius: 99px; text-decoration: none; }</style>
 </head><body><main><h1>That page isn't here</h1><p>The link may be old, or the piece was renamed.</p><a href="/">Back to Hexkey</a></main></body></html>
 `);
-console.log(`share-pages: ${n} /p/ pages, sitemap.xml (${n + 1} URLs), llms.txt, 404.html`);
+console.log(`share-pages: ${n} /p/ pages, sitemap.xml (${n + 1} URLs), llms.txt, llms-full.txt, 404.html`);

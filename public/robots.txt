@@ -54,3 +54,6 @@ User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://hexkey.pages.dev/sitemap.xml
+
+# LLM-friendly site guide (https://llmstxt.org): https://hexkey.pages.dev/llms.txt
+# Every guide in full as text: https://hexkey.pages.dev/llms-full.txt

@@ -106,7 +106,7 @@ Routes are hash-based, so you can open a piece directly: `/#/billy` (check the b
 | Command | What it does |
 |---|---|
 | `npm run dev` | Vite dev server on port 5173. |
-| `npm run build` | `validate` + `tsc --noEmit` + `vite build` to `dist/`, then `scripts/share-pages.mjs` writes the `/p/<slug>/` share pages, `sitemap.xml`, `llms.txt` and `404.html` (see [Link previews](#link-previews-and-share-pages)). |
+| `npm run build` | `validate` + `tsc --noEmit` + `vite build` to `dist/`, then `scripts/share-pages.mjs` writes the `/p/<slug>/` share pages, `sitemap.xml`, `llms.txt`, `llms-full.txt` (every guide's parts, hardware and steps as text, for AI agents that can't run the 3D app) and `404.html` (see [Link previews](#link-previews-and-share-pages)). |
 | `npm run preview` | Serves `dist/` on port 4173. The browser scripts below default to this URL. |
 | `npm run validate` | `scripts/validate.mjs` (ids, references, counts, product links, brands; audio drift is a warning) and `scripts/tools-check.mjs` (tool rules) and `scripts/share-check.mjs` (every piece has a fresh 1200×630 link-preview card under 300 KB). |
 | `npm run typecheck` | TypeScript only. |
