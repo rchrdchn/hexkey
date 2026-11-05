@@ -12,6 +12,31 @@ Pick your piece, check off what's in the box, then build it step by step. A voic
 |---|---|---|---|
 | Choose a piece. It spins in 3D. | Tap each part and hardware bag as you find it. Parts are color-matched to the 3D model. | Parts lift off the floor and fly into a glowing ghost outline. Hardware pops in with ×N counts; cam locks turn. | Confetti, a turntable and a share card with your build time. |
 
+## Quick reference
+
+| | |
+|---|---|
+| Live | https://hexkey.pages.dev |
+| Repo / branch | `rchrdchn/hexkey`, `main`. Checkout: `/workspace/hexkey` (feature worktrees `/workspace/hexkey-*`) |
+| Stack | Vite + TypeScript 3D app, static share pages, Pages Functions in `functions/` |
+| Host | Cloudflare Pages, Git-connected: every push to `main` deploys |
+| Install / dev / build | `npm ci`, `npm run dev`, `npm run build` (validate, tools and share checks, typecheck, Vite, share pages, outbound tags) |
+| Checks | `npm run validate` before every push (GitHub Actions is off) |
+| Ship to production | Commit, push to `main`, check live, ping IndexNow. No ship script yet. |
+| Amazon tag | `hexkey-20` |
+| Secrets (names only) | none in the repo |
+
+**House rules (all Tiny Labs sites)**
+
+- Footer reads `© <year> <Site name>`. "Tiny Labs LLC" appears only on the Terms and Privacy pages.
+- Never mention another Tiny Labs site on this site, and never say "Cloudflare" in visible page text.
+- No GitHub Actions. Builds, checks, data refreshes and IndexNow pings run on the build box.
+- Secrets live in the Cloudflare project settings or in private files on the build box. Docs and chats name them, never print them.
+- Copy style: short paragraphs, no em dashes, no owner name in site copy. City and item lists run A to Z.
+- Design bar: equal card heights, no orphan words, no sideways scroll at 320/375/1280 px.
+- After a production deploy, run `npm run indexnow` if the ship step didn't already do it.
+- The cross-site index of repos, ship commands and URLs is `/home/box/shared/side-hustle/PROJECTS.md` on the build box.
+
 ## Contents
 
 - [Features](#features)
